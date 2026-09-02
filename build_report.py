@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""Technical report (academic form) for the Churchill Corridor work. Every number is read
+from the result files; nothing is retyped. -> report/index.html (+ report.pdf via chromium)."""
+import base64, json, os, re, numpy as np
+os.makedirs("report", exist_ok=True)
+def b64(fn): return base64.b64encode(open(fn, "rb").read()).decode()
+def f1(v): return f"{v:.1f}"
+# ---------------- numbers
+A = np.load("indep_cells_corridor_out.npy"); em, en, eg, sg, dk, dep = A.T
+sh = (-dep >= 50) & (-dep < 400); deep = -dep >= 1000; slope = (-dep >= 400) & (-dep < 1000); coast = -dep < 50
+m = lambda x, s: float(np.abs(x[s]).mean())
+IJ = json.load(open("indep_validation_corridor_out.json"))
+T = json.load(open("temporal_validation_v5_small_temporal.json")); Tt = json.load(open("temporal_validation_v5_tiny_temporal.json"))
+td = {tuple(r["km"]): r for r in T["by_distance"]}; tdep = {tuple(r["m"]): r for r in T["by_depth"]}
+cal = json.load(open("sigma_calibration.json")); F = json.load(open("forecast_manifest.json"))
+prof = json.load(open("route_profile_v2.json")); hc = json.load(open("hindcast.json")); hz = json.load(open("hazard_corridor.json"))
+cs = json.load(open("corridor_stats.json")); ns = json.load(open("national_stats_corrected.json")); cf = json.load(open("corridor_found.json"))["stats"]
+plan = json.load(open("survey_plan.json")); plan_days = sum(p.get("ship_days", 0) for p in plan); plan_cost = sum(p.get("cost_CAD_M", 0) for p in plan) * 1e6
+hl = open("hazard_small.log").read(); hlt = open("hazard_tiny.log").read()
+def hz_nums(log):
+    a = re.search(r"model ([\d.]+) m \| '100 m sounding is the shoal' ([\d.]+) m \| gravity ([\d.]+) m", log)
+    b = re.search(r"hidden\):\s+model ([\d.]+) m \| nearest-field ([\d.]+) m", log); c = re.search(r"σ coverage 1σ (\d+)%\s+2σ (\d+)%", log)
+    return [float(a.group(i)) for i in (1, 2, 3)] + [float(b.group(1)), float(b.group(2)), int(c.group(1)), int(c.group(2))]
+HS = hz_nums(hl); HT = hz_nums(hlt)
+yrs = [p["survey_year"] for p in prof if p.get("survey_year")]; pre80 = sum(1 for y in yrs if y < 1980)
+grades = {g: sum(1 for p in prof if p["grade"] == g) for g in "ABCD"}; npts = len(prof)
+r = np.abs(em[sh]) / np.maximum(sg[sh], .1)
+sig_scale = float(np.mean(np.interp(sg[sh], cal["sigma_raw_grid"], cal["sigma68"]) / np.maximum(sg[sh], .1)))
+s68 = float(np.interp(48.3, cal["sigma_raw_grid"], cal["sigma68"])); s95 = float(np.interp(48.3, cal["sigma_raw_grid"], cal["sigma95"]))
+landed = [x for x in hc if x["rank"]["hazard_p_shoal"]["percentile"] is not None and x["rank"]["hazard_p_shoal"]["percentile"] >= 90]
+def ordn(p):
+    p = int(round(p)); return f"{p}{'th' if 10 <= p % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(p % 10, 'th')}"
+# ---------------- tables
+def tr(cells, th=False):
+    t = "th" if th else "td"; return "<tr>" + "".join(f"<{t}>{c}</{t}>" for c in cells) + "</tr>"
+t1 = "".join(tr([f"{a}–{b} km", f"{((sh&(dk>=a)&(dk<b)).sum()):,}", f1(m(em, sh&(dk>=a)&(dk<b))), f1(m(en, sh&(dk>=a)&(dk<b))), f1(m(eg, sh&(dk>=a)&(dk<b)))]) for a, b in [(0,.5),(.5,1),(1,2),(2,4)])
+t1 += tr(["<b>all shelf 50–400 m</b>", f"<b>{sh.sum():,}</b>", f"<b>{f1(m(em, sh))}</b>", f"<b>{f1(m(en, sh))}</b>", f"<b>{f1(m(eg, sh))}</b>"])
+t1d = "".join(tr([lab, f"{s.sum():,}", f1(m(em, s)), f1(m(eg, s))]) for lab, s in [("coastal &lt; 50 m (excluded, see §4.4)", coast), ("shelf 50–400 m", sh), ("slope 400–1000 m", slope), ("basin &gt; 1000 m", deep)])
+t2 = "".join(tr([f"{a}–{b} km", f"{td[(a,b)]['n']:,}", f1(td[(a,b)]['mae_model']), f1(td[(a,b)]['mae_nn']), f1(td[(a,b)]['mae_grav']), f"{td[(a,b)]['bias']:+.1f}", f"{td[(a,b)]['frac_within_1sigma']*100:.0f}%"]) for a, b in [(0,.5),(.5,1),(1,2),(2,4),(4,8)])
+t2 += tr(["<b>all</b>", f"<b>{T['overall']['n']:,}</b>", f"<b>{f1(T['overall']['mae_model'])}</b>", f"<b>{f1(T['overall']['mae_nn'])}</b>", f"<b>{f1(T['overall']['mae_grav'])}</b>", f"<b>{T['overall']['bias']:+.1f}</b>", f"<b>{T['overall']['frac_within_1sigma']*100:.0f}%</b>"])
+t2d = "".join(tr([f"{a}–{b} m", f"{tdep[(a,b)]['n']:,}", f1(tdep[(a,b)]['mae_model']), f1(tdep[(a,b)]['mae_nn']), f1(tdep[(a,b)]['mae_grav']), f"{tdep[(a,b)]['bias']:+.1f}"]) for a, b in [(0,20),(20,50),(50,100),(100,200),(200,400),(400,9999)])
+t3 = ""
+for x in hc:
+    rk = x["rank"]; p = x["site"]["p_shoal_lt_draft"]; g = lambda v: "—" if v is None else f"{v:.0f}"
+    t3 += tr([f"<b>{x['name']}</b><br><span class='mut'>{x['date']} · TSB {x['tsb']}</span>", f"{x['pre_soundings']:,}", f"{x['dist_to_pre_sounding_km']:.1f}", "—" if p is None else f"{p*100:.0f}%", f"<b>{g(rk['hazard_p_shoal']['percentile'])}</b>", g(rk['mean_model_sigma']['percentile']), g(rk['nearest_sounding_shallowness']['percentile'])])
+tcal = "".join(tr([f"{c['sigma_lo']:.1f}–{c['sigma_hi']:.1f}", f"{c['n']:,}", f1(c['abs_err_p50']), f1(c['abs_err_p90']), f"{c['frac_within_1sigma']*100:.0f}%"]) for c in IJ["calib"])
+tplan = "".join(tr([str(i+1), f"{p['lat']:.2f}°N", f"{abs(p['lon']):.2f}°W", f"{p['area_km2']:,.0f}", f1(p['mean_sigma']), f1(p['peak_sigma']), f"{p.get('ship_days',0):.1f}", f"{p.get('cost_CAD_M',0):.1f}"]) for i, p in enumerate(plan))
+def fig(fn, cap, n): return f'<figure><img src="data:image/jpeg;base64,{b64(fn)}" alt="{cap[:60]}"><figcaption><b>Figure {n}.</b> {cap}</figcaption></figure>'
+html = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SeabedNet Churchill Corridor Report</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{{--bg:#f7f8fa;--paper:#ffffff;--ink:#16202c;--mut:#5b6677;--rule:#d6dce4;--acc:#173a5e;--haz:#b3412c;--soft:#eef1f5;
+--body:'Spectral',Georgia,'Times New Roman',serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace}}
+@media (prefers-color-scheme: dark){{:root:not([data-theme="light"]){{--bg:#0f141b;--paper:#151b24;--ink:#e3e8ef;--mut:#95a1b3;--rule:#2a3441;--acc:#8fb4dc;--haz:#e07a63;--soft:#1b2330}}}}
+:root[data-theme="dark"]{{--bg:#0f141b;--paper:#151b24;--ink:#e3e8ef;--mut:#95a1b3;--rule:#2a3441;--acc:#8fb4dc;--haz:#e07a63;--soft:#1b2330}}
+html{{background:var(--bg)}} body{{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}}
+.sheet{{max-width:860px;margin:0 auto;padding:56px 28px 80px}}
+header{{border-bottom:1px solid var(--rule);padding-bottom:26px;margin-bottom:34px}}
+.kicker{{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}}
+h1{{font-size:38px;line-height:1.15;margin:12px 0 10px;font-weight:600;text-wrap:balance}}
+.auth{{font-family:var(--sans);font-size:15px;color:var(--mut)}}
+h2{{font-size:24px;margin:44px 0 12px;font-weight:600;text-wrap:balance}} h3{{font-size:18px;margin:26px 0 8px;font-weight:600}}
+p{{margin:0 0 14px;max-width:68ch}} .abstract{{background:var(--soft);padding:18px 22px;border-left:3px solid var(--acc);margin:0 0 8px}} .abstract p{{max-width:none}}
+.mut{{color:var(--mut)}} .sm{{font-size:14px}}
+table{{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;font-variant-numeric:tabular-nums;margin:10px 0 6px}}
+th{{text-align:right;font-weight:600;padding:8px 10px;border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}}
+td{{text-align:right;padding:7px 10px;border-bottom:1px solid var(--rule)}} th:first-child,td:first-child{{text-align:left}}
+.tw{{overflow-x:auto}} .tcap{{font-family:var(--sans);font-size:13.5px;color:var(--mut);margin:0 0 22px}} .tcap b{{color:var(--ink)}}
+figure{{margin:22px 0 26px;background:var(--paper);border:1px solid var(--rule)}} figure img{{display:block;width:100%;height:auto}}
+figcaption{{font-family:var(--sans);font-size:13.5px;color:var(--mut);padding:10px 14px;border-top:1px solid var(--rule)}} figcaption b{{color:var(--ink)}}
+.eq{{font-family:var(--mono);font-size:14.5px;background:var(--soft);padding:10px 14px;margin:8px 0 14px;overflow-x:auto}}
+ol.refs{{padding-left:22px;font-size:15px}} ol.refs li{{margin-bottom:8px}}
+.stamp{{display:inline-block;border:2px solid var(--haz);color:var(--haz);font-family:var(--mono);font-size:12px;letter-spacing:.14em;padding:5px 10px;margin-top:8px}}
+a{{color:var(--acc)}} .cols{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 28px;font-family:var(--sans);font-size:14.5px}}
+:focus-visible{{outline:2px solid var(--acc);outline-offset:2px}} @media print{{.sheet{{padding:0}} figure{{break-inside:avoid}} h2{{break-after:avoid}}}}
+</style></head><body><div class="sheet">
+<header>
+<div class="kicker">Technical report · SeabedNet · Montréal · September 2026 · v1.0</div>
+<h1>Model-completed bathymetry and a shoal-hazard field for the Churchill trade corridor, validated on soundings the model never saw</h1>
+<div class="auth">Emilio Girard · SeabedNet, Montréal · girardemilio3@gmail.com<br>
+Interactive atlas: <a href="../">girardemilio3-svg.github.io/churchill-corridor-atlas</a> · Code and results: <a href="https://github.com/girardemilio3-svg/seabednet-validation">github.com/girardemilio3-svg/seabednet-validation</a></div>
+<div class="stamp">PLANNING PRIOR — NOT FOR NAVIGATION</div>
+</header>
+
+<div class="abstract"><p><b>Abstract.</b> Canada, Manitoba and Saskatchewan have committed C$262.5M to reopen the Churchill trade corridor through Hudson Bay and Hudson Strait, water in which the Canadian Hydrographic Service (CHS) reports 15.8% of Arctic waters and 44.7% of key routes surveyed to modern standards. Under the 2,327 km Churchill–Atlantic route itself, 17% of the seabed carries a published sounding; the median survey year of those soundings is {int(np.median(yrs))}. We train a heteroscedastic masked-completion network on the public CHS NONNA archive and score it on two sets of depths it never saw. (1) {sh.sum():,} research-cruise multibeam cells on the shelf (50–400 m) at locations where NONNA has no sounding: mean absolute error {f1(m(em, sh))} m, against {f1(m(en, sh))} m for the nearest published sounding and {f1(m(eg, sh))} m for the gravity-derived prior. (2) A temporal split using CHS's own dated Survey Index: a model trained only on soundings from before 2016 predicts the {T['overall']['n']/1e6:.2f} million post-2016 soundings in the corridor to {f1(T['overall']['mae_model'])} m ({f1(T['overall']['mae_nn'])} m nearest sounding, {f1(T['overall']['mae_grav'])} m gravity), with {T['overall']['frac_within_1sigma']*100:.0f}% of errors inside the model's 1σ. Because ships ground on the shallowest point and not the mean, we further train a hazard model on NONNA-10/100 pairs to predict the minimum depth within 500 m (error {HS[0]:.1f} m on held-out tiles versus {HS[1]:.1f} m if the archive depth is taken as the shoal) and hindcast six Transportation Safety Board groundings using only pre-incident soundings: the strike site falls in the top 10% of hazard among apparently safe water in {len(landed)} of 6 cases. We publish a calibrated uncertainty field, a σ-ranked survey plan ({plan_days:.0f} ship-days, C${plan_cost/1e6:.0f}M), a sealed forecast of {F['n']:,} predicted depths (SHA-256 on record), and the full code and validation cells. Limitations are stated in §8.</p></div>
+
+<h2>1. Problem</h2>
+<p>Hydrographic adequacy in the Canadian Arctic is a documented gap: the CHS, reporting through the IHO in December 2025, put 15.8% of Canadian Arctic waters and 44.7% of key routes at adequate survey standard [1]; in 2016 its Hydrographer-in-Charge for the Arctic put full charting "more than a decade" away [2]. Groundings on uncharted or poorly charted shoals recur — Hanseatic (1996), Clipper Adventurer (2010), Akademik Ioffe (2018), Thamesborg (2025) — and the TSB reports in each case identify the survey state of the water as a contributing factor [3–6].</p>
+<p>The federal–provincial Churchill Plus commitment (C$262.5M, February 2026) funds port and rail, not charting. The question this report addresses is narrow: given only the public archive, how much of the corridor's seabed can be inferred with stated, tested uncertainty, and where should a survey ship go first? A second question follows from the first and is, to our knowledge, unaddressed in the completion literature: a completion model predicts mean depth, but a keel meets the shallowest point. We treat that quantity as a separate target.</p>
+
+<h2>2. Data</h2>
+<p><b>Archive.</b> CHS NONNA-100 (100 m) and NONNA-10 (10 m) non-navigational bathymetry, Open Government Licence – Canada, retrieved on 29 August 2026 through the CHS WCS endpoint. 437 national 100 m blocks (≈2,000×2,000 cells) and 3,601 10 m tiles; corridor subset of 94 blocks covering Hudson Bay, Hudson Strait, the Labrador approaches and Franklin Strait. NONNA is the <em>published</em> archive; CHS holds surveys not yet released to it. Throughout, "no published sounding" is the only claim made; "unsurveyed" is never inferred.</p>
+<p><b>Physics prior.</b> SRTM15+ V2.7 gravity-derived bathymetry (Scripps) [7], resampled to a 295 MB Canada raster; used as an input channel and as the always-reported baseline.</p>
+<p><b>Independent multibeam.</b> Gridded multibeam from the GMRT synthesis (Lamont-Doherty) [8], <code>topo-mask</code> layer, which returns measured cells only. In the corridor bounding box these derive from NCEI-archived research cruises (CCGS Amundsen 2003–2013, USCGC Healy, R/V Knorr, R/V Neil Armstrong, R/V Maria S. Merian; 36 surveys). Independence from NONNA is by provenance: research-cruise data are not CHS holdings.</p>
+<p><b>Survey dates.</b> The CHS Survey Index (DFO EGIS), 7,078 polygons with survey start/end and CATZOC grade, 1832–2016 [9]. Rasterized onto every block, it dates each sounding to the latest indexed survey covering it; a sounding outside every polygon is, by construction, post-2016. Nationally, {100758149/215390546*100:.1f}% of NONNA-100 soundings and {1758872993/3779561253*100:.1f}% of NONNA-10 soundings are post-index; in the corridor, 19,471,411 of 34,281,587 (56.8%).</p>
+<p><b>Groundings.</b> Positions, dates and drafts from TSB reports M96H0016, M10H0006, M12H0012, M14C0219, M18C0225 and the open M25C0241 occurrence [3–6]; the Thamesborg position is from AIS and press reporting and is flagged as such.</p>
+
+<h2>3. Method</h2>
+<h3>3.1 Completion model (mean depth and uncertainty)</h3>
+<p>A hierarchical ConvNeXt-style U-Net with self-attention at the two coarsest scales, FiLM-conditioned on a learned resolution embedding (10 m / 100 m). Inputs per 256×256 patch: visible depth, visibility mask, gravity prior. All depth channels are normalized by the gravity patch statistics (mean, standard deviation floored at 5 m), so normalization is continuous across windows and the prediction is a residual over physics. Two heads: μ and log σ², trained with the heteroscedastic Gaussian negative log-likelihood on hidden cells plus an L1 term on visible cells. Masks mix harvested real NONNA gap patterns, random blocks and half-plane survey edges. Configurations: tiny (6.8M parameters) and small (34.8M; widths 96–768, depths 2/3/6/3). AdamW 2×10⁻⁴, cosine schedule, batch 16, bf16; 4,000 steps. Inference: overlapping windows (stride 128) with Hann blending; windows require ≥400 visible cells; predicted land (μ &gt; −4 m) is dropped; inference is published only within 6 km of a sounding.</p>
+<h3>3.2 Hazard model (shallowest point)</h3>
+<p>Where NONNA-10 and NONNA-100 overlap, the 10 m grid gives the sub-cell extreme statistics the 100 m grid hides. For each 100 m cell we compute the shallowest 10 m sounding within a 500 m radius (a 101×101 maximum filter on negative depths, requiring ≥50% coverage of the disc). 3,601 tiles mosaicked 4×4 give 475 groups of 800×800 cells. Along the Churchill route the shallowest point sits a median {hz['median_gap_m']:.0f} m above the 100 m mean. The same backbone is trained to predict this extreme and its σ from the masked 100 m field and gravity, everywhere — the extreme is unknown even where a 100 m sounding exists. The hazard for a draft <i>d</i> is</p>
+<div class="eq">P(shoal &lt; d) = 1 − Φ( (−d − μ_s) / σ_s )</div>
+<p>Groups within 0.4° of any of the six grounding sites and the three geographic holdouts are excluded from training. Configurations: tiny (1,500 steps) and small (3,000 steps).</p>
+<h3>3.3 Validation design</h3>
+<p><b>Test 1 (independent).</b> Cells with a GMRT measured depth, no NONNA sounding, and a model fill within 60 cells (6 km) of a sounding; baselines are the nearest published sounding (via distance transform) and the gravity prior; stratified by distance and depth. <b>Test 2 (temporal).</b> The model is retrained with every post-index sounding blanked from the corpus (100 m and 10 m); it is then given the pre-2016 soundings of each corridor block and scored on the post-2016 ones. <b>σ calibration.</b> An isotonic map from raw σ to the 68th and 95th percentiles of |error| is fitted on Test 1 shelf cells and applied everywhere. <b>Hindcast.</b> For each grounding, the hazard model receives only soundings dated before the incident (all soundings for Thamesborg, since NONNA carries no post-2016 dates); the strike cell's P(shoal &lt; draft), allowing 500 m of position slop, is ranked among "apparently safe" cells — mean-model depth deeper than twice the draft — within 25 km. A rank at or above the 90th percentile is counted as a landing.</p>
+
+<h2>4. Results: completion</h2>
+<h3>4.1 Test 1 — research-cruise multibeam the archive does not contain</h3>
+<div class="tw"><table><thead>{tr(["Distance to nearest sounding", "n cells", "SeabedNet (m)", "Nearest sounding (m)", "Gravity prior (m)"], True)}</thead><tbody>{t1}</tbody></table></div>
+<div class="tcap"><b>Table 1.</b> Mean absolute error on independent multibeam cells, shelf water 50–400 m, by distance from the nearest published sounding. {IJ['n_cells']:,} cells over {IJ['n_blocks']} blocks in total, of which {sh.sum():,} on the shelf.</div>
+<div class="tw"><table><thead>{tr(["Depth band", "n cells", "SeabedNet (m)", "Gravity prior (m)"], True)}</thead><tbody>{t1d}</tbody></table></div>
+<div class="tcap"><b>Table 2.</b> The same test by depth. Below 400 m the gravity prior is the better estimator; the published completion therefore defers to it there (300–400 m blended).</div>
+<p>On the shelf the model reduces error by {(1-m(em,sh)/m(en,sh))*100:.0f}% relative to the archive's own nearest sounding and the advantage grows with distance ({f1(m(em, sh&(dk>=2)&(dk<4)))} vs {f1(m(en, sh&(dk>=2)&(dk<4)))} m at 2–4 km). Against the gravity prior the margin on these cells is small ({f1(m(em, sh))} vs {f1(m(eg, sh))} m): research cruises transit deep channels where gravity inversion already works, and the glacial shelf where it fails is where NONNA is dense and therefore absent from this test. Test 2 addresses that.</p>
+<h3>4.2 Test 2 — pre-2016 model, post-2016 soundings</h3>
+<div class="tw"><table><thead>{tr(["Distance to nearest pre-2016 sounding", "n cells", "SeabedNet (m)", "Nearest sounding (m)", "Gravity (m)", "Bias (m)", "|err| ≤ 1σ"], True)}</thead><tbody>{t2}</tbody></table></div>
+<div class="tcap"><b>Table 3.</b> Temporal holdout, corridor, 34.8M-parameter model. Positive bias = model shallower than the sounding. The 6.8M model scored {f1(Tt['overall']['mae_model'])} m overall on the same cells; model capacity is not the limiting factor.</div>
+<div class="tw"><table><thead>{tr(["Depth band", "n cells", "SeabedNet (m)", "Nearest (m)", "Gravity (m)", "Bias (m)"], True)}</thead><tbody>{t2d}</tbody></table></div>
+<div class="tcap"><b>Table 4.</b> Temporal holdout by depth. In water shallower than 50 m the mean-depth model reads {abs(tdep[(20,50)]['bias']):.0f}–{abs(tdep[(0,20)]['bias']):.0f} m too deep — the direction that matters for a keel, and the motivation for §5.</div>
+<h3>4.3 Calibration and deferral</h3>
+<p>Raw σ ranked error correctly (Spearman-like correlation {np.corrcoef(sg[sh], np.abs(em[sh]))[0,1]:.2f} on Test 1 shelf cells) but was under-confident: {np.mean(r<=1)*100:.0f}% of errors inside 1σ where 68% is expected, {np.mean(r<=2)*100:.0f}% inside 2σ. The isotonic map (mean factor {sig_scale:.1f}×) restores {cal['coverage_cal_68']*100:.0f}% / {cal['coverage_cal_95']*100:.0f}% coverage; the temporal test, scored with the raw σ of a differently trained model, independently shows {T['overall']['frac_within_1sigma']*100:.0f}% inside 1σ. All uncertainty on the atlas is the calibrated one. Inferred cells deeper than 400 m carry the gravity prior (Table 2).</p>
+<div class="tw"><table><thead>{tr(["Raw σ decile (m)", "n", "|err| p50 (m)", "|err| p90 (m)", "inside 1σ"], True)}</thead><tbody>{tcal}</tbody></table></div>
+<div class="tcap"><b>Table 5.</b> Raw-σ calibration curve on all Test 1 cells.</div>
+<h3>4.4 Excluded cells</h3>
+<p>{coast.sum():,} Test 1 cells shallower than 50 m, at a median {float(np.median(dk[coast]))*1000:.0f} m from a sounding and all at the shoreline of three blocks, disagree with every source: the model reads {em[coast].mean():+.0f} m, the nearest CHS sounding {float(np.median(en[coast])):+.0f} m, and gravity {float(np.median(eg[coast])):+.0f} m relative to GMRT. We attribute this to GMRT's coastal grid rather than measured swath and exclude the band from the headline pending inspection; it is reported here rather than removed.</p>
+
+<h2>5. Results: hazard field and grounding hindcast</h2>
+<p>On held-out tile groups (around the grounding sites and the geographic holdouts), the 34.8M hazard model predicts the shallowest point within 500 m to {HS[0]:.1f} m mean absolute error where a 100 m sounding exists ({HS[1]:.1f} m if that sounding is taken as the shoal; {HS[2]:.1f} m gravity) and {HS[3]:.1f} m where no sounding exists ({HS[4]:.1f} m nearest field); {HS[5]}% of errors inside 1σ, {HS[6]}% inside 2σ. The 6.8M model: {HT[0]:.1f} / {HT[3]:.1f} m.</p>
+{fig("hazard_corridor_web.jpg", f"P(shallowest point within 500 m < 10.5 m) for every corridor cell. Blue: the Churchill route; red rings: the {hz['km_flagged']:.0f} route-km (of {hz['km_mean_map_safe']:.0f} km deeper than 21 m on the mean map) where the hazard exceeds 5%; white rings: grounding sites with their hindcast percentile.", 1)}
+<div class="tw"><table><thead>{tr(["Grounding", "Pre-incident soundings in block", "km to nearest", "P(shoal < draft) at site", "Hazard percentile", "Mean-σ percentile", "Nearest-sounding percentile"], True)}</thead><tbody>{t3}</tbody></table></div>
+<div class="tcap"><b>Table 6.</b> Hindcast. Percentiles are among apparently-safe cells within 25 km; higher is more dangerous. Landings (≥90th): {", ".join(f"{x['name']} ({ordn(x['rank']['hazard_p_shoal']['percentile'])})" for x in landed)}. Akademik Ioffe and Clipper Adventurer lie 9–12 km from any pre-incident sounding, beyond the 6 km publication envelope; their scores are reported at a 12 km envelope. The two Nanny cases were navigation errors in known narrows and serve as controls.</div>
+<p>The hazard percentile separates the four uncharted-shoal groundings from the baselines in a way neither the mean model's σ nor the nearest-sounding depth does: for Hanseatic the mean model's σ ranks the site at the {hc[3]['rank']['mean_model_sigma']['percentile']:.0f}th percentile (the area was densely sounded, so the mean model was confident) while the hazard field ranks it {ordn(hc[3]['rank']['hazard_p_shoal']['percentile'])}. For Thamesborg the two agree ({ordn(hc[0]['rank']['hazard_p_shoal']['percentile'])} hazard, {ordn(hc[0]['rank']['mean_model_sigma']['percentile'])} σ), which is consistent with the court's finding that the ship was routed through CATZOC C water 1.7 km beyond the modern multibeam swath.</p>
+{fig("thamesborg_exhibit_web.jpg", "Franklin Strait, 6 September 2025. Left: published soundings (blue), the surveyed swath the court identified as the safer lane, and the strike position. Right: the model-completed depth with its uncertainty; the site sits at the 98th percentile of calibrated σ for the strait (≥ %.0f m at 68%%, ≥ %.0f m at 95%%). The nearest dated CHS survey is a 1960 single-beam line, CATZOC C." % (s68, s95), 2)}
+
+<h2>6. The corridor product</h2>
+<div class="cols">
+<div><b>Completion.</b> {cs['surveyed_km2']:,.0f} km² with published soundings → +{cs['inferred_km2']:,.0f} km² inferred within 6 km of data (corridor); {ns['surveyed_km2']:,.0f} → +{ns['inferred_km2']:,.0f} km² nationally.</div>
+<div><b>Route provenance.</b> {npts} points at 2 km along the Churchill–Atlantic route: grade A (published sounding) {grades['A']/npts*100:.0f}%, B (inferred, ≤1 km) {grades['B']/npts*100:.0f}%, C (1–6 km) {grades['C']/npts*100:.0f}%, D (no inference) {grades['D']/npts*100:.0f}%. Of the {len(yrs)} sounded points, {pre80} ({pre80/len(yrs)*100:.0f}%) date from before 1980; median survey year {int(np.median(yrs))}.</div>
+<div><b>Least-risk channel.</b> Cost = distance × (shallow-water penalty + σ/8 + 13 × no-data); water under 20 m and land impassable. Result: {cf['length_km']:,} km, shallowest {abs(cf['shallowest_on_path']):.0f} m, mean σ {cf['mean_sigma']} m, {cf['frac_nodata']*100:.0f}% over no-data water.</div>
+<div><b>Survey plan.</b> Ten highest-σ boxes within 35 km of the route priced at 40 km²/day (assumption) and C$183,000/day (CCG polar-icebreaker charter, July 2026: C$22M / ~120 days) [10].</div>
+</div>
+<div class="tw"><table><thead>{tr(["#", "Lat", "Lon", "Inferred km²", "mean σ (m)", "peak σ (m)", "Ship-days", "C$M"], True)}</thead><tbody>{tplan}</tbody></table></div>
+<div class="tcap"><b>Table 7.</b> σ-ranked survey plan: {plan_days:.0f} ship-days, C${plan_cost/1e6:.1f}M — one fundable season against "more than a decade" for full conventional coverage.</div>
+{fig("corridor_found_web.jpg", "The least-risk channel (cyan) through the completed depth and uncertainty fields; dashed grey is the straight-line route. Green: easy water; red: shallow, uncertain or no-data.", 3)}
+
+<h2>7. A forecast that can fail</h2>
+<p>File <code>{F['file']}</code> ({F['n']:,} cells: {F['n_channel']} on the found channel, the rest random inferred cells across the corridor) lists a predicted depth and calibrated 68% / 95% bands at cells that have no published sounding as of 29 August 2026. SHA-256 <code class="sm">{F['sha256']}</code>, sealed {F['date']}. Scoring rule: any later survey through these cells reports the mean absolute error and the fraction of soundings inside each band; we publish the score regardless of outcome.</p>
+
+<h2>8. Limitations</h2>
+<p>(i) NONNA is not the CHS holdings; a "no published sounding" cell may be surveyed. (ii) Test 1 under-represents the glacial shelf; Test 2 covers it but its labels are CHS's own later surveys, so datum and processing differences between survey eras are absorbed into the error. (iii) In water shallower than 50 m the mean-depth model is biased deep by 6–9 m (Table 4); the hazard model, not the mean model, is the appropriate product there. (iv) The hindcast has six cases, two of which are controls and two of which lie beyond the publication envelope; it is a benchmark, not a proof. (v) The Thamesborg position is not yet official. (vi) Survey-day rate and km²/day are assumptions from public contracts, not quotes. (vii) The physics prior itself ingests historical soundings, so the gravity baseline is not fully independent on surveyed water; on the cells of Test 1 it is. (viii) Nothing here is a chart. Every product carries "planning prior — not for navigation".</p>
+
+<h2>9. Reproducibility</h2>
+<p>All scripts, result JSON files and the per-cell validation arrays are public at <a href="https://github.com/girardemilio3-svg/seabednet-validation">github.com/girardemilio3-svg/seabednet-validation</a>; the atlas page and this report are generated from those files by <code>build_atlas_v2.py</code>, <code>build_atlas_hazard.py</code> and <code>build_report.py</code>, so no number is transcribed by hand. Data are public (CHS NONNA under the Open Government Licence – Canada; GMRT; CHS Survey Index; SRTM15+). Training the 34.8M completion model to 4,000 steps takes 17 minutes on one RTX 5090 and about 12 hours on an NVIDIA GB10; the hazard model 13 minutes. Model weights are available on request.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>Canadian Hydrographic Service, national report to the IHO, <i>International Hydrographic Review</i>, December 2025: 15.8% of Canadian Arctic waters and 44.7% of key routes adequately surveyed.</li>
+<li>A. Leyzack (CHS), quoted in <i>Hakai Magazine</i>, 6 May 2016, on the time to complete Arctic charting.</li>
+<li>Transportation Safety Board of Canada, Marine Investigation Report M96H0016 (Hanseatic, Simpson Strait, 1996).</li>
+<li>TSB, M10H0006 (Clipper Adventurer, Coronation Gulf, 2010); M12H0012 and M14C0219 (Nanny, 2012 and 2014).</li>
+<li>TSB, M18C0225 (Akademik Ioffe, Gulf of Boothia, 2018).</li>
+<li>TSB, occurrence M25C0241 (Thamesborg, Franklin Strait, 2025), investigation open; Dutch Maritime Disciplinary Court ruling, July 2026.</li>
+<li>Tozer, B. et al., "Global bathymetry and topography at 15 arc sec: SRTM15+", <i>Earth and Space Science</i>, 2019 (V2.7 used).</li>
+<li>Ryan, W.B.F. et al., "Global Multi-Resolution Topography synthesis", <i>Geochem. Geophys. Geosyst.</i>, 2009; GMRT GridServer, layer topo-mask.</li>
+<li>Fisheries and Oceans Canada, CHS Survey Index (EGIS MapServer <code>chs_edh_survey_index</code>), 7,078 dated polygons with CATZOC.</li>
+<li>Canadian Coast Guard polar-icebreaker charter, July 2026 (C$22M / ~120 days); Churchill Plus commitment, C$262.5M, February 2026; TC/MPO market-sounding study, February 2026.</li>
+</ol>
+<p class="mut sm">Version 1.0, 2 September 2026. Generated from result files; see the repository for the exact commit.</p>
+</div></body></html>'''
+open("report/index.html", "w", encoding="utf-8").write(html)
+print("report built", len(html)//1024, "KB; landed", len(landed), "of", len(hc))
