@@ -57,7 +57,5 @@ H = f'''
 </section>
 '''
 src = sub1(src, "<!--HAZARD-->", H)
-src = sub1(src, "Test 2 used a 6.8M-parameter model trained in 3.7 hours; the full-size run is in progress and will replace these numbers, better or worse.",
-           "Test 2 used a 6.8M-parameter model trained in 3.7 hours; the full-size run is in progress and will replace these numbers, better or worse." if not os.path.exists("temporal_validation_v5_small_temporal.json") else "Test 2 numbers are from the full-size model.")
 open("churchill_atlas_v3.html", "w", encoding="utf-8").write(src)
 print("built v3", len(src)//1024, "KB;", verdict)

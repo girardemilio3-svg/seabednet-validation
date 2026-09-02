@@ -5,13 +5,15 @@ Inserts: Exhibit G (independent + temporal tests), Exhibit H (hashed forecast), 
 keel profile, corrected Exhibit D, rewritten claims, footer sources. Leaves a <!--HAZARD-->
 marker for the hazard/hindcast pass."""
 import json, re, numpy as np
-src = open("churchill_atlas.html", encoding="utf-8").read()
+src = open("churchill_atlas_v1.html", encoding="utf-8").read()
 def sub1(s, old, new):
     assert s.count(old) == 1, f"pattern count {s.count(old)}: {old[:60]}"
     return s.replace(old, new)
 A = np.load("indep_cells_corridor_out.npy"); em, en, eg, sg, dk, dep = A.T
 sh = (-dep >= 50) & (-dep < 400); m = lambda x, s: np.abs(x[s]).mean()
-T = json.load(open("temporal_validation_v5_tiny_temporal.json")); cal = json.load(open("sigma_calibration.json"))
+import os
+TF = "temporal_validation_v5_small_temporal.json" if os.path.exists("temporal_validation_v5_small_temporal.json") else "temporal_validation_v5_tiny_temporal.json"
+T = json.load(open(TF)); FULL = "small" in TF; cal = json.load(open("sigma_calibration.json"))
 F = json.load(open("forecast_manifest.json")); prof = json.load(open("route_profile_v2.json"))
 yrs = [p["survey_year"] for p in prof if p.get("survey_year")]; pre80 = sum(1 for y in yrs if y < 1980)
 grades = {g: sum(1 for p in prof if p["grade"] == g) for g in "ABCD"}; n = len(prof)
@@ -85,7 +87,7 @@ G = f'''
     <tbody><tr><td colspan="4" style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.1em">TEST 1 &middot; INDEPENDENT MULTIBEAM, SHELF 50&ndash;400 M</td></tr>{ind_rows}
     <tr><td colspan="4" style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.1em">TEST 2 &middot; PRE-2016 MODEL vs POST-2016 CHS SOUNDINGS, CORRIDOR</td></tr>{tmp_rows}</tbody>
   </table></div>
-  <p class="lede" style="font-size:14.5px"><b style="color:var(--text)">What the tests do not support.</b> Under 50 m of water the pre-2016 model reads {abs(tdep[(20,50)]['bias']):.0f}&ndash;{abs(tdep[(0,20)]['bias']):.0f} m <em>too deep</em> &mdash; the dangerous direction, and the reason the mean depth is the wrong target for navigation (see the hazard exhibit). Within 500 m of an old sounding, copying that sounding still beats the model ({fmt(td[(0,.5)]['mae_nn'])} vs {fmt(td[(0,.5)]['mae_model'])} m); the model earns its keep beyond that. Test 2 used a 6.8M-parameter model trained in 3.7 hours; the full-size run is in progress and will replace these numbers, better or worse. Coastal cells under 50 m in Test 1 disagree with every source including CHS&rsquo;s own nearest sounding and are excluded pending a look at the GMRT coastline product.</p>
+  <p class="lede" style="font-size:14.5px"><b style="color:var(--text)">What the tests do not support.</b> Under 50 m of water the pre-2016 model reads {abs(tdep[(20,50)]['bias']):.0f}&ndash;{abs(tdep[(0,20)]['bias']):.0f} m <em>too deep</em> &mdash; the dangerous direction, and the reason the mean depth is the wrong target for navigation (see the hazard exhibit). Within 500 m of an old sounding, copying that sounding still beats the model ({fmt(td[(0,.5)]['mae_nn'])} vs {fmt(td[(0,.5)]['mae_model'])} m); the model earns its keep beyond that. {"Test 2 is the full-size (34.8M-parameter) model, trained 17 minutes on a rented RTX 5090; the 6.8M model scored 13.5 m on the same test, so size is not what limits this." if FULL else "Test 2 used a 6.8M-parameter model trained in 3.7 hours; the full-size run is in progress and will replace these numbers, better or worse."} Coastal cells under 50 m in Test 1 disagree with every source including CHS&rsquo;s own nearest sounding and are excluded pending a look at the GMRT coastline product.</p>
 </section>
 '''
 src = sub1(src, '<section>\n  <div class="eyebrow">Exhibit A &mdash; the corridor, found</div>', G + '<!--HAZARD-->\n<section>\n  <div class="eyebrow">Exhibit A &mdash; the corridor, found</div>')
