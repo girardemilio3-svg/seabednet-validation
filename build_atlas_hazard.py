@@ -8,7 +8,7 @@ src = open("churchill_atlas_v2.html", encoding="utf-8").read()
 def sub1(s, old, new):
     assert s.count(old) == 1, f"count {s.count(old)}: {old[:50]}"; return s.replace(old, new)
 hc = json.load(open("hindcast.json")); hz = json.load(open("hazard_corridor.json"))
-log = open("hazard_tiny.log").read()
+log = open(os.environ.get("HZ_LOG", "hazard_small.log")).read()
 m_ex = re.search(r"model ([\d.]+) m \| '100 m sounding is the shoal' ([\d.]+) m \| gravity ([\d.]+) m", log)
 m_hid = re.search(r"hidden\):\s+model ([\d.]+) m \| nearest-field ([\d.]+) m", log)
 m_cov = re.search(r"σ coverage 1σ (\d+)%\s+2σ (\d+)%", log)
@@ -39,7 +39,7 @@ H = f'''
 <section>
   <div class="eyebrow">Exhibit I &mdash; the hazard field</div>
   <h2>Ships do not ground on the mean depth. This predicts the shallowest point.</h2>
-  <p class="lede">Every bathymetry model, including the one above, predicts the average depth of a 100 m cell. A keel meets the shallowest rock in it. Where CHS holds both 10 m and 100 m data, the shallowest point within 500 m sits a median <b style="color:var(--text)">{gap:.0f} m above</b> the 100 m mean on this route. So we trained a second model on {475} NONNA-10/100 tile pairs to predict that shallowest point and its uncertainty, and turned it into one number per cell: the probability that a 10.5 m draft touches.</p>
+  <p class="lede">Every bathymetry model, including the one above, predicts the average depth of a 100 m cell. A keel meets the shallowest rock in it. Where CHS holds both 10 m and 100 m data, the shallowest point within 500 m sits a median <b style="color:var(--text)">{gap:.0f} m above</b> the 100 m mean on this route. So we trained a second, 34.8M-parameter model on {475} NONNA-10/100 tile pairs to predict that shallowest point and its uncertainty, and turned it into one number per cell: the probability that a 10.5 m draft touches.</p>
   <div class="claims">
     <div class="claim"><span class="num">{m_ex.group(1) if m_ex else '&mdash;'} m</span><h3>Shallowest-point error, held-out tiles</h3>
       <p>Mean error of the predicted shallowest depth within 500 m on tiles held out around the grounding sites, against <b>{m_ex.group(2) if m_ex else '&mdash;'} m</b> if you assume the archive&rsquo;s 100 m depth is the shallowest point, and {m_ex.group(3) if m_ex else '&mdash;'} m for gravity. Where no sounding exists at all: {m_hid.group(1) if m_hid else '&mdash;'} m vs {m_hid.group(2) if m_hid else '&mdash;'} m. Bands: {m_cov.group(1) if m_cov else '&mdash;'}% inside 1&sigma;, {m_cov.group(2) if m_cov else '&mdash;'}% inside 2&sigma;.</p></div>
