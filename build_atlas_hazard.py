@@ -26,12 +26,14 @@ for r in hc:
                 f"<td{hot}>{f(pr)}</td><td>{f(ms)}</td><td>{f(nn)}</td></tr>")
     if pr is None: continue
     (landed if pr >= 90 else missed).append((r["name"], pr))
+def ordn(p):
+    p=int(round(p)); return f"{p}{'th' if 10<=p%100<=20 else {1:'st',2:'nd',3:'rd'}.get(p%10,'th')}"
 n_scored = len(landed) + len(missed)
 if n_scored == 0: verdict = "No site could be scored inside the fill domain; the hindcast is reported as not yet possible on published data."
 else:
     verdict = (f"On {len(landed)} of {n_scored} scored groundings the hazard field placed the strike site in the top 10% of danger among water that looked safe on the mean map"
-               + (f" ({', '.join(f'{n} {p:.0f}th' for n, p in landed)})" if landed else "") + "."
-               + (f" It missed {', '.join(f'{n} ({p:.0f}th)' for n, p in missed)}." if missed else " It missed none."))
+               + (f" ({', '.join(f'{n} {ordn(p)}' for n, p in landed)})" if landed else "") + "."
+               + (f" It missed {', '.join(f'{n} ({ordn(p)})' for n, p in missed)}." if missed else " It missed none."))
 gap = hz["median_gap_m"]
 H = f'''
 <section>

@@ -53,14 +53,25 @@ for f, (x0, x1, y0, y1) in blocks.items():
     if c1-c0 < 2 or r1-r0 < 2: continue
     im = np.array(Image.fromarray(np.nan_to_num(d["p"], nan=-1).astype("float32")).resize((c1-c0, r1-r0), Image.BILINEAR))
     im[im < 0] = np.nan; canvas[r0:r1, c0:c1] = np.where(np.isfinite(im), im, canvas[r0:r1, c0:c1])
-fig = plt.figure(figsize=(16, 16*Hc/Wc), facecolor="#04060c"); ax = fig.add_axes([0, 0, 1, 1]); ax.set_facecolor("#04060c")
+fig = plt.figure(figsize=(16, 16*Hc/Wc), facecolor="#04060c"); ax = fig.add_axes([0, 0, 1, 0.94]); ax.set_facecolor("#04060c")
+ax.imshow(np.where(np.isfinite(canvas), 0, 1), cmap=matplotlib.colors.ListedColormap(["#04060c", "#141b2c"]), vmin=0, vmax=1, interpolation="nearest")
 ax.imshow(np.clip(canvas, 0, 0.5), cmap="inferno", vmin=0, vmax=0.5, interpolation="nearest")
 rx = [(xl(q["lon"])-X0)/(X1-X0)*Wc for q in prof]; ry = [(Y1-yl(q["lat"]))/(Y1-Y0)*Hc for q in prof]
 ax.plot(rx, ry, color="#6aa9e0", lw=0.9, alpha=0.9)
-for q in flag: ax.plot((xl(q["lon"])-X0)/(X1-X0)*Wc, (Y1-yl(q["lat"]))/(Y1-Y0)*Hc, "o", ms=4, mfc="none", mec="#ff5d4d", mew=0.8)
+for q in flag: ax.plot((xl(q["lon"])-X0)/(X1-X0)*Wc, (Y1-yl(q["lat"]))/(Y1-Y0)*Hc, "o", ms=11, mfc="none", mec="#ff5d4d", mew=1.6)
+try:
+    for r in json.load(open("hindcast.json")):
+        if "rank" not in r: continue
+        px, py = (xl(r["lon"])-X0)/(X1-X0)*Wc, (Y1-yl(r["lat"]))/(Y1-Y0)*Hc
+        if not (0 <= px <= Wc and 0 <= py <= Hc): continue
+        pr = r["rank"]["hazard_p_shoal"]["percentile"]
+        ax.plot(px, py, "o", ms=14, mfc="none", mec="#ffffff", mew=1.8)
+        ax.annotate(f"{r['name'] if r['date'][:4] in r['name'] else r['name']+' '+r['date'][:4]} — hazard {pr:.0f}th pct" if pr is not None else r["name"], (px, py), xytext=(22, -6), textcoords="offset points", color="#ffffff", fontsize=11, family="monospace",
+                    bbox=dict(boxstyle="round,pad=0.25", fc="#04060c", ec="#ffffff", lw=0.6, alpha=0.85))
+except Exception as e: print("site markers skipped:", e)
 ax.set_xticks([]); ax.set_yticks([])
 fig.text(0.01, 0.985, "THE HAZARD FIELD — P(shallowest point within 500 m < 10.5 m draft), every cell of the corridor", color="#d8e0ee", fontsize=13, va="top", family="monospace")
-fig.text(0.01, 0.955, f"black = safe · yellow = >50% · blue line = route · red rings = route km the mean map calls safe (>21 m) but the hazard field flags (P>5%): {stats['km_flagged']:.0f} km of {stats['km_mean_map_safe']:.0f} km", color="#7c8aa6", fontsize=10.5, va="top", family="monospace")
+fig.text(0.01, 0.955, f"black = safe · grey = no inference · yellow = >50% · blue line = route · red rings = route km the mean map calls safe (>21 m) but the hazard field flags (P>5%): {stats['km_flagged']:.0f} km of {stats['km_mean_map_safe']:.0f} km", color="#7c8aa6", fontsize=10.5, va="top", family="monospace")
 fig.savefig("hazard_corridor.png", dpi=110, facecolor="#04060c")
 Image.open("hazard_corridor.png").convert("RGB").save("hazard_corridor_web.jpg", quality=82)
 print("HAZARD_ROUTE_DONE")
