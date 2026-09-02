@@ -1,0 +1,9 @@
+{
+ "file": "forecast_2026-09-02.csv",
+ "sha256": "4d3f5dc8a5c2b50f3f72fba95384581fc778d6d453a3eec46aa2dc383c66be45",
+ "n": 1314,
+ "n_channel": 314,
+ "date": "2026-09-02",
+ "model": "SeabedNet v5-small corridor completion + depth gate + isotonic \u03c3 (2026-09-02)",
+ "rule": "A future survey scores this file: MAE, and the share of soundings inside the 68 % / 95 % bands. Anything outside CHS NONNA-100 as of 2026-08-29 counts."
+}
