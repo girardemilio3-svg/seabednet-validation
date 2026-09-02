@@ -1,0 +1,5 @@
+===== HAZARD held-out (grounding-site + geographic groups) =====
+shoal MAE where a 100 m sounding EXISTS: model 4.03 m | '100 m sounding is the shoal' 10.44 m | gravity 11.60 m
+shoal MAE where NO sounding (hidden):     model 9.38 m | nearest-field 11.14 m
+σ coverage 1σ 77%  2σ 94%
+HAZARD_DONE
