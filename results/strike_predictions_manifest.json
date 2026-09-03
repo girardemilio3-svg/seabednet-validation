@@ -1,0 +1,61 @@
+{
+ "file": "strike_predictions_2026-09-03.csv",
+ "sha256": "a33994d6999ab30b94fc2ca69e294a4ebb8b7fc29fcbb7f5c247ce50a4df2322",
+ "date": "2026-09-03",
+ "model": "SeabedNet hazard-small (34.8M) + v5-small mean model; inputs: full published NONNA-100 archive (2026-08-29 snapshot)",
+ "rule": "Graded verbatim against TSB occurrence positions when obtained (ATIP request drafted 2026-09-03). A prediction counts as a hit if the TSB position lies within 2 km; the Rosaire case is void if TSB places it outside the stated search area.",
+ "incidents": [
+  {
+   "name": "Nanny 2010",
+   "date": "2010-09-01",
+   "place": "Simpson Strait, eastern approach, near Gjoa Haven",
+   "draft_assumed_m": 9.2,
+   "predicted_lat": 68.64425,
+   "predicted_lon": -97.76188,
+   "p_shoal_lt_draft": 0.9998,
+   "predicted_shoal_depth_m": 0.7,
+   "mean_map_depth_m": -11.6,
+   "candidates_in_search_area": 16596,
+   "note": "laden shuttle tanker; sources: 'eastern approach to Simpson Strait', '~50 km southwest of Gjoa Haven'"
+  },
+  {
+   "name": "Mokami 2010",
+   "date": "2010-08-08",
+   "place": "Pangnirtung harbour approach, Cumberland Sound",
+   "draft_assumed_m": 5.2,
+   "predicted_lat": 66.09032,
+   "predicted_lon": -65.99351,
+   "p_shoal_lt_draft": 0.7066,
+   "predicted_shoal_depth_m": 0.8,
+   "mean_map_depth_m": -50.1,
+   "candidates_in_search_area": 3553,
+   "note": "grounded at low tide in the harbour approach; refloated on the tide"
+  },
+  {
+   "name": "Dorsch 2012",
+   "date": "2012-10-24",
+   "place": "Regina Narrows, Chesterfield Inlet",
+   "draft_assumed_m": 4.6,
+   "predicted_lat": 63.99312,
+   "predicted_lon": -94.19941,
+   "p_shoal_lt_draft": 0.7121,
+   "predicted_shoal_depth_m": 0.9,
+   "mean_map_depth_m": -12.8,
+   "candidates_in_search_area": 14,
+   "note": "cited in TSB M14C0219; shuttle tanker, day before the Nanny grounding"
+  },
+  {
+   "name": "Rosaire A. Desgagnes 2025",
+   "date": "2025-08-23",
+   "place": "Arctic Bay / Adams Sound approach (position disputed: Shipfax says Arctic Bay; other summaries say Pelly Bay)",
+   "draft_assumed_m": 7.5,
+   "predicted_lat": 73.06742,
+   "predicted_lon": -84.46646,
+   "p_shoal_lt_draft": 0.8309,
+   "predicted_shoal_depth_m": 0.4,
+   "mean_map_depth_m": -31.8,
+   "candidates_in_search_area": 7335,
+   "note": "TSB M25C0219 open; sealift to Nanisivik supports the Arctic Bay reading; if TSB says Pelly Bay this prediction is simply wrong and will be reported as such"
+  }
+ ]
+}

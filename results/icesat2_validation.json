@@ -1,0 +1,293 @@
+{
+ "source": "ICESat-2 ATL24 (NASA, release 006) via SlideRule atl24x; bathymetry photons, confidence >= 0.6; cells: >=8 photons, MAD <= 1.5 m; per-block datum offset fitted on NONNA-sounded cells",
+ "overall": {
+  "n": 57993,
+  "model": 29.150012969970703,
+  "nearest": 29.176925659179688,
+  "gravity": 30.899391174316406,
+  "bias": 2.322702169418335,
+  "within_68": 0.2228199955167003
+ },
+ "by_depth": {
+  "5-10": {
+   "n": 481,
+   "model": 13.408077239990234,
+   "nearest": 15.72718620300293,
+   "gravity": 14.119328498840332,
+   "bias": -13.168957710266113,
+   "within_68": 0.3367983367983368
+  },
+  "10-20": {
+   "n": 620,
+   "model": 41.164031982421875,
+   "nearest": 39.90723419189453,
+   "gravity": 23.289987564086914,
+   "bias": -39.14601135253906,
+   "within_68": 0.20483870967741935
+  },
+  "20-40": {
+   "n": 29854,
+   "model": 15.764511108398438,
+   "nearest": 15.854351997375488,
+   "gravity": 16.974271774291992,
+   "bias": -7.132955551147461,
+   "within_68": 0.25889328063241107
+  }
+ },
+ "by_distance": {
+  "0-0.5": {
+   "n": 16592,
+   "model": 36.04170608520508,
+   "nearest": 36.87870407104492,
+   "gravity": 38.68598556518555,
+   "bias": 10.235239028930664,
+   "within_68": 0.19250241080038571
+  },
+  "0.5-1": {
+   "n": 15064,
+   "model": 24.64478874206543,
+   "nearest": 25.292699813842773,
+   "gravity": 25.734996795654297,
+   "bias": -4.237117290496826,
+   "within_68": 0.22623473181093998
+  },
+  "1-2": {
+   "n": 14546,
+   "model": 22.577274322509766,
+   "nearest": 23.280715942382812,
+   "gravity": 23.93712615966797,
+   "bias": -4.2097673416137695,
+   "within_68": 0.25498418809294654
+  },
+  "2-6": {
+   "n": 11789,
+   "model": 33.314632415771484,
+   "nearest": 30.574222564697266,
+   "gravity": 35.12834930419922,
+   "bias": 7.632805347442627,
+   "within_68": 0.22147764865552633
+  }
+ },
+ "boxes": {
+  "churchill_approach": {
+   "blocks": [
+    {
+     "block": "b0038_0031",
+     "offset_m": 37.54,
+     "n_cells": 41820,
+     "n_sounded": 1833,
+     "n_scored": 31323,
+     "laser_vs_nonna_mae": 16.365087509155273
+    },
+    {
+     "block": "b0039_0031",
+     "offset_m": 62.66,
+     "n_cells": 5060,
+     "n_sounded": 33,
+     "n_scored": 1500,
+     "laser_vs_nonna_mae": 17.596458435058594
+    }
+   ]
+  },
+  "nelson_hayes": {
+   "blocks": [
+    {
+     "block": "b0039_0032",
+     "offset_m": 37.78,
+     "n_cells": 6724,
+     "n_sounded": 849,
+     "n_scored": 5694,
+     "laser_vs_nonna_mae": 8.509095191955566
+    }
+   ]
+  },
+  "chesterfield": {
+   "blocks": [
+    {
+     "block": "b0035_0032",
+     "offset_m": 30.53,
+     "n_cells": 749,
+     "n_sounded": 49,
+     "n_scored": 341,
+     "laser_vs_nonna_mae": 23.553409576416016
+    }
+   ]
+  },
+  "rankin_whale_cove": {
+   "blocks": [
+    {
+     "block": "b0035_0032",
+     "offset_m": -2.07,
+     "n_cells": 665,
+     "n_sounded": 83,
+     "n_scored": 3,
+     "laser_vs_nonna_mae": 5.199429988861084
+    },
+    {
+     "block": "b0036_0031",
+     "offset_m": 34.05,
+     "n_cells": 3639,
+     "n_sounded": 201,
+     "n_scored": 689,
+     "laser_vs_nonna_mae": 18.930274963378906
+    },
+    {
+     "block": "b0036_0032",
+     "offset_m": 39.59,
+     "n_cells": 4482,
+     "n_sounded": 614,
+     "n_scored": 3182,
+     "laser_vs_nonna_mae": 19.629549026489258
+    }
+   ]
+  },
+  "southampton_coral": {
+   "blocks": [
+    {
+     "block": "b0034_0035",
+     "offset_m": -1.55,
+     "n_cells": 317,
+     "n_sounded": 27,
+     "n_scored": 54,
+     "laser_vs_nonna_mae": 1.033231496810913
+    }
+   ]
+  },
+  "hudson_strait_south": {
+   "blocks": [
+    {
+     "block": "b0036_0039",
+     "offset_m": 148.33,
+     "n_cells": 6435,
+     "n_sounded": 1363,
+     "n_scored": 4505,
+     "laser_vs_nonna_mae": 44.79277801513672
+    },
+    {
+     "block": "b0036_0040",
+     "offset_m": 234.04,
+     "n_cells": 746,
+     "n_sounded": 289,
+     "n_scored": 457,
+     "laser_vs_nonna_mae": 6.067105770111084
+    },
+    {
+     "block": "b0037_0039",
+     "offset_m": 152.8,
+     "n_cells": 4317,
+     "n_sounded": 108,
+     "n_scored": 1435,
+     "laser_vs_nonna_mae": 10.020873069763184
+    },
+    {
+     "block": "b0037_0040",
+     "offset_m": 239.46,
+     "n_cells": 4616,
+     "n_sounded": 1508,
+     "n_scored": 2840,
+     "laser_vs_nonna_mae": 69.83049011230469
+    }
+   ]
+  },
+  "big_island_kimmirut": {
+   "blocks": [
+    {
+     "block": "b0036_0039",
+     "offset_m": 296.27,
+     "n_cells": 441,
+     "n_sounded": 103,
+     "n_scored": 261,
+     "laser_vs_nonna_mae": 18.75716209411621
+    },
+    {
+     "block": "b0036_0040",
+     "offset_m": 173.53,
+     "n_cells": 2302,
+     "n_sounded": 191,
+     "n_scored": 1606,
+     "laser_vs_nonna_mae": 45.57548522949219
+    }
+   ]
+  },
+  "frobisher": {
+   "blocks": [
+    {
+     "block": "b0035_0040",
+     "offset_m": 96.6,
+     "n_cells": 1626,
+     "n_sounded": 528,
+     "n_scored": 604,
+     "laser_vs_nonna_mae": 77.39173889160156
+    },
+    {
+     "block": "b0035_0041",
+     "offset_m": 250.17,
+     "n_cells": 1533,
+     "n_sounded": 138,
+     "n_scored": 425,
+     "laser_vs_nonna_mae": 142.14447021484375
+    },
+    {
+     "block": "b0036_0041",
+     "offset_m": 356.95,
+     "n_cells": 100,
+     "n_sounded": 72,
+     "n_scored": 20,
+     "laser_vs_nonna_mae": 79.02554321289062
+    }
+   ]
+  },
+  "simpson_strait": {
+   "blocks": [
+    {
+     "block": "b0030_0029",
+     "offset_m": 1.88,
+     "n_cells": 195,
+     "n_sounded": 83,
+     "n_scored": 1,
+     "laser_vs_nonna_mae": 3.9790399074554443
+    },
+    {
+     "block": "b0030_0030",
+     "offset_m": 25.42,
+     "n_cells": 1645,
+     "n_sounded": 516,
+     "n_scored": 705,
+     "laser_vs_nonna_mae": 8.578509330749512
+    }
+   ]
+  },
+  "gjoa_rae": {
+   "blocks": [
+    {
+     "block": "b0030_0030",
+     "offset_m": 10.1,
+     "n_cells": 2650,
+     "n_sounded": 118,
+     "n_scored": 592,
+     "laser_vs_nonna_mae": 15.656510353088379
+    },
+    {
+     "block": "b0030_0031",
+     "offset_m": 6.99,
+     "n_cells": 1443,
+     "n_sounded": 51,
+     "n_scored": 479,
+     "laser_vs_nonna_mae": 7.662191390991211
+    }
+   ]
+  },
+  "franklin_tasmania": {
+   "blocks": [
+    {
+     "block": "b0027_0030",
+     "offset_m": 158.1,
+     "n_cells": 1520,
+     "n_sounded": 210,
+     "n_scored": 1277,
+     "laser_vs_nonna_mae": 35.860206604003906
+    }
+   ]
+  }
+ }
+}

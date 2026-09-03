@@ -31,3 +31,9 @@ SeabedNet · Montréal · 2026
 
 ## The bet, graded monthly
 `grade_forecast.py` re-fetches every corridor block holding a sealed forecast cell from the CHS WCS on the 1st of each month (`monthly_grade.sh`, cron on the SeabedNet workstation), scores any sealed cell that has since received a CHS sounding, and publishes the result to the atlas (`grades/latest.json`). The sealed file is hash-checked before every grade and never modified.
+
+## Sealed strike-point predictions
+`results/strike_predictions_2026-09-03.csv` (+ OTS proof): for the four Arctic groundings known only by place name (Nanny 2010, Mokami 2010, Dorsch 2012, Rosaire A. Desgagnés 2025), the hazard model's predicted strike coordinate within the reported area — sealed before the TSB occurrence positions are obtained, graded verbatim when they arrive (hit = within 2 km).
+
+## Attempted Test 3: ICESat-2 ATL24 laser bathymetry (negative result)
+`results/icesat2_validation.json` / `_strict.json`, `icesat2_eval.py`. NASA's ATL24 seafloor photons over 12 corridor boxes (~3.6M photons): where the fitted datum offset is physical (±3 m), laser agrees with NONNA soundings to 1–5 m — an independent check of the archive itself — but almost no photon cells with NO published sounding survive the quality gates in this turbid water (124 cells nationally), so ATL24 cannot score the model's fills here. Recorded as a negative result with the full per-block table.

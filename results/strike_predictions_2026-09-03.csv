@@ -1,0 +1,5 @@
+candidates_in_search_area,date,draft_assumed_m,mean_map_depth_m,name,note,p_shoal_lt_draft,place,predicted_lat,predicted_lon,predicted_shoal_depth_m
+16596,2010-09-01,9.2,-11.6,Nanny 2010,"laden shuttle tanker; sources: 'eastern approach to Simpson Strait', '~50 km southwest of Gjoa Haven'",0.9998,"Simpson Strait, eastern approach, near Gjoa Haven",68.64425,-97.76188,0.7
+3553,2010-08-08,5.2,-50.1,Mokami 2010,grounded at low tide in the harbour approach; refloated on the tide,0.7066,"Pangnirtung harbour approach, Cumberland Sound",66.09032,-65.99351,0.8
+14,2012-10-24,4.6,-12.8,Dorsch 2012,"cited in TSB M14C0219; shuttle tanker, day before the Nanny grounding",0.7121,"Regina Narrows, Chesterfield Inlet",63.99312,-94.19941,0.9
+7335,2025-08-23,7.5,-31.8,Rosaire A. Desgagnes 2025,TSB M25C0219 open; sealift to Nanisivik supports the Arctic Bay reading; if TSB says Pelly Bay this prediction is simply wrong and will be reported as such,0.8309,Arctic Bay / Adams Sound approach (position disputed: Shipfax says Arctic Bay; other summaries say Pelly Bay),73.06742,-84.46646,0.4
