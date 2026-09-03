@@ -1,0 +1,43 @@
+{
+ "version": "1.0",
+ "date": "2026-09-03",
+ "n_targets": 6686037,
+ "leaderboard": [
+  {
+   "method": "nearest train sounding",
+   "mae": 18.924932237906667,
+   "independent": true
+  },
+  {
+   "method": "SRTM15+ V2.7 gravity prior",
+   "mae": 18.94842545464401,
+   "independent": true
+  },
+  {
+   "method": "gravity trend + natural-neighbour residual",
+   "mae": 16.780768277231484,
+   "independent": true
+  },
+  {
+   "method": "gravity trend + inverse-distance residual (k=12)",
+   "mae": 16.182936843146997,
+   "independent": true
+  },
+  {
+   "method": "GEBCO 2024/25 (NCEI global mosaic) \u2014 contains the test soundings via IBCAO v5; reference only",
+   "mae": 6.222603430217324,
+   "independent": false
+  },
+  {
+   "method": "SeabedNet v5 tiny (6.8M), trained on TRAIN only",
+   "mae": 13.549896240234375,
+   "independent": true
+  },
+  {
+   "method": "SeabedNet v5 small (34.8M), trained on TRAIN only",
+   "mae": 13.260026931762695,
+   "frac_within_1sigma": 0.7369959688029555,
+   "independent": true
+  }
+ ]
+}

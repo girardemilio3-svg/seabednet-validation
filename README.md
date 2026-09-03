@@ -25,3 +25,9 @@ GMRT GridServer `layer=topo-mask`; CHS Survey Index (DFO EGIS MapServer `chs_edh
 Model weights are not included (v5-small 418 MB); ask.
 
 SeabedNet · Montréal · 2026
+
+## Benchmark: NONNA-Temporal-Churchill v1
+`benchmark/` — the temporal-holdout split as a public benchmark: index rasters for 94 corridor blocks, 6,686,037 target cells (`targets_corridor.npz`), the exact WCS request to re-fetch NONNA-100, `score.py`, and `leaderboard.json` with the independent baselines and SeabedNet. Rules and citation in `benchmark/README.md`. Submit scores by issue or PR.
+
+## The bet, graded monthly
+`grade_forecast.py` re-fetches every corridor block holding a sealed forecast cell from the CHS WCS on the 1st of each month (`monthly_grade.sh`, cron on the SeabedNet workstation), scores any sealed cell that has since received a CHS sounding, and publishes the result to the atlas (`grades/latest.json`). The sealed file is hash-checked before every grade and never modified.
