@@ -1,0 +1,822 @@
+{
+ "sites": {
+  "Thamesborg": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 0.79,
+    "p_shoal_at_site": 0.27041391007211835,
+    "shoal_depth_at_site": -38.265650408692714,
+    "mean_sigma_at_site": 49.70489484590321,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 93.86331938633194,
+      "n": 129060
+     },
+     "win10km_safe2x": {
+      "percentile": 94.36122730353095,
+      "n": 128379
+     },
+     "win10km_safe3x": {
+      "percentile": 95.88715805471124,
+      "n": 126336
+     },
+     "win25km_safe1.5x": {
+      "percentile": 94.7803803150249,
+      "n": 612650
+     },
+     "win25km_safe2x": {
+      "percentile": 95.57867638465729,
+      "n": 607533
+     },
+     "win25km_safe3x": {
+      "percentile": 97.32141659400362,
+      "n": 596360
+     },
+     "win50km_safe1.5x": {
+      "percentile": 94.09295511647855,
+      "n": 1185669
+     },
+     "win50km_safe2x": {
+      "percentile": 95.31687859156712,
+      "n": 1169754
+     },
+     "win50km_safe3x": {
+      "percentile": 97.50247642887969,
+      "n": 1137727
+     }
+    },
+    "mean_sigma_percentile_25km": 99.30999632941749
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 10.0,
+    "p_shoal_at_site": 0.014496229093140856,
+    "shoal_depth_at_site": -176.73083061643612,
+    "mean_sigma_at_site": 37.10700953046596,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 91.28871373544408,
+      "n": 89826
+     },
+     "win10km_safe2x": {
+      "percentile": 91.30497717403408,
+      "n": 89810
+     },
+     "win10km_safe3x": {
+      "percentile": 91.34464359314255,
+      "n": 89771
+     },
+     "win25km_safe1.5x": {
+      "percentile": 92.2277003934785,
+      "n": 568519
+     },
+     "win25km_safe2x": {
+      "percentile": 92.88679061445389,
+      "n": 564485
+     },
+     "win25km_safe3x": {
+      "percentile": 94.15191237205963,
+      "n": 556900
+     },
+     "win50km_safe1.5x": {
+      "percentile": 88.9691801762184,
+      "n": 1141538
+     },
+     "win50km_safe2x": {
+      "percentile": 90.14037379760114,
+      "n": 1126706
+     },
+     "win50km_safe3x": {
+      "percentile": 92.45447600628991,
+      "n": 1098267
+     }
+    },
+    "mean_sigma_percentile_25km": 93.50168737876116
+   },
+   "mask_25km": {
+    "dist_to_input_sounding_km": 25.0,
+    "p_shoal_at_site": null,
+    "shoal_depth_at_site": null,
+    "mean_sigma_at_site": null,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe1.5x": {
+      "percentile": null,
+      "n": 148765
+     },
+     "win25km_safe2x": {
+      "percentile": null,
+      "n": 148765
+     },
+     "win25km_safe3x": {
+      "percentile": null,
+      "n": 148765
+     },
+     "win50km_safe1.5x": {
+      "percentile": null,
+      "n": 719386
+     },
+     "win50km_safe2x": {
+      "percentile": null,
+      "n": 708666
+     },
+     "win50km_safe3x": {
+      "percentile": null,
+      "n": 688009
+     }
+    },
+    "mean_sigma_percentile_25km": null
+   }
+  },
+  "Akademik Ioffe": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 9.45,
+    "p_shoal_at_site": 0.26235629179651054,
+    "shoal_depth_at_site": -27.427488327026364,
+    "mean_sigma_at_site": 23.20846939086914,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 70.2207394543211,
+      "n": 21881
+     },
+     "win10km_safe2x": {
+      "percentile": 70.76079948420374,
+      "n": 21714
+     },
+     "win10km_safe3x": {
+      "percentile": 71.75882682607883,
+      "n": 21412
+     },
+     "win25km_safe1.5x": {
+      "percentile": 92.3374231213512,
+      "n": 160155
+     },
+     "win25km_safe2x": {
+      "percentile": 92.54834470242193,
+      "n": 159790
+     },
+     "win25km_safe3x": {
+      "percentile": 92.91350950603787,
+      "n": 159162
+     },
+     "win50km_safe1.5x": {
+      "percentile": 97.95971969939545,
+      "n": 677701
+     },
+     "win50km_safe2x": {
+      "percentile": 98.01815156423253,
+      "n": 677297
+     },
+     "win50km_safe3x": {
+      "percentile": 98.10998975856519,
+      "n": 676663
+     }
+    },
+    "mean_sigma_percentile_25km": 76.53420113899493
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 10.0,
+    "p_shoal_at_site": 0.31180372862244465,
+    "shoal_depth_at_site": -25.09136962890625,
+    "mean_sigma_at_site": 25.24180603027344,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 73.4071484071484,
+      "n": 20592
+     },
+     "win10km_safe2x": {
+      "percentile": 73.7257962249427,
+      "n": 20503
+     },
+     "win10km_safe3x": {
+      "percentile": 74.50342550150327,
+      "n": 20289
+     },
+     "win25km_safe1.5x": {
+      "percentile": 93.47315394085575,
+      "n": 159204
+     },
+     "win25km_safe2x": {
+      "percentile": 93.65492935586394,
+      "n": 158895
+     },
+     "win25km_safe3x": {
+      "percentile": 94.03427401519076,
+      "n": 158254
+     },
+     "win50km_safe1.5x": {
+      "percentile": 98.26730698189878,
+      "n": 676750
+     },
+     "win50km_safe2x": {
+      "percentile": 98.31786422866875,
+      "n": 676402
+     },
+     "win50km_safe3x": {
+      "percentile": 98.41199843138415,
+      "n": 675755
+     }
+    },
+    "mean_sigma_percentile_25km": 77.47883822650178
+   },
+   "mask_25km": {
+    "dist_to_input_sounding_km": 25.0,
+    "p_shoal_at_site": null,
+    "shoal_depth_at_site": null,
+    "mean_sigma_at_site": null,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe1.5x": {
+      "percentile": null,
+      "n": 32645
+     },
+     "win25km_safe2x": {
+      "percentile": null,
+      "n": 32645
+     },
+     "win25km_safe3x": {
+      "percentile": null,
+      "n": 32645
+     },
+     "win50km_safe1.5x": {
+      "percentile": null,
+      "n": 534552
+     },
+     "win50km_safe2x": {
+      "percentile": null,
+      "n": 534513
+     },
+     "win50km_safe3x": {
+      "percentile": null,
+      "n": 534507
+     }
+    },
+    "mean_sigma_percentile_25km": null
+   }
+  },
+  "Clipper Adventurer": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 12.41,
+    "p_shoal_at_site": 0.1858283254854738,
+    "shoal_depth_at_site": -39.023475646972656,
+    "mean_sigma_at_site": 11.058195114135742,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 98.74161768358309,
+      "n": 12079
+     },
+     "win10km_safe2x": {
+      "percentile": 98.74161768358309,
+      "n": 12079
+     },
+     "win10km_safe3x": {
+      "percentile": 98.74161768358309,
+      "n": 12079
+     },
+     "win25km_safe1.5x": {
+      "percentile": 83.4840579710145,
+      "n": 120750
+     },
+     "win25km_safe2x": {
+      "percentile": 83.61285292458777,
+      "n": 120564
+     },
+     "win25km_safe3x": {
+      "percentile": 83.950565877464,
+      "n": 120079
+     },
+     "win50km_safe1.5x": {
+      "percentile": 82.98408848419783,
+      "n": 301794
+     },
+     "win50km_safe2x": {
+      "percentile": 83.19746196266028,
+      "n": 301020
+     },
+     "win50km_safe3x": {
+      "percentile": 83.86527494533242,
+      "n": 298623
+     }
+    },
+    "mean_sigma_percentile_25km": 10.625062207624167
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 12.41,
+    "p_shoal_at_site": 0.1858283254854738,
+    "shoal_depth_at_site": -39.023475646972656,
+    "mean_sigma_at_site": 11.058195114135742,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 98.74161768358309,
+      "n": 12079
+     },
+     "win10km_safe2x": {
+      "percentile": 98.74161768358309,
+      "n": 12079
+     },
+     "win10km_safe3x": {
+      "percentile": 98.74161768358309,
+      "n": 12079
+     },
+     "win25km_safe1.5x": {
+      "percentile": 83.4840579710145,
+      "n": 120750
+     },
+     "win25km_safe2x": {
+      "percentile": 83.61285292458777,
+      "n": 120564
+     },
+     "win25km_safe3x": {
+      "percentile": 83.950565877464,
+      "n": 120079
+     },
+     "win50km_safe1.5x": {
+      "percentile": 82.98408848419783,
+      "n": 301794
+     },
+     "win50km_safe2x": {
+      "percentile": 83.19746196266028,
+      "n": 301020
+     },
+     "win50km_safe3x": {
+      "percentile": 83.86527494533242,
+      "n": 298623
+     }
+    },
+    "mean_sigma_percentile_25km": 10.625062207624167
+   },
+   "mask_25km": {
+    "dist_to_input_sounding_km": 25.0,
+    "p_shoal_at_site": null,
+    "shoal_depth_at_site": null,
+    "mean_sigma_at_site": null,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe1.5x": {
+      "percentile": null,
+      "n": 34792
+     },
+     "win25km_safe2x": {
+      "percentile": null,
+      "n": 34792
+     },
+     "win25km_safe3x": {
+      "percentile": null,
+      "n": 34792
+     },
+     "win50km_safe1.5x": {
+      "percentile": null,
+      "n": 215836
+     },
+     "win50km_safe2x": {
+      "percentile": null,
+      "n": 215248
+     },
+     "win50km_safe3x": {
+      "percentile": null,
+      "n": 213336
+     }
+    },
+    "mean_sigma_percentile_25km": null
+   }
+  },
+  "Hanseatic": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 0.34,
+    "p_shoal_at_site": 0.9388537330120615,
+    "shoal_depth_at_site": 1.8662256667397792,
+    "mean_sigma_at_site": 2.6827195326620217,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 93.23548181238036,
+      "n": 9402
+     },
+     "win10km_safe2x": {
+      "percentile": 95.39197217794523,
+      "n": 6901
+     },
+     "win10km_safe3x": {
+      "percentile": 95.4971369078605,
+      "n": 3842
+     },
+     "win25km_safe1.5x": {
+      "percentile": 97.53575816584372,
+      "n": 43137
+     },
+     "win25km_safe2x": {
+      "percentile": 98.70112000880596,
+      "n": 36339
+     },
+     "win25km_safe3x": {
+      "percentile": 99.2709689417891,
+      "n": 26885
+     },
+     "win50km_safe1.5x": {
+      "percentile": 97.94413932861464,
+      "n": 68098
+     },
+     "win50km_safe2x": {
+      "percentile": 98.95637860082304,
+      "n": 60750
+     },
+     "win50km_safe3x": {
+      "percentile": 99.51164314215949,
+      "n": 50373
+     }
+    },
+    "mean_sigma_percentile_25km": 17.521120559178843
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 10.0,
+    "p_shoal_at_site": 0.7833894056425807,
+    "shoal_depth_at_site": 1.1067062616348267,
+    "mean_sigma_at_site": 5.331160545349121,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 61.26331811263318,
+      "n": 3942
+     },
+     "win10km_safe2x": {
+      "percentile": 86.19575253924285,
+      "n": 2166
+     },
+     "win10km_safe3x": {
+      "percentile": 97.47899159663865,
+      "n": 476
+     },
+     "win25km_safe1.5x": {
+      "percentile": 86.34547778843081,
+      "n": 37548
+     },
+     "win25km_safe2x": {
+      "percentile": 94.55166740492311,
+      "n": 31606
+     },
+     "win25km_safe3x": {
+      "percentile": 98.61193398222599,
+      "n": 23630
+     },
+     "win50km_safe1.5x": {
+      "percentile": 89.67106105209267,
+      "n": 62504
+     },
+     "win50km_safe2x": {
+      "percentile": 95.24787118196262,
+      "n": 56017
+     },
+     "win50km_safe3x": {
+      "percentile": 98.63746338978734,
+      "n": 47118
+     }
+    },
+    "mean_sigma_percentile_25km": 74.79276086818959
+   },
+   "mask_25km": {
+    "dist_to_input_sounding_km": 27.0,
+    "p_shoal_at_site": null,
+    "shoal_depth_at_site": null,
+    "mean_sigma_at_site": null,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win50km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win50km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win50km_safe3x": {
+      "percentile": null,
+      "n": 0
+     }
+    },
+    "mean_sigma_percentile_25km": null
+   }
+  },
+  "Nanny 2012": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 6.35,
+    "p_shoal_at_site": 0.9534150892579852,
+    "shoal_depth_at_site": 17.201833724975586,
+    "mean_sigma_at_site": 9.153594970703125,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 92.74924471299094,
+      "n": 1986
+     },
+     "win10km_safe2x": {
+      "percentile": 92.26441631504923,
+      "n": 1422
+     },
+     "win10km_safe3x": {
+      "percentile": 95.30386740331491,
+      "n": 724
+     },
+     "win25km_safe1.5x": {
+      "percentile": 94.33186906617543,
+      "n": 28228
+     },
+     "win25km_safe2x": {
+      "percentile": 95.29009126466754,
+      "n": 24544
+     },
+     "win25km_safe3x": {
+      "percentile": 97.42403532751551,
+      "n": 19022
+     },
+     "win50km_safe1.5x": {
+      "percentile": 94.82361214204789,
+      "n": 51194
+     },
+     "win50km_safe2x": {
+      "percentile": 95.84921008691185,
+      "n": 46714
+     },
+     "win50km_safe3x": {
+      "percentile": 97.84128914563696,
+      "n": 39468
+     }
+    },
+    "mean_sigma_percentile_25km": 74.03031290743155
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 10.0,
+    "p_shoal_at_site": 0.9606591819584164,
+    "shoal_depth_at_site": 17.503522872924805,
+    "mean_sigma_at_site": 9.225387573242188,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 100.0,
+      "n": 786
+     },
+     "win10km_safe2x": {
+      "percentile": 100.0,
+      "n": 482
+     },
+     "win10km_safe3x": {
+      "percentile": 100.0,
+      "n": 118
+     },
+     "win25km_safe1.5x": {
+      "percentile": 95.09290665093644,
+      "n": 27124
+     },
+     "win25km_safe2x": {
+      "percentile": 95.96074467188947,
+      "n": 23742
+     },
+     "win25km_safe3x": {
+      "percentile": 97.74525103589302,
+      "n": 18583
+     },
+     "win50km_safe1.5x": {
+      "percentile": 96.08704332202036,
+      "n": 50090
+     },
+     "win50km_safe2x": {
+      "percentile": 97.03563338560724,
+      "n": 45912
+     },
+     "win50km_safe3x": {
+      "percentile": 98.57029388403494,
+      "n": 39029
+     }
+    },
+    "mean_sigma_percentile_25km": 73.78906579058209
+   },
+   "mask_25km": {
+    "status": "too few soundings left"
+   }
+  },
+  "Nanny 2014": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 0.0,
+    "p_shoal_at_site": 0.6243239533383015,
+    "shoal_depth_at_site": -4.0239600347170015,
+    "mean_sigma_at_site": 27.09637474078794,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 51.985007644128814,
+      "n": 20277
+     },
+     "win10km_safe2x": {
+      "percentile": 58.768893504096,
+      "n": 17334
+     },
+     "win10km_safe3x": {
+      "percentile": 70.47396421086572,
+      "n": 12406
+     },
+     "win25km_safe1.5x": {
+      "percentile": 73.21866084913576,
+      "n": 59590
+     },
+     "win25km_safe2x": {
+      "percentile": 78.73007929786743,
+      "n": 51956
+     },
+     "win25km_safe3x": {
+      "percentile": 87.28006778647261,
+      "n": 40126
+     },
+     "win50km_safe1.5x": {
+      "percentile": 78.7853719506164,
+      "n": 111211
+     },
+     "win50km_safe2x": {
+      "percentile": 84.24326890060392,
+      "n": 99018
+     },
+     "win50km_safe3x": {
+      "percentile": 91.38717233130669,
+      "n": 80264
+     }
+    },
+    "mean_sigma_percentile_25km": 98.00408037570251
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 10.0,
+    "p_shoal_at_site": 0.5260626084352001,
+    "shoal_depth_at_site": -14.34803522583675,
+    "mean_sigma_at_site": 21.539069287907065,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 27.16801053151226,
+      "n": 18231
+     },
+     "win10km_safe2x": {
+      "percentile": 32.574211808069506,
+      "n": 15193
+     },
+     "win10km_safe3x": {
+      "percentile": 45.22919535707259,
+      "n": 10166
+     },
+     "win25km_safe1.5x": {
+      "percentile": 52.50459957649183,
+      "n": 57614
+     },
+     "win25km_safe2x": {
+      "percentile": 59.801817342988386,
+      "n": 49853
+     },
+     "win25km_safe3x": {
+      "percentile": 73.40549102428723,
+      "n": 37880
+     },
+     "win50km_safe1.5x": {
+      "percentile": 62.66215040966723,
+      "n": 109235
+     },
+     "win50km_safe2x": {
+      "percentile": 69.75081256771396,
+      "n": 96915
+     },
+     "win50km_safe3x": {
+      "percentile": 81.56451075392857,
+      "n": 78018
+     }
+    },
+    "mean_sigma_percentile_25km": 95.93404609552083
+   },
+   "mask_25km": {
+    "dist_to_input_sounding_km": 25.0,
+    "p_shoal_at_site": null,
+    "shoal_depth_at_site": null,
+    "mean_sigma_at_site": null,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe1.5x": {
+      "percentile": null,
+      "n": 22253
+     },
+     "win25km_safe2x": {
+      "percentile": null,
+      "n": 19663
+     },
+     "win25km_safe3x": {
+      "percentile": null,
+      "n": 15902
+     },
+     "win50km_safe1.5x": {
+      "percentile": null,
+      "n": 73600
+     },
+     "win50km_safe2x": {
+      "percentile": null,
+      "n": 66593
+     },
+     "win50km_safe3x": {
+      "percentile": null,
+      "n": 56092
+     }
+    },
+    "mean_sigma_percentile_25km": null
+   }
+  }
+ },
+ "skill": {
+  "mask_0km": {
+   "hits_all": [
+    4,
+    6
+   ],
+   "p_binomial_all": 0.0012700000000000003,
+   "hits_uncharted4": [
+    3,
+    4
+   ],
+   "p_binomial_uncharted4": 0.0037000000000000006
+  },
+  "mask_10km": {
+   "hits_all": [
+    4,
+    6
+   ],
+   "p_binomial_all": 0.0012700000000000003,
+   "hits_uncharted4": [
+    3,
+    4
+   ],
+   "p_binomial_uncharted4": 0.0037000000000000006
+  },
+  "mask_25km": {
+   "hits_all": [
+    0,
+    0
+   ],
+   "p_binomial_all": null,
+   "hits_uncharted4": [
+    0,
+    0
+   ],
+   "p_binomial_uncharted4": null
+  }
+ }
+}

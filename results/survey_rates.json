@@ -1,0 +1,9 @@
+{
+ "cost_per_km2_cad": 2580,
+ "cost_per_line_km_cad": 722,
+ "swath_km": 0.35,
+ "overlap": 0.2,
+ "source": "CHS Arctic hydrographic contract to Sedna ROV Services (Iqaluit), C$6.5M over two seasons, 9,000+ line-km in the first (DFO, March 2024): ~C$720 per line-km; at a 350 m swath with 20% overlap, ~C$2,600 per km\u00b2",
+ "amundsen_context": "CCGS Amundsen 2021: ~38,700 km\u00b2 mapped over an ~80-day season (Copernicus ESSD 2024), i.e. several hundred km\u00b2/day in transit mapping of deep water; 40 km\u00b2/day is conservative for 100\u2013130 m shelf water",
+ "srtm15_release": "SRTM15+ V2.7 released 21 April 2025 (Scripps); inherits the cumulative NCEI multibeam archive of earlier point releases"
+}

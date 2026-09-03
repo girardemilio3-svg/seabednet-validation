@@ -8,6 +8,24 @@ src = open("churchill_atlas_v2.html", encoding="utf-8").read()
 def sub1(s, old, new):
     assert s.count(old) == 1, f"count {s.count(old)}: {old[:50]}"; return s.replace(old, new)
 hc = json.load(open("hindcast.json")); hz = json.load(open("hazard_corridor.json"))
+HB = json.load(open("hindcast_blind.json")) if os.path.exists("hindcast_blind.json") else None
+def ordn(p):
+    p=int(round(p)); return f"{p}{'th' if 10<=p%100<=20 else {1:'st',2:'nd',3:'rd'}.get(p%10,'th')}"
+BLIND = ""
+if HB:
+    S = HB["sites"]; K = HB["skill"]; names = ["Thamesborg", "Akademik Ioffe", "Clipper Adventurer", "Hanseatic", "Nanny 2012", "Nanny 2014"]
+    def cell(n, mask, key="win25km_safe2x"):
+        r = S.get(n, {}).get(mask, {}); v = r.get("ranks", {}).get(key, {}).get("percentile"); return "&mdash;" if v is None else f"{v:.0f}"
+    rows_b = "".join(f"<tr><td><b>{n}</b></td><td>{cell(n,'mask_0km')}</td><td><b>{cell(n,'mask_10km')}</b></td><td>{cell(n,'mask_25km')}</td><td>{cell(n,'mask_10km','win10km_safe2x')}</td><td>{cell(n,'mask_10km','win50km_safe2x')}</td><td>{cell(n,'mask_10km','win25km_safe1.5x')}</td><td>{cell(n,'mask_10km','win25km_safe3x')}</td></tr>" for n in names if n in S)
+    k25 = K["mask_10km"]; k0 = K["mask_0km"]
+    th = S["Thamesborg"]["mask_10km"]; th_pct = th["ranks"]["win25km_safe2x"]["percentile"]
+    BLIND = f"""
+  <h2 style="font-size:24px;margin-top:34px">The same hindcast, blind, and how much the denominator matters</h2>
+  <p class="lede">The table above still lets the model see every published sounding around a site at inference time, and NONNA carries no dates after 2016, so a post-grounding survey could be in that input. Here every sounding within 10 km of each site is removed from the input as well (the hazard model was trained with every tile group within 0.4&deg; of the sites excluded from the start), and a 25 km hole is shown too: at 25 km the site falls outside the model&rsquo;s inference envelope and it returns <em>no estimate</em>, which is the right answer, not a miss. Then the two choices that set the percentile &mdash; the comparison window and the definition of &ldquo;looked safe&rdquo; &mdash; are varied. Thamesborg with a 10 km hole in its input: <b style="color:var(--text)">{ordn(th_pct)} percentile</b>, nearest remaining sounding {th['dist_to_input_sounding_km']:.1f} km away, absolute P(shoal &lt; draft) {th['p_shoal_at_site']*100:.1f}%.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Grounding</th><th>Input: all soundings</th><th>Input: 10 km hole</th><th>Input: 25 km hole</th><th>10 km hole, 10 km window</th><th>10 km hole, 50 km window</th><th>10 km hole, safe = 1.5&times; draft</th><th>10 km hole, safe = 3&times; draft</th></tr></thead>
+    <tbody>{rows_b}</tbody></table></div>
+  <p class="lede" style="font-size:14px"><b style="color:var(--text)">Skill, not recall.</b> By construction 10% of apparently-safe cells sit above the 90th percentile, so the base rate is known exactly. With the 10 km hole, {k25['hits_all'][0]} of {k25['hits_all'][1]} sites land above it (binomial p = {k25['p_binomial_all']:.4f}); on the four uncharted-shoal groundings alone, {k25['hits_uncharted4'][0]} of {k25['hits_uncharted4'][1]} (p = {k25['p_binomial_uncharted4']:.4f}). With all soundings visible: {k0['hits_all'][0]} of {k0['hits_all'][1]} (p = {k0['p_binomial_all']:.4f}). The precision side of the ledger is stated too: corridor-wide, {hz['frac_p_gt_5pct']*100:.0f}% of cells exceed P = 5%, and on the route {hz['km_flagged']:.0f} km of {hz['km_mean_map_safe']:.0f} apparently-safe km are flagged. Six incidents cannot bound a false-alarm rate; what the flags buy is a survey order, and the survey is what tests them.</p>"""
 log = open(os.environ.get("HZ_LOG", "hazard_small.log")).read()
 m_ex = re.search(r"model ([\d.]+) m \| '100 m sounding is the shoal' ([\d.]+) m \| gravity ([\d.]+) m", log)
 m_hid = re.search(r"hidden\):\s+model ([\d.]+) m \| nearest-field ([\d.]+) m", log)
@@ -26,8 +44,6 @@ for r in hc:
                 f"<td{hot}>{f(pr)}</td><td>{f(ms)}</td><td>{f(nn)}</td></tr>")
     if pr is None: continue
     (landed if pr >= 90 else missed).append((r["name"], pr))
-def ordn(p):
-    p=int(round(p)); return f"{p}{'th' if 10<=p%100<=20 else {1:'st',2:'nd',3:'rd'}.get(p%10,'th')}"
 n_scored = len(landed) + len(missed)
 if n_scored == 0: verdict = "No site could be scored inside the fill domain; the hindcast is reported as not yet possible on published data."
 else:
@@ -53,7 +69,8 @@ H = f'''
   <div class="tblwrap"><table>
     <thead><tr><th>Grounding</th><th>Pre-incident soundings in block</th><th>km to nearest</th><th>P(shoal &lt; draft) at site</th><th>Hazard percentile</th><th>Mean-&sigma; percentile</th><th>Nearest-sounding percentile</th></tr></thead>
     <tbody>{''.join(rows)}</tbody></table></div>
-  <p class="lede" style="font-size:14px">Thamesborg uses all published soundings because NONNA carries no dates after 2016; its position is from AIS and press, not TSB. Akademik Ioffe and Clipper Adventurer sit 9&ndash;12 km from any pre-incident sounding, at the edge of what any completion should be trusted for; their scores are reported anyway. The two Nanny groundings were navigation errors in known narrows and are included as controls, not claims. Full per-site JSON in the validation repo.</p>
+  {BLIND}
+  <p class="lede" style="font-size:14px">Thamesborg (table above) uses all published soundings because NONNA carries no dates after 2016; its position is from AIS and press, not TSB. Akademik Ioffe and Clipper Adventurer sit 9&ndash;12 km from any pre-incident sounding, at the edge of what any completion should be trusted for; their scores are reported anyway. The two Nanny groundings were navigation errors in known narrows and are included as controls, not claims. Full per-site JSON in the validation repo.</p>
 </section>
 '''
 src = sub1(src, "<!--HAZARD-->", H)
