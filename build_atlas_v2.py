@@ -128,6 +128,10 @@ if SR:
       f"route, priced in ship-days. Coverage assumption: 40 km&sup2;/day, from a multibeam swath of ~3&times; water depth (300&ndash;400 m at 100&ndash;130 m), 8 knots for 20 hours (~300 line-km/day, ~100 km&sup2; raw), 20% line overlap and a 50% weather-and-ice downtime factor across an Arctic season. Two public contracts bracket the cost. Lower bound: {lo_src}, which prices the plan&rsquo;s {plan_area:,.0f} km&sup2; at about C${lo_cost/1e6:.0f}M. Upper bound: the Coast Guard&rsquo;s July 2026 polar-icebreaker charter at C$183,000/day (C$22M for ~120 days), which the table uses. For scale, {SR['amundsen_context']}.</p>")
     src = sub1(src, "Total: <b style=\"color:var(--text)\">~219 ship-days, C$40.1M</b>",
       f"Total: <b style=\"color:var(--text)\">~{plan_days:.0f} ship-days for {plan_area:,.0f} km&sup2;: C${lo_cost/1e6:.0f}M at the CHS contract rate, C$40.1M at the icebreaker charter rate</b>")
+# ---------- Exhibit D figure: re-rendered with the calibrated-σ annotation
+import base64 as _b64
+_i = src.index("Exhibit D &mdash; the stakes"); _j = src.index('<img src="data:image/jpeg;base64,', _i); _k = src.index('"', _j + len('<img src="'))
+src = src[:_j] + '<img src="data:image/jpeg;base64,' + _b64.b64encode(open("thamesborg_exhibit_web.jpg", "rb").read()).decode() + src[_k:]
 # ---------- Exhibit H: forecast (before Exhibit F)
 H = f'''
 <section>
