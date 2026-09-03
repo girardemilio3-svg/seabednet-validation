@@ -14,37 +14,37 @@
   "dist_to_pre_sounding_km": 0.79,
   "in_fill_domain": true,
   "site": {
-   "mean_depth_model": -67.72173751937989,
+   "mean_depth_model": -67.84256285766149,
    "shoal_depth_model": -38.265650408692714,
-   "shoal_sigma": 41.70152005126409,
-   "p_shoal_lt_draft": 0.270390602902266,
-   "mean_sigma": 49.715307503194516,
+   "shoal_sigma": 41.7028987393585,
+   "p_shoal_lt_draft": 0.27041391007211835,
+   "mean_sigma": 49.70489484590321,
    "nearest_pre_sounding": -115.0,
    "gravity": -74.50126647949219
   },
   "rank": {
    "hazard_p_shoal": {
-    "percentile": 95.57846083953608,
-    "n_cells": 607526
+    "percentile": 95.57867638465729,
+    "n_cells": 607533
    },
    "hazard_shoal_depth": {
-    "percentile": 5.008839127872716,
-    "n_cells": 607526
+    "percentile": 5.010921217448271,
+    "n_cells": 607533
    },
    "mean_model_sigma": {
-    "percentile": 99.30817775700135,
-    "n_cells": 607526
+    "percentile": 99.30999632941749,
+    "n_cells": 607533
    },
    "nearest_sounding_shallowness": {
-    "percentile": 89.73986298528787,
-    "n_cells": 607526
+    "percentile": 89.73866440176911,
+    "n_cells": 607533
    },
    "gravity_shallowness": {
-    "percentile": 91.74471545250739,
-    "n_cells": 607526
+    "percentile": 91.74365836917501,
+    "n_cells": 607533
    },
    "hazard_p_shoal_whole_block": {
-    "percentile": 94.96304400596968
+    "percentile": 94.96231324029321
    }
   }
  },
@@ -63,37 +63,37 @@
   "dist_to_pre_sounding_km": 9.45,
   "in_fill_domain": false,
   "site": {
-   "mean_depth_model": -41.37120056152344,
+   "mean_depth_model": -41.298194885253906,
    "shoal_depth_model": -27.427488327026364,
    "shoal_sigma": 26.043064117431644,
-   "p_shoal_lt_draft": 0.2619511964438097,
-   "mean_sigma": 23.163183212280273,
+   "p_shoal_lt_draft": 0.26235629179651054,
+   "mean_sigma": 23.20846939086914,
    "nearest_pre_sounding": -72.3125,
    "gravity": -39.11412811279297
   },
   "rank": {
    "hazard_p_shoal": {
-    "percentile": 92.54723298267133,
-    "n_cells": 159793
+    "percentile": 92.54834470242193,
+    "n_cells": 159790
    },
    "hazard_shoal_depth": {
-    "percentile": 6.602291714906159,
-    "n_cells": 159793
+    "percentile": 6.5980349208335936,
+    "n_cells": 159790
    },
    "mean_model_sigma": {
-    "percentile": 76.4320089115293,
-    "n_cells": 159793
+    "percentile": 76.53420113899493,
+    "n_cells": 159790
    },
    "nearest_sounding_shallowness": {
-    "percentile": 89.93385192092269,
-    "n_cells": 159793
+    "percentile": 89.93554039677076,
+    "n_cells": 159790
    },
    "gravity_shallowness": {
-    "percentile": 93.41523095504809,
-    "n_cells": 159793
+    "percentile": 93.41698479254022,
+    "n_cells": 159790
    },
    "hazard_p_shoal_whole_block": {
-    "percentile": 98.0117425104902
+    "percentile": 98.01290994123302
    }
   }
  },
@@ -113,36 +113,36 @@
   "in_fill_domain": false,
   "site": {
    "mean_depth_model": -69.99551391601562,
-   "shoal_depth_model": -39.76979064941406,
+   "shoal_depth_model": -39.023475646972656,
    "shoal_sigma": 33.533565521240234,
-   "p_shoal_lt_draft": 0.17945639479324615,
+   "p_shoal_lt_draft": 0.1858283254854738,
    "mean_sigma": 11.058195114135742,
    "nearest_pre_sounding": -234.75,
    "gravity": -73.19254302978516
   },
   "rank": {
    "hazard_p_shoal": {
-    "percentile": 83.31107701239995,
-    "n_cells": 120565
+    "percentile": 83.61285292458777,
+    "n_cells": 120564
    },
    "hazard_shoal_depth": {
-    "percentile": 14.419607680504292,
-    "n_cells": 120565
+    "percentile": 14.224810059387547,
+    "n_cells": 120564
    },
    "mean_model_sigma": {
-    "percentile": 10.629121220918176,
-    "n_cells": 120565
+    "percentile": 10.625062207624167,
+    "n_cells": 120564
    },
    "nearest_sounding_shallowness": {
-    "percentile": 22.32073984987351,
-    "n_cells": 120565
+    "percentile": 22.320924985899605,
+    "n_cells": 120564
    },
    "gravity_shallowness": {
-    "percentile": 80.28781155393357,
-    "n_cells": 120565
+    "percentile": 80.28847748913441,
+    "n_cells": 120564
    },
    "hazard_p_shoal_whole_block": {
-    "percentile": 81.9006604829846
+    "percentile": 82.21310886044743
    }
   }
  },
@@ -162,36 +162,36 @@
   "in_fill_domain": true,
   "site": {
    "mean_depth_model": -1.6064498372784135,
-   "shoal_depth_model": 1.8665696745768128,
+   "shoal_depth_model": 1.8662256667397792,
    "shoal_sigma": 6.009697214379969,
-   "p_shoal_lt_draft": 0.9388262972187179,
+   "p_shoal_lt_draft": 0.9388537330120615,
    "mean_sigma": 2.6827195326620217,
    "nearest_pre_sounding": -2.873046875,
    "gravity": -5.9400153160095215
   },
   "rank": {
    "hazard_p_shoal": {
-    "percentile": 98.70437102852584,
-    "n_cells": 36353
+    "percentile": 98.70112000880596,
+    "n_cells": 36339
    },
    "hazard_shoal_depth": {
-    "percentile": 14.521497538029873,
-    "n_cells": 36353
+    "percentile": 14.502325325407964,
+    "n_cells": 36339
    },
    "mean_model_sigma": {
-    "percentile": 17.519874563309767,
-    "n_cells": 36353
+    "percentile": 17.521120559178843,
+    "n_cells": 36339
    },
    "nearest_sounding_shallowness": {
-    "percentile": 91.02412455643277,
-    "n_cells": 36353
+    "percentile": 91.03442582349541,
+    "n_cells": 36339
    },
    "gravity_shallowness": {
-    "percentile": 96.7237917090749,
-    "n_cells": 36353
+    "percentile": 96.71427392058119,
+    "n_cells": 36339
    },
    "hazard_p_shoal_whole_block": {
-    "percentile": 99.40902710497622
+    "percentile": 99.40878493152985
    }
   }
  },
@@ -211,36 +211,36 @@
   "in_fill_domain": true,
   "site": {
    "mean_depth_model": -0.06559435857532493,
-   "shoal_depth_model": 17.210494995117188,
+   "shoal_depth_model": 17.201833724975586,
    "shoal_sigma": 15.239829063415527,
-   "p_shoal_lt_draft": 0.9533356557968532,
+   "p_shoal_lt_draft": 0.9534150892579852,
    "mean_sigma": 9.153594970703125,
    "nearest_pre_sounding": -3.8046875,
    "gravity": 0.01825382001698017
   },
   "rank": {
    "hazard_p_shoal": {
-    "percentile": 95.31803919970662,
-    "n_cells": 24541
+    "percentile": 95.29009126466754,
+    "n_cells": 24544
    },
    "hazard_shoal_depth": {
-    "percentile": 91.80554989609226,
-    "n_cells": 24541
+    "percentile": 91.79840286831812,
+    "n_cells": 24544
    },
    "mean_model_sigma": {
-    "percentile": 74.02713825842467,
-    "n_cells": 24541
+    "percentile": 74.03031290743155,
+    "n_cells": 24544
    },
    "nearest_sounding_shallowness": {
-    "percentile": 98.4026730777067,
-    "n_cells": 24541
+    "percentile": 98.39064537157758,
+    "n_cells": 24544
    },
    "gravity_shallowness": {
-    "percentile": 0.3219102726050283,
-    "n_cells": 24541
+    "percentile": 0.321870925684485,
+    "n_cells": 24544
    },
    "hazard_p_shoal_whole_block": {
-    "percentile": 95.87044014386025
+    "percentile": 95.84921008691185
    }
   }
  },
@@ -259,37 +259,88 @@
   "dist_to_pre_sounding_km": 0.0,
   "in_fill_domain": true,
   "site": {
-   "mean_depth_model": -2.3405590507538836,
-   "shoal_depth_model": -4.021167451856208,
-   "shoal_sigma": 19.52912527132186,
-   "p_shoal_lt_draft": 0.623324347342621,
-   "mean_sigma": 27.14726591464627,
+   "mean_depth_model": -2.2839204190685174,
+   "shoal_depth_model": -4.0239600347170015,
+   "shoal_sigma": 19.568860379358387,
+   "p_shoal_lt_draft": 0.6243239533383015,
+   "mean_sigma": 27.09637474078794,
    "nearest_pre_sounding": -18.65625,
    "gravity": -57.683258056640625
   },
   "rank": {
    "hazard_p_shoal": {
-    "percentile": 78.78478771315292,
-    "n_cells": 51958
+    "percentile": 78.73007929786743,
+    "n_cells": 51956
    },
    "hazard_shoal_depth": {
-    "percentile": 15.87051079718234,
-    "n_cells": 51958
+    "percentile": 15.901917006697975,
+    "n_cells": 51956
    },
    "mean_model_sigma": {
-    "percentile": 98.01570499249394,
-    "n_cells": 51958
+    "percentile": 98.00408037570251,
+    "n_cells": 51956
    },
    "nearest_sounding_shallowness": {
-    "percentile": 82.3145617614227,
-    "n_cells": 51958
+    "percentile": 82.33120332589114,
+    "n_cells": 51956
    },
    "gravity_shallowness": {
-    "percentile": 15.46248893336926,
-    "n_cells": 51958
+    "percentile": 15.463084148125336,
+    "n_cells": 51956
    },
    "hazard_p_shoal_whole_block": {
-    "percentile": 98.02979770169115
+    "percentile": 98.02454797603633
+   }
+  }
+ },
+ {
+  "name": "Mokami 2000",
+  "date": "2000-10-31",
+  "year": 2000,
+  "lon": -61.56967,
+  "lat": 56.45083,
+  "draft": 5.2,
+  "tsb": "M00N0098",
+  "note": "TSB: buoy NP5 at 56\u00b027.05'N 061\u00b034.18'W, Bridges Passage, Labrador; grounded ~200 m NE of the buoy; navigation error + buoy 160 m off charted position + datum mismatch; hazard known (control). Hazard-model training did NOT exclude this site's tiles.",
+  "control": true,
+  "training_exposed": true,
+  "block": "b0040_0043.npz",
+  "pre_soundings": 208248,
+  "all_soundings": 787312,
+  "dist_to_pre_sounding_km": 0.0,
+  "in_fill_domain": true,
+  "site": {
+   "mean_depth_model": -0.1922996690254916,
+   "shoal_depth_model": 15.482158086738613,
+   "shoal_sigma": 31.2897758738241,
+   "p_shoal_lt_draft": 0.8155492868242686,
+   "mean_sigma": 3.648094029549282,
+   "nearest_pre_sounding": -2.0,
+   "gravity": -6.332167148590088
+  },
+  "rank": {
+   "hazard_p_shoal": {
+    "percentile": 94.9678732160698,
+    "n_cells": 109099
+   },
+   "hazard_shoal_depth": {
+    "percentile": 46.3166481819265,
+    "n_cells": 109099
+   },
+   "mean_model_sigma": {
+    "percentile": 11.144923418179818,
+    "n_cells": 109099
+   },
+   "nearest_sounding_shallowness": {
+    "percentile": 93.52423028625377,
+    "n_cells": 109099
+   },
+   "gravity_shallowness": {
+    "percentile": 81.25647347821703,
+    "n_cells": 109099
+   },
+   "hazard_p_shoal_whole_block": {
+    "percentile": 99.52176420147269
    }
   }
  }

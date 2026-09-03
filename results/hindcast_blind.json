@@ -779,15 +779,152 @@
     },
     "mean_sigma_percentile_25km": null
    }
+  },
+  "Mokami 2000": {
+   "mask_0km": {
+    "dist_to_input_sounding_km": 0.0,
+    "p_shoal_at_site": 0.8155492868242686,
+    "shoal_depth_at_site": 15.482158086738613,
+    "mean_sigma_at_site": 3.648094029549282,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 89.83085284705643,
+      "n": 19687
+     },
+     "win10km_safe2x": {
+      "percentile": 91.85761715560878,
+      "n": 18373
+     },
+     "win10km_safe3x": {
+      "percentile": 94.48094612352168,
+      "n": 15981
+     },
+     "win25km_safe1.5x": {
+      "percentile": 93.70245283662538,
+      "n": 117252
+     },
+     "win25km_safe2x": {
+      "percentile": 94.9678732160698,
+      "n": 109099
+     },
+     "win25km_safe3x": {
+      "percentile": 96.83856478148272,
+      "n": 93059
+     },
+     "win50km_safe1.5x": {
+      "percentile": 96.65625879420554,
+      "n": 373115
+     },
+     "win50km_safe2x": {
+      "percentile": 97.38397458524533,
+      "n": 354125
+     },
+     "win50km_safe3x": {
+      "percentile": 98.4502021198714,
+      "n": 314170
+     }
+    },
+    "mean_sigma_percentile_25km": 11.144923418179818
+   },
+   "mask_10km": {
+    "dist_to_input_sounding_km": 10.0,
+    "p_shoal_at_site": 0.618405823895973,
+    "shoal_depth_at_site": 30.490861655603403,
+    "mean_sigma_at_site": 33.26759864131052,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": 77.74694261523989,
+      "n": 21260
+     },
+     "win10km_safe2x": {
+      "percentile": 80.53333333333333,
+      "n": 20250
+     },
+     "win10km_safe3x": {
+      "percentile": 86.15469919600777,
+      "n": 18035
+     },
+     "win25km_safe1.5x": {
+      "percentile": 63.43392440071164,
+      "n": 118599
+     },
+     "win25km_safe2x": {
+      "percentile": 67.22288868644412,
+      "n": 110867
+     },
+     "win25km_safe3x": {
+      "percentile": 75.65809490835458,
+      "n": 95313
+     },
+     "win50km_safe1.5x": {
+      "percentile": 76.66281172294617,
+      "n": 374411
+     },
+     "win50km_safe2x": {
+      "percentile": 79.57929939438223,
+      "n": 355835
+     },
+     "win50km_safe3x": {
+      "percentile": 86.00715604217766,
+      "n": 316376
+     }
+    },
+    "mean_sigma_percentile_25km": 90.90261304085074
+   },
+   "mask_25km": {
+    "dist_to_input_sounding_km": 25.0,
+    "p_shoal_at_site": null,
+    "shoal_depth_at_site": null,
+    "mean_sigma_at_site": null,
+    "ranks": {
+     "win10km_safe1.5x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe2x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win10km_safe3x": {
+      "percentile": null,
+      "n": 0
+     },
+     "win25km_safe1.5x": {
+      "percentile": null,
+      "n": 52308
+     },
+     "win25km_safe2x": {
+      "percentile": null,
+      "n": 49667
+     },
+     "win25km_safe3x": {
+      "percentile": null,
+      "n": 44230
+     },
+     "win50km_safe1.5x": {
+      "percentile": null,
+      "n": 303236
+     },
+     "win50km_safe2x": {
+      "percentile": null,
+      "n": 290387
+     },
+     "win50km_safe3x": {
+      "percentile": null,
+      "n": 262516
+     }
+    },
+    "mean_sigma_percentile_25km": null
+   }
   }
  },
  "skill": {
   "mask_0km": {
    "hits_all": [
-    4,
-    6
+    5,
+    7
    ],
-   "p_binomial_all": 0.0012700000000000003,
+   "p_binomial_all": 0.00017650000000000003,
    "hits_uncharted4": [
     3,
     4
@@ -797,9 +934,9 @@
   "mask_10km": {
    "hits_all": [
     4,
-    6
+    7
    ],
-   "p_binomial_all": 0.0012700000000000003,
+   "p_binomial_all": 0.0027280000000000004,
    "hits_uncharted4": [
     3,
     4

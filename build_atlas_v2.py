@@ -34,6 +34,7 @@ src = sub1(src, '<div class="stat amber"><b>+61%</b><span>completed by SeabedNet
   '<div class="stat amber"><b>+61%</b><span>of the route, completed by model (grades B+C)</span></div>\n'
   f'    <div class="stat red"><b>{int(np.median(yrs))}</b><span>median survey year under keel</span></div>')
 
+src = sub1(src, '<div class="stat red"><b>C$40M</b><span>to survey the worst 10 boxes vs a decade</span></div>', '<div class="stat red"><b>C$23&ndash;40M</b><span>to survey the worst 10 boxes vs a decade</span></div>')
 # ---------- keel profile: v2 data + readout
 src = re.sub(r"const PROF = \[.*?\];\n", lambda _m: "const PROF = " + json.dumps(prof) + ";\n", src, count=1, flags=re.S)
 src = sub1(src, '<span id="rprov" class="chip none">no data</span>',
@@ -132,6 +133,17 @@ if SR:
 import base64 as _b64
 _i = src.index("Exhibit D &mdash; the stakes"); _j = src.index('<img src="data:image/jpeg;base64,', _i); _k = src.index('"', _j + len('<img src="'))
 src = src[:_j] + '<img src="data:image/jpeg;base64,' + _b64.b64encode(open("thamesborg_exhibit_web.jpg", "rb").read()).decode() + src[_k:]
+# ---------- Exhibit H: latest grade (monthly cron re-fetches the CHS archive and scores resolved cells)
+GRADE_ROW = ""
+if os.path.exists("grades/latest.json"):
+    GR = json.load(open("grades/latest.json"))
+    mv = [m for m in GR["archive_movement"].values() if isinstance(m, dict)]
+    newsnd = sum(m["new_soundings"] for m in mv)
+    if GR.get("score"):
+        sc = GR["score"]
+        GRADE_ROW = f"<tr><td>Score so far</td><td><b>{GR['n_scored']} of {GR['n_sealed']} sealed cells now have a CHS sounding</b> (archive checked {GR['graded_on']}): MAE {sc['mae']:.1f} m, bias {sc['bias']:+.1f} m, {sc['inside_68']*100:.0f}% inside the 68% band, {sc['inside_95']*100:.0f}% inside the 95% band; nearest-sounding baseline {sc['mae_nearest_sounding']:.1f} m, gravity {sc['mae_gravity']:.1f} m. Re-graded on the 1st of every month; the full per-cell record is in <a href=\"grades/latest.json\">grades/latest.json</a>.</td></tr>"
+    else:
+        GRADE_ROW = f"<tr><td>Score so far</td><td>Archive re-checked {GR['graded_on']}: {newsnd:,} new soundings have appeared in the {len(mv)} corridor blocks that hold sealed cells, none yet at a sealed cell. The grader runs on the 1st of every month and publishes the score the day a sealed cell is sounded, good or bad (<a href=\"grades/latest.json\">grades/latest.json</a>).</td></tr>"
 # ---------- Exhibit H: forecast (before Exhibit F)
 H = f'''
 <section>
@@ -144,6 +156,7 @@ H = f'''
     <tr><td>Model</td><td>SeabedNet v5-small, the 34.8M-parameter completion model used throughout this page (trained on the full archive), with the depth gate and calibrated &sigma; of Exhibit G</td></tr>
     {'<tr><td>External timestamp</td><td>OpenTimestamps proof <a href="forecast_2026-09-02.csv.ots">forecast_2026-09-02.csv.ots</a>, submitted to three public calendars (Bitcoin-anchored; verify with <code>ots verify</code>), plus the hash in a GitHub commit in the validation repository. Neither clock is ours.</td></tr>' if OTS else ''}
     <tr><td>Scoring rule</td><td>{F['rule']}</td></tr>
+    {GRADE_ROW}
   </tbody></table></div>
 </section>
 '''

@@ -1,0 +1,574 @@
+{
+ "graded_on": "2026-09-03",
+ "sealed_file": "forecast_2026-09-02.csv",
+ "sealed_sha256": "4d3f5dc8a5c2b50f3f72fba95384581fc778d6d453a3eec46aa2dc383c66be45",
+ "n_sealed": 1314,
+ "n_scored": 0,
+ "archive_movement": {
+  "b0038_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 122674,
+   "known_now": 122674
+  },
+  "b0037_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 115793,
+   "known_now": 115793
+  },
+  "b0036_0032.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 290870,
+   "known_now": 290870
+  },
+  "b0036_0033.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 215465,
+   "known_now": 215465
+  },
+  "b0036_0034.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 147637,
+   "known_now": 147637
+  },
+  "b0036_0035.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 131605,
+   "known_now": 131605
+  },
+  "b0036_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 572111,
+   "known_now": 572111
+  },
+  "b0036_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 521599,
+   "known_now": 521599
+  },
+  "b0036_0038.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 335574,
+   "known_now": 335574
+  },
+  "b0036_0039.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 906401,
+   "known_now": 906401
+  },
+  "b0036_0040.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 603528,
+   "known_now": 603528
+  },
+  "b0036_0041.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1222694,
+   "known_now": 1222694
+  },
+  "b0036_0042.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1749191,
+   "known_now": 1749191
+  },
+  "b0036_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 799396,
+   "known_now": 799396
+  },
+  "b0037_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1574373,
+   "known_now": 1574373
+  },
+  "b0038_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 269055,
+   "known_now": 269055
+  },
+  "b0038_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 315700,
+   "known_now": 315700
+  },
+  "b0039_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 512903,
+   "known_now": 512903
+  },
+  "b0029_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 63044,
+   "known_now": 63044
+  },
+  "b0036_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 100781,
+   "known_now": 100781
+  },
+  "b0035_0041.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 185176,
+   "known_now": 185176
+  },
+  "b0033_0032.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 22390,
+   "known_now": 22390
+  },
+  "b0035_0042.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 727008,
+   "known_now": 727008
+  },
+  "b0029_0030.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 310075,
+   "known_now": 310075
+  },
+  "b0026_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 119944,
+   "known_now": 119944
+  },
+  "b0035_0039.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 98953,
+   "known_now": 98953
+  },
+  "b0039_0032.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 140052,
+   "known_now": 140052
+  },
+  "b0035_0038.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 485856,
+   "known_now": 485856
+  },
+  "b0040_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 135178,
+   "known_now": 135178
+  },
+  "b0039_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 8100,
+   "known_now": 8100
+  },
+  "b0039_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 115640,
+   "known_now": 115640
+  },
+  "b0040_0045.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 187238,
+   "known_now": 187238
+  },
+  "b0040_0034.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 78488,
+   "known_now": 78488
+  },
+  "b0039_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 312218,
+   "known_now": 312218
+  },
+  "b0037_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 21274,
+   "known_now": 21274
+  },
+  "b0033_0033.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 142822,
+   "known_now": 142822
+  },
+  "b0033_0034.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 371564,
+   "known_now": 371564
+  },
+  "b0034_0034.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 5016,
+   "known_now": 5016
+  },
+  "b0038_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 201317,
+   "known_now": 201317
+  },
+  "b0035_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 437021,
+   "known_now": 437021
+  },
+  "b0027_0029.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 42115,
+   "known_now": 42115
+  },
+  "b0037_0041.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1124572,
+   "known_now": 1124572
+  },
+  "b0042_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 184466,
+   "known_now": 184466
+  },
+  "b0035_0033.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 246057,
+   "known_now": 246057
+  },
+  "b0042_0045.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 328337,
+   "known_now": 328337
+  },
+  "b0041_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1184547,
+   "known_now": 1184547
+  },
+  "b0036_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 262214,
+   "known_now": 262214
+  },
+  "b0033_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 130971,
+   "known_now": 130971
+  },
+  "b0034_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 25746,
+   "known_now": 25746
+  },
+  "b0034_0041.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 188460,
+   "known_now": 188460
+  },
+  "b0027_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 283774,
+   "known_now": 283774
+  },
+  "b0028_0029.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 733410,
+   "known_now": 733410
+  },
+  "b0034_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 177309,
+   "known_now": 177309
+  },
+  "b0037_0039.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 34270,
+   "known_now": 34270
+  },
+  "b0025_0030.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 774992,
+   "known_now": 774992
+  },
+  "b0035_0032.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 185595,
+   "known_now": 185595
+  },
+  "b0041_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 142976,
+   "known_now": 142976
+  },
+  "b0038_0040.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 708649,
+   "known_now": 708649
+  },
+  "b0037_0040.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 601041,
+   "known_now": 601041
+  },
+  "b0028_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 12419,
+   "known_now": 12419
+  },
+  "b0041_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 109274,
+   "known_now": 109274
+  },
+  "b0040_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 295099,
+   "known_now": 295099
+  },
+  "b0037_0033.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 76882,
+   "known_now": 76882
+  },
+  "b0041_0045.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 223955,
+   "known_now": 223955
+  },
+  "b0038_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 51283,
+   "known_now": 51283
+  },
+  "b0040_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 787312,
+   "known_now": 787312
+  },
+  "b0035_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 630004,
+   "known_now": 630004
+  },
+  "b0033_0035.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 310083,
+   "known_now": 310083
+  },
+  "b0037_0034.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 58977,
+   "known_now": 58977
+  },
+  "b0038_0041.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 373385,
+   "known_now": 373385
+  },
+  "b0035_0034.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 149721,
+   "known_now": 149721
+  },
+  "b0037_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 232220,
+   "known_now": 232220
+  },
+  "b0034_0042.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 926563,
+   "known_now": 926563
+  },
+  "b0042_0043.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 103370,
+   "known_now": 103370
+  },
+  "b0030_0029.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 837832,
+   "known_now": 837832
+  },
+  "b0038_0042.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 374734,
+   "known_now": 374734
+  },
+  "b0038_0032.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 92807,
+   "known_now": 92807
+  },
+  "b0034_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 375069,
+   "known_now": 375069
+  },
+  "b0028_0030.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 138278,
+   "known_now": 138278
+  },
+  "b0037_0044.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 270802,
+   "known_now": 270802
+  },
+  "b0030_0031.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 174340,
+   "known_now": 174340
+  },
+  "b0041_0036.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 178721,
+   "known_now": 178721
+  },
+  "b0030_0030.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 421819,
+   "known_now": 421819
+  },
+  "b0039_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 128642,
+   "known_now": 128642
+  },
+  "b0027_0030.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1000495,
+   "known_now": 1000495
+  },
+  "b0035_0040.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 285851,
+   "known_now": 285851
+  },
+  "b0029_0029.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 852600,
+   "known_now": 852600
+  },
+  "b0034_0035.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 116222,
+   "known_now": 116222
+  },
+  "b0039_0042.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 184785,
+   "known_now": 184785
+  },
+  "b0026_0030.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 747631,
+   "known_now": 747631
+  },
+  "b0037_0042.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 1126648,
+   "known_now": 1126648
+  },
+  "b0035_0035.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 271652,
+   "known_now": 271652
+  },
+  "b0034_0033.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 134250,
+   "known_now": 134250
+  },
+  "b0040_0037.npz": {
+   "new_soundings": 0,
+   "removed": 0,
+   "known_before": 192637,
+   "known_now": 192637
+  }
+ },
+ "cells": []
+}

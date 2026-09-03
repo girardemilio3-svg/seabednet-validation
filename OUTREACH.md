@@ -1,6 +1,6 @@
-# Outreach drafts — send-ready, numbers pulled from the live page (2026-09-02)
+# Outreach drafts — send-ready, numbers match the live page (2026-09-03)
 
-Fill the `[…]` slots after the hindcast lands. Nothing here claims more than the page shows.
+Nothing here claims more than the page shows.
 
 ---
 
@@ -13,11 +13,11 @@ Fill the `[…]` slots after the hindcast lands. Nothing here claims more than t
 **Sector:** Marine transportation / hydrography / trade-corridor infrastructure
 
 **One-paragraph summary:**
-Canada, Manitoba and Saskatchewan have committed C$262.5M to reopen the Churchill corridor, yet CHS reports only 15.8% of Canadian Arctic waters and 44.7% of key routes are adequately surveyed, and under the Churchill route itself 17% of the seabed has a published sounding with a median survey year of 1974. SeabedNet is a machine-learning completion of the CHS NONNA archive that produces depth, calibrated uncertainty and a shoal-hazard probability for every 100 m cell of the corridor, with the provenance of every pixel kept explicit. It has been scored on two independent tests: (1) 109,044 research-cruise multibeam depths CHS never published (mean error 4.9 m vs 13.4 m for the nearest published sounding); (2) a model trained only on pre-2016 soundings predicting the 6.46 million soundings CHS collected after 2016 (13.5 m vs 18.1 m for the gravity-derived bathymetry global charts fall back on). [Hindcast sentence.] All code and validation data are public.
+Canada, Manitoba and Saskatchewan have committed C$262.5M to reopen the Churchill corridor, yet CHS reports only 15.8% of Canadian Arctic waters and 44.7% of key routes are adequately surveyed, and under the Churchill route itself 17% of the seabed has a published sounding with a median survey year of 1974. SeabedNet is a machine-learning completion of the CHS NONNA archive that produces depth, calibrated uncertainty and a shoal-hazard probability for every 100 m cell of the corridor, with the provenance of every pixel kept explicit. It has been scored on two independent tests: (1) 109,044 research-cruise multibeam depths CHS never published (mean error 4.9 m vs 13.4 m for the nearest published sounding); (2) a model trained only on pre-2016 soundings predicting the 6.46 million soundings CHS collected after 2016 (13.3 m vs 18.1 m for the gravity-derived bathymetry global charts fall back on, and 16.2–16.8 m for gravity-trend-plus-interpolation). A hazard model predicting the shallowest point within 500 m, given only pre-incident soundings, ranked the strike site of 4 of 7 TSB-documented Arctic groundings in the top 10% of danger among water that looked safe (binomial p = 0.001), including Thamesborg 2025 with every sounding within 10 km withheld. All code, validation cells and a public benchmark are online.
 
 **What we are asking for (three items):**
 1. **A validation agreement with CHS:** access to CHS multibeam for the Churchill corridor not yet released to NONNA, under an agreement that we score the model on it and publish the score whatever it is.
-2. **A charting-risk budget line in Churchill Plus**, sized by the σ-ranked survey plan on the atlas: ~219 ship-days, ~C$40M at the Coast Guard's July 2026 polar-icebreaker charter day rate (C$183k/day), to de-risk the ten highest-uncertainty boxes on the route in one season.
+2. **A charting-risk budget line in Churchill Plus**, sized by the σ-ranked survey plan on the atlas: ~219 ship-days, C$23M at the rate implied by CHS's 2023–25 Arctic survey contract to C$40M at the Coast Guard's July 2026 polar-icebreaker charter day rate, to de-risk the ten highest-uncertainty boxes on the route in one season.
 3. **Arctic Gateway Group as the file owner** on the proponent side; SeabedNet as the technical contributor.
 
 **Readiness / stage:** Working prototype, publicly validated; national completion of all 437 NONNA blocks already run. Not for navigation; planning prior.
@@ -40,8 +40,8 @@ SeabedNet is a machine-learning completion of NONNA-100/10 that predicts depth, 
 
 Two things you may find directly useful:
 
-1. **A temporal test using your own Survey Index.** Training only on soundings inside the 1832–2016 index polygons, the model predicts the post-2016 soundings in the corridor to 13.5 m mean error (gravity prior 18.1 m; nearest old sounding 18.8 m). It also exposes where the archive's mean depth is the wrong quantity: under 50 m of water, mean-depth models read 12–14 m too deep. The hazard model targets the shallowest point within 500 m instead, learned from NONNA-10/100 pairs.
-2. **A grounding hindcast** on TSB cases M18C0225, M10H0006, M96H0016, M12H0012, M14C0219 and M25C0241, using only pre-incident soundings: [one sentence with the result].
+1. **A temporal test using your own Survey Index.** Training only on soundings inside the 1832–2016 index polygons, the model predicts the 6.46 million post-2016 soundings in the corridor to 13.3 m mean error (gravity prior 18.1 m; gravity trend plus interpolated residuals 16.2–16.8 m; nearest old sounding 18.8 m). It also exposes where the archive's mean depth is the wrong quantity: under 50 m of water, mean-depth models read 6–9 m too deep. The hazard model targets the shallowest point within 500 m instead, learned from NONNA-10/100 pairs.
+2. **A grounding hindcast** on TSB cases M96H0016, M00N0098, M10H0006, M12H0012, M14C0219, M18C0225 and M25C0241, using only pre-incident soundings and, in the blind variant, no sounding within 10 km of the strike: the shallowest-point hazard field ranks 4 of the 7 strike sites in the top 10% of danger among water the mean map called safe (binomial p = 0.001; 3 of the 4 uncharted-shoal cases). The TSB counts 74 Arctic groundings for 2000–2018; these seven are the ones with a published position, and I have asked the Board for the rest.
 
 I'd welcome a correction on anything, and I'd welcome more: if CHS holds corridor multibeam not yet in NONNA, I would score the model on it under any agreement you prefer and publish the result, good or bad. There is also a sealed forecast file (SHA-256 on the page) of 1,314 predicted depths at unsounded cells that the next survey through the corridor can grade.
 
@@ -57,7 +57,7 @@ Emilio Girard, Montréal
 
 Subject: A charting-risk map for the Churchill route, validated on CHS's own data — would AGG carry it into Churchill Plus?
 
-Under the route your ships run, 17% of the seabed has a published sounding and the median survey year is 1974. I built and publicly validated a model that fills the rest with depth, uncertainty and a shoal-hazard probability, then priced the survey season that removes the worst of it (~C$40M, ~219 ship-days). It is not a chart and says so; it is the document that lets the corridor ask for a charting budget line with a number on it. I would like AGG to own the file on the proponent side — I do the technical work, you carry it to the table. Ten minutes on a call and I'll show you the route under keel, kilometre by kilometre.
+Under the route your ships run, 17% of the seabed has a published sounding and the median survey year is 1974. I built and publicly validated a model that fills the rest with depth, uncertainty and a shoal-hazard probability, then priced the survey season that removes the worst of it (C$23–40M, ~219 ship-days, bracketed by CHS's own Arctic survey contract and the Coast Guard's icebreaker charter). It is not a chart and says so; it is the document that lets the corridor ask for a charting budget line with a number on it. I would like AGG to own the file on the proponent side — I do the technical work, you carry it to the table. Ten minutes on a call and I'll show you the route under keel, kilometre by kilometre.
 
 ---
 
@@ -66,3 +66,19 @@ Under the route your ships run, 17% of the seabed has a published sounding and t
 Subject: Request — Northern Low-Impact Shipping Corridors polygons for the Hudson Bay / Hudson Strait / Labrador route
 
 Requesting the current NLISC corridor polygons (or a pointer to their public release) to overlay the model-found least-risk channel on the official corridors and report where they disagree. Purpose: a public charting-risk atlas for the Churchill corridor (link). Happy to share the overlay back.
+
+---
+
+## 5. Transportation Safety Board of Canada — data request (Marine occurrence records)
+
+To: Access to Information and Privacy Coordinator, Transportation Safety Board of Canada (atip-aiprp@tsb.gc.ca), or directly to TSB Marine Investigations.
+
+Subject: Request for occurrence-level records of vessel groundings and bottom contacts in Canadian Arctic waters, 1990–2026
+
+I am requesting, in machine-readable form (CSV or spreadsheet), the occurrence-level records held by the TSB for marine groundings and bottom contacts in Canadian Arctic waters (Hudson Bay, Hudson Strait, the Labrador coast north of 55°N, and the Arctic Archipelago) from 1 January 1990 to the present. For each occurrence: occurrence number, date, vessel name and type, position (latitude/longitude as recorded), reported draft, water depth or chart information where recorded, and the TSB's classification (grounding / bottom contact / striking). The TSB's report M18C0225 cites 74 such occurrences for 2000–2018; I am seeking the underlying list.
+
+Purpose: a public, reproducible hindcast benchmark for seabed-hazard models (see https://girardemilio3-svg.github.io/churchill-corridor-atlas/report/ §5), in which each grounding is scored against a model given only the soundings that existed before the incident. The benchmark currently uses the seven Arctic groundings for which a position is published in a TSB report; the full occurrence list would make it complete. Results will be published whatever they show.
+
+I am content to receive the records under the Open Government Licence or with any redaction the Board considers necessary for personal information; vessel names may be withheld if positions and dates are retained.
+
+Emilio Girard, SeabedNet, Montréal · girardemilio3@gmail.com

@@ -33,6 +33,8 @@ INCIDENTS = [
       note="TSB: 63°59.6'N 094°18.4'W, Chesterfield Narrows; navigation error, hazard known"),
  dict(name="Nanny 2014", date="2014-10-14", year=2014, lon=-91.52000, lat=63.62000, draft=6.9, tsb="M14C0219",
       note="TSB: 63°37.2'N 091°31.2'W, Chesterfield Inlet; helm-order error, hazard known"),
+ dict(name="Mokami 2000", date="2000-10-31", year=2000, lon=-61.56967, lat=56.45083, draft=5.2, tsb="M00N0098",
+      note="TSB: buoy NP5 at 56°27.05'N 061°34.18'W, Bridges Passage, Labrador; grounded ~200 m NE of the buoy; navigation error + buoy 160 m off charted position + datum mismatch; hazard known (control). Hazard-model training did NOT exclude this site's tiles.", control=True, training_exposed=True),
 ]
 grav = GravityPrior()
 hz = V5(HZS).to(DEV); ck = torch.load(HZ, map_location=DEV, weights_only=False); hz.load_state_dict(ck["net"]); hz.eval()
