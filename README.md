@@ -37,3 +37,9 @@ SeabedNet · Montréal · 2026
 
 ## Attempted Test 3: ICESat-2 ATL24 laser bathymetry (negative result)
 `results/icesat2_validation.json` / `_strict.json`, `icesat2_eval.py`. NASA's ATL24 seafloor photons over 12 corridor boxes (~3.6M photons): where the fitted datum offset is physical (±3 m), laser agrees with NONNA soundings to 1–5 m — an independent check of the archive itself — but almost no photon cells with NO published sounding survive the quality gates in this turbid water (124 cells nationally), so ATL24 cannot score the model's fills here. Recorded as a negative result with the full per-block table.
+
+## Discoveries (3 September 2026)
+- `results/shoal_list_2026-09-03.csv` (+ OTS): 40 sealed suspected uncharted keel-depth shoals in Canadian shipping water, from the national hazard field (`shoal_list.py`); each is a falsifiable claim for one survey line.
+- `results/strike_predictions_2026-09-03.csv` (+ OTS): sealed strike-point predictions for the four Arctic groundings known only by place name.
+- `results/temporal_validation_national.json`, `results/temporal_national_strata.json`: the temporal test over all NONNA blocks (20.4M post-2016 marine soundings: model 12.6 m vs 19.7 nearest vs 15.7 gravity; inland lakes excluded and reported).
+- `results/chart_age.json` + `chart_age_web.jpg`: age of every sounded cell nationally (28.0% pre-1980). `results/community_cards.json`: 26 resupply lanes graded. `results/gebco_lag.json`: global-chart disagreement with the archive. `results/national_plan.json`: national sigma-ranked survey plan. `results/era_audit.json`: null result (sounding age does not predict error at 200 m). `results/icesat2_validation*.json`: ICESat-2 ATL24 attempt, negative.

@@ -14,11 +14,11 @@ DEV = "cuda"; P = 256; S = 128; BW = 16
 HZ = os.environ.get("HZ_CKPT", "hazard_tiny.pt"); HZS = os.environ.get("HZ_SIZE", "tiny")
 DRAFTS = {"p105": 10.5, "p125": 12.5}
 net = V5(HZS).to(DEV); ck = torch.load(HZ, map_location=DEV, weights_only=False); net.load_state_dict(ck["net"]); net.eval()
-grav = GravityPrior(); os.makedirs("hazard_out", exist_ok=True)
+grav = GravityPrior(); OUT = os.environ.get("HZ_OUT", "hazard_out"); os.makedirs(OUT, exist_ok=True)
 win = np.outer(np.hanning(P), np.hanning(P)) + 1e-3
-files = [l.strip() for l in open("corridor_blocks.txt") if l.strip()]
+files = [l.strip() for l in open(os.environ.get("HZ_BLOCKS", "corridor_blocks.txt")) if l.strip()]
 for n, f in enumerate(files):
-    out = f"hazard_out/{os.path.basename(f)}"
+    out = f"{OUT}/{os.path.basename(f)}"
     if os.path.exists(out): continue
     d = np.load(f, allow_pickle=True); z = d["z"].astype("float32"); bb = d["bbox3857"]; H, W = z.shape
     known = np.isfinite(z).astype(np.float32)

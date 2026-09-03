@@ -1,0 +1,347 @@
+{
+ "radius_km": 15,
+ "note": "median_survey_year uses 2017 for soundings outside the 1832-2016 CHS Survey Index (i.e. modern)",
+ "cards": [
+  {
+   "community": "Churchill MB",
+   "lat": 58.77,
+   "lon": -94.19,
+   "water_cells": 62721,
+   "pct_sounded": 29.9,
+   "median_survey_year": 1992,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "B": 16362
+   },
+   "pct_safe_water_flagged": 27.5
+  },
+  {
+   "community": "Arviat",
+   "lat": 61.1,
+   "lon": -94.06,
+   "water_cells": 57475,
+   "pct_sounded": 32.3,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {},
+   "pct_safe_water_flagged": 33.3
+  },
+  {
+   "community": "Whale Cove",
+   "lat": 62.18,
+   "lon": -92.58,
+   "water_cells": 108934,
+   "pct_sounded": 19.0,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {},
+   "pct_safe_water_flagged": 65.4
+  },
+  {
+   "community": "Rankin Inlet",
+   "lat": 62.82,
+   "lon": -92.08,
+   "water_cells": 53524,
+   "pct_sounded": 55.9,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {},
+   "pct_safe_water_flagged": 64.5
+  },
+  {
+   "community": "Chesterfield Inlet",
+   "lat": 63.34,
+   "lon": -90.7,
+   "water_cells": 84360,
+   "pct_sounded": 39.9,
+   "median_survey_year": 2017,
+   "pct_pre1980": 8.6,
+   "catzoc": {
+    "B": 2761,
+    "C": 2908
+   },
+   "pct_safe_water_flagged": 59.9
+  },
+  {
+   "community": "Baker Lake (inlet route)",
+   "lat": 63.9,
+   "lon": -93.5,
+   "water_cells": 249,
+   "pct_sounded": 100.0,
+   "median_survey_year": 1974,
+   "pct_pre1980": 100.0,
+   "catzoc": {
+    "B": 249
+   }
+  },
+  {
+   "community": "Coral Harbour",
+   "lat": 64.14,
+   "lon": -83.17,
+   "water_cells": 49730,
+   "pct_sounded": 73.0,
+   "median_survey_year": 2017,
+   "pct_pre1980": 13.1,
+   "catzoc": {
+    "A2": 718,
+    "B": 20,
+    "C": 1880,
+    "D": 4744
+   },
+   "pct_safe_water_flagged": 17.0
+  },
+  {
+   "community": "Naujaat",
+   "lat": 66.53,
+   "lon": -86.25,
+   "water_cells": 81435,
+   "pct_sounded": 26.7,
+   "median_survey_year": 1955,
+   "pct_pre1980": 53.9,
+   "catzoc": {
+    "C": 19749
+   }
+  },
+  {
+   "community": "Kugaaruk",
+   "lat": 68.53,
+   "lon": -89.83,
+   "water_cells": 81938,
+   "pct_sounded": 72.1,
+   "median_survey_year": 1992,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "B": 36750,
+    "C": 22350
+   }
+  },
+  {
+   "community": "Gjoa Haven",
+   "lat": 68.63,
+   "lon": -95.88,
+   "water_cells": 127181,
+   "pct_sounded": 41.0,
+   "median_survey_year": 1995,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "C": 52157
+   },
+   "pct_safe_water_flagged": 30.6
+  },
+  {
+   "community": "Taloyoak",
+   "lat": 69.54,
+   "lon": -93.53,
+   "water_cells": 35160,
+   "pct_sounded": 62.3,
+   "median_survey_year": 1995,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "A1": 2589,
+    "B": 4668,
+    "C": 14435
+   },
+   "pct_safe_water_flagged": 42.0
+  },
+  {
+   "community": "Kugluktuk",
+   "lat": 67.83,
+   "lon": -115.1,
+   "water_cells": 96460,
+   "pct_sounded": 13.7,
+   "median_survey_year": 2011,
+   "pct_pre1980": 41.0,
+   "catzoc": {
+    "A1": 2559,
+    "B": 5801
+   }
+  },
+  {
+   "community": "Cambridge Bay",
+   "lat": 69.12,
+   "lon": -105.06,
+   "water_cells": 59810,
+   "pct_sounded": 75.8,
+   "median_survey_year": 1995,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "A1": 9214,
+    "A2": 6,
+    "B": 4710,
+    "C": 30818
+   }
+  },
+  {
+   "community": "Iqaluit",
+   "lat": 63.75,
+   "lon": -68.51,
+   "water_cells": 45820,
+   "pct_sounded": 68.7,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "C": 3308
+   },
+   "pct_safe_water_flagged": 62.8
+  },
+  {
+   "community": "Kimmirut",
+   "lat": 62.85,
+   "lon": -69.87,
+   "water_cells": 21384,
+   "pct_sounded": 26.5,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "A2": 586,
+    "C": 554
+   },
+   "pct_safe_water_flagged": 100.0
+  },
+  {
+   "community": "Pangnirtung",
+   "lat": 66.15,
+   "lon": -65.71,
+   "water_cells": 24850,
+   "pct_sounded": 90.3,
+   "median_survey_year": 2003,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "B": 21161
+   }
+  },
+  {
+   "community": "Qikiqtarjuaq",
+   "lat": 67.56,
+   "lon": -64.03,
+   "water_cells": 99956,
+   "pct_sounded": 66.4,
+   "median_survey_year": 2001,
+   "pct_pre1980": 36.4,
+   "catzoc": {
+    "C": 12799,
+    "D": 24174
+   }
+  },
+  {
+   "community": "Clyde River",
+   "lat": 70.47,
+   "lon": -68.59,
+   "water_cells": 76770,
+   "pct_sounded": 45.6,
+   "median_survey_year": 1970,
+   "pct_pre1980": 72.2,
+   "catzoc": {
+    "C": 9719,
+    "D": 25286
+   }
+  },
+  {
+   "community": "Pond Inlet",
+   "lat": 72.7,
+   "lon": -77.96,
+   "water_cells": 186241,
+   "pct_sounded": 97.5,
+   "median_survey_year": 2001,
+   "pct_pre1980": 0.0,
+   "catzoc": {
+    "A2": 41744,
+    "B": 89854,
+    "C": 5827,
+    "D": 44105
+   }
+  },
+  {
+   "community": "Arctic Bay",
+   "lat": 73.03,
+   "lon": -85.15,
+   "water_cells": 149176,
+   "pct_sounded": 58.7,
+   "median_survey_year": 2001,
+   "pct_pre1980": 19.7,
+   "catzoc": {
+    "A2": 23157,
+    "B": 5172,
+    "C": 32385,
+    "D": 20025
+   }
+  },
+  {
+   "community": "Resolute",
+   "lat": 74.7,
+   "lon": -94.83,
+   "water_cells": 181645,
+   "pct_sounded": 89.9,
+   "median_survey_year": 2011,
+   "pct_pre1980": 17.1,
+   "catzoc": {
+    "A1": 5726,
+    "A2": 34677,
+    "C": 12491,
+    "D": 81875
+   }
+  },
+  {
+   "community": "Sanikiluaq",
+   "lat": 56.54,
+   "lon": -79.23,
+   "water_cells": 63820,
+   "pct_sounded": 21.8,
+   "median_survey_year": 1983,
+   "pct_pre1980": 41.4,
+   "catzoc": {
+    "B": 8155,
+    "C": 5756
+   },
+   "pct_safe_water_flagged": 50.1
+  },
+  {
+   "community": "Puvirnituq",
+   "lat": 60.04,
+   "lon": -77.28,
+   "water_cells": 18796,
+   "pct_sounded": 54.9,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {},
+   "pct_safe_water_flagged": 100.0
+  },
+  {
+   "community": "Salluit",
+   "lat": 62.2,
+   "lon": -75.63,
+   "water_cells": 23034,
+   "pct_sounded": 45.8,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.0,
+   "catzoc": {},
+   "pct_safe_water_flagged": 59.2
+  },
+  {
+   "community": "Deception Bay (Raglan)",
+   "lat": 62.13,
+   "lon": -74.6,
+   "water_cells": 11961,
+   "pct_sounded": 55.6,
+   "median_survey_year": 1960,
+   "pct_pre1980": 80.6,
+   "catzoc": {
+    "C": 1287,
+    "D": 5361
+   },
+   "pct_safe_water_flagged": 100.0
+  },
+  {
+   "community": "Milne Inlet (Baffinland)",
+   "lat": 71.88,
+   "lon": -80.88,
+   "water_cells": 19516,
+   "pct_sounded": 97.6,
+   "median_survey_year": 2017,
+   "pct_pre1980": 0.8,
+   "catzoc": {
+    "B": 8335
+   }
+  }
+ ]
+}

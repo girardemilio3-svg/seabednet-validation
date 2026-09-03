@@ -1,0 +1,231 @@
+{
+ "assumptions": "0.5 deg boxes; inferred water only; calibrated sigma68; 40 km2/day; C$2,600/km2 (CHS Sedna contract rate) to C$183k/day (CCG charter)",
+ "top20": [
+  {
+   "lon": -57.0,
+   "lat": 44.0,
+   "area_km2": 2143,
+   "mean_sigma68": 13.9,
+   "peak_sigma68": 14.0,
+   "burden": 29685,
+   "ship_days": 53.6,
+   "cost_low_MCAD": 5.6,
+   "cost_high_MCAD": 9.8
+  },
+  {
+   "lon": -57.0,
+   "lat": 43.5,
+   "area_km2": 2180,
+   "mean_sigma68": 13.3,
+   "peak_sigma68": 14.0,
+   "burden": 28948,
+   "ship_days": 54.5,
+   "cost_low_MCAD": 5.7,
+   "cost_high_MCAD": 10.0
+  },
+  {
+   "lon": -61.5,
+   "lat": 42.5,
+   "area_km2": 2075,
+   "mean_sigma68": 13.9,
+   "peak_sigma68": 14.0,
+   "burden": 28921,
+   "ship_days": 51.9,
+   "cost_low_MCAD": 5.4,
+   "cost_high_MCAD": 9.5
+  },
+  {
+   "lon": -87.5,
+   "lat": 47.5,
+   "area_km2": 2029,
+   "mean_sigma68": 13.8,
+   "peak_sigma68": 14.0,
+   "burden": 28086,
+   "ship_days": 50.7,
+   "cost_low_MCAD": 5.3,
+   "cost_high_MCAD": 9.3
+  },
+  {
+   "lon": -57.5,
+   "lat": 43.5,
+   "area_km2": 2045,
+   "mean_sigma68": 13.6,
+   "peak_sigma68": 14.0,
+   "burden": 27847,
+   "ship_days": 51.1,
+   "cost_low_MCAD": 5.3,
+   "cost_high_MCAD": 9.4
+  },
+  {
+   "lon": -87.0,
+   "lat": 47.5,
+   "area_km2": 2025,
+   "mean_sigma68": 13.7,
+   "peak_sigma68": 14.0,
+   "burden": 27749,
+   "ship_days": 50.6,
+   "cost_low_MCAD": 5.3,
+   "cost_high_MCAD": 9.3
+  },
+  {
+   "lon": -88.0,
+   "lat": 47.5,
+   "area_km2": 1975,
+   "mean_sigma68": 13.9,
+   "peak_sigma68": 14.0,
+   "burden": 27417,
+   "ship_days": 49.4,
+   "cost_low_MCAD": 5.1,
+   "cost_high_MCAD": 9.0
+  },
+  {
+   "lon": -86.5,
+   "lat": 47.5,
+   "area_km2": 2004,
+   "mean_sigma68": 13.6,
+   "peak_sigma68": 14.0,
+   "burden": 27201,
+   "ship_days": 50.1,
+   "cost_low_MCAD": 5.2,
+   "cost_high_MCAD": 9.2
+  },
+  {
+   "lon": -86.5,
+   "lat": 47.0,
+   "area_km2": 1986,
+   "mean_sigma68": 13.6,
+   "peak_sigma68": 14.0,
+   "burden": 27011,
+   "ship_days": 49.6,
+   "cost_low_MCAD": 5.2,
+   "cost_high_MCAD": 9.1
+  },
+  {
+   "lon": -85.5,
+   "lat": 47.0,
+   "area_km2": 1923,
+   "mean_sigma68": 13.9,
+   "peak_sigma68": 14.0,
+   "burden": 26812,
+   "ship_days": 48.1,
+   "cost_low_MCAD": 5.0,
+   "cost_high_MCAD": 8.8
+  },
+  {
+   "lon": -87.0,
+   "lat": 48.0,
+   "area_km2": 1972,
+   "mean_sigma68": 13.6,
+   "peak_sigma68": 14.0,
+   "burden": 26786,
+   "ship_days": 49.3,
+   "cost_low_MCAD": 5.1,
+   "cost_high_MCAD": 9.0
+  },
+  {
+   "lon": -49.0,
+   "lat": 49.5,
+   "area_km2": 1908,
+   "mean_sigma68": 14.0,
+   "peak_sigma68": 14.0,
+   "burden": 26701,
+   "ship_days": 47.7,
+   "cost_low_MCAD": 5.0,
+   "cost_high_MCAD": 8.7
+  },
+  {
+   "lon": -49.5,
+   "lat": 49.0,
+   "area_km2": 1893,
+   "mean_sigma68": 14.0,
+   "peak_sigma68": 14.0,
+   "burden": 26496,
+   "ship_days": 47.3,
+   "cost_low_MCAD": 4.9,
+   "cost_high_MCAD": 8.7
+  },
+  {
+   "lon": -49.5,
+   "lat": 49.5,
+   "area_km2": 1871,
+   "mean_sigma68": 14.0,
+   "peak_sigma68": 14.0,
+   "burden": 26180,
+   "ship_days": 46.8,
+   "cost_low_MCAD": 4.9,
+   "cost_high_MCAD": 8.6
+  },
+  {
+   "lon": -83.0,
+   "lat": 45.0,
+   "area_km2": 1979,
+   "mean_sigma68": 13.1,
+   "peak_sigma68": 14.0,
+   "burden": 25912,
+   "ship_days": 49.5,
+   "cost_low_MCAD": 5.1,
+   "cost_high_MCAD": 9.1
+  },
+  {
+   "lon": -61.5,
+   "lat": 43.0,
+   "area_km2": 2144,
+   "mean_sigma68": 12.1,
+   "peak_sigma68": 14.0,
+   "burden": 25837,
+   "ship_days": 53.6,
+   "cost_low_MCAD": 5.6,
+   "cost_high_MCAD": 9.8
+  },
+  {
+   "lon": -49.5,
+   "lat": 50.0,
+   "area_km2": 1839,
+   "mean_sigma68": 13.9,
+   "peak_sigma68": 14.0,
+   "burden": 25609,
+   "ship_days": 46.0,
+   "cost_low_MCAD": 4.8,
+   "cost_high_MCAD": 8.4
+  },
+  {
+   "lon": -127.5,
+   "lat": 49.0,
+   "area_km2": 1980,
+   "mean_sigma68": 12.8,
+   "peak_sigma68": 14.0,
+   "burden": 25433,
+   "ship_days": 49.5,
+   "cost_low_MCAD": 5.1,
+   "cost_high_MCAD": 9.1
+  },
+  {
+   "lon": -47.5,
+   "lat": 48.5,
+   "area_km2": 1801,
+   "mean_sigma68": 14.0,
+   "peak_sigma68": 14.0,
+   "burden": 25207,
+   "ship_days": 45.0,
+   "cost_low_MCAD": 4.7,
+   "cost_high_MCAD": 8.2
+  },
+  {
+   "lon": -48.0,
+   "lat": 49.0,
+   "area_km2": 1797,
+   "mean_sigma68": 14.0,
+   "peak_sigma68": 14.0,
+   "burden": 25154,
+   "ship_days": 44.9,
+   "cost_low_MCAD": 4.7,
+   "cost_high_MCAD": 8.2
+  }
+ ],
+ "total": {
+  "area_km2": 39569,
+  "ship_days": 989,
+  "cost_low_MCAD": 103,
+  "cost_high_MCAD": 181
+ }
+}

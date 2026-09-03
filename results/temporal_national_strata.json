@@ -1,0 +1,12 @@
+{
+ "marine_blocks": 300,
+ "marine_cells": 20405461,
+ "marine_model": 12.626998453992293,
+ "marine_nn": 19.68239954490614,
+ "marine_grav": 15.741078969007365,
+ "gravfail_blocks": 21,
+ "gravfail_cells": 539352,
+ "gravfail_model": 79.3,
+ "gravfail_nn": 46.9,
+ "gravfail_grav": 199.7
+}

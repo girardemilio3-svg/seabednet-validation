@@ -1,0 +1,69 @@
+{
+ "rule": "post-2016 sounding cells within 1 km of a dated pre-2016 sounding; water shallower than 100 m; error = old sounding minus modern value; negative = reality shallower than the old chart",
+ "n_blocks": 292,
+ "by_survey_decade": {
+  "1900-1940": {
+   "n": 9047,
+   "median_abs_err": 0.779296875,
+   "p90_abs_err": 7.475390434265137,
+   "median_err": -0.1513671875,
+   "pct_shallower_than_charted_5m": 9.107991599425223
+  },
+  "1940-1950": {
+   "n": 5036,
+   "median_abs_err": 0.9375,
+   "p90_abs_err": 14.2734375,
+   "median_err": 0.015625,
+   "pct_shallower_than_charted_5m": 8.379666401906274
+  },
+  "1950-1960": {
+   "n": 21823,
+   "median_abs_err": 1.375,
+   "p90_abs_err": 9.560142517089844,
+   "median_err": -0.25,
+   "pct_shallower_than_charted_5m": 13.678229391009486
+  },
+  "1960-1970": {
+   "n": 25009,
+   "median_abs_err": 1.0,
+   "p90_abs_err": 6.59375,
+   "median_err": -0.15625,
+   "pct_shallower_than_charted_5m": 7.845175736734776
+  },
+  "1970-1980": {
+   "n": 29960,
+   "median_abs_err": 0.75,
+   "p90_abs_err": 5.09375,
+   "median_err": -0.0625,
+   "pct_shallower_than_charted_5m": 5.5740987983978645
+  },
+  "1980-1990": {
+   "n": 22852,
+   "median_abs_err": 0.90625,
+   "p90_abs_err": 7.8125,
+   "median_err": -0.09375,
+   "pct_shallower_than_charted_5m": 9.443374759320847
+  },
+  "1990-2000": {
+   "n": 24782,
+   "median_abs_err": 1.3299560546875,
+   "p90_abs_err": 9.759870529174805,
+   "median_err": -0.1927490234375,
+   "pct_shallower_than_charted_5m": 12.287143894762327
+  },
+  "2000-2010": {
+   "n": 101867,
+   "median_abs_err": 0.8125,
+   "p90_abs_err": 7.6875,
+   "median_err": -0.0625,
+   "pct_shallower_than_charted_5m": 10.7709071632619
+  },
+  "2010-2017": {
+   "n": 25922,
+   "median_abs_err": 0.9375,
+   "p90_abs_err": 7.421875,
+   "median_err": -0.1561279296875,
+   "pct_shallower_than_charted_5m": 10.40043206542705
+  }
+ }
+}

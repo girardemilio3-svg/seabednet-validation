@@ -1,0 +1,15 @@
+{
+ "scope": "corridor blocks with cached GEBCO tiles; NONNA-sounded cells shallower than 200 m; GEBCO = NCEI global mosaic (GEBCO 2024/25)",
+ "n_cells": 14665028,
+ "km2": 73155,
+ "pct_err_gt10": 14.4,
+ "pct_err_gt20": 6.3,
+ "pct_deep_biased_gt10": 6.0,
+ "km2_deep_biased_gt10": 4523,
+ "route": {
+  "n_points": 172,
+  "pct_gt10": 15.7,
+  "pct_deep_gt10": 10.5,
+  "worst_deep_m": -122.0048828125
+ }
+}
