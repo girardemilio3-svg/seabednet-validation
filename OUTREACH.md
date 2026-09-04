@@ -82,3 +82,33 @@ Purpose: a public, reproducible hindcast benchmark for seabed-hazard models (see
 I am content to receive the records under the Open Government Licence or with any redaction the Board considers necessary for personal information; vessel names may be withheld if positions and dates are retained.
 
 Emilio Girard, SeabedNet, Montréal · girardemilio3@gmail.com
+
+---
+
+## 6. Academic / scholarship cold email (Jakobsson, Mayer, Church, Forest, OFI)
+
+Subject: A temporal-holdout benchmark for bathymetric completion on CHS NONNA, plus a grounding hindcast — would you look?
+
+Dear Professor [Name],
+
+I'm an independent ML engineer in Montréal. Over the past week I built and validated a completion model for Canada's NONNA archive and released the part I think your field is missing: a temporal-holdout benchmark. Training only on soundings inside the CHS Survey Index (1832–2016) and scoring on the 20.4 million soundings CHS collected afterwards, the model reaches 12.6 m against 15.7 m for SRTM15+ and 16.2–16.8 m for gravity-trend-plus-interpolation; the split, targets and scorer are public (NONNA-Temporal-Churchill v1).
+
+Two things you may find directly relevant: [for Jakobsson: an audit of where the GEBCO/IBCAO grid disagrees with the CHS archive by >10 m along the Churchill route, and the caveat that GEBCO contains the test set via IBCAO v5, which I state rather than exploit] [for Mayer: the benchmark and the shallowest-point hazard model, hindcast on seven TSB groundings] [for Church/Forest: the independent test on Amundsen multibeam and the hazard field for Hudson Strait].
+
+Everything, including the negative results (an ICESat-2 ATL24 attempt that cannot referee turbid water; an era audit that came out null), is on the record: [links]. I'd value ten minutes of your criticism more than praise, and I'm looking for a place to do this properly — a graduate position, a lab, or a project.
+
+Emilio Girard · Montréal · girardemilio3@gmail.com
+
+---
+
+## 7. Press pitch (Day 7: Nunatsiaq News, CBC North, Hakai, Globe, gCaptain) — send with the sentence "CHS and the TSB received this on [date]"
+
+Subject: A desktop model says it can see the Arctic shoals Canada hasn't charted — and it has put 40 of them in writing
+
+A solo engineer in Montréal has published a machine-learning completion of Canada's official seabed archive and, with it, a sealed list of 40 places in Arctic and coastal shipping water where the official depth map says safe and the model says a keel-depth rock lies within 500 m. The list is timestamped on a public ledger; each entry is settled by a single survey line.
+
+The numbers behind it are public and checkable: trained only on soundings from before 2016, the model predicted 20 million soundings the Canadian Hydrographic Service collected afterwards more accurately than the gravity-based charts the world falls back on; run against seven real Arctic groundings using only the soundings that existed before each ship hit, it ranked four of the seven strike sites in the top 10% of danger among water the chart called safe. It also grades every Nunavut resupply lane: Naujaat's approach rests on surveys with a median year of 1955; Deception Bay's, where ore ships dock, on 1960.
+
+Ten years ago CHS said full Arctic charting was "more than a decade" away. The decade has passed; Ottawa, Manitoba and Saskatchewan are investing C$262.5M in the Churchill corridor with no charting line in the budget. The atlas prices one: C$23–40M for the corridor's worst water.
+
+Page, report, code, and the sealed list: [links]. Available for interview; the TSB and CHS were informed on [date].
