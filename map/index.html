@@ -77,7 +77,7 @@ const style = {
     plan: { type: "geojson", data: { type: "FeatureCollection", features: D.plan.map((b, i) => ({ type: "Feature", geometry: { type: "Polygon", coordinates: [[[b.lon - .25, b.lat - .25], [b.lon + .25, b.lat - .25], [b.lon + .25, b.lat + .25], [b.lon - .25, b.lat + .25], [b.lon - .25, b.lat - .25]]] }, properties: Object.assign({ rank: i + 1 }, b) })) } }
   },
   layers: [
-    { id: "bg", type: "background", paint: { "background-color": "#04060c" } },
+    { id: "bg", type: "background", paint: { "background-color": "#0a1526" } },
     { id: "ocean", type: "raster", source: "ocean", paint: { "raster-saturation": -0.55, "raster-brightness-max": 0.55, "raster-contrast": 0.15 } },
     { id: "relief", type: "color-relief", source: "hillsrc", paint: { "color-relief-color": ["interpolate", ["linear"], ["elevation"], -700, "#06132a", -350, "#0c264a", -180, "#144677", -90, "#256c9c", -45, "#4396bd", -18, "#7fc1d8", -4, "#bfe2e8", -0.5, "#d9cfb4", 0, "rgba(0,0,0,0)"], "color-relief-opacity": ["interpolate", ["linear"], ["zoom"], 5, 0, 6.5, 0.9] } },
     { id: "hillshade", type: "hillshade", source: "hillsrc", paint: { "hillshade-exaggeration": 0.9, "hillshade-shadow-color": "#02030a", "hillshade-highlight-color": "#9fc4e8", "hillshade-accent-color": "#1b3a5c", "hillshade-illumination-direction": 315 } },
@@ -201,13 +201,18 @@ if (/film=1/.test(location.search)) {
   const u = document.createElement("div"); u.style.cssText = "position:absolute;left:62px;top:96px;font:13px/1.4 IBM Plex Mono,monospace;letter-spacing:.2em;color:#e8b24a;z-index:9"; u.textContent = "SEABEDNET · SEALED CLAIMS ON THE SEABED · SEPTEMBER 2026"; document.body.appendChild(u);
   const e = document.createElement("div"); e.style.cssText = "position:absolute;right:60px;bottom:40px;font:12px/1.4 IBM Plex Mono,monospace;letter-spacing:.14em;color:#8a97b1;z-index:9;text-align:right"; e.innerHTML = "girardemilio3-svg.github.io/churchill-corridor-atlas<br>planning prior — not for navigation"; document.body.appendChild(e);
   cap.style.cssText += ";font-size:19px;max-width:820px;left:60px;transform:none;bottom:60px"; map.getCanvas().style.cursor = "none"; document.body.style.cursor = "none";
+  map.on("load", () => map.setLayoutProperty("labels", "visibility", "none"));   // the captions name the places; the raster labels balloon when pitched mid-flight
   window.__tourDone = false; window.__warmDone = false; window.__go = false;
   // warm-up: visit every stop (and the zoomed-out midpoints of each flight) behind a black cover so all tiles are cached before the capture starts
   const cover = document.createElement("div"); cover.style.cssText = "position:absolute;inset:0;background:#04060c;z-index:20"; document.body.appendChild(cover);
   const idle = () => new Promise(r => { if (map.loaded() && !map.isMoving()) r(); else map.once("idle", r); });
   map.once("idle", async () => {
     const views = []; let prev = { c: [-80, 62], z: 1.6, p: 0, b: 0 };
-    for (const st of STOPS) { views.push({ c: [(prev.c[0] + st.c[0])/2, (prev.c[1] + st.c[1])/2], z: Math.max(3, Math.min(prev.z, st.z) - 2.5), p: (prev.p + st.p)/2, b: st.b }); views.push(st); prev = st; }
+    for (const st of STOPS) {   // flyTo (curve 1.6) zooms out to ~z4 mid-flight while pitched: cache those wide views too
+      const mid = [(prev.c[0] + st.c[0])/2, (prev.c[1] + st.c[1])/2];
+      for (const [f, z, p] of [[0.25, 5.5, 60], [0.5, 4.2, 60], [0.5, 6.5, 70], [0.75, 5.5, 65]]) views.push({ c: [prev.c[0] + f*(st.c[0]-prev.c[0]), prev.c[1] + f*(st.c[1]-prev.c[1])], z, p, b: st.b });
+      views.push({ c: st.c, z: Math.max(3, st.z - 2), p: st.p, b: st.b }); views.push(st); prev = st;
+    }
     for (const v of views) { map.jumpTo({ center: v.c, zoom: v.z, pitch: v.p, bearing: v.b }); await new Promise(r => setTimeout(r, 300)); await idle(); await new Promise(r => setTimeout(r, 400)); }
     map.jumpTo({ center: [-80, 62], zoom: 1.6, pitch: 0, bearing: 0 }); await idle(); window.__warmDone = true;
     while (!window.__go) await new Promise(r => setTimeout(r, 100));
