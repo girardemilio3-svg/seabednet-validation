@@ -66,6 +66,8 @@ K = f'''
   <p class="lede" style="font-size:14.5px"><b style="color:var(--text)">NASA&rsquo;s laser.</b> ICESat-2 ATL24 seafloor photons, {sum(len(v.get('blocks', [])) for v in IC.get('boxes', {}).values())} block-passes over 12 corridor boxes, ~3.6 million photons: where the fitted datum offset is physical, the laser agrees with CHS soundings to 1&ndash;5 m, which independently checks the archive, but only {ICS.get('overall', {}).get('n', 0)} photon cells with no published sounding survive the quality gates in this turbid water. The laser cannot referee the model&rsquo;s fills here; we tried and say so. <b style="color:var(--text)">The era audit.</b> Where CHS re-surveyed water after 2016, the older soundings within 200 m agree with the new ones to about a metre in every decade back to 1900 ({', '.join(f"{k}: {v['median_abs_err']:.1f} m" for k, v in list(json.load(open('era_audit.json'))['by_survey_decade'].items())[2:7])}). A null result with a lesson: {era_note}.</p>
 </section>
 '''
+src = sub1(src, '<div class="stat amber"><b>+61%</b><span>of the route, completed by model (grades B+C)</span></div>',
+  '<div class="stat amber"><b>+61%</b><span>of the route, completed by model (grades B+C)</span></div>\n    <div class="stat blue"><b><a href="map/" style="text-decoration:none;color:inherit">&#9679; GLOBE</a></b><span><a href="map/">open the interactive globe: every sealed claim on the planet</a></span></div>')
 anchor = '<section>\n  <div class="eyebrow">Exhibit A &mdash; the corridor, found</div>'
 src = sub1(src, anchor, J + K + anchor)
 open("churchill_atlas_v4.html", "w", encoding="utf-8").write(src)
