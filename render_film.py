@@ -14,7 +14,7 @@ FLY, HOLD = (2.0, 1.0) if A.test else (7.0, 5.0)      # seconds per flight / per
 ORBIT = dict(c=[-80, 62], z=2.3, p=0, b=0, t="", s="")
 def ease(u): return u*u*(3-2*u)
 with sync_playwright() as pw:
-    br = pw.chromium.launch(args=["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"])
+    br = pw.chromium.launch(args=os.environ.get("CHROME_ARGS", "--use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader --ignore-gpu-blocklist").split())
     pg = br.new_page(viewport={"width": A.w, "height": A.h}, device_scale_factor=1)
     pg.goto(A.url, wait_until="load"); pg.wait_for_function("window.map && map.loaded && map.loaded()", timeout=180000)
     pg.evaluate("""() => { document.querySelector('.panel').style.display='none'; document.querySelector('.legend').style.display='none';
