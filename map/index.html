@@ -79,6 +79,7 @@ const style = {
   layers: [
     { id: "bg", type: "background", paint: { "background-color": "#04060c" } },
     { id: "ocean", type: "raster", source: "ocean", paint: { "raster-saturation": -0.55, "raster-brightness-max": 0.55, "raster-contrast": 0.15 } },
+    { id: "relief", type: "color-relief", source: "hillsrc", paint: { "color-relief-color": ["interpolate", ["linear"], ["elevation"], -700, "#06132a", -350, "#0c264a", -180, "#144677", -90, "#256c9c", -45, "#4396bd", -18, "#7fc1d8", -4, "#bfe2e8", -0.5, "#d9cfb4", 0, "rgba(0,0,0,0)"], "color-relief-opacity": ["interpolate", ["linear"], ["zoom"], 5, 0, 6.5, 0.9] } },
     { id: "hillshade", type: "hillshade", source: "hillsrc", paint: { "hillshade-exaggeration": 0.9, "hillshade-shadow-color": "#02030a", "hillshade-highlight-color": "#9fc4e8", "hillshade-accent-color": "#1b3a5c", "hillshade-illumination-direction": 315 } },
     { id: "age-img", type: "raster", source: "age", paint: { "raster-opacity": 0.0, "raster-resampling": "nearest" } },
     { id: "hazard-img", type: "raster", source: "hazard", paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0.8, 9, 0.45, 11, 0.22], "raster-resampling": "linear" } },
