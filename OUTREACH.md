@@ -2,6 +2,28 @@
 
 Nothing here claims more than the page shows.
 
+## 0. Verified contacts (checked 3 Sept 2026; official pages only, no guessed personal addresses)
+
+| # | Who | Send to | Draft |
+|---|---|---|---|
+| 1 | **Manon Larocque**, Hydrographer General of Canada / DG CHS (since Sept 2023) | chsinfo@dfo-mpo.gc.ca, attention Ms Larocque · 613-998-4931 · 200 Kent St, Station 12W090, Ottawa K1A 0E6 | 2 |
+| 2 | **TSB ATIP Coordinator** (legal 30-day reply); cc Clifford Harvey, Director of Investigations (Marine) | atip.aiprp@tsb-bst.gc.ca | 5 |
+| 3 | **Chris Avery**, CEO Arctic Gateway Group (since July 2024) | web form arcticgateway.com/contact · (204) 805-7042 · 728 Bignell Ave, The Pas MB R9A 1L8 (no public email) | 3 |
+| 4 | **Major Projects Office** (Privy Council) intake | canada.ca/en/privy-council/major-projects-office/proponent-intake-form.html · info@mpo-bgp.gc.ca | 1 |
+| 4b | **TC Northern Low-Impact Shipping Corridors** | OPPCorridorsPPO@tc.gc.ca | 4 |
+| 5 | **Martin Jakobsson**, Stockholm U (IBCAO / Seabed 2030 Arctic) | martin.jakobsson@geo.su.se | 6 |
+| 6 | **Larry Mayer**, UNH CCOM | Larry.Mayer@unh.edu | 6 |
+| 7 | **Ian Church**, UNB Ocean Mapping Group | ian.church@unb.ca | 6 |
+| 8 | **Alexandre Forest**, Amundsen Science, U Laval | alexandre.forest@as.ulaval.ca | 6 |
+| 9 | **Ocean Frontier Institute** | ofi@dal.ca (media: oficomms@dal.ca) | 6 |
+| Day 7 | **Nunatsiaq News** | editors@nunatsiaq.com (Corey Larocque, coreyl@nunatsiaq.com) | 7 |
+| Day 7 | **CBC North** | nunavut@cbc.ca · 867-979-6135 | 7 |
+| Day 7 | **Hakai Magazine** | news@hakaimagazine.com / editor@hakaimagazine.com | 7 |
+| Day 7 | **gCaptain** | editorial@gcaptain.com | 7 |
+| Day 7 | **The Globe and Mail** | tips@globeandmail.com | 7 |
+
+Flags: Harvey's 2026 tenure confirmed only via cached TSB pages; Arctic Gateway publishes no email (use the form and follow with a call).
+
 ---
 
 ## 1. Transport Canada / MPO — Churchill Plus "Project intake form" (Major Projects Office)
@@ -71,7 +93,7 @@ Requesting the current NLISC corridor polygons (or a pointer to their public rel
 
 ## 5. Transportation Safety Board of Canada — data request (Marine occurrence records)
 
-To: Access to Information and Privacy Coordinator, Transportation Safety Board of Canada (atip-aiprp@tsb.gc.ca), or directly to TSB Marine Investigations.
+To: ATIP Coordinator, Transportation Safety Board of Canada — atip.aiprp@tsb-bst.gc.ca (Place du Centre, 200 Promenade du Portage, 4th floor, Gatineau QC K1A 1K8); cc Director of Investigations (Marine), Clifford Harvey, via the TSB switchboard.
 
 Subject: Request for occurrence-level records of vessel groundings and bottom contacts in Canadian Arctic waters, 1990–2026
 
