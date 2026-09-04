@@ -7,18 +7,23 @@ from playwright.sync_api import sync_playwright
 ap = argparse.ArgumentParser(); ap.add_argument("--url", default="http://localhost:8765/map/?film=1&static=1"); ap.add_argument("--w", type=int, default=1920); ap.add_argument("--h", type=int, default=1080); ap.add_argument("--fps", type=int, default=30)
 A = ap.parse_args(); os.makedirs("film", exist_ok=True)
 env = dict(os.environ, DISPLAY=":99", VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json")
-xvfb = subprocess.Popen(["Xvfb", ":99", "-screen", "0", f"{A.w}x{A.h}x24", "-nolisten", "tcp"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); time.sleep(1.5)
+xvfb = subprocess.Popen(["Xvfb", ":99", "-screen", "0", f"{A.w}x{A.h+200}x24", "-nolisten", "tcp"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); time.sleep(1.5)
 args = ["--use-angle=vulkan", "--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan", "--ignore-gpu-blocklist", "--disable-gpu-sandbox", "--enable-gpu-rasterization",
-        "--kiosk", f"--window-size={A.w},{A.h}", "--window-position=0,0", "--hide-scrollbars", "--autoplay-policy=no-user-gesture-required"]
+        f"--window-size={A.w},{A.h+140}", "--window-position=0,0", "--hide-scrollbars", "--autoplay-policy=no-user-gesture-required"]
 rec = None
 try:
     with sync_playwright() as pw:
         br = pw.chromium.launch(headless=False, args=args, env=env, ignore_default_args=["--enable-automation"])
-        ctx = br.new_context(viewport=None); pg = ctx.new_page(); pg.goto(A.url, wait_until="load")
+        ctx = br.new_context(viewport={"width": A.w, "height": A.h}); pg = ctx.new_page(); pg.goto(A.url, wait_until="load")
         pg.wait_for_function("window.map && map.loaded && map.loaded()", timeout=180000)
-        pg.evaluate("() => { document.body.style.cursor='none'; }")
         time.sleep(1.0)
-        rec = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "x11grab", "-framerate", str(A.fps), "-video_size", f"{A.w}x{A.h}", "-i", ":99.0",
+        g = pg.evaluate("() => ({iw: innerWidth, ih: innerHeight, sx: screenX, sy: screenY, oh: outerHeight, ow: outerWidth})")
+        print("window geometry", g, flush=True)
+        gx, gy, gw, gh = max(0, g["sx"]), max(0, g["sy"] + (g["oh"] - g["ih"])), min(A.w, g["iw"] - (g["iw"] % 2)), min(A.h, g["ih"] - (g["ih"] % 2))
+        print("grab", gx, gy, gw, gh, flush=True)
+        pg.evaluate("() => { document.body.style.cursor='none'; map.getCanvas().style.cursor='none'; }"); pg.mouse.move(gw-1, gh-1)
+        time.sleep(1.0)
+        rec = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "x11grab", "-framerate", str(A.fps), "-video_size", f"{gw}x{gh}", "-i", f":99.0+{gx},{gy}", "-vf", f"scale={A.w}:{A.h}:flags=lanczos",
                                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "film/churchill_corridor_raw.mp4"], env=env)
         t0 = time.time()
         while time.time() - t0 < 240:
@@ -31,5 +36,7 @@ finally:
     if rec: rec.send_signal(signal.SIGINT)
     xvfb.terminate()
 # trim the first second (page settle) and re-encode with faststart
-subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1.0", "-i", "film/churchill_corridor_raw.mp4", "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "film/churchill_corridor.mp4"], check=True)
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1.0", "-i", "film/churchill_corridor_raw.mp4", "-loop", "1", "-t", "5", "-framerate", str(A.fps), "-i", "film/endcard.png",
+    "-filter_complex", f"[0:v]fade=t=in:st=0:d=1.2,fade=t=out:st=84.5:d=1.2,setsar=1[a];[1:v]scale={A.w}:{A.h},fade=t=in:st=0:d=1,fade=t=out:st=4:d=1,setsar=1[b];[a][b]concat=n=2:v=1:a=0[v]",
+    "-map", "[v]", "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "film/churchill_corridor.mp4"], check=True)
 print("FILM_DONE"); os.system("ls -la film/churchill_corridor.mp4; ffprobe -v error -show_entries format=duration -of csv=p=0 film/churchill_corridor.mp4")

@@ -18,8 +18,13 @@ def load_blocks(kind):
     elif kind == "hazard":
         for f in sorted(glob.glob("hazard_nat/*.npz")):
             name = os.path.basename(f)
-            if not os.path.exists(f"corridor_out_v2/{name}"): continue
-            d = np.load(f, allow_pickle=True); out.append((d["bbox3857"], d["p105"].astype("float32")))
+            if not os.environ.get("HZ_ALL") and not os.path.exists(f"corridor_out_v2/{name}"): continue
+            d = np.load(f, allow_pickle=True); p = d["p105"].astype("float32")
+            cf = f"corridor_out_v2/{name}" if os.path.exists(f"corridor_out_v2/{name}") else f"national_v5_out/{name}"
+            if os.path.exists(cf):
+                c = np.load(cf, allow_pickle=True)["complete"].astype("float32")
+                if c.shape == p.shape: p = np.where(np.isfinite(c) & (c < -21), p, np.nan)   # draw hazard only where the mean map calls the water navigable: the surprises
+            out.append((d["bbox3857"], p))
     else:
         for f in sorted(glob.glob("tiles_nat/*.npz")):
             ip = f"index_out/{os.path.basename(f)}"
@@ -64,7 +69,7 @@ def cmap(v, lo, hi, stops):
     return rgb.astype(np.uint8)
 def enc_hazard(v):
     ok = np.isfinite(v); rgb = cmap(np.nan_to_num(v), 0, 0.5, INFERNO)
-    a = np.where(ok, np.clip(60 + 195*np.nan_to_num(v)/0.5, 60, 255), 0).astype(np.uint8)
+    a = np.where(ok, np.clip((np.nan_to_num(v) - 0.25)/0.35*255, 0, 255), 0).astype(np.uint8)   # transparent below P=0.25, opaque at P>=0.6: only real flags are drawn
     return np.dstack([rgb, a])
 AGE = [(1800,(140,29,29)),(1940,(192,57,43)),(1960,(230,126,34)),(1980,(232,178,74)),(2000,(127,157,185)),(2017,(46,125,209)),(2020,(46,125,209))]
 def enc_age(v):
@@ -74,7 +79,7 @@ def enc_age(v):
     m = ok & (v >= 2020); rgb[m] = AGE[-1][1]
     return np.dstack([rgb, np.where(ok, 235, 0).astype(np.uint8)])
 import sys
-ALL = [("terrain", (5, 10), enc_terrain, "RGB"), ("hazard", (5, 10), enc_hazard, "RGBA"), ("age", (3, 8), enc_age, "RGBA")]
+ALL = [("terrain", (5, 10), enc_terrain, "RGB"), ("hazard", (int(os.environ.get("HZ_ZMIN", 5)), int(os.environ.get("HZ_ZMAX", 10))), enc_hazard, "RGBA"), ("age", (3, 8), enc_age, "RGBA")]
 JOBS = [j for j in ALL if len(sys.argv) < 2 or j[0] in sys.argv[1:]]
 os.makedirs("map/tiles", exist_ok=True)
 for kind, (zmin, zmax), enc, mode in JOBS:
