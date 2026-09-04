@@ -53,7 +53,7 @@ a{color:var(--blue)}
   <div><i style="background:#ffffff;border:1px solid #888"></i>grounding site · label = blind hazard percentile</div>
   <div><i style="background:#e8b24a"></i>predicted strike point (sealed)</div>
   <div><i style="background:#c0392b"></i>community, chart median &lt; 1980 · <i style="background:#6aa9e0"></i>modern</div>
-  <div style="margin-top:4px">relief: the model-completed seabed, exaggerated ×3.5 · hazard layer: yellow = P(shoal &lt; 10.5 m) &gt; 50% · age layer: red pre-1960 → blue post-2016</div>
+  <div style="margin-top:4px">relief: the seabed, 10 m where CHS has it, model-completed at 100 m elsewhere, exaggerated ×3.5 · water: translucent sea surface · hazard layer: yellow = P(shoal &lt; 10.5 m) &gt; 50% · age layer: red pre-1960 → blue post-2016</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
@@ -65,7 +65,8 @@ const style = {
   sources: {
     ocean: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 13, attribution: "Basemap: Esri, GEBCO, NOAA, National Geographic, DeLorme, HERE, Geonames.org" },
     labels: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 13 },
-    terrain: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 10, attribution: "Seabed relief: SeabedNet completed NONNA-100 (planning prior, not for navigation)" },
+    terrain: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 12, attribution: "Seabed relief: SeabedNet completed NONNA-100 (planning prior, not for navigation)" },
+    hillsrc: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 12 },
     hazard: { type: "raster", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/hazard/{z}/{x}/{y}.png"], tileSize: 256, minzoom: 5, maxzoom: 10 },
     age: { type: "raster", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/age/{z}/{x}/{y}.png"], tileSize: 256, minzoom: 3, maxzoom: 8 },
     route: { type: "geojson", data: { type: "Feature", geometry: { type: "LineString", coordinates: D.route.map(p => [p[1], p[0]]) } } },
@@ -78,7 +79,7 @@ const style = {
   layers: [
     { id: "bg", type: "background", paint: { "background-color": "#04060c" } },
     { id: "ocean", type: "raster", source: "ocean", paint: { "raster-saturation": -0.55, "raster-brightness-max": 0.55, "raster-contrast": 0.15 } },
-    { id: "hillshade", type: "hillshade", source: "terrain", paint: { "hillshade-exaggeration": 0.9, "hillshade-shadow-color": "#02030a", "hillshade-highlight-color": "#9fc4e8", "hillshade-accent-color": "#1b3a5c", "hillshade-illumination-direction": 315 } },
+    { id: "hillshade", type: "hillshade", source: "hillsrc", paint: { "hillshade-exaggeration": 0.9, "hillshade-shadow-color": "#02030a", "hillshade-highlight-color": "#9fc4e8", "hillshade-accent-color": "#1b3a5c", "hillshade-illumination-direction": 315 } },
     { id: "age-img", type: "raster", source: "age", paint: { "raster-opacity": 0.0, "raster-resampling": "nearest" } },
     { id: "hazard-img", type: "raster", source: "hazard", paint: { "raster-opacity": 0.85, "raster-resampling": "nearest" } },
     { id: "labels", type: "raster", source: "labels", paint: { "raster-opacity": 0.55 } },
@@ -98,8 +99,43 @@ const map = new maplibregl.Map({ container: "map", style, center: [-80, 62], zoo
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
 map.on("style.load", () => { try { map.setProjection({ type: "globe" }); } catch (e) {} try { map.setTerrain({ source: "terrain", exaggeration: 3.5 }); } catch (e) {} });
 map.addControl(new maplibregl.TerrainControl({ source: "terrain", exaggeration: 3.5 }), "top-right");
+
+// ---- water surface: a translucent plane at sea level drawn as a 3D custom layer (depth-tested against the terrain)
+const WATER = {
+  id: "water", type: "custom", renderingMode: "3d",
+  onAdd(map, gl) {
+    const vs = `attribute vec2 a_pos; uniform mat4 u_matrix; varying vec2 v_pos; void main(){ v_pos = a_pos; gl_Position = u_matrix * vec4(a_pos, 0.0, 1.0); }`;
+    const fs = `precision highp float; varying vec2 v_pos; uniform float u_t; void main(){
+      float w = 0.5 + 0.5*sin(v_pos.x*9000.0 + u_t*1.3) * sin(v_pos.y*7000.0 - u_t*0.9);
+      vec3 c = mix(vec3(0.05,0.22,0.42), vec3(0.16,0.45,0.70), w*0.35);
+      gl_FragColor = vec4(c, 0.42); }`;
+    const sh = (t, src) => { const o = gl.createShader(t); gl.shaderSource(o, src); gl.compileShader(o); return o; };
+    this.prog = gl.createProgram(); gl.attachShader(this.prog, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(this.prog, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(this.prog);
+    this.aPos = gl.getAttribLocation(this.prog, "a_pos"); this.uM = gl.getUniformLocation(this.prog, "u_matrix"); this.uT = gl.getUniformLocation(this.prog, "u_t");
+    // corridor extent in mercator [0..1] units, subdivided so the plane follows the globe/terrain projection
+    const b = D.hz_bounds; const m = maplibregl.MercatorCoordinate;
+    const tl = m.fromLngLat({ lng: b[0][1], lat: b[1][0] }), br = m.fromLngLat({ lng: b[1][1], lat: b[0][0] });
+    const N = 48, verts = [];
+    for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+      const x0 = tl.x + (br.x - tl.x)*i/N, x1 = tl.x + (br.x - tl.x)*(i+1)/N, y0 = tl.y + (br.y - tl.y)*j/N, y1 = tl.y + (br.y - tl.y)*(j+1)/N;
+      verts.push(x0, y0, x1, y0, x0, y1, x1, y0, x1, y1, x0, y1);
+    }
+    this.n = verts.length/2; this.buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, this.buf); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
+    this.t0 = performance.now(); this.map = map;
+  },
+  render(gl, args) {
+    const matrix = args && args.defaultProjectionData ? args.defaultProjectionData.mainMatrix : (Array.isArray(args) ? args : (args && args.modelViewProjectionMatrix) || args);
+    gl.useProgram(this.prog); gl.uniformMatrix4fv(this.uM, false, matrix); gl.uniform1f(this.uT, (performance.now() - this.t0)/1000);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buf); gl.enableVertexAttribArray(this.aPos); gl.vertexAttribPointer(this.aPos, 2, gl.FLOAT, false, 0, 0);
+    gl.disable(gl.CULL_FACE); gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL); gl.depthMask(false); gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.drawArrays(gl.TRIANGLES, 0, this.n); gl.depthMask(true);
+    if (!/static/.test(location.search) && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) this.map.triggerRepaint();
+  }
+};
+map.on("load", () => { try { map.addLayer(WATER, "plan-fill"); } catch (e) { console.warn("water layer", e); } });
+
 // layer chips
-const LAYERS = [["Hazard field", ["hazard-img"], true], ["Age of the chart", ["age-img"], false], ["Shoal claims", ["shoals", "shoal-glow"], true], ["Groundings", ["hind", "hind-lbl"], true], ["Strike predictions", ["strikes"], true], ["Communities", ["comm"], true], ["Survey plan", ["plan-fill", "plan-line"], false], ["Route", ["route"], true]];
+const LAYERS = [["Water", ["water"], true], ["Hazard field", ["hazard-img"], true], ["Age of the chart", ["age-img"], false], ["Shoal claims", ["shoals", "shoal-glow"], true], ["Groundings", ["hind", "hind-lbl"], true], ["Strike predictions", ["strikes"], true], ["Communities", ["comm"], true], ["Survey plan", ["plan-fill", "plan-line"], false], ["Route", ["route"], true]];
 const lw = document.getElementById("layers");
 LAYERS.forEach(([name, ids, on]) => {
   const c = document.createElement("span"); c.className = "chip" + (on ? " on" : ""); c.textContent = name; c.tabIndex = 0;
@@ -141,7 +177,7 @@ async function tour() {
   }
   touring = false; document.getElementById("tour").textContent = "▶ FLY AGAIN";
 }
-document.getElementById("tour").onclick = tour;
+document.getElementById("tour").onclick = tour; window.map = map; window.STOPS = STOPS;
 map.on("load", () => { setTimeout(() => { if (!touring) map.flyTo({ center: [-80, 62], zoom: 2.4, duration: 3500, essential: true }); }, 900); });
 </script>
 </body></html>
