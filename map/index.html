@@ -205,12 +205,12 @@ if (/film=1/.test(location.search)) {
   window.__tourDone = false; window.__warmDone = false; window.__go = false;
   // warm-up: visit every stop (and the zoomed-out midpoints of each flight) behind a black cover so all tiles are cached before the capture starts
   const cover = document.createElement("div"); cover.style.cssText = "position:absolute;inset:0;background:#04060c;z-index:20"; document.body.appendChild(cover);
-  const idle = () => new Promise(r => { if (map.loaded() && !map.isMoving()) r(); else map.once("idle", r); });
+  const idle = () => new Promise(r => { const t = setTimeout(r, 12000); if (map.loaded() && !map.isMoving()) { clearTimeout(t); r(); } else map.once("idle", () => { clearTimeout(t); r(); }); });
   map.once("idle", async () => {
     const views = []; let prev = { c: [-80, 62], z: 1.6, p: 0, b: 0 };
     for (const st of STOPS) {   // flyTo (curve 1.6) zooms out to ~z4 mid-flight while pitched: cache those wide views too
       const mid = [(prev.c[0] + st.c[0])/2, (prev.c[1] + st.c[1])/2];
-      for (const [f, z, p] of [[0.25, 5.5, 60], [0.5, 4.2, 60], [0.5, 6.5, 70], [0.75, 5.5, 65]]) views.push({ c: [prev.c[0] + f*(st.c[0]-prev.c[0]), prev.c[1] + f*(st.c[1]-prev.c[1])], z, p, b: st.b });
+      for (const [f, z, p] of [[0.5, 4.3, 60], [0.5, 6.5, 70]]) views.push({ c: [prev.c[0] + f*(st.c[0]-prev.c[0]), prev.c[1] + f*(st.c[1]-prev.c[1])], z, p, b: st.b });
       views.push({ c: st.c, z: Math.max(3, st.z - 2), p: st.p, b: st.b }); views.push(st); prev = st;
     }
     for (const v of views) { map.jumpTo({ center: v.c, zoom: v.z, pitch: v.p, bearing: v.b }); await new Promise(r => setTimeout(r, 300)); await idle(); await new Promise(r => setTimeout(r, 400)); }

@@ -22,7 +22,7 @@ try:
         gx, gy, gw, gh = max(0, g["sx"]), max(0, g["sy"] + (g["oh"] - g["ih"])), min(A.w, g["iw"] - (g["iw"] % 2)), min(A.h, g["ih"] - (g["ih"] % 2))
         print("grab", gx, gy, gw, gh, flush=True)
         pg.evaluate("() => { document.body.style.cursor='none'; map.getCanvas().style.cursor='none'; }"); pg.mouse.move(gw-1, gh-1)
-        tw = time.time(); pg.wait_for_function("() => !!window.__warmDone", timeout=300000); print(f"tiles warmed in {time.time()-tw:.0f}s", flush=True)
+        tw = time.time(); pg.wait_for_function("() => !!window.__warmDone", timeout=600000); print(f"tiles warmed in {time.time()-tw:.0f}s", flush=True)
         time.sleep(1.0)
         rec = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "x11grab", "-framerate", str(A.fps), "-video_size", f"{gw}x{gh}", "-i", f":99.0+{gx},{gy}", "-vf", f"scale={A.w}:{A.h}:flags=lanczos",
                                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "film/churchill_corridor_raw.mp4"], env=env)
