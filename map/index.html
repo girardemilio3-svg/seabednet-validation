@@ -49,7 +49,7 @@ a{color:var(--blue)}
 </div>
 <div id="cap"></div>
 <div class="legend">
-  <div><i style="background:#ff5d4d"></i>sealed shoal claim (size = probability)</div>
+  <div><i style="background:#ff5d4d"></i>sealed shoal claim v2 (size = probability) · <i style="background:transparent;border:1px solid #8a97b1"></i>v1, superseded</div>
   <div><i style="background:#ffffff;border:1px solid #888"></i>grounding site · label = blind hazard percentile</div>
   <div><i style="background:#e8b24a"></i>predicted strike point (sealed)</div>
   <div><i style="background:#c0392b"></i>community, chart median &lt; 1980 · <i style="background:#6aa9e0"></i>modern</div>
@@ -71,6 +71,7 @@ const style = {
     age: { type: "raster", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/age/{z}/{x}/{y}.png"], tileSize: 256, minzoom: 3, maxzoom: 8 },
     route: { type: "geojson", data: { type: "Feature", geometry: { type: "LineString", coordinates: D.route.map(p => [p[1], p[0]]) } } },
     shoals: { type: "geojson", data: { type: "FeatureCollection", features: D.shoals.map(s => ({ type: "Feature", geometry: { type: "Point", coordinates: [s.lon, s.lat] }, properties: s })) } },
+    shoals_v1: { type: "geojson", data: { type: "FeatureCollection", features: (D.shoals_v1 || []).map(s => ({ type: "Feature", geometry: { type: "Point", coordinates: [s.lon, s.lat] }, properties: s })) } },
     strikes: { type: "geojson", data: { type: "FeatureCollection", features: D.strikes.map(s => ({ type: "Feature", geometry: { type: "Point", coordinates: [s.lon, s.lat] }, properties: s })) } },
     hind: { type: "geojson", data: { type: "FeatureCollection", features: D.hindcast.map(s => ({ type: "Feature", geometry: { type: "Point", coordinates: [s.lon, s.lat] }, properties: Object.assign({}, s, { lbl: (s.blind != null ? Math.round(s.blind) + "th" : (s.pct != null ? Math.round(s.pct) + "th" : "—")) }) })) } },
     comm: { type: "geojson", data: { type: "FeatureCollection", features: D.communities.map(c => ({ type: "Feature", geometry: { type: "Point", coordinates: [c.lon, c.lat] }, properties: Object.assign({}, c, { old: (c.median_survey_year || 2017) < 1980 ? 1 : 0 }) })) } },
@@ -88,6 +89,7 @@ const style = {
     { id: "plan-line", type: "line", source: "plan", paint: { "line-color": "#e8b24a", "line-width": 1.2, "line-dasharray": [2, 2] }, layout: { visibility: "none" } },
     { id: "route", type: "line", source: "route", paint: { "line-color": "#6aa9e0", "line-width": 2, "line-opacity": 0.9 } },
     { id: "comm", type: "circle", source: "comm", paint: { "circle-radius": 6, "circle-color": ["case", ["==", ["get", "old"], 1], "#c0392b", "#6aa9e0"], "circle-stroke-color": "#04060c", "circle-stroke-width": 1.5 } },
+    { id: "shoals-v1", type: "circle", source: "shoals_v1", paint: { "circle-radius": 4, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": "#8a97b1", "circle-stroke-width": 1.2 }, layout: { visibility: "none" } },
     { id: "shoal-glow", type: "circle", source: "shoals", paint: { "circle-radius": ["interpolate", ["linear"], ["get", "p"], 0.8, 10, 1, 18], "circle-color": "#ff5d4d", "circle-opacity": 0.18, "circle-blur": 0.8 } },
     { id: "shoals", type: "circle", source: "shoals", paint: { "circle-radius": ["interpolate", ["linear"], ["get", "p"], 0.8, 4, 1, 7], "circle-color": "#ff5d4d", "circle-stroke-color": "#ffd6d0", "circle-stroke-width": 1 } },
     { id: "strikes", type: "circle", source: "strikes", paint: { "circle-radius": 7, "circle-color": "#e8b24a", "circle-stroke-color": "#04060c", "circle-stroke-width": 2 } },
@@ -149,7 +151,7 @@ const WATER = {
 };
 map.on("load", () => { try { map.addLayer(WATER, "plan-fill"); } catch (e) { console.warn("water layer", e); } });
 // layer chips
-const LAYERS = [["Water", ["water"], true], ["Hazard field", ["hazard-img"], true], ["Age of the chart", ["age-img"], false], ["Shoal claims", ["shoals", "shoal-glow"], true], ["Groundings", ["hind", "hind-lbl"], true], ["Strike predictions", ["strikes"], true], ["Communities", ["comm"], true], ["Survey plan", ["plan-fill", "plan-line"], false], ["Route", ["route"], true]];
+const LAYERS = [["Water", ["water"], true], ["Hazard field", ["hazard-img"], true], ["Age of the chart", ["age-img"], false], ["Shoal claims v2", ["shoals", "shoal-glow"], true], ["v1 (superseded)", ["shoals-v1"], false], ["Groundings", ["hind", "hind-lbl"], true], ["Strike predictions", ["strikes"], true], ["Communities", ["comm"], true], ["Survey plan", ["plan-fill", "plan-line"], false], ["Route", ["route"], true]];
 const lw = document.getElementById("layers");
 LAYERS.forEach(([name, ids, on]) => {
   const c = document.createElement("span"); c.className = "chip" + (on ? " on" : ""); c.textContent = name; c.tabIndex = 0;
@@ -159,21 +161,22 @@ LAYERS.forEach(([name, ids, on]) => {
 });
 // popups
 const pop = (html, lngLat) => new maplibregl.Popup({ closeButton: true, maxWidth: "320px" }).setLngLat(lngLat).setHTML(html).addTo(map);
-map.on("click", "shoals", e => { const p = e.features[0].properties; pop(`<b>Sealed shoal claim #${p.rank}</b><br>${p.region}<br><span class="mono">${(+p.lat).toFixed(4)}N ${Math.abs(+p.lon).toFixed(4)}W</span><br>P(shallowest point within 500 m &lt; 10.5 m): <b>${Math.round(p.p * 100)}%</b><br>Predicted shallowest: ${(+p.shoal).toFixed(1)} m · map says ${Math.abs(+p.mean).toFixed(0)} m<br><span class="mono">settled by one survey line; miss published</span>`, e.lngLat); });
+map.on("click", "shoals-v1", e => { const p = e.features[0].properties; pop(`<b>Shoal claim v1 #${p.rank} (superseded, still scored)</b><br>${p.region}<br><span class="mono">${(+p.lat).toFixed(4)}N ${Math.abs(+p.lon).toFixed(4)}W</span><br>predicted shallowest ${(+p.shoal).toFixed(1)} m · map ${Math.abs(+p.mean).toFixed(0)} m`, e.lngLat); });
+map.on("click", "shoals", e => { const p = e.features[0].properties; pop(`<b>Sealed shoal claim v2 #${p.rank}</b><br>${p.region}<br><span class="mono">${(+p.lat).toFixed(4)}N ${Math.abs(+p.lon).toFixed(4)}W</span><br>P(shallowest point within 500 m &lt; 10.5 m): <b>${Math.round(p.p * 100)}%</b><br>Predicted shallowest: ${(+p.shoal).toFixed(1)} m · map says ${Math.abs(+p.mean).toFixed(0)} m<br><span class="mono">settled by one survey line; miss published</span>`, e.lngLat); });
 map.on("click", "hind", e => { const p = e.features[0].properties; pop(`<b>${p.name}</b> · ${p.date} · TSB ${p.tsb}${p.control === "true" || p.control === true ? " · control" : ""}<br>Hazard percentile among apparently-safe water within 25 km:<br>all soundings visible <b>${p.pct != null ? Math.round(p.pct) + "th" : "—"}</b> · 10 km hole in input <b>${p.blind != null ? Math.round(p.blind) + "th" : "—"}</b><br><span class="mono">only pre-incident soundings used</span>`, e.lngLat); });
 map.on("click", "strikes", e => { const p = e.features[0].properties; pop(`<b>Predicted strike point · ${p.name}</b><br>${p.place}<br><span class="mono">${(+p.lat).toFixed(4)}N ${Math.abs(+p.lon).toFixed(4)}W</span><br>P(shoal &lt; draft) ${Math.round(p.p * 100)}% · sealed 2026-09-03; graded vs TSB position (hit = 2 km)`, e.lngLat); });
 map.on("click", "comm", e => { const p = e.features[0].properties; pop(`<b>${p.community}</b> · 15 km approach<br>published soundings: ${p.pct_sounded}% of water<br>median survey year: <b>${p.median_survey_year}</b> · pre-1980: ${p.pct_pre1980}%${p.pct_safe_water_flagged != null ? `<br>apparently-safe water flagged by hazard field: ${p.pct_safe_water_flagged}%` : ""}`, e.lngLat); });
 map.on("click", "plan-fill", e => { const p = e.features[0].properties; pop(`<b>Survey box #${p.rank}</b><br>${(+p.area_km2).toLocaleString()} km² inferred · mean σ ${(+p.mean_sigma).toFixed(1)} m · ${(+p.ship_days).toFixed(0)} ship-days · C$${(+p.cost_CAD_M).toFixed(1)}M at the icebreaker rate`, e.lngLat); });
-["shoals", "hind", "strikes", "comm", "plan-fill"].forEach(l => { map.on("mouseenter", l, () => map.getCanvas().style.cursor = "pointer"); map.on("mouseleave", l, () => map.getCanvas().style.cursor = ""); });
+["shoals", "shoals-v1", "hind", "strikes", "comm", "plan-fill"].forEach(l => { map.on("mouseenter", l, () => map.getCanvas().style.cursor = "pointer"); map.on("mouseleave", l, () => map.getCanvas().style.cursor = ""); });
 // tour
 const th = D.hindcast.find(h => h.name === "Thamesborg") || { lat: 71.35, lon: -96.9 };
-const s1 = D.shoals[0]; const dec = D.communities.find(c => c.community.startsWith("Deception")) || D.communities[0]; const nau = D.communities.find(c => c.community.startsWith("Naujaat")) || D.communities[0];
-const beau = D.shoals.find(s => s.region === "Beaufort Sea") || D.shoals[1]; const ches = D.shoals.find(s => s.region === "Chesterfield Inlet") || D.shoals[2];
+const s1 = D.shoals.find(s => s.region === "Simpson Strait") || D.shoals.find(s => !s.region.startsWith("unnamed") && s.lat > 55 && s.lon > -100 && s.lon < -52) || D.shoals[0]; const dec = D.communities.find(c => c.community.startsWith("Deception")) || D.communities[0]; const nau = D.communities.find(c => c.community.startsWith("Naujaat")) || D.communities[0];
+const beau = D.shoals.find(s => s.region === "Queen Maud Gulf") || D.shoals[1]; const nQMG = D.shoals.filter(s => s.region === "Queen Maud Gulf").length; const ches = D.shoals.find(s => s.region === "Chesterfield Inlet") || D.shoals[2];
 const STOPS = [
   { c: [th.lon, th.lat], z: 9.4, p: 72, b: -35, t: "FRANKLIN STRAIT · 6 SEPTEMBER 2025", s: `The Thamesborg struck an uncharted shoal here. Given only pre-incident soundings, and with every sounding within 10 km withheld, the model ranks this cell in the <span style="color:var(--amber);font-weight:600">${th.blind != null ? Math.round(th.blind) + "th" : "93rd"} percentile</span> of hazard among water the chart called safe.` },
-  { c: [s1.lon, s1.lat], z: 10.5, p: 74, b: 40, t: "SEALED SHOAL CLAIM #1 · " + s1.region.toUpperCase(), s: `The chart says ${Math.abs(s1.mean).toFixed(0)} m. The model says a rock within 500 m lies at ${s1.shoal.toFixed(1)} m, with ${Math.round(s1.p * 100)}% probability. Timestamped on a public ledger; one survey line settles it.` },
-  { c: [beau.lon, beau.lat], z: 9.6, p: 70, b: 15, t: "BEAUFORT SEA · THE PINGO FIELD", s: `Six of the forty claims cluster off the Mackenzie Delta, where drowned pingos are a known hazard to the Tuktoyaktuk resupply. If the model is reading the delta right, this is the cheapest place in Canada to prove it.` },
-  { c: [ches.lon, ches.lat], z: 10, p: 72, b: -55, t: "CHESTERFIELD INLET · WHERE THE TANKERS TOUCH", s: `Two Nanny groundings and the Dorsch, 2012–2014, in these narrows. Five sealed shoal claims sit in the same water, plus the model's guess of where the Dorsch struck, sealed before the TSB record is opened.` },
+  { c: [s1.lon, s1.lat], z: 10.5, p: 74, b: 40, t: "SEALED SHOAL CLAIM #1 · " + s1.region.toUpperCase(), s: `The chart says ${Math.abs(s1.mean).toFixed(0)} m, ${s1.coast_km} km from the nearest shore. The retrained model says the shallowest point within 500 m lies at ${Math.abs(s1.shoal).toFixed(1)} m, with ${Math.round(s1.p * 100)}% probability. Sealed 6 September 2026 on a public ledger; one survey line settles it.` },
+  { c: [beau.lon, beau.lat], z: 9.6, p: 70, b: 15, t: "QUEEN MAUD GULF · THE SHALLOW GULF", s: `${nQMG} of the forty version-2 claims sit in Queen Maud Gulf, the shallow, sparsely sounded water every Northwest Passage transit crosses. Each is 2 km or more from shore, in water the chart calls 21 m or deeper. One survey line each.` },
+  { c: [ches.lon, ches.lat], z: 10, p: 72, b: -55, t: "CHESTERFIELD INLET · WHERE THE TANKERS TOUCH", s: `Two Nanny groundings and the Dorsch, 2012–2014, in these narrows, plus the model's guess of where the Dorsch struck, sealed before the TSB record is opened. The version-1 shoal claims here were near-shore artefacts and are shown hollow, superseded but still scored.` },
   { c: [dec.lon, dec.lat], z: 9.4, p: 68, b: 25, t: "DECEPTION BAY · THE ORE DOCK", s: `Where Raglan's ore ships load: median survey year <span style="color:var(--amber);font-weight:600">${dec.median_survey_year}</span>, ${dec.pct_pre1980}% of soundings pre-1980, and 100% of its apparently-safe water flagged by the hazard field. Naujaat's lane is older still: ${nau.median_survey_year}.` },
   { c: [-80, 62], z: 2.6, p: 0, b: 0, t: "THE AGE OF CANADA'S CHART", s: `28% of Canada's sounded seabed rests on surveys older than 1980 (red and orange); 47% is post-2016 multibeam (blue). The Arctic corridors are new. The approaches to Hudson Bay, the Labrador shore and Foxe Basin are not.`, age: true }
 ];

@@ -1,0 +1,43 @@
+{
+ "stats": {
+  "Chart says the water is safe at the position (deeper than 21 m)": {
+   "n": 107,
+   "v1": 34,
+   "v2": 36,
+   "base": 40,
+   "p": 2.770836867536276e-11
+  },
+  "&nbsp;&nbsp;&hellip; and no published sounding within 300 m": {
+   "n": 37,
+   "v1": 8,
+   "v2": 10,
+   "base": 7,
+   "p": 0.002745851663462339
+  },
+  "&nbsp;&nbsp;&hellip; and no published sounding within 1 km": {
+   "n": 22,
+   "v1": 4,
+   "v2": 3,
+   "base": 1,
+   "p": 0.37995906158809667
+  },
+  "&nbsp;&nbsp;Arctic notices only": {
+   "n": 40,
+   "v1": 10,
+   "v2": 11,
+   "base": 9,
+   "p": 0.0014697224972242636
+  },
+  "&nbsp;&nbsp;Notices stating a measured depth of 21 m or less": {
+   "n": 13,
+   "v1": 4,
+   "v2": 8,
+   "base": 5,
+   "p": 8.090210800000003e-06
+  }
+ },
+ "n_points": 1558,
+ "n_notices": 510,
+ "n_depth": 460,
+ "n_arctic": 94
+}

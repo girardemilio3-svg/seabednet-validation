@@ -202,5 +202,26 @@ Interactive atlas: <a href="../">girardemilio3-svg.github.io/churchill-corridor-
 </ol>
 <p class="mut sm">Version 1.0, 2 September 2026. Generated from result files; see the repository for the exact commit.</p>
 </div></body></html>'''
+
+# ---- §10.1 / §11 (6 September 2026): correction, Shoal List v2, reported-dangers test
+try:
+    _SL2 = json.load(open("shoal_list_v2_manifest.json")); _R2 = list(_csv.DictReader(open(_SL2["file"]))); _NW = json.load(open("navwarn_exhibit_stats.json"))
+    _st = _NW["stats"]; _k = list(_st.keys())
+    _rows = "".join(tr([_n.replace("&nbsp;", " ").replace("&hellip;", "…"), str(_v["n"]), f"{_v['v1']} ({_v['v1']/max(1,_v['n'])*100:.0f}%)", f"<b>{_v['v2']} ({_v['v2']/max(1,_v['n'])*100:.0f}%)</b>", f"{_v['base']} ({_v['base']/max(1,_v['n'])*100:.0f}%)", (f"{_v['p']:.0e}" if _v['p'] < 1e-3 else f"{_v['p']:.3f}")]) for _n, _v in _st.items())
+    _reg = ", ".join(f"{k} ({v})" for k, v in __import__("collections").Counter(r["region"] for r in _R2).most_common(6))
+    EXTRA = f"""
+<h2>10.1 Correction and Shoal List version 2 (6 September 2026)</h2>
+<p>Three days after sealing, the version-1 Shoal List was tested against data it had never seen: a Sentinel-2 summer image over every claim, the GSHHG full-resolution shoreline, and the Coast Guard reported-danger notices of §11. It failed two of our own checks. All forty claims predicted a shallowest point at the surface (0 ± 4 m); 22 of 40 lay within 1 km of a shore; several clustered along single survey tracks (repeated latitudes 58.734°N and 69.397°N). The hazard head had learned that near a coast the shallowest point within 500 m is the beach, which is true and useless, and the top-40-by-probability selection preferentially picked those cells. Version 1 remains sealed and will be scored exactly as published.</p>
+<p><b>Retraining.</b> The shallowest-point head (§3.2) was retrained with two changes to the target: a cell contributes only where at least 95% of its 500 m disc carries 10 m soundings (<code>cov ≥ 0.95</code>, which removes coast-adjacent windows and survey gaps; 32% of the original targets survive), and targets at or above −0.5 m are discarded. 4,000 steps, batch 8, seven grounding sites and the geographic holdouts excluded as before. The resulting national field is nearly identical to version 1 away from coasts (per-block correlation 1.00) and differs where it should.</p>
+<p><b>Version 2 filters.</b> To the version-1 criteria: ≥ 2 km from the coastline, predicted shallowest point between 3 and 18 m, cluster of ≥ 5 cells spanning ≥ 2 rows and ≥ 2 columns, > 5 cells from a block edge, P ≥ 0.7. {_SL2['n_candidates_total']:,} candidate clusters, {_SL2['n_pass_filters']} pass, {_SL2['n_sealed']} sealed (<code>{_SL2['file']}</code>, SHA-256 {_SL2['sha256'][:16]}…, OpenTimestamps). Regions: {_reg}. Median distance to shore 3.2 km; predicted shallowest points 3.0–6.6 m in 21–52 m water. Sentinel-2 imagery over all forty shows open water with no visible rock or breaker, which at 10 m resolution neither confirms nor refutes a 3–7 m shoal.</p>
+<h2>11. The reported-dangers test (6 September 2026)</h2>
+<p>The Canadian Coast Guard publishes every navigational warning in force with a position and a category. All {_NW['n_points']:,} positions in the danger categories (Shallow Depth Confirmed, Shallow Depth Reported, Shoal, Uncharted Rock, Submerged Object) from {_NW['n_notices']} notices in force on 6 September 2026 were parsed; {_NW['n_depth']} state a measured depth and {_NW['n_arctic']} are Arctic. Each position was scored with the hindcast protocol of §5: the percentile of the hazard field at the position (maximum within 500 m) among apparently-safe cells (mean map deeper than 21 m, within 6 km of a sounding) within 25 km, so that 10% of safe water lies above the 90th percentile by construction. The nearest-sounding rule (the shallowness of the nearest published sounding, ranked the same way) is the baseline. Notices in the Confirmed category usually follow a CHS survey that may already be in the NONNA snapshot the field was computed from, so the table conditions on the chart still calling the water safe and on the distance to the nearest published sounding.</p>
+<div class='tw'><table><thead>{tr(["Subset (chart says safe)", "n", "v1 head, top decile", "v2 head, top decile", "nearest-sounding rule", "p vs 10% (v2)"], True)}</thead><tbody>{_rows}</tbody></table></div>
+<div class='tcap'><b>Table 8.</b> Reported dangers in the model's top decile of apparently-safe water, by subset. Where a sounding lies beside the notice the simple rule ties or wins; the model's edge appears where no sounding is within 300 m. Samples are small; the full per-notice table is <code>navwarn/navwarn_hindcast_v2.csv</code>.</div>
+"""
+    html = html.replace("<h2>References</h2>", EXTRA + "<h2>References</h2>").replace("Version 1.0, 2 September 2026", "Version 1.1, 6 September 2026 (§10.1 and §11 added)")
+except Exception as _e:
+    print("section 10.1/11 skipped:", _e)
+
 open("report/index.html", "w", encoding="utf-8").write(html)
 print("report built", len(html)//1024, "KB; landed", len(landed), "of", len(hc))
