@@ -1,0 +1,1559 @@
+id,series,date,category,area,lat,lon,depth_m,src
+2578,NW-M-2492-15,2015-12-09,Shallow Depth Reported,Lurcher,43.7165,-66.0749,,json
+7456,NW-A-0149-18,2018-09-26,Shallow Depth Reported,Ungava,58.96213,-66.42973,15.7,desc
+7456,NW-A-0149-18,2018-09-26,Shallow Depth Reported,Ungava,58.97532,-67.06443,42.0,desc
+7456,NW-A-0149-18,2018-09-26,Shallow Depth Reported,Ungava,58.97815,-67.31708,45.0,desc
+7477,NW-A-0166-18,2018-10-06,Shoal,Shipping Safety Control Zone 15 Vicinity Forbes Sound,60.3811,-64.81998,6.4,desc
+7477,NW-A-0166-18,2018-10-06,Shoal,Shipping Safety Control Zone 15 Vicinity Forbes Sound,60.38052,-64.82937,17.8,desc
+7489,NW-A-0181-18,2018-10-14,Shoal,Shipping Safety Control Zone 15 Vicinity Negus Bay,64.27032,-76.33585,5.4864,desc
+7489,NW-A-0181-18,2018-10-14,Shoal,Shipping Safety Control Zone 15 Vicinity Negus Bay,64.2623,-76.35283,2.4384,desc
+7489,NW-A-0181-18,2018-10-14,Shoal,Shipping Safety Control Zone 15 Vicinity Negus Bay,64.26242,-76.34732,8.2296,desc
+7489,NW-A-0181-18,2018-10-14,Shoal,Shipping Safety Control Zone 15 Vicinity Negus Bay,64.24677,-76.37427,9.144,desc
+7489,NW-A-0181-18,2018-10-14,Shoal,Shipping Safety Control Zone 15 Vicinity Negus Bay,64.2391,-76.3784,21.640800000000002,desc
+25276,NW-M-1673-19,2019-08-19,Shallow Depth Reported,"Cabot Strait - south Vicinity Mira Gut, N.S.",46.03582,-59.96774,,json
+29464,NW-A-0183-19,2019-09-29,Shoal,Shipping Safety Control Zone 15,63.43333,-72.3,,desc
+29467,NW-A-0184-19,2019-09-29,Shoal,Shipping Safety Control Zone 15,63.425,-72.21667,,desc
+29470,NW-A-0185-19,2019-09-29,Shoal,Shipping Safety Control Zone 15,63.5,-72.2,,desc
+29476,NW-A-0186-19,2019-09-29,Shoal,Shipping Safety Control Zone 15,63.61667,-72.125,,desc
+29482,NW-A-0187-19,2019-09-29,Shoal,Shipping Safety Control Zone 15,63.63833,-72.18333,,desc
+38488,NW-M-0071-20,2020-01-16,Shallow Depth Reported,Southwestern Shore Vicinity Pollock Point,44.14151,-64.48832,,json
+38551,NW-M-0076-20,2020-01-17,Shallow Depth Reported,Southwestern Shore,44.11797,-64.54557,,json
+38554,NW-M-0077-20,2020-01-17,Shallow Depth Reported,Southwestern Shore,44.1443,-64.6039,,json
+38572,NW-M-0079-20,2020-01-17,Shallow Depth Reported,Southwestern Shore,44.01873,-64.65942,,json
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.43233,-63.23517,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.42983,-63.254,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.43083,-63.25683,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.43333,-63.26567,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.44667,-63.305,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.45,-63.30317,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.45467,-63.28983,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.4565,-63.28933,,desc
+41623,NW-M-0349-20,2020-03-12,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity North Rustico, PEI",46.4565,-63.28833,,desc
+51772,NW-A-0035-20,2020-07-10,Shallow Depth Reported,Shipping Safety Control Zone 14,62.38233,-78.23367,43.8912,desc
+51772,NW-A-0035-20,2020-07-10,Shallow Depth Reported,Shipping Safety Control Zone 14,62.3795,-78.25817,45.72,desc
+52249,NW-N-0828-20,2020-07-15,Submerged Object,Northeast Coast,49.73355,-54.16538,,desc
+73447,NW-M-0481-21,2021-04-13,Shallow Depth Reported,"Northumberland Strait Vicinity Saint-Édouard, N.B.",46.54048,-64.69863,1.46,json
+73450,NW-M-0482-21,2021-04-13,Shallow Depth Reported,"Northumberland Strait Vicinity Cap Lumière, N.B.",46.67313,-64.71035,,json
+75443,NW-P-0619-21,2021-05-05,Submerged Object,Fraser River Vancouver Harbour,49.27417,-123.10383,,desc
+97718,NW-P-0101-22,2022-01-18,Submerged Object,BC Inland Waterways and Lakes,49.58,-117.21528,,desc
+108670,NW-H-0068-22,2022-06-14,Obstruction (Other) Submerged Object,Great Slave Lake Vicinity Back Bay,62.48185,-114.34335,,desc
+115214,NW-P-1035-22,2022-08-15,Submerged Object,Strait of Georgia,49.07082,-123.68547,,desc
+116795,NW-P-1168-22,2022-09-04,Submerged Object,Strait of Georgia,49.46402,-123.78535,,desc
+117637,NW-M-1650-22,2022-09-14,Submerged Object,Chaleur - Miscou - south Vicinity Northwest Miramichi River,46.94498,-65.82042,,json
+121093,NW-A-0156-22,2022-10-18,Submerged Object,Arctic Vicinity Chesterfield Narrows,63.99333,-94.315,4.8,json
+122152,NW-A-0170-22,2022-10-28,Shallow Depth Reported,Belcher,57.48627,-76.92218,19.1,json
+138940,NW-M-0811-23,2023-06-22,Shoal,Chaleur - Miscou - south Vicinity Escuminac Harbour,47.08142,-64.88675,,desc
+138940,NW-M-0811-23,2023-06-22,Shoal,Chaleur - Miscou - south Vicinity Escuminac Harbour,47.08265,-64.8879,,desc
+138940,NW-M-0811-23,2023-06-22,Shoal,Chaleur - Miscou - south Vicinity Escuminac Harbour,47.08283,-64.88702,,desc
+139516,NW-N-0796-23,2023-06-28,Sandspit or Sandbar Change,Southwest Coast,47.4466,-55.55201,,json
+139619,NW-P-0832-23,2023-06-29,Submerged Object,Douglas Channel & Gardner Canal,53.99388,-128.68667,,desc
+139741,NW-C-1108-23,2023-06-30,RACON Aids Southeast Shoal light LL 597,Lake Erie Vicinity Point Pelee,41.82634,-82.46279,,json
+140527,NW-A-0045-23,2023-07-07,Submerged Object,Great Slave Lake Vicinity Mosher Island,62.44212,-114.34492,,json
+140695,NW-M-0914-23,2023-07-10,Submerged Object,Fundy Vicinity Walton River,45.23235,-64.01761,,json
+141616,NW-P-0924-23,2023-07-19,Submerged Object,West Coast Vancouver Island South,49.12742,-125.8315,,desc
+143977,NW-C-1516-23,2023-08-11,Shallow Depth Reported,Welland Canal Vicinity Thorold,43.11188,-79.19795,,desc
+143977,NW-C-1516-23,2023-08-11,Shallow Depth Reported,Welland Canal Vicinity Thorold,43.11293,-79.19758,,desc
+143977,NW-C-1516-23,2023-08-11,Shallow Depth Reported,Welland Canal Vicinity Thorold,43.11292,-79.19753,,desc
+143977,NW-C-1516-23,2023-08-11,Shallow Depth Reported,Welland Canal Vicinity Thorold,43.1121,-79.19773,7.8,desc
+144127,NW-M-1110-23,2023-08-12,Submerged Object,Halifax Harbour and Approaches Vicinity Halifax Harbour,44.62768,-63.54958,,desc
+145951,NW-M-1272-23,2023-08-31,Submerged Object,Northumberland Strait Vicinity Rocky Point,46.20667,-63.13833,,desc
+156182,NW-M-0101-24,2024-01-22,Shoal,Eastern Shore,45.2732,-60.9048,,desc
+156275,NW-N-0048-24,2024-01-24,Shallow Depth Reported,South Coast Vicinity St. Lawrence Harbour,46.90915,-55.38487,,desc
+156275,NW-N-0048-24,2024-01-24,Shallow Depth Reported,South Coast Vicinity St. Lawrence Harbour,46.90688,-55.38342,,desc
+156275,NW-N-0048-24,2024-01-24,Shallow Depth Reported,South Coast Vicinity St. Lawrence Harbour,46.91715,-55.3904,,desc
+156275,NW-N-0048-24,2024-01-24,Shallow Depth Reported,South Coast Vicinity St. Lawrence Harbour,46.90805,-55.38407,,desc
+156275,NW-N-0048-24,2024-01-24,Shallow Depth Reported,South Coast Vicinity St. Lawrence Harbour,46.90228,-55.37002,,desc
+156652,NW-M-0126-24,2024-01-27,Shallow Depth Reported,Eastern Shore Fourchu,45.32497,-60.9362,8.4,desc
+156652,NW-M-0126-24,2024-01-27,Shallow Depth Reported,Eastern Shore Fourchu,45.21403,-61.02803,19.3,desc
+157332,NW-A-0008-24,2024-02-13,Shoal,Shipping Safety Control Zone 10 Vicinity Pangnirtung,66.15218,-65.71183,0.6,json
+157337,NW-M-0247-24,2024-02-14,Shallow Depth Reported,Eastern Shore,45.19047,-61.15713,,desc
+157337,NW-M-0247-24,2024-02-14,Shallow Depth Reported,Eastern Shore,45.2053,-61.15977,,desc
+157553,NW-M-0280-24,2024-02-27,Shallow Depth Reported,Fourchu,45.35987,-61.14667,6.9,desc
+157553,NW-M-0280-24,2024-02-27,Shallow Depth Reported,Fourchu,45.35905,-61.13987,6.1,desc
+157622,NW-M-0290-24,2024-02-29,Shallow Depth Reported,Fourchu,45.35348,-61.25693,6.2,desc
+157622,NW-M-0290-24,2024-02-29,Shallow Depth Reported,Fourchu,45.35625,-61.1882,7.4,desc
+157622,NW-M-0290-24,2024-02-29,Shallow Depth Reported,Fourchu,45.35142,-61.27087,12.6,desc
+157741,NW-M-0313-24,2024-03-08,Shallow Depth Reported,Fourchu,45.42972,-60.99645,,desc
+157741,NW-M-0313-24,2024-03-08,Shallow Depth Reported,Fourchu,45.42972,-60.99645,,desc
+157784,NW-M-0317-24,2024-03-11,Shallow Depth Reported,Fourchu,45.42822,-61.05403,,desc
+157784,NW-M-0317-24,2024-03-11,Shallow Depth Reported,Fourchu,45.4352,-61.0425,,desc
+157784,NW-M-0317-24,2024-03-11,Shallow Depth Reported,Fourchu,45.43445,-61.01418,,desc
+157784,NW-M-0317-24,2024-03-11,Shallow Depth Reported,Fourchu,45.42558,-61.05485,,desc
+157784,NW-M-0317-24,2024-03-11,Shallow Depth Reported,Fourchu,45.42797,-61.02018,,desc
+157856,NW-M-0338-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.43955,-61.00337,,desc
+157856,NW-M-0338-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.43233,-60.99623,,desc
+157856,NW-M-0338-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.43867,-60.98245,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.339,-60.88773,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.33867,-60.89242,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.33582,-60.91348,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.34212,-60.87822,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.34435,-60.87097,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.3377,-60.89303,,desc
+157857,NW-M-0339-24,2024-03-14,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.33622,-60.90872,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.3513,-60.8804,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.34155,-60.88467,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.35172,-60.88878,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.34518,-60.8819,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.3433,-60.88567,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.34122,-60.89175,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.34025,-60.89403,,desc
+157908,NW-M-0356-24,2024-03-16,Shallow Depth Reported,"Fourchu Vicinity Canso, NS",45.35143,-60.87507,,desc
+157909,NW-M-0355-24,2024-03-16,Shallow Depth Reported,Fourchu,45.42488,-61.10992,,desc
+157917,NW-M-0361-24,2024-03-17,Shallow Depth Reported,Fourchu,45.3341,-60.91962,,desc
+157917,NW-M-0361-24,2024-03-17,Shallow Depth Reported,Fourchu,45.3371,-60.86885,,desc
+157917,NW-M-0361-24,2024-03-17,Shallow Depth Reported,Fourchu,45.33293,-60.9061,,desc
+158112,NW-M-0425-24,2024-03-28,Shallow Depth Reported,Fourchu,45.46475,-61.16773,,desc
+158296,NW-M-0462-24,2024-04-07,Shoal,Fourchu,45.42238,-61.2638,,desc
+158317,NW-M-0465-24,2024-04-08,Shoal,Fourchu Vicinity Chedabucto Bay,45.46542,-61.08752,,desc
+158444,NW-M-0485-24,2024-04-12,Shallow Depth Reported,Fourchu,45.4285,-61.265,,desc
+158469,NW-M-0492-24,2024-04-13,Shallow Depth Reported,Fourchu,45.42683,-61.28617,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.47965,-60.86935,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.4778,-60.86833,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.4813,-60.89827,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.47712,-60.88923,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.4748,-60.9089,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.46557,-61.03058,,desc
+158684,NW-M-0546-24,2024-04-20,Shallow Depth Reported,Fourchu Vicinity Isle Madame,45.46542,-61.0435,,desc
+159075,NW-C-0776-24,2024-05-02,Submerged Object,Lake Superior Vicinity Thunder Bay,48.39378,-89.21577,,json
+160005,NW-M-0795-24,2024-05-28,Shallow Depth Reported,Fourchu,45.90342,-59.9706,,json
+161081,NW-M-1027-24,2024-06-26,Submerged Object,Northumberland Strait Vicinity Munns Point,46.26347,-63.06175,,desc
+162341,NW-M-1283-24,2024-07-30,Shallow Depth Reported,Eastern Shore Vicinity Wedge Island,45.00267,-61.89537,7.8,desc
+162341,NW-M-1283-24,2024-07-30,Shallow Depth Reported,Eastern Shore Vicinity Wedge Island,45.00268,-61.88167,8.4,desc
+162341,NW-M-1283-24,2024-07-30,Shallow Depth Reported,Eastern Shore Vicinity Wedge Island,45.00907,-61.89238,,desc
+162622,NW-M-1363-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.71127,-64.66138,,desc
+162622,NW-M-1363-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.71258,-64.66237,,desc
+162622,NW-M-1363-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.71587,-64.663,,desc
+162624,NW-M-1364-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.715,-64.66272,,desc
+162624,NW-M-1364-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.71507,-64.66243,,desc
+162624,NW-M-1364-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.71492,-64.66218,,desc
+162624,NW-M-1364-24,2024-08-07,Shallow Depth Reported,Chaleur - Miscou - south,47.71413,-64.66255,1.2,desc
+162634,NW-M-1366-24,2024-08-07,Shallow Depth Reported,Eastern Shore,45.15513,-61.4373,,desc
+162634,NW-M-1366-24,2024-08-07,Shallow Depth Reported,Eastern Shore,45.12523,-61.50225,,desc
+162634,NW-M-1366-24,2024-08-07,Shallow Depth Reported,Eastern Shore,45.15785,-61.43947,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.1445,-61.46578,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.09393,-61.53197,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.0955,-61.55058,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.09822,-61.54805,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.09975,-61.5508,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.10148,-61.55668,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.09205,-61.54428,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.11178,-61.50058,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.07662,-61.54772,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.0801,-61.55555,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.10427,-61.58,,desc
+162971,NW-M-1497-24,2024-08-15,Shallow Depth Reported,Eastern Shore,45.09977,-61.57442,,desc
+163019,NW-M-1521-24,2024-08-16,Shallow Depth Reported,Eastern Shore Vicinity Country Harbour,45.0902,-61.54978,16.9,desc
+163019,NW-M-1521-24,2024-08-16,Shallow Depth Reported,Eastern Shore Vicinity Country Harbour,45.10273,-61.50752,19.8,desc
+163019,NW-M-1521-24,2024-08-16,Shallow Depth Reported,Eastern Shore Vicinity Country Harbour,45.10635,-61.51803,12.0,desc
+163765,NW-P-1411-24,2024-09-03,Submerged Object,Fraser River,49.24908,-122.72605,,desc
+164585,NW-M-1960-24,2024-09-26,Shallow Depth Reported,"Fourchu Vicinity Louisbourg, NS",45.89827,-59.95773,,desc
+164585,NW-M-1960-24,2024-09-26,Shallow Depth Reported,"Fourchu Vicinity Louisbourg, NS",45.89783,-59.96482,,desc
+164585,NW-M-1960-24,2024-09-26,Shallow Depth Reported,"Fourchu Vicinity Louisbourg, NS",45.89505,-59.95812,,desc
+164585,NW-M-1960-24,2024-09-26,Shallow Depth Reported,"Fourchu Vicinity Louisbourg, NS",45.89482,-59.98417,,desc
+164585,NW-M-1960-24,2024-09-26,Shallow Depth Reported,"Fourchu Vicinity Louisbourg, NS",45.89153,-59.96903,,desc
+164585,NW-M-1960-24,2024-09-26,Shallow Depth Reported,"Fourchu Vicinity Louisbourg, NS",45.89302,-59.9667,,desc
+164767,NW-N-1042-24,2024-10-01,Shallow Depth Reported,South Coast,47.2975,-53.97567,,desc
+165649,NW-M-2186-24,2024-11-03,Submerged Object,Fourchu,45.3373,-60.99105,11.0,desc
+166060,NW-M-2390-24,2024-11-14,Submerged Object,Northumberland Strait,46.099,-63.46167,,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.86647,-78.82657,1.8,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.86638,-78.82602,2.7,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.866,-78.82607,2.8,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.8661,-78.8258,3.7,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.86637,-78.82557,3.8,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.86677,-78.82675,1.1,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.8667,-78.82657,1.3,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.8636,-78.82292,1.5,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.86662,-78.82635,1.6,desc
+166296,NW-C-3222-24,2024-11-23,Shallow Depth Reported,Lake Ontario Vicinity Oshawa,43.86717,-78.82663,1.6,desc
+166702,NW-C-3382-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50283,-73.54555,10.4,desc
+166703,NW-C-3383-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50387,-73.54545,10.5,desc
+166704,NW-C-3384-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.5153,-73.54312,10.2,desc
+166705,NW-C-3385-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.51287,-73.54308,9.3,desc
+166706,NW-C-3386-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50297,-73.54497,9.5,desc
+166707,NW-C-3387-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50247,-73.5453,10.2,desc
+166708,NW-C-3388-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.5342,-73.53387,10.5,desc
+166709,NW-C-3389-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.5125,-73.54338,10.4,desc
+166710,NW-C-3390-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50908,-73.54362,9.8,desc
+166711,NW-C-3391-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.51497,-73.54275,9.9,desc
+166713,NW-C-3393-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.54517,-73.5308,9.6,desc
+166714,NW-C-3394-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.51608,-73.54292,10.3,desc
+166715,NW-C-3395-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.54125,-73.53288,10.6,desc
+166716,NW-C-3396-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50727,-73.54583,10.0,desc
+166717,NW-C-3397-24,2024-12-10,Shallow Depth Reported,Port of Montreal Vicinity Port of Montreal,45.50315,-73.54743,10.2,desc
+166718,NW-C-3398-24,2024-12-10,Shallow Depth Reported,Trois-Rivières to Donnacona Vicinity Port de Bécancour,46.40465,-72.37858,10.4,desc
+166719,NW-C-3399-24,2024-12-10,Shallow Depth Reported,Trois-Rivières to Donnacona Vicinity Port de Bécancour,46.40302,-72.37928,10.3,desc
+166721,NW-C-3401-24,2024-12-10,Shallow Depth Reported,Trois-Rivières to Donnacona Vicinity Port de Bécancour,46.40297,-72.37518,10.2,desc
+168524,NW-P-0373-25,2025-03-17,Lights Aids Boundary Pass Shoal isolated danger light and bell buoy DB (U.S.) LL 264.5,Washington State - San Juan Islands,48.76483,-123.01463,,json
+169130,NW-P-0496-25,2025-04-11,Submerged Object,West Coast Vancouver Island South,49.15168,-125.89522,,desc
+169527,NW-N-0248-25,2025-04-24,Buoys Aids 9 Feet Rock light buoy D2 LL 358.16,Northeast Coast,49.68375,-54.73556,,json
+169984,NW-A-0043-25,2025-05-07,Shoal,Great Slave Lake Vicinity Simpson Island,61.649,-112.98596,600.0,desc
+170050,NW-M-0692-25,2025-05-09,Shallow Depth Reported,"Chaleur - Miscou - south Vicinity Shippagan Gully, NB",47.73633,-64.682,,desc
+170081,NW-C-0985-25,2025-05-09,Shallow Depth Reported,Georgian Bay Vicinity Clontarf Island,45.57968,-80.51188,,json
+170158,NW-M-0709-25,2025-05-12,Shoal,Cabot Strait - south Vicinity Sydney Harbour,46.20387,-60.21922,1.86,desc
+170202,NW-C-1058-25,2025-05-13,Shallow Depth Reported,Rainy Lake Vicinity Rainy River,48.61006,-93.36628,,json
+170740,NW-M-0776-25,2025-05-28,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, Prince Edward Island",46.79453,-64.0589,,json
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.79518,-64.05983,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.79488,-64.05483,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.80065,-64.0423,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.80197,-64.03685,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.80325,-64.01523,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.8021,-64.01455,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.80205,-64.0132,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.80397,-64.01198,,desc
+171187,NW-M-0833-25,2025-06-10,Shallow Depth Reported,Gulf - Magdalen - south,46.80362,-64.01067,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.7947,-64.0577,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79472,-64.05822,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79595,-64.0579,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79592,-64.05743,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79708,-64.05575,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79732,-64.05512,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.7972,-64.05475,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79572,-64.05647,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79545,-64.05773,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79773,-64.04618,1.7,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79777,-64.04795,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79868,-64.04757,,desc
+171188,NW-M-0834-25,2025-06-10,Shallow Depth Reported,"Gulf - Magdalen - south Vicinity Alberton, PE",46.79922,-64.04657,,desc
+171702,NW-C-1803-25,2025-06-27,Shallow Depth Reported,Port of Sorel-Tracy Vicinity Saint-Joseph-de-Sorel,46.04746,-73.14148,10.7,json
+172785,NW-P-1019-25,2025-07-27,Lights Aids Race Rocks light LL 189,Juan de Fuca Strait,48.29803,-123.53142,,json
+173434,NW-C-2568-25,2025-08-15,Shallow Depth Reported,Magdalen Islands Vicinity Havre-aux-Maisons,47.40117,-61.8397,,desc
+173517,NW-P-1144-25,2025-08-17,Buoys Aids Stubbs Rock light buoy C40 LL 795.5,Dixon Entrance West,53.74251,-132.27298,,json
+173540,NW-M-1228-25,2025-08-18,Shallow Depth Reported,Grand Manan Vicinity Letete Passage,45.02057,-66.91423,,desc
+173596,NW-A-0233-25,2025-08-20,Shallow Depth Reported,Shipping Safety Control Zone 13,74.6619,-91.30985,7.1,desc
+173596,NW-A-0233-25,2025-08-20,Shallow Depth Reported,Shipping Safety Control Zone 13,74.66442,-91.30523,8.0,desc
+173596,NW-A-0233-25,2025-08-20,Shallow Depth Reported,Shipping Safety Control Zone 13,74.66602,-91.30648,17.1,desc
+173596,NW-A-0233-25,2025-08-20,Shallow Depth Reported,Shipping Safety Control Zone 13,74.6715,-91.30585,12.7,desc
+173895,NW-M-1278-25,2025-08-29,Shallow Depth Reported,Grand Manan Vicinity Letete Passage,44.976,-66.91983,,desc
+173934,NW-M-1285-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.955,-66.93767,,desc
+173934,NW-M-1285-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.95633,-66.93617,,desc
+173934,NW-M-1285-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.94283,-66.95233,,desc
+173934,NW-M-1285-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.94933,-66.9495,,desc
+173934,NW-M-1285-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.95583,-66.9365,,desc
+173934,NW-M-1285-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.93867,-66.97867,,desc
+173935,NW-M-1286-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,45.03,-66.87117,,desc
+173935,NW-M-1286-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,45.01517,-66.89483,,desc
+173935,NW-M-1286-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,45.035,-66.91667,,desc
+173935,NW-M-1286-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,45.03317,-66.90433,,desc
+173935,NW-M-1286-25,2025-08-30,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,45.03783,-66.806,,desc
+173937,NW-A-0258-25,2025-08-30,Shallow Depth Reported,Shipping Safety Control Zone 13,74.6438,-91.34225,13.6,desc
+173947,NW-M-1290-25,2025-08-31,Shallow Depth Reported,"Grand Manan Vicinity Campobello Island, NB",44.92467,-66.9655,,desc
+173947,NW-M-1290-25,2025-08-31,Shallow Depth Reported,"Grand Manan Vicinity Campobello Island, NB",44.99217,-66.933,,desc
+173947,NW-M-1290-25,2025-08-31,Shallow Depth Reported,"Grand Manan Vicinity Campobello Island, NB",44.98083,-66.9395,,desc
+173956,NW-M-1292-25,2025-08-31,Shallow Depth Reported,"Grand Manan Vicinity Campobello Island, NB",44.93683,-66.96567,,desc
+173956,NW-M-1292-25,2025-08-31,Shallow Depth Reported,"Grand Manan Vicinity Campobello Island, NB",44.934,-66.964,,desc
+173957,NW-M-1293-25,2025-08-31,Shoal,Cabot Strait - south,46.11952,-59.4819,,desc
+174007,NW-M-1301-25,2025-09-02,Shallow Depth Reported,"Grand Manan Vicinity Passamaquoddy Bay, NB",45.08133,-66.91767,,desc
+174108,NW-N-0667-25,2025-09-05,Buoys Aids Cox Rock light buoy QE3 LL 145.82,Southwest Coast,47.63117,-58.43067,,json
+174146,NW-M-1335-25,2025-09-05,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.9845,-66.95133,,desc
+174146,NW-M-1335-25,2025-09-05,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.989,-66.94583,,desc
+174146,NW-M-1335-25,2025-09-05,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,44.99267,-66.94367,,desc
+174146,NW-M-1335-25,2025-09-05,Shallow Depth Reported,Grand Manan Vicinity Passamaquoddy Bay,45.00667,-66.93767,,desc
+174289,NW-N-0694-25,2025-09-11,Buoys Aids Gibraltor Rock light buoy PX2 LL 15.5,South Coast,47.22817,-54.04758,,json
+174435,NW-A-0272-25,2025-09-17,Shoal,Shipping Safety Control Zone 15,65.02052,-63.3808,,desc
+174435,NW-A-0272-25,2025-09-17,Shoal,Shipping Safety Control Zone 15,64.95855,-63.08733,,desc
+174435,NW-A-0272-25,2025-09-17,Shoal,Shipping Safety Control Zone 15,65.15387,-62.87625,,desc
+174435,NW-A-0272-25,2025-09-17,Shoal,Shipping Safety Control Zone 15,65.18608,-63.15128,,desc
+174440,NW-A-0271-25,2025-09-17,Shoal,Shipping Safety Control Zone 10,65.56925,-62.22748,,desc
+174440,NW-A-0271-25,2025-09-17,Shoal,Shipping Safety Control Zone 10,65.56715,-62.21623,,desc
+174440,NW-A-0271-25,2025-09-17,Shoal,Shipping Safety Control Zone 10,65.5541,-62.2222,,desc
+174440,NW-A-0271-25,2025-09-17,Shoal,Shipping Safety Control Zone 10,65.55807,-62.23387,,desc
+174441,NW-A-0270-25,2025-09-17,Shoal,Shipping Safety Control Zone 10,65.2491,-63.05488,,desc
+174441,NW-A-0270-25,2025-09-17,Shoal,Shipping Safety Control Zone 10,65.25262,-63.02147,,desc
+174481,NW-C-2963-25,2025-09-18,Shallow Depth Reported,Cornwall to Montréal - west Vicinity Summerstown,45.05002,-74.57572,,desc
+174481,NW-C-2963-25,2025-09-18,Shallow Depth Reported,Cornwall to Montréal - west Vicinity Summerstown,45.05003,-74.57305,,desc
+174481,NW-C-2963-25,2025-09-18,Shallow Depth Reported,Cornwall to Montréal - west Vicinity Summerstown,45.0462,-74.57487,,desc
+174481,NW-C-2963-25,2025-09-18,Shallow Depth Reported,Cornwall to Montréal - west Vicinity Summerstown,45.0462,-74.57953,,desc
+174549,NW-M-1426-25,2025-09-21,Submerged Object,"Southwestern Shore Vicinity Head of St. Margarets Bay, NS",44.68463,-63.90797,,desc
+174711,NW-A-0289-25,2025-09-27,Shallow Depth Reported,Shipping Safety Control Zone 6,71.36372,-96.78643,42.0,desc
+174715,NW-A-0290-25,2025-09-27,Shallow Depth Reported,Shipping Safety Control Zone 6,71.30063,-96.87685,37.6,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.31822,-64.40603,,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.3203,-64.39978,,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.30685,-64.36735,,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.30297,-64.36762,,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.30467,-64.37987,,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.30932,-64.3891,,desc
+174754,NW-M-1476-25,2025-09-29,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.31508,-64.39688,,desc
+174785,NW-A-0295-25,2025-09-29,Shallow Depth Reported,Shipping Safety Control Zone 1 Vicinity Erskine Inlet,76.6726,-102.27703,33.57,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.38027,-96.6878,29.3,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.36745,-96.67887,26.6,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.35888,-96.76315,11.3,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.35333,-96.74422,11.3,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.34315,-96.75563,28.4,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.3047,-96.81715,28.35,desc
+174819,NW-A-0299-25,2025-10-01,Shallow Depth Reported,Shipping Safety Control Zone 6,71.29075,-96.81312,41.0,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",44.63705,-65.74902,,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",44.62758,-65.74947,,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",44.62483,-65.7509,,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",44.62977,-65.75027,,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",44.63032,-65.7504,,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",44.63168,-65.75,,desc
+175021,NW-M-1535-25,2025-10-07,Shallow Depth Reported,"Fundy Vicinity Digby, N.S.",45.63715,-65.75198,,desc
+175039,NW-M-1539-25,2025-10-07,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.24367,-64.36938,,desc
+175039,NW-M-1539-25,2025-10-07,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.17255,-64.32373,7.1,desc
+175039,NW-M-1539-25,2025-10-07,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.1729,-64.32532,7.1,desc
+175039,NW-M-1539-25,2025-10-07,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.17683,-64.32732,8.0,desc
+175039,NW-M-1539-25,2025-10-07,Shallow Depth Reported,Southwestern Shore Vicinity LaHave River,44.23025,-64.37628,,desc
+175311,NW-N-0809-25,2025-10-18,Buoys Aids Lamb Rock North Cardinal light buoy MLR LL 7.4,South Coast,46.46601,-54.02884,,json
+175349,NW-A-0342-25,2025-10-20,Shoal,Shipping Safety Control Zone 6 Vicinity Franklin Strait,71.35125,-96.89827,,desc
+175428,NW-C-3274-25,2025-10-23,Submerged Object,Lake Ontario Vicinity Hamilton Harbour,43.29217,-79.829,,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.81668,-68.31688,2.3,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.82793,-68.2758,5.8,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.82913,-68.26533,3.9,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.23377,-68.27708,4.2,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.22895,-68.28207,3.6,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.17493,-68.31945,4.6,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.17288,-68.32103,4.2,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.10952,-68.31463,6.7,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.09822,-68.36425,2.7,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.09833,-68.36817,1.8,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.0983,-68.37062,3.0,desc
+175605,NW-A-0355-25,2025-10-30,Shallow Depth Reported,Ungava,58.09063,-68.39272,0.4,desc
+175763,NW-C-3406-25,2025-11-04,Shallow Depth Reported,Anticosti Vicinity Havre-Saint-Pierre Port,50.23767,-63.60895,10.1,json
+175876,NW-M-1690-25,2025-11-09,Submerged Object,Grand Manan Vicinity Meteghan,44.19389,-66.16583,0.5,json
+176565,NW-C-3698-25,2025-12-02,Submerged Object,Montréal to Trois-Rivières Vicinity Îlet Vert,45.69997,-73.44767,,desc
+177480,NW-P-0060-26,2026-01-12,Lights Aids Blackrock Point sector light LL 665.41,North Coast,53.20846,-129.34423,,json
+177885,NW-C-0156-26,2026-02-06,Shallow Depth Reported,Lake Superior Vicinity Port of Thunder Bay,48.41412,-89.22033,8.0,desc
+178339,NW-C-0288-26,2025-05-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40564,-72.3828,10.5,json
+178343,NW-C-0292-26,2025-07-04,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.61785,-71.95661,8.2,json
+178345,NW-C-0294-26,2025-07-04,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.62166,-71.94881,10.1,json
+178575,NW-M-0209-26,2026-03-03,Submerged Object,Halifax Harbour and Approaches Vicinity Georges Island,44.64378,-63.55712,5.0,desc
+178575,NW-M-0209-26,2026-03-03,Submerged Object,Halifax Harbour and Approaches Vicinity Georges Island,44.64295,-63.55612,,desc
+178575,NW-M-0209-26,2026-03-03,Submerged Object,Halifax Harbour and Approaches Vicinity Georges Island,44.64208,-63.55555,,desc
+178719,NW-P-0371-26,2026-03-13,Shallow Depth Reported,Hecate Strait,52.95453,-131.90228,,desc
+178744,NW-C-0581-26,2026-03-13,Submerged Object,Port of Trois-Rivieres Vicinity Trois-Rivières,46.33653,-72.54176,3.0,json
+178786,NW-M-0245-26,2026-03-16,Shallow Depth Confirmed,Lurcher,43.82373,-66.13558,0.8,desc
+178786,NW-M-0245-26,2026-03-16,Shallow Depth Confirmed,Lurcher,43.82817,-66.13182,2.3,desc
+178786,NW-M-0245-26,2026-03-16,Shallow Depth Confirmed,Lurcher,43.83262,-66.1245,3.3,desc
+178786,NW-M-0245-26,2026-03-16,Shallow Depth Confirmed,Lurcher,43.8378,-66.12237,2.9,desc
+178786,NW-M-0245-26,2026-03-16,Shallow Depth Confirmed,Lurcher,43.84818,-66.12637,5.0,desc
+178887,NW-C-0640-26,2026-03-21,Submerged Object,Magdalen Islands Vicinity Cap-Aux-Meules,47.36395,-61.81057,,desc
+178917,NW-P-0426-26,2026-03-23,Aids to Navigation (Other) Aids Mackie Rock port daybeacon,Dixon Entrance West,53.69417,-132.32263,,desc
+178948,NW-M-0269-26,2026-03-25,Shallow Depth Confirmed,Southwestern Shore Vicinity LaHave,44.2608,-64.34672,5.5,desc
+178948,NW-M-0269-26,2026-03-25,Shallow Depth Confirmed,Southwestern Shore Vicinity LaHave,44.2604,-64.34438,5.5,desc
+178948,NW-M-0269-26,2026-03-25,Shallow Depth Confirmed,Southwestern Shore Vicinity LaHave,44.2622,-64.36203,5.5,desc
+178948,NW-M-0269-26,2026-03-25,Shallow Depth Confirmed,Southwestern Shore Vicinity LaHave,44.26522,-64.3613,5.5,desc
+179015,NW-N-0183-26,2026-03-29,Buoys Aids Gregory Rock light buoy PR3 LL 66.5,South Coast,47.03343,-55.12133,,json
+179084,NW-P-0475-26,2026-04-01,Submerged Object,Fraser River - North Arm,49.2104,-123.1565,,desc
+179368,NW-C-0841-26,2026-04-13,Sandspit or Sandbar Change,Magdalen Islands Vicinity Pointe-aux-Loups,47.53117,-61.71577,,desc
+179410,NW-P-0525-26,2026-04-15,Uncharted Rock,West Coast Vancouver Island South,49.24132,-125.77338,,desc
+179415,NW-N-0215-26,2026-04-15,Buoys Aids Big Shoal light buoy PFH2 LL 37.7,South Coast,47.52333,-53.93917,,json
+179438,NW-C-0880-26,2026-04-16,Submerged Object,Lake Huron Vicinity Lake Huron,43.18704,-82.02252,,json
+179462,NW-N-0222-26,2026-04-17,Buoys Aids Peter Point Shoal South Cardinal light buoy XWC LL 197.5,Northeast Gulf - south,49.08017,-58.16285,,desc
+179524,NW-N-0236-26,2026-04-19,Buoys Aids Halibut Rock West Cardinal light buoy QHR LL 173.12,Cabot Strait - north,47.58318,-59.261,,json
+179677,NW-M-0385-26,2026-04-24,Shallow Depth Reported,Chaleur - Miscou - south,47.31913,-64.93272,0.4,desc
+179677,NW-M-0385-26,2026-04-24,Shallow Depth Reported,Chaleur - Miscou - south,47.3145,-64.9316,0.6,desc
+179738,NW-C-1039-26,2026-04-26,Submerged Object,Niagara River Vicinity Grand Island,42.97767,-78.9985,,desc
+179825,NW-C-1111-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40388,-72.38328,8.7,json
+179838,NW-C-1112-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40383,-72.38353,7.7,json
+179843,NW-C-1110-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40403,-72.38297,10.0,json
+179854,NW-C-1121-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.50947,-72.22805,10.0,json
+179855,NW-C-1122-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.5104,-72.22828,9.5,json
+179856,NW-C-1123-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.5101,-72.2294,9.3,json
+179857,NW-C-1124-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.50983,-72.22993,8.8,json
+179858,NW-C-1125-26,2026-04-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.50935,-72.23133,8.3,json
+179901,NW-C-1130-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2785,-72.60997,,desc
+179901,NW-C-1130-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27832,-72.61032,,desc
+179901,NW-C-1130-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27837,-72.61035,,desc
+179901,NW-C-1130-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27855,-72.61002,10.9,desc
+179903,NW-C-1129-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27937,-72.60845,,desc
+179903,NW-C-1129-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27935,-72.60847,,desc
+179903,NW-C-1129-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27937,-72.60848,,desc
+179903,NW-C-1129-26,2026-04-29,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.27938,-72.60847,11.1,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.55338,-61.56675,6.3,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56018,-61.56248,6.5,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56148,-61.56162,3.9,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56265,-61.5607,6.3,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56813,-61.55488,6.8,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.59387,-61.53045,6.6,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.59582,-61.53062,6.5,desc
+180008,NW-C-1164-26,2026-04-30,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.59708,-61.53108,6.5,desc
+180132,NW-C-1247-26,2026-05-04,Uncharted Rock,Lake Ontario Vicinity Cathedral Bluffs Yacht Club,43.70817,-79.22794,,json
+180133,NW-C-1246-26,2026-05-04,Shallow Depth Reported,Lake Ontario Vicinity Cathedral Bluffs Yacht Club,43.70817,-79.22794,,json
+180202,NW-C-1268-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55937,-73.5131,,desc
+180202,NW-C-1268-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55935,-73.51312,,desc
+180202,NW-C-1268-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55937,-73.51315,,desc
+180202,NW-C-1268-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55938,-73.51313,10.9,desc
+180208,NW-C-1273-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55082,-73.51865,,desc
+180208,NW-C-1273-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.5508,-73.51867,,desc
+180208,NW-C-1273-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55082,-73.51868,,desc
+180208,NW-C-1273-26,2026-05-06,Shallow Depth Confirmed,Port of Montreal,45.55083,-73.51868,10.9,desc
+180309,NW-C-1329-26,2026-05-08,Submerged Object,Georgian Bay Vicinity Parry Sound,45.56233,-80.60783,,desc
+180336,NW-C-1341-26,2026-05-08,Shallow Depth Confirmed,Magdalen Islands Vicinity Havre-Aubert,47.23517,-61.82678,,desc
+180336,NW-C-1341-26,2026-05-08,Shallow Depth Confirmed,Magdalen Islands Vicinity Havre-Aubert,47.23693,-61.82502,3.0,desc
+180338,NW-C-1342-26,2026-05-08,Shallow Depth Confirmed,Magdalen Islands Vicinity Cap-aux-Meules,47.37662,-61.8578,,desc
+180338,NW-C-1342-26,2026-05-08,Shallow Depth Confirmed,Magdalen Islands Vicinity Cap-aux-Meules,47.37675,-61.85652,,desc
+180407,NW-C-1387-26,2026-05-11,Shallow Depth Reported,Anticosti Vicinity Rivière-au-Renard,48.99875,-64.39107,0.2,desc
+180467,NW-C-1425-26,2026-05-13,Shallow Depth Confirmed,Chaleur - Miscou - north Vicinity Anse aux Gascons,48.19128,-64.8624,1.2,desc
+180494,NW-C-1446-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20682,-72.82613,,desc
+180494,NW-C-1446-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20703,-72.8271,,desc
+180494,NW-C-1446-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20723,-72.827,,desc
+180494,NW-C-1446-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20702,-72.82605,9.3,desc
+180495,NW-C-1445-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20623,-72.82475,,desc
+180495,NW-C-1445-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20697,-72.82802,,desc
+180495,NW-C-1445-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20723,-72.8279,,desc
+180495,NW-C-1445-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20648,-72.82463,6.8,desc
+180496,NW-C-1444-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20547,-72.82138,,desc
+180496,NW-C-1444-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20623,-72.82475,,desc
+180496,NW-C-1444-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2066,-72.82458,,desc
+180496,NW-C-1444-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20583,-72.82122,6.3,desc
+180497,NW-C-1443-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20872,-72.8165,,desc
+180497,NW-C-1443-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20815,-72.81812,,desc
+180497,NW-C-1443-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20833,-72.81825,,desc
+180497,NW-C-1443-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2089,-72.81663,10.6,desc
+180498,NW-C-1442-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20855,-72.8161,,desc
+180498,NW-C-1442-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20647,-72.82202,,desc
+180498,NW-C-1442-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20667,-72.82217,,desc
+180498,NW-C-1442-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20875,-72.81625,10.0,desc
+180499,NW-C-1441-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21132,-72.80715,,desc
+180499,NW-C-1441-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20615,-72.82178,,desc
+180499,NW-C-1441-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2065,-72.82205,,desc
+180499,NW-C-1441-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21167,-72.80742,9.2,desc
+180500,NW-C-1439-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21087,-72.80727,,desc
+180500,NW-C-1439-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20582,-72.82155,,desc
+180500,NW-C-1439-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20617,-72.8218,,desc
+180500,NW-C-1439-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21122,-72.80753,8.4,desc
+180501,NW-C-1438-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2106,-72.80768,,desc
+180501,NW-C-1438-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20572,-72.82147,,desc
+180501,NW-C-1438-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20583,-72.82155,,desc
+180501,NW-C-1438-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2107,-72.80777,7.4,desc
+180502,NW-C-1437-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21082,-72.8111,,desc
+180502,NW-C-1437-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21082,-72.81113,,desc
+180502,NW-C-1437-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21083,-72.81115,,desc
+180502,NW-C-1437-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.21085,-72.81112,10.6,desc
+180503,NW-C-1436-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20635,-72.82192,,desc
+180503,NW-C-1436-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20655,-72.8228,,desc
+180503,NW-C-1436-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2068,-72.82268,,desc
+180503,NW-C-1436-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2066,-72.8218,9.6,desc
+180504,NW-C-1435-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2059,-72.8216,,desc
+180504,NW-C-1435-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20637,-72.82362,,desc
+180504,NW-C-1435-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2067,-72.82347,,desc
+180504,NW-C-1435-26,2026-05-13,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.20625,-72.82145,8.3,desc
+180707,NW-C-1564-26,2026-05-17,Lights Aids Southeast Shoal light LL 597,Lake Erie Vicinity Leamington,41.82634,-82.46279,,json
+180733,NW-C-1585-26,2026-05-18,Submerged Object,Lake Ontario Vicinity Mississauga,43.57633,-79.52935,,desc
+180799,NW-C-1641-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.06915,-83.13162,,desc
+180799,NW-C-1641-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07047,-83.13145,,desc
+180799,NW-C-1641-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07045,-83.13135,,desc
+180799,NW-C-1641-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.06915,-83.13152,7.8,desc
+180803,NW-C-1642-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07702,-83.13058,,desc
+180803,NW-C-1642-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07705,-83.13057,,desc
+180803,NW-C-1642-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07705,-83.13053,,desc
+180803,NW-C-1642-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07702,-83.13055,8.3,desc
+180804,NW-C-1643-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.0778,-83.1314,,desc
+180804,NW-C-1643-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07782,-83.13138,,desc
+180804,NW-C-1643-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.07782,-83.13137,,desc
+180804,NW-C-1643-26,2026-05-19,Shallow Depth Confirmed,Detroit River Lake Erie,42.0778,-83.13137,8.2,desc
+180805,NW-C-1644-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.08242,-83.12987,,desc
+180805,NW-C-1644-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.08422,-83.12963,,desc
+180805,NW-C-1644-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.08422,-83.12952,,desc
+180805,NW-C-1644-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.0824,-83.12975,8.3,desc
+180806,NW-C-1645-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09097,-83.12872,,desc
+180806,NW-C-1645-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09098,-83.12872,,desc
+180806,NW-C-1645-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09098,-83.12868,,desc
+180806,NW-C-1645-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09097,-83.12868,8.3,desc
+180807,NW-C-1646-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09,-83.1304,,desc
+180807,NW-C-1646-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09173,-83.13017,,desc
+180807,NW-C-1646-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09173,-83.13007,,desc
+180807,NW-C-1646-26,2026-05-19,Shallow Depth Confirmed,Detroit River,42.09,-83.1303,7.8,desc
+180837,NW-C-1654-26,2026-05-19,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56293,-61.56118,,desc
+180837,NW-C-1654-26,2026-05-19,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56223,-61.55942,,desc
+180837,NW-C-1654-26,2026-05-19,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.5597,-61.56138,,desc
+180837,NW-C-1654-26,2026-05-19,Shallow Depth Reported,Magdalen Islands Vicinity Chenal de la Grande Entrée,47.56043,-61.56323,,desc
+180865,NW-C-1666-26,2026-05-20,Shallow Depth Confirmed,Montréal to Trois-Rivières,45.83768,-73.28067,,desc
+180865,NW-C-1666-26,2026-05-20,Shallow Depth Confirmed,Montréal to Trois-Rivières,45.83702,-73.281,,desc
+180865,NW-C-1666-26,2026-05-20,Shallow Depth Confirmed,Montréal to Trois-Rivières,45.83703,-73.28107,,desc
+180865,NW-C-1666-26,2026-05-20,Shallow Depth Confirmed,Montréal to Trois-Rivières,45.8377,-73.28073,10.0,desc
+180876,NW-C-1670-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13625,-83.12263,,desc
+180876,NW-C-1670-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13628,-83.12263,,desc
+180876,NW-C-1670-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13627,-83.1226,,desc
+180876,NW-C-1670-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13625,-83.1226,8.3,desc
+180877,NW-C-1671-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13913,-83.1245,,desc
+180877,NW-C-1671-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13977,-83.1245,,desc
+180877,NW-C-1671-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13977,-83.1244,,desc
+180877,NW-C-1671-26,2026-05-20,Shallow Depth Confirmed,Detroit River,42.13913,-83.12442,8.2,desc
+180881,NW-C-1677-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.13817,-83.12098,,desc
+180881,NW-C-1677-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.13833,-83.12105,,desc
+180881,NW-C-1677-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.13835,-83.12098,,desc
+180881,NW-C-1677-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.13818,-83.12092,7.8,desc
+180882,NW-C-1676-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.1372,-83.12068,,desc
+180882,NW-C-1676-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.13722,-83.12068,,desc
+180882,NW-C-1676-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.13722,-83.12067,,desc
+180882,NW-C-1676-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.1372,-83.12065,8.2,desc
+180883,NW-C-1675-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Amherstburg,42.12763,-83.11653,,desc
+180883,NW-C-1675-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Amherstburg,42.1284,-83.11685,,desc
+180883,NW-C-1675-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Amherstburg,42.12842,-83.11678,,desc
+180883,NW-C-1675-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Amherstburg,42.12765,-83.11647,7.5,desc
+180884,NW-C-1674-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.12667,-83.11613,,desc
+180884,NW-C-1674-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.127,-83.11627,,desc
+180884,NW-C-1674-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.12702,-83.1162,,desc
+180884,NW-C-1674-26,2026-05-20,Shallow Depth Confirmed,Detroit River Vicinity Detroit River,42.12668,-83.11607,7.2,desc
+180931,NW-M-0629-26,2026-05-21,Shallow Depth Confirmed,Chaleur - Miscou - south Vicinity Caraquet,47.80957,-64.90242,,desc
+180985,NW-C-1762-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06678,-83.13252,,desc
+180985,NW-C-1762-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06702,-83.13248,,desc
+180985,NW-C-1762-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.067,-83.13232,,desc
+180985,NW-C-1762-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06677,-83.13235,8.7,desc
+180987,NW-C-1761-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06667,-83.13192,,desc
+180987,NW-C-1761-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0667,-83.1319,,desc
+180987,NW-C-1761-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0667,-83.13185,,desc
+180987,NW-C-1761-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06665,-83.13185,8.7,desc
+180988,NW-C-1735-26,2026-05-22,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.56697,-72.06897,,desc
+180988,NW-C-1735-26,2026-05-22,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.56667,-72.071,,desc
+180988,NW-C-1735-26,2026-05-22,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.5667,-72.07102,,desc
+180988,NW-C-1735-26,2026-05-22,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.567,-72.06898,8.3,desc
+180989,NW-C-1760-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06655,-83.13353,,desc
+180989,NW-C-1760-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06807,-83.13333,,desc
+180989,NW-C-1760-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06807,-83.13312,,desc
+180989,NW-C-1760-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06653,-83.13332,8.3,desc
+180990,NW-C-1763-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06605,-83.13253,,desc
+180990,NW-C-1763-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0662,-83.1325,,desc
+180990,NW-C-1763-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06617,-83.13212,,desc
+180990,NW-C-1763-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06602,-83.13213,8.7,desc
+180992,NW-C-1770-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0653,-83.13218,,desc
+180992,NW-C-1770-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06543,-83.13217,,desc
+180992,NW-C-1770-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06542,-83.13202,,desc
+180992,NW-C-1770-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06528,-83.13203,8.7,desc
+180993,NW-C-1775-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06503,-83.13218,,desc
+180993,NW-C-1775-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06507,-83.13218,,desc
+180993,NW-C-1775-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06507,-83.13215,,desc
+180993,NW-C-1775-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06503,-83.13215,8.7,desc
+180994,NW-C-1777-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06443,-83.13233,,desc
+180994,NW-C-1777-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06463,-83.1323,,desc
+180994,NW-C-1777-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06462,-83.1322,,desc
+180994,NW-C-1777-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06443,-83.13223,8.7,desc
+180995,NW-C-1778-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0644,-83.1337,,desc
+180995,NW-C-1778-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06452,-83.13368,,desc
+180995,NW-C-1778-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0645,-83.13363,,desc
+180995,NW-C-1778-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0644,-83.13365,8.7,desc
+180996,NW-C-1776-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06317,-83.13345,,desc
+180996,NW-C-1776-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06347,-83.13342,,desc
+180996,NW-C-1776-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06343,-83.13305,,desc
+180996,NW-C-1776-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06313,-83.13308,8.7,desc
+180998,NW-C-1779-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06217,-83.13258,,desc
+180998,NW-C-1779-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06293,-83.13248,,desc
+180998,NW-C-1779-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06292,-83.13235,,desc
+180998,NW-C-1779-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06215,-83.13245,8.7,desc
+180999,NW-C-1774-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06187,-83.13415,,desc
+180999,NW-C-1774-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06293,-83.13402,,desc
+180999,NW-C-1774-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06292,-83.13388,,desc
+180999,NW-C-1774-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06187,-83.13403,8.5,desc
+181000,NW-C-1771-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06057,-83.1331,,desc
+181000,NW-C-1771-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06185,-83.13292,,desc
+181000,NW-C-1771-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06183,-83.1325,,desc
+181000,NW-C-1771-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06053,-83.13267,8.5,desc
+181001,NW-C-1773-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06,-83.13348,,desc
+181001,NW-C-1773-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06007,-83.13348,,desc
+181001,NW-C-1773-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.06005,-83.1333,,desc
+181001,NW-C-1773-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05998,-83.1333,8.6,desc
+181002,NW-C-1782-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05782,-83.1347,,desc
+181002,NW-C-1782-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05995,-83.13442,,desc
+181002,NW-C-1782-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05995,-83.13423,,desc
+181002,NW-C-1782-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0578,-83.13452,8.6,desc
+181003,NW-C-1772-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0591,-83.13423,,desc
+181003,NW-C-1772-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05913,-83.13423,,desc
+181003,NW-C-1772-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05913,-83.13418,,desc
+181003,NW-C-1772-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0591,-83.13418,8.7,desc
+181004,NW-C-1769-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05903,-83.1335,,desc
+181004,NW-C-1769-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05907,-83.1335,,desc
+181004,NW-C-1769-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05905,-83.13347,,desc
+181004,NW-C-1769-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05903,-83.13347,8.7,desc
+181005,NW-C-1768-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0588,-83.13322,,desc
+181005,NW-C-1768-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05928,-83.13315,,desc
+181005,NW-C-1768-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05927,-83.13283,,desc
+181005,NW-C-1768-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05877,-83.1329,8.5,desc
+181006,NW-C-1767-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05822,-83.13325,,desc
+181006,NW-C-1767-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05855,-83.13322,,desc
+181006,NW-C-1767-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05853,-83.13293,,desc
+181006,NW-C-1767-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0582,-83.13298,8.7,desc
+181007,NW-C-1765-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05767,-83.13433,,desc
+181007,NW-C-1765-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05795,-83.13428,,desc
+181007,NW-C-1765-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05792,-83.13377,,desc
+181007,NW-C-1765-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05763,-83.1338,8.7,desc
+181008,NW-C-1766-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05788,-83.13317,,desc
+181008,NW-C-1766-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05792,-83.13317,,desc
+181008,NW-C-1766-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05792,-83.13313,,desc
+181008,NW-C-1766-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05788,-83.13313,8.7,desc
+181009,NW-C-1764-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05755,-83.13318,,desc
+181009,NW-C-1764-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0577,-83.13317,,desc
+181009,NW-C-1764-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0577,-83.13303,,desc
+181009,NW-C-1764-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05755,-83.13305,8.5,desc
+181010,NW-C-1759-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05437,-83.13517,,desc
+181010,NW-C-1759-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05725,-83.13478,,desc
+181010,NW-C-1759-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05723,-83.13452,,desc
+181010,NW-C-1759-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05435,-83.1349,8.4,desc
+181011,NW-C-1758-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05647,-83.13332,,desc
+181011,NW-C-1758-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05672,-83.13328,,desc
+181011,NW-C-1758-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05672,-83.13313,,desc
+181011,NW-C-1758-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05645,-83.13317,8.7,desc
+181012,NW-C-1781-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05503,-83.13332,,desc
+181012,NW-C-1781-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05622,-83.13337,,desc
+181012,NW-C-1781-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05622,-83.13302,,desc
+181012,NW-C-1781-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05503,-83.13297,8.6,desc
+181013,NW-C-1757-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05352,-83.13305,,desc
+181013,NW-C-1757-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05475,-83.13308,,desc
+181013,NW-C-1757-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05475,-83.13297,,desc
+181013,NW-C-1757-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05352,-83.13292,8.4,desc
+181014,NW-C-1756-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05298,-83.13433,,desc
+181014,NW-C-1756-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0556,-83.13398,,desc
+181014,NW-C-1756-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0556,-83.13392,,desc
+181014,NW-C-1756-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05297,-83.13427,8.7,desc
+181015,NW-C-1755-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05225,-83.13582,,desc
+181015,NW-C-1755-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05438,-83.13517,,desc
+181015,NW-C-1755-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05437,-83.13503,,desc
+181015,NW-C-1755-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05223,-83.13568,8.3,desc
+181016,NW-C-1754-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0515,-83.13582,,desc
+181016,NW-C-1754-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05158,-83.1358,,desc
+181016,NW-C-1754-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.05158,-83.13577,,desc
+181016,NW-C-1754-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0515,-83.13577,8.7,desc
+181017,NW-C-1753-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04628,-83.13415,,desc
+181017,NW-C-1753-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0463,-83.13413,,desc
+181017,NW-C-1753-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0463,-83.1341,,desc
+181017,NW-C-1753-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04627,-83.1341,8.6,desc
+181018,NW-C-1752-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04458,-83.1344,,desc
+181018,NW-C-1752-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04533,-83.1343,,desc
+181018,NW-C-1752-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04532,-83.1341,,desc
+181018,NW-C-1752-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04457,-83.1342,8.6,desc
+181019,NW-C-1751-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04417,-83.134,,desc
+181019,NW-C-1751-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04615,-83.13373,,desc
+181019,NW-C-1751-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04613,-83.13367,,desc
+181019,NW-C-1751-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04417,-83.13392,8.7,desc
+181020,NW-C-1750-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0432,-83.13493,,desc
+181020,NW-C-1750-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04338,-83.1349,,desc
+181020,NW-C-1750-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04337,-83.13485,,desc
+181020,NW-C-1750-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0432,-83.13487,8.7,desc
+181021,NW-C-1780-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04195,-83.13507,,desc
+181021,NW-C-1780-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0429,-83.13493,,desc
+181021,NW-C-1780-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04287,-83.13448,,desc
+181021,NW-C-1780-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04192,-83.1346,8.7,desc
+181022,NW-C-1749-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04132,-83.13522,,desc
+181022,NW-C-1749-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04175,-83.13517,,desc
+181022,NW-C-1749-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04173,-83.13487,,desc
+181022,NW-C-1749-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0413,-83.13492,8.6,desc
+181023,NW-C-1748-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04063,-83.13547,,desc
+181023,NW-C-1748-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04067,-83.13547,,desc
+181023,NW-C-1748-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04067,-83.13542,,desc
+181023,NW-C-1748-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04063,-83.13543,8.7,desc
+181024,NW-C-1747-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03948,-83.13462,,desc
+181024,NW-C-1747-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04037,-83.1345,,desc
+181024,NW-C-1747-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04037,-83.13443,,desc
+181024,NW-C-1747-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03947,-83.13455,8.7,desc
+181025,NW-C-1746-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02718,-83.13623,,desc
+181025,NW-C-1746-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0272,-83.13623,,desc
+181025,NW-C-1746-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0272,-83.1362,,desc
+181025,NW-C-1746-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02718,-83.1362,8.4,desc
+181026,NW-C-1745-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01855,-83.13957,,desc
+181026,NW-C-1745-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03412,-83.13748,,desc
+181026,NW-C-1745-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0341,-83.13725,,desc
+181026,NW-C-1745-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01853,-83.13932,8.2,desc
+181027,NW-C-1744-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01873,-83.1399,,desc
+181027,NW-C-1744-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03958,-83.13713,,desc
+181027,NW-C-1744-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03955,-83.13675,,desc
+181027,NW-C-1744-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01872,-83.13952,7.4,desc
+181028,NW-C-1743-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01937,-83.14018,,desc
+181028,NW-C-1743-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04433,-83.13687,,desc
+181028,NW-C-1743-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0443,-83.13648,,desc
+181028,NW-C-1743-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01933,-83.13982,6.0,desc
+181030,NW-C-1742-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01248,-83.137,,desc
+181030,NW-C-1742-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02658,-83.13512,,desc
+181030,NW-C-1742-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02657,-83.13478,,desc
+181030,NW-C-1742-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01247,-83.13667,7.8,desc
+181031,NW-C-1741-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01302,-83.1375,,desc
+181031,NW-C-1741-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01952,-83.13665,,desc
+181031,NW-C-1741-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01947,-83.13605,,desc
+181031,NW-C-1741-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.01298,-83.13692,8.3,desc
+181032,NW-C-1740-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02088,-83.1362,,desc
+181032,NW-C-1740-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0211,-83.13617,,desc
+181032,NW-C-1740-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0211,-83.13612,,desc
+181032,NW-C-1740-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02088,-83.13615,8.7,desc
+181033,NW-C-1739-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02353,-83.13612,,desc
+181033,NW-C-1739-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02665,-83.1357,,desc
+181033,NW-C-1739-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.02662,-83.13508,,desc
+181033,NW-C-1739-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0235,-83.1355,8.0,desc
+181048,NW-C-1794-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.12265,-83.11538,,desc
+181048,NW-C-1794-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.12265,-83.11538,,desc
+181048,NW-C-1794-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.12265,-83.11535,,desc
+181048,NW-C-1794-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.12265,-83.11535,6.2,desc
+181049,NW-C-1795-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11447,-83.1156,,desc
+181049,NW-C-1795-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11448,-83.1156,,desc
+181049,NW-C-1795-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11448,-83.11557,,desc
+181049,NW-C-1795-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11447,-83.11557,6.3,desc
+181050,NW-C-1802-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11412,-83.1161,,desc
+181050,NW-C-1802-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11415,-83.1161,,desc
+181050,NW-C-1802-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11415,-83.11607,,desc
+181050,NW-C-1802-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11412,-83.11607,6.2,desc
+181051,NW-C-1796-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11405,-83.11517,,desc
+181051,NW-C-1796-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11407,-83.11515,,desc
+181051,NW-C-1796-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11407,-83.11512,,desc
+181051,NW-C-1796-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11405,-83.11512,6.2,desc
+181052,NW-C-1799-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11263,-83.11523,,desc
+181052,NW-C-1799-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11265,-83.11523,,desc
+181052,NW-C-1799-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11265,-83.11518,,desc
+181052,NW-C-1799-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.11263,-83.1152,6.2,desc
+181054,NW-C-1806-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09362,-83.11507,,desc
+181054,NW-C-1806-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09365,-83.11507,,desc
+181054,NW-C-1806-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09365,-83.11503,,desc
+181054,NW-C-1806-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09362,-83.11503,6.3,desc
+181055,NW-C-1805-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09232,-83.11447,,desc
+181055,NW-C-1805-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09235,-83.11447,,desc
+181055,NW-C-1805-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09235,-83.11442,,desc
+181055,NW-C-1805-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09233,-83.11442,6.3,desc
+181058,NW-C-1804-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.08952,-83.11475,,desc
+181058,NW-C-1804-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.08953,-83.11473,,desc
+181058,NW-C-1804-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.08953,-83.1147,,desc
+181058,NW-C-1804-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.0895,-83.11472,6.3,desc
+181059,NW-C-1800-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.07455,-83.12062,,desc
+181059,NW-C-1800-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.07457,-83.12062,,desc
+181059,NW-C-1800-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.07457,-83.12058,,desc
+181059,NW-C-1800-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.07453,-83.12058,6.3,desc
+181060,NW-C-1798-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.07178,-83.12095,,desc
+181060,NW-C-1798-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0718,-83.12093,,desc
+181060,NW-C-1798-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0718,-83.1209,,desc
+181060,NW-C-1798-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.07177,-83.12092,6.2,desc
+181061,NW-C-1801-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04457,-83.1311,,desc
+181061,NW-C-1801-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04627,-83.13062,,desc
+181061,NW-C-1801-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04622,-83.13035,,desc
+181061,NW-C-1801-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04452,-83.13082,6.1,desc
+181062,NW-C-1797-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04293,-83.13122,,desc
+181062,NW-C-1797-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04325,-83.13113,,desc
+181062,NW-C-1797-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.0432,-83.1308,,desc
+181062,NW-C-1797-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.04288,-83.1309,6.2,desc
+181063,NW-C-1803-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03635,-83.13265,,desc
+181063,NW-C-1803-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03638,-83.13265,,desc
+181063,NW-C-1803-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03637,-83.1326,,desc
+181063,NW-C-1803-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03633,-83.13262,6.3,desc
+181064,NW-C-1792-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03172,-83.13365,,desc
+181064,NW-C-1792-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03173,-83.13363,,desc
+181064,NW-C-1792-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03173,-83.1336,,desc
+181064,NW-C-1792-26,2026-05-22,Shallow Depth Confirmed,Detroit River Lake Erie,42.03172,-83.13362,6.0,desc
+181066,NW-C-1793-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.10695,-83.11562,,desc
+181066,NW-C-1793-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.1097,-83.11542,,desc
+181066,NW-C-1793-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.1097,-83.11535,,desc
+181066,NW-C-1793-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.10695,-83.11553,5.7,desc
+181068,NW-C-1808-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09927,-83.11717,,desc
+181068,NW-C-1808-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.10367,-83.1176,,desc
+181068,NW-C-1808-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.10367,-83.1175,,desc
+181068,NW-C-1808-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09927,-83.11708,6.9,desc
+181069,NW-C-1809-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09222,-83.11647,,desc
+181069,NW-C-1809-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09263,-83.11652,,desc
+181069,NW-C-1809-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09263,-83.11642,,desc
+181069,NW-C-1809-26,2026-05-22,Shallow Depth Confirmed,Detroit River,42.09222,-83.11638,8.0,desc
+181170,NW-C-1866-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05187,-83.12942,,desc
+181170,NW-C-1866-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06548,-83.12455,,desc
+181170,NW-C-1866-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06543,-83.12433,,desc
+181170,NW-C-1866-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05183,-83.1292,8.3,desc
+181171,NW-C-1867-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.0317,-83.13417,,desc
+181171,NW-C-1867-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03173,-83.13415,,desc
+181171,NW-C-1867-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03173,-83.13412,,desc
+181171,NW-C-1867-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.0317,-83.13413,8.5,desc
+181172,NW-C-1868-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.04612,-83.13193,,desc
+181172,NW-C-1868-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.04613,-83.13192,,desc
+181172,NW-C-1868-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.04613,-83.1319,,desc
+181172,NW-C-1868-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.04612,-83.1319,8.3,desc
+181173,NW-C-1869-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05177,-83.12988,,desc
+181173,NW-C-1869-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05178,-83.12988,,desc
+181173,NW-C-1869-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05178,-83.12985,,desc
+181173,NW-C-1869-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05175,-83.12985,8.5,desc
+181174,NW-C-1870-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02665,-83.13553,,desc
+181174,NW-C-1870-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.0289,-83.13513,,desc
+181174,NW-C-1870-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02888,-83.13503,,desc
+181174,NW-C-1870-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02663,-83.13543,8.4,desc
+181175,NW-C-1871-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02662,-83.13543,,desc
+181175,NW-C-1871-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03088,-83.13468,,desc
+181175,NW-C-1871-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03083,-83.13412,,desc
+181175,NW-C-1871-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02657,-83.13488,8.2,desc
+181177,NW-C-1872-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.0585,-83.12758,,desc
+181177,NW-C-1872-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05868,-83.12752,,desc
+181177,NW-C-1872-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05867,-83.1274,,desc
+181177,NW-C-1872-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05848,-83.12747,8.1,desc
+181179,NW-C-1874-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05977,-83.12707,,desc
+181179,NW-C-1874-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05978,-83.12705,,desc
+181179,NW-C-1874-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05978,-83.12702,,desc
+181179,NW-C-1874-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05975,-83.12703,8.5,desc
+181180,NW-C-1875-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03938,-83.13273,,desc
+181180,NW-C-1875-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03967,-83.13265,,desc
+181180,NW-C-1875-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03965,-83.13253,,desc
+181180,NW-C-1875-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03937,-83.13262,8.5,desc
+181181,NW-C-1876-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02657,-83.13488,,desc
+181181,NW-C-1876-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.03122,-83.13405,,desc
+181181,NW-C-1876-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.0312,-83.1339,,desc
+181181,NW-C-1876-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.02655,-83.13473,7.7,desc
+181182,NW-C-1877-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05967,-83.1261,,desc
+181182,NW-C-1877-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06043,-83.12582,,desc
+181182,NW-C-1877-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06042,-83.12575,,desc
+181182,NW-C-1877-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.05965,-83.12602,7.3,desc
+181183,NW-C-1878-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06248,-83.1251,,desc
+181183,NW-C-1878-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06313,-83.12487,,desc
+181183,NW-C-1878-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06312,-83.12478,,desc
+181183,NW-C-1878-26,2026-05-25,Shallow Depth Confirmed,Detroit River Lake Erie,42.06247,-83.12502,7.0,desc
+181225,NW-C-1913-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34587,-82.94688,,desc
+181225,NW-C-1913-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34718,-82.94512,,desc
+181225,NW-C-1913-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34708,-82.94497,,desc
+181225,NW-C-1913-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34577,-82.94673,7.5,desc
+181226,NW-C-1915-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34475,-82.9482,,desc
+181226,NW-C-1915-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34477,-82.94818,,desc
+181226,NW-C-1915-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34475,-82.94815,,desc
+181226,NW-C-1915-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.34473,-82.94818,8.5,desc
+181227,NW-C-1916-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.33783,-82.9642,,desc
+181227,NW-C-1916-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.33887,-82.96138,,desc
+181227,NW-C-1916-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.33877,-82.96132,,desc
+181227,NW-C-1916-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.33773,-82.96413,8.5,desc
+181228,NW-C-1917-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.13903,-83.12263,,desc
+181228,NW-C-1917-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.13905,-83.12263,,desc
+181228,NW-C-1917-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.13907,-83.12255,,desc
+181228,NW-C-1917-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.13905,-83.12255,8.5,desc
+181229,NW-C-1924-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1403,-83.12375,,desc
+181229,NW-C-1924-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14222,-83.12457,,desc
+181229,NW-C-1924-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14228,-83.12427,,desc
+181229,NW-C-1924-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14037,-83.12347,8.4,desc
+181230,NW-C-1926-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1414,-83.1239,,desc
+181230,NW-C-1926-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14315,-83.12463,,desc
+181230,NW-C-1926-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1432,-83.12438,,desc
+181230,NW-C-1926-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14147,-83.12365,8.3,desc
+181231,NW-C-1927-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14577,-83.12643,,desc
+181231,NW-C-1927-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14583,-83.12647,,desc
+181231,NW-C-1927-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14585,-83.1264,,desc
+181231,NW-C-1927-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14578,-83.12637,8.1,desc
+181232,NW-C-1928-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14792,-83.12522,,desc
+181232,NW-C-1928-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14793,-83.12522,,desc
+181232,NW-C-1928-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14793,-83.12518,,desc
+181232,NW-C-1928-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14792,-83.12518,8.5,desc
+181233,NW-C-1929-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14705,-83.12698,,desc
+181233,NW-C-1929-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14718,-83.12703,,desc
+181233,NW-C-1929-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1472,-83.12697,,desc
+181233,NW-C-1929-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.14707,-83.12692,8.2,desc
+181234,NW-C-1930-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15265,-83.12732,,desc
+181234,NW-C-1930-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15267,-83.12732,,desc
+181234,NW-C-1930-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15267,-83.1273,,desc
+181234,NW-C-1930-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15265,-83.12728,8.5,desc
+181235,NW-C-1931-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15363,-83.12762,,desc
+181235,NW-C-1931-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1542,-83.12785,,desc
+181235,NW-C-1931-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15423,-83.12768,,desc
+181235,NW-C-1931-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15368,-83.12745,8.4,desc
+181237,NW-C-1932-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1544,-83.12798,,desc
+181237,NW-C-1932-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1565,-83.12888,,desc
+181237,NW-C-1932-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15655,-83.12867,,desc
+181237,NW-C-1932-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15445,-83.12777,8.2,desc
+181238,NW-C-1933-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.15705,-83.12917,,desc
+181238,NW-C-1933-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.16078,-83.13075,,desc
+181238,NW-C-1933-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.16085,-83.13048,,desc
+181238,NW-C-1933-26,2026-05-26,Shallow Depth Confirmed,Detroit River,42.1571,-83.1289,7.9,desc
+181251,NW-C-1934-26,2026-05-26,Shallow Depth Confirmed,Port of Trois-Rivieres,46.3403,-72.5389,,desc
+181251,NW-C-1934-26,2026-05-26,Shallow Depth Confirmed,Port of Trois-Rivieres,46.34073,-72.53817,,desc
+181251,NW-C-1934-26,2026-05-26,Shallow Depth Confirmed,Port of Trois-Rivieres,46.34067,-72.53807,,desc
+181251,NW-C-1934-26,2026-05-26,Shallow Depth Confirmed,Port of Trois-Rivieres,46.34023,-72.5388,9.3,desc
+181252,NW-M-0663-26,2026-05-26,Submerged Object,Chaleur - Miscou - south,47.61803,-65.64093,,desc
+181529,NW-C-2095-26,2026-06-02,Submerged Object,Lake Saint-Louis - west Vicinity Île Dowker,45.39783,-73.91617,,desc
+181535,NW-C-2097-26,2026-06-02,Submerged Object,Lake Ontario Vicinity Grimsby Beach,43.19533,-79.51983,,desc
+181567,NW-C-2108-26,2026-06-03,Shallow Depth Confirmed,Pointe-des-Monts to Anticosti - south Vicinity Cap-Chat,49.09957,-66.68967,,desc
+181594,NW-M-0712-26,2026-06-04,Shallow Depth Confirmed,Northumberland Strait Vicinity Souris,46.34952,-62.25168,,desc
+181594,NW-M-0712-26,2026-06-04,Shallow Depth Confirmed,Northumberland Strait Vicinity Souris,46.34952,-62.25168,,desc
+181595,NW-C-2127-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51847,-82.68297,,desc
+181595,NW-C-2127-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5189,-82.68173,,desc
+181595,NW-C-2127-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5188,-82.68167,,desc
+181595,NW-C-2127-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51835,-82.68288,8.1,desc
+181597,NW-C-2128-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51865,-82.6828,,desc
+181597,NW-C-2128-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52095,-82.67635,,desc
+181597,NW-C-2128-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52083,-82.67627,,desc
+181597,NW-C-2128-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51853,-82.68273,8.0,desc
+181598,NW-C-2129-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52103,-82.67583,,desc
+181598,NW-C-2129-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52103,-82.67582,,desc
+181598,NW-C-2129-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52102,-82.6758,,desc
+181598,NW-C-2129-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.521,-82.67583,8.2,desc
+181599,NW-C-2131-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52182,-82.67392,,desc
+181599,NW-C-2131-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52268,-82.67152,,desc
+181599,NW-C-2131-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5226,-82.67147,,desc
+181599,NW-C-2131-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52175,-82.67387,7.7,desc
+181600,NW-C-2130-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52178,-82.67378,,desc
+181600,NW-C-2130-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52255,-82.67167,,desc
+181600,NW-C-2130-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52245,-82.6716,,desc
+181600,NW-C-2130-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52168,-82.67372,7.7,desc
+181601,NW-C-2132-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5218,-82.6734,,desc
+181601,NW-C-2132-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52213,-82.67248,,desc
+181601,NW-C-2132-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52207,-82.67245,,desc
+181601,NW-C-2132-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52175,-82.67337,8.0,desc
+181602,NW-C-2133-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52292,-82.67085,,desc
+181602,NW-C-2133-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52305,-82.67047,,desc
+181602,NW-C-2133-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52278,-82.67028,,desc
+181602,NW-C-2133-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52263,-82.67068,8.2,desc
+181603,NW-C-2134-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52337,-82.66958,,desc
+181603,NW-C-2134-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52548,-82.66367,,desc
+181603,NW-C-2134-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52535,-82.66358,,desc
+181603,NW-C-2134-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52325,-82.6695,7.2,desc
+181604,NW-C-2135-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5232,-82.66967,,desc
+181604,NW-C-2135-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52578,-82.66245,,desc
+181604,NW-C-2135-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52555,-82.6623,,desc
+181604,NW-C-2135-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52298,-82.66952,7.4,desc
+181605,NW-C-2136-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52733,-82.65847,,desc
+181605,NW-C-2136-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5285,-82.65522,,desc
+181605,NW-C-2136-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52835,-82.6551,,desc
+181605,NW-C-2136-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52718,-82.65837,7.6,desc
+181606,NW-C-2137-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52737,-82.65787,,desc
+181606,NW-C-2137-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52805,-82.65593,,desc
+181606,NW-C-2137-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52775,-82.65573,,desc
+181606,NW-C-2137-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52707,-82.65767,7.7,desc
+181607,NW-C-2138-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5289,-82.65398,,desc
+181607,NW-C-2138-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52945,-82.65242,,desc
+181607,NW-C-2138-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52915,-82.6522,,desc
+181607,NW-C-2138-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52858,-82.65377,8.1,desc
+181608,NW-C-2139-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53102,-82.64817,,desc
+181608,NW-C-2139-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53268,-82.64347,,desc
+181608,NW-C-2139-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53252,-82.64335,,desc
+181608,NW-C-2139-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53083,-82.64805,8.1,desc
+181609,NW-C-2140-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53272,-82.64262,,desc
+181609,NW-C-2140-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53273,-82.6426,,desc
+181609,NW-C-2140-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53272,-82.64258,,desc
+181609,NW-C-2140-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5327,-82.6426,8.2,desc
+181610,NW-C-2141-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5155,-82.68592,,desc
+181610,NW-C-2141-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53653,-82.62695,,desc
+181610,NW-C-2141-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53647,-82.6269,,desc
+181610,NW-C-2141-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51542,-82.68587,1.9,desc
+181611,NW-C-2144-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51572,-82.68582,,desc
+181611,NW-C-2144-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5366,-82.62727,,desc
+181611,NW-C-2144-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53645,-82.62718,,desc
+181611,NW-C-2144-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51557,-82.68572,5.2,desc
+181612,NW-C-2146-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51613,-82.68562,,desc
+181612,NW-C-2146-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.53648,-82.62858,,desc
+181612,NW-C-2146-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5362,-82.62838,,desc
+181612,NW-C-2146-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.51583,-82.68543,6.9,desc
+181613,NW-C-2147-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52505,-82.66133,,desc
+181613,NW-C-2147-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5368,-82.62837,,desc
+181613,NW-C-2147-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5366,-82.62823,,desc
+181613,NW-C-2147-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.52483,-82.66118,7.9,desc
+181614,NW-C-2148-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54473,-82.6086,,desc
+181614,NW-C-2148-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54523,-82.6072,,desc
+181614,NW-C-2148-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5452,-82.60717,,desc
+181614,NW-C-2148-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5447,-82.60857,8.2,desc
+181615,NW-C-2149-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5463,-82.6053,,desc
+181615,NW-C-2149-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54948,-82.59637,,desc
+181615,NW-C-2149-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54935,-82.59628,,desc
+181615,NW-C-2149-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54617,-82.60522,5.6,desc
+181616,NW-C-2143-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5462,-82.60517,,desc
+181616,NW-C-2143-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54868,-82.59818,,desc
+181616,NW-C-2143-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54857,-82.5981,,desc
+181616,NW-C-2143-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54608,-82.60508,6.2,desc
+181617,NW-C-2150-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54608,-82.60508,,desc
+181617,NW-C-2150-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54825,-82.599,,desc
+181617,NW-C-2150-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54815,-82.59893,,desc
+181617,NW-C-2150-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54598,-82.60503,6.9,desc
+181618,NW-C-2151-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54603,-82.60492,,desc
+181618,NW-C-2151-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54778,-82.6,,desc
+181618,NW-C-2151-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5477,-82.59995,,desc
+181618,NW-C-2151-26,2026-06-04,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.54595,-82.60487,7.7,desc
+181629,NW-C-2145-26,2026-06-04,Submerged Object,Lake Huron Vicinity Murphy road Beach,43.01983,-82.36233,,desc
+181657,NW-C-2168-26,2026-06-05,Shallow Depth Confirmed,Kingston to Cornwall Vicinity Maitland,44.61475,-75.62192,3.6,desc
+181740,NW-C-2208-26,2026-06-08,Shallow Depth Confirmed,St. Clair River,42.73608,-82.48153,,desc
+181740,NW-C-2208-26,2026-06-08,Shallow Depth Confirmed,St. Clair River,42.73687,-82.48108,,desc
+181740,NW-C-2208-26,2026-06-08,Shallow Depth Confirmed,St. Clair River,42.7368,-82.4809,,desc
+181740,NW-C-2208-26,2026-06-08,Shallow Depth Confirmed,St. Clair River,42.73602,-82.48135,8.1,desc
+181793,NW-C-2230-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56703,-82.57692,,desc
+181793,NW-C-2230-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56747,-82.57633,,desc
+181793,NW-C-2230-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56742,-82.57627,,desc
+181793,NW-C-2230-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56698,-82.57683,7.5,desc
+181795,NW-C-2231-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.5681,-82.57548,,desc
+181795,NW-C-2231-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56818,-82.57537,,desc
+181795,NW-C-2231-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56813,-82.5753,,desc
+181795,NW-C-2231-26,2026-06-09,Shallow Depth Confirmed,Lake St. Clair St. Clair River,42.56805,-82.57542,8.1,desc
+181796,NW-C-2232-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.57153,-82.57122,,desc
+181796,NW-C-2232-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.5718,-82.57088,,desc
+181796,NW-C-2232-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.57158,-82.5706,,desc
+181796,NW-C-2232-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.57133,-82.57093,7.9,desc
+181797,NW-C-2233-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.572,-82.57073,,desc
+181797,NW-C-2233-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.57285,-82.56942,,desc
+181797,NW-C-2233-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.57257,-82.56908,,desc
+181797,NW-C-2233-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.57172,-82.5704,7.8,desc
+181798,NW-C-2234-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.605,-82.52432,,desc
+181798,NW-C-2234-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.60607,-82.52262,,desc
+181798,NW-C-2234-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.60592,-82.52245,,desc
+181798,NW-C-2234-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.60485,-82.52413,2.9,desc
+181799,NW-C-2235-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.60752,-82.52132,,desc
+181799,NW-C-2235-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.60848,-82.52042,,desc
+181799,NW-C-2235-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.60845,-82.52037,,desc
+181799,NW-C-2235-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.6075,-82.52127,7.4,desc
+181800,NW-C-2236-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.6116,-82.51808,,desc
+181800,NW-C-2236-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61175,-82.51802,,desc
+181800,NW-C-2236-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61173,-82.51792,,desc
+181800,NW-C-2236-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61157,-82.51798,5.0,desc
+181801,NW-C-2237-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61727,-82.51547,,desc
+181801,NW-C-2237-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61735,-82.51543,,desc
+181801,NW-C-2237-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61735,-82.51537,,desc
+181801,NW-C-2237-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61725,-82.51542,8.2,desc
+181802,NW-C-2238-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61772,-82.5154,,desc
+181802,NW-C-2238-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61785,-82.51533,,desc
+181802,NW-C-2238-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.6178,-82.51513,,desc
+181802,NW-C-2238-26,2026-06-09,Shallow Depth Confirmed,St. Clair River,42.61767,-82.5152,7.8,desc
+181810,NW-C-2242-26,2026-06-09,Buoys Aids Rockcliffe Yacht Club information light buoy PRIV LL 1295.86 Rockcliffe Yacht Club information light buoy PRIV LL 1295.9 Rockcliffe Yacht Club information light buoy PRIV LL 1295.88 Rockcliffe Yacht Club information light buoy PRIV LL 1295.84 Rockcliffe Yacht Club information light buoy PRIV LL 1295.92 Rockcliffe Yacht Club information light buoy PRIV LL 1295.82,Ottawa River 1,45.46507,-75.64463,,json
+181882,NW-C-2278-26,2026-06-11,Submerged Object,Port of Montreal Vicinity Section 16-17,45.506,-73.5495,3.0,desc
+181890,NW-N-0380-26,2026-06-11,Shallow Depth Reported,East Coast,48.64995,-53.12327,,desc
+181890,NW-N-0380-26,2026-06-11,Shallow Depth Reported,East Coast,48.64868,-53.11618,,desc
+181890,NW-N-0380-26,2026-06-11,Shallow Depth Reported,East Coast,48.64865,-53.11352,,desc
+181890,NW-N-0380-26,2026-06-11,Shallow Depth Reported,East Coast,48.65035,-53.11488,,desc
+181890,NW-N-0380-26,2026-06-11,Shallow Depth Reported,East Coast,48.6507,-53.11495,,desc
+181932,NW-C-2303-26,2026-06-11,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.64882,-71.90888,,desc
+181932,NW-C-2303-26,2026-06-11,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.6488,-71.9089,,desc
+181932,NW-C-2303-26,2026-06-11,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.64882,-71.90893,,desc
+181932,NW-C-2303-26,2026-06-11,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.64883,-71.90892,10.4,desc
+181969,NW-C-2329-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97773,-82.41312,,desc
+181969,NW-C-2329-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97828,-82.41335,,desc
+181969,NW-C-2329-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97833,-82.41317,,desc
+181969,NW-C-2329-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97777,-82.41293,8.2,desc
+181970,NW-C-2330-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97832,-82.41383,,desc
+181970,NW-C-2330-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97833,-82.41385,,desc
+181970,NW-C-2330-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97835,-82.41382,,desc
+181970,NW-C-2330-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97832,-82.4138,8.2,desc
+181971,NW-C-2331-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97848,-82.41353,,desc
+181971,NW-C-2331-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97913,-82.41382,,desc
+181971,NW-C-2331-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.9792,-82.41355,,desc
+181971,NW-C-2331-26,2026-06-12,Shallow Depth Confirmed,St. Clair River,42.97855,-82.41327,7.6,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.51525,-53.07187,8.0,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.51457,-53.0698,6.0,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.51305,-53.07198,3.9,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.51292,-53.07002,2.4,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.50993,-53.06362,6.0,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.50967,-53.06238,5.4,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.51353,-53.05352,5.5,desc
+181991,NW-N-0386-26,2026-06-13,Shallow Depth Reported,East Coast,48.51272,-53.04413,8.2,desc
+182067,NW-C-2377-26,2026-06-15,Shallow Depth Reported,Lake Superior Vicinity Nipigon River,49.00994,-88.25875,,json
+182142,NW-C-2407-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2571,-72.71657,,desc
+182142,NW-C-2407-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2573,-72.71595,,desc
+182142,NW-C-2407-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25723,-72.71592,,desc
+182142,NW-C-2407-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25703,-72.71652,11.0,desc
+182143,NW-C-2408-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.26452,-72.70282,,desc
+182143,NW-C-2408-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.26533,-72.7002,,desc
+182143,NW-C-2408-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.26515,-72.70008,,desc
+182143,NW-C-2408-26,2026-06-17,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.26432,-72.70268,10.1,desc
+182166,NW-M-0812-26,2026-06-17,Submerged Object,Northumberland Strait Vicinity Cap Bimet,46.23867,-64.45892,,desc
+182219,NW-C-2441-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.50082,-84.32703,,desc
+182219,NW-C-2441-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.50077,-84.32685,,desc
+182219,NW-C-2441-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.50073,-84.32688,,desc
+182219,NW-C-2441-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.50077,-84.32707,8.3,desc
+182220,NW-C-2442-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49922,-84.3205,,desc
+182220,NW-C-2442-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49875,-84.3186,,desc
+182220,NW-C-2442-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.4984,-84.31877,,desc
+182220,NW-C-2442-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49887,-84.32068,8.2,desc
+182221,NW-C-2443-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49945,-84.32122,,desc
+182221,NW-C-2443-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49882,-84.31857,,desc
+182221,NW-C-2443-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49875,-84.31858,,desc
+182221,NW-C-2443-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49938,-84.32125,7.8,desc
+182222,NW-C-2444-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49805,-84.31532,,desc
+182222,NW-C-2444-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49787,-84.3146,,desc
+182222,NW-C-2444-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49782,-84.31463,,desc
+182222,NW-C-2444-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.498,-84.31535,7.8,desc
+182223,NW-C-2445-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.4959,-84.30633,,desc
+182223,NW-C-2445-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49583,-84.30607,,desc
+182223,NW-C-2445-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49578,-84.30608,,desc
+182223,NW-C-2445-26,2026-06-19,Shallow Depth Confirmed,St. Marys River,46.49585,-84.30635,8.2,desc
+182327,NW-C-2482-26,2026-06-22,Submerged Object,Montréal to Trois-Rivières Vicinity Tracy,46.0041,-73.17435,,desc
+182365,NW-C-2503-26,2026-06-23,Submerged Object,Lake of Two Mountains - west Vicinity Saint-Placide,45.52367,-74.17467,,desc
+182370,NW-C-2506-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45553,-84.50195,,desc
+182370,NW-C-2506-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45553,-84.50192,,desc
+182370,NW-C-2506-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45552,-84.50192,,desc
+182370,NW-C-2506-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45552,-84.50193,6.7,desc
+182372,NW-C-2511-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45612,-84.48573,,desc
+182372,NW-C-2511-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45685,-84.4821,,desc
+182372,NW-C-2511-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45677,-84.48207,,desc
+182372,NW-C-2511-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45603,-84.4857,8.5,desc
+182373,NW-C-2507-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45703,-84.48172,,desc
+182373,NW-C-2507-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45778,-84.47793,,desc
+182373,NW-C-2507-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45765,-84.47787,,desc
+182373,NW-C-2507-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.4569,-84.48167,7.9,desc
+182374,NW-C-2508-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.4569,-84.48167,,desc
+182374,NW-C-2508-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45765,-84.47785,,desc
+182374,NW-C-2508-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.4576,-84.47783,,desc
+182374,NW-C-2508-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45685,-84.48165,7.3,desc
+182375,NW-C-2510-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45898,-84.4882,,desc
+182375,NW-C-2510-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45985,-84.48383,,desc
+182375,NW-C-2510-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45978,-84.4838,,desc
+182375,NW-C-2510-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45892,-84.48817,7.9,desc
+182376,NW-C-2509-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45865,-84.4905,,desc
+182376,NW-C-2509-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46037,-84.48187,,desc
+182376,NW-C-2509-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46025,-84.48182,,desc
+182376,NW-C-2509-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.45853,-84.49045,6.3,desc
+182377,NW-C-2512-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46047,-84.47185,,desc
+182377,NW-C-2512-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46198,-84.4683,,desc
+182377,NW-C-2512-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46182,-84.46815,,desc
+182377,NW-C-2512-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.4603,-84.4717,7.8,desc
+182380,NW-C-2513-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46567,-84.47005,,desc
+182380,NW-C-2513-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.4684,-84.46768,,desc
+182380,NW-C-2513-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46833,-84.46755,,desc
+182380,NW-C-2513-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.4656,-84.4699,7.9,desc
+182381,NW-C-2514-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46535,-84.47045,,desc
+182381,NW-C-2514-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46858,-84.46765,,desc
+182381,NW-C-2514-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46855,-84.46755,,desc
+182381,NW-C-2514-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46532,-84.47035,7.4,desc
+182390,NW-C-2516-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46017,-84.47202,,desc
+182390,NW-C-2516-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46182,-84.46815,,desc
+182390,NW-C-2516-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46177,-84.4681,,desc
+182390,NW-C-2516-26,2026-06-23,Shallow Depth Confirmed,St. Marys River,46.46012,-84.47197,7.4,desc
+182401,NW-C-2522-26,2026-06-23,Shallow Depth Confirmed,Kingston to Cornwall Vicinity Iroquois,44.8528,-75.26782,2.9,desc
+182418,NW-A-0098-26,2026-06-24,Submerged Object,Wrigley Harbour mile 0 to Axe Point mile 91 Vicinity Fort Providence,61.30853,-117.60617,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.64675,-67.4415,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.67217,-67.4579,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.67372,-67.41658,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.68932,-67.41543,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.69913,-67.44248,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.70467,-67.4134,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.71323,-67.42608,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.71048,-67.43007,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.67745,-67.30405,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.67843,-67.30922,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.63503,-67.2882,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.63723,-67.27247,,desc
+182446,NW-A-0100-26,2026-06-25,Shallow Depth Confirmed,Ungava,58.63963,-67.3003,,desc
+182455,NW-C-2554-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5019,-84.39317,,desc
+182455,NW-C-2554-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.502,-84.39298,,desc
+182455,NW-C-2554-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50197,-84.39293,,desc
+182455,NW-C-2554-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50185,-84.39312,6.8,desc
+182456,NW-C-2555-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50143,-84.39462,,desc
+182456,NW-C-2555-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50165,-84.39335,,desc
+182456,NW-C-2555-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50153,-84.3933,,desc
+182456,NW-C-2555-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50132,-84.39458,8.3,desc
+182457,NW-C-2556-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50093,-84.39163,,desc
+182457,NW-C-2556-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50093,-84.3916,,desc
+182457,NW-C-2556-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5009,-84.39158,,desc
+182457,NW-C-2556-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5009,-84.39162,8.4,desc
+182458,NW-C-2557-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50053,-84.39452,,desc
+182458,NW-C-2557-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50057,-84.39437,,desc
+182458,NW-C-2557-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50037,-84.3943,,desc
+182458,NW-C-2557-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50035,-84.39445,8.4,desc
+182459,NW-C-2558-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5121,-84.37127,,desc
+182459,NW-C-2558-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51253,-84.36588,,desc
+182459,NW-C-2558-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51245,-84.36587,,desc
+182459,NW-C-2558-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51202,-84.37127,3.9,desc
+182460,NW-C-2559-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51253,-84.3665,,desc
+182460,NW-C-2559-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51255,-84.36647,,desc
+182460,NW-C-2559-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51252,-84.36647,,desc
+182460,NW-C-2559-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51252,-84.3665,6.7,desc
+182461,NW-C-2560-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51332,-84.36612,,desc
+182461,NW-C-2560-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51332,-84.36587,,desc
+182461,NW-C-2560-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51325,-84.36588,,desc
+182461,NW-C-2560-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51325,-84.36612,3.6,desc
+182462,NW-C-2561-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51335,-84.36895,,desc
+182462,NW-C-2561-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51333,-84.36758,,desc
+182462,NW-C-2561-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5132,-84.36758,,desc
+182462,NW-C-2561-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51322,-84.36895,4.7,desc
+182463,NW-C-2562-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51337,-84.37193,,desc
+182463,NW-C-2562-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51337,-84.37187,,desc
+182463,NW-C-2562-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51328,-84.37187,,desc
+182463,NW-C-2562-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51328,-84.37193,6.7,desc
+182464,NW-C-2563-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51133,-84.37643,,desc
+182464,NW-C-2563-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51162,-84.37597,,desc
+182464,NW-C-2563-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51155,-84.37588,,desc
+182464,NW-C-2563-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.51128,-84.37637,7.1,desc
+182465,NW-C-2564-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50905,-84.38097,,desc
+182465,NW-C-2564-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50978,-84.37968,,desc
+182465,NW-C-2564-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50955,-84.3794,,desc
+182465,NW-C-2564-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50882,-84.38068,7.1,desc
+182466,NW-C-2565-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50378,-84.39063,,desc
+182466,NW-C-2565-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50417,-84.38995,,desc
+182466,NW-C-2565-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50388,-84.3896,,desc
+182466,NW-C-2565-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5035,-84.39028,6.9,desc
+182467,NW-C-2566-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50295,-84.392,,desc
+182467,NW-C-2566-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50312,-84.39172,,desc
+182467,NW-C-2566-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50282,-84.39135,,desc
+182467,NW-C-2566-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50265,-84.39163,6.9,desc
+182468,NW-C-2567-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50335,-84.3931,,desc
+182468,NW-C-2567-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50338,-84.39307,,desc
+182468,NW-C-2567-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50335,-84.39303,,desc
+182468,NW-C-2567-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50333,-84.39308,7.2,desc
+182469,NW-C-2568-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50075,-84.39863,,desc
+182469,NW-C-2568-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50098,-84.39727,,desc
+182469,NW-C-2568-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.5006,-84.39713,,desc
+182469,NW-C-2568-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.50037,-84.3985,7.9,desc
+182470,NW-C-2569-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.49968,-84.4048,,desc
+182470,NW-C-2569-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.49978,-84.40425,,desc
+182470,NW-C-2569-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.49972,-84.40423,,desc
+182470,NW-C-2569-26,2026-06-25,Shallow Depth Confirmed,St. Marys River,46.49962,-84.40478,7.5,desc
+182576,NW-N-0428-26,2026-06-27,Buoys Aids Ducie Rock light and bell buoy VD1 LL 116.5,Southwest Coast,47.59952,-55.38003,,json
+182629,NW-C-2661-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24217,-84.10708,,desc
+182629,NW-C-2661-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.2422,-84.10708,,desc
+182629,NW-C-2661-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24218,-84.10705,,desc
+182629,NW-C-2661-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24217,-84.10705,8.1,desc
+182630,NW-C-2662-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24615,-84.10358,,desc
+182630,NW-C-2662-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24617,-84.10358,,desc
+182630,NW-C-2662-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24617,-84.10355,,desc
+182630,NW-C-2662-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24613,-84.10355,6.3,desc
+182631,NW-C-2666-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24662,-84.10365,,desc
+182631,NW-C-2666-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24663,-84.10365,,desc
+182631,NW-C-2666-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24663,-84.10362,,desc
+182631,NW-C-2666-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24662,-84.10362,6.3,desc
+182632,NW-C-2665-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24668,-84.10338,,desc
+182632,NW-C-2665-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24698,-84.10327,,desc
+182632,NW-C-2665-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24695,-84.1031,,desc
+182632,NW-C-2665-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24665,-84.10323,6.2,desc
+182633,NW-C-2664-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24733,-84.1032,,desc
+182633,NW-C-2664-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.2477,-84.10303,,desc
+182633,NW-C-2664-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24765,-84.1028,,desc
+182633,NW-C-2664-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24728,-84.10297,6.3,desc
+182634,NW-C-2663-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24942,-84.10232,,desc
+182634,NW-C-2663-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24943,-84.1023,,desc
+182634,NW-C-2663-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.24943,-84.10227,,desc
+182634,NW-C-2663-26,2026-06-29,Shallow Depth Confirmed,St. Marys River,46.2494,-84.10228,6.3,desc
+182652,NW-C-2671-26,2026-06-29,Shallow Depth Confirmed,Anticosti Vicinity Rivière-au-Renard,48.99897,-64.3909,,desc
+182692,NW-C-2683-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.27693,-84.11592,,desc
+182692,NW-C-2683-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.27742,-84.11595,,desc
+182692,NW-C-2683-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.27742,-84.11595,,desc
+182692,NW-C-2683-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.27693,-84.1159,6.3,desc
+182693,NW-C-2684-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26958,-84.11562,,desc
+182693,NW-C-2684-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.27077,-84.11572,,desc
+182693,NW-C-2684-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.2708,-84.11522,,desc
+182693,NW-C-2684-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26962,-84.11512,8.3,desc
+182694,NW-C-2685-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.2681,-84.11395,,desc
+182694,NW-C-2685-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.2685,-84.11455,,desc
+182694,NW-C-2685-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26852,-84.11453,,desc
+182694,NW-C-2685-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26812,-84.11393,8.3,desc
+182695,NW-C-2686-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26692,-84.11298,,desc
+182695,NW-C-2686-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26708,-84.11322,,desc
+182695,NW-C-2686-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26713,-84.11315,,desc
+182695,NW-C-2686-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26697,-84.1129,8.4,desc
+182698,NW-C-2689-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26528,-84.10793,,desc
+182698,NW-C-2689-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26607,-84.10907,,desc
+182698,NW-C-2689-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26635,-84.10868,,desc
+182698,NW-C-2689-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26557,-84.10755,5.1,desc
+182699,NW-C-2690-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26472,-84.10892,,desc
+182699,NW-C-2690-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26482,-84.10905,,desc
+182699,NW-C-2690-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26488,-84.10895,,desc
+182699,NW-C-2690-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26478,-84.10882,8.4,desc
+182700,NW-C-2691-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26278,-84.10372,,desc
+182700,NW-C-2691-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26462,-84.10637,,desc
+182700,NW-C-2691-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26473,-84.1062,,desc
+182700,NW-C-2691-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.2629,-84.10355,5.9,desc
+182701,NW-C-2692-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26122,-84.10365,,desc
+182701,NW-C-2692-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26123,-84.10368,,desc
+182701,NW-C-2692-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26125,-84.10365,,desc
+182701,NW-C-2692-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26123,-84.10363,8.3,desc
+182702,NW-C-2693-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25935,-84.101,,desc
+182702,NW-C-2693-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26083,-84.10313,,desc
+182702,NW-C-2693-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26092,-84.10302,,desc
+182702,NW-C-2693-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25943,-84.10088,7.2,desc
+182711,NW-C-2704-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25743,-84.09858,,desc
+182711,NW-C-2704-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25785,-84.09918,,desc
+182711,NW-C-2704-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25797,-84.09903,,desc
+182711,NW-C-2704-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25755,-84.09843,2.2,desc
+182712,NW-C-2705-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25763,-84.09855,,desc
+182712,NW-C-2705-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25862,-84.09998,,desc
+182712,NW-C-2705-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25875,-84.09978,,desc
+182712,NW-C-2705-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25777,-84.09835,2.7,desc
+182714,NW-C-2706-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25803,-84.09875,,desc
+182714,NW-C-2706-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25855,-84.0995,,desc
+182714,NW-C-2706-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.2587,-84.09932,,desc
+182714,NW-C-2706-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25817,-84.09857,2.6,desc
+182715,NW-C-2707-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25955,-84.10045,,desc
+182715,NW-C-2707-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26168,-84.10257,,desc
+182715,NW-C-2707-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.26178,-84.10237,,desc
+182715,NW-C-2707-26,2026-06-30,Shallow Depth Confirmed,St. Marys River,46.25963,-84.10025,3.1,desc
+182716,NW-C-2702-26,2026-06-30,Submerged Object,Muskoka Lakes Vicinity Lake Muskoka,45.0236,-79.52707,,desc
+182734,NW-C-2716-26,2026-06-30,Lights Aids Marsh Lake Point light LL 1314 Mackey Point light LL 1315 Stonecliffe light LL 1316 Bissett Bay Point light LL 1317 Powell Creek light LL 1318 Deerhorn Rock light LL 1319 Deux Rivières light LL 1320 Bear Point light LL 1321 Bald Rock light LL 1322,Ottawa River Vicinity Mattawa,46.19228,-77.75198,,json
+182790,NW-N-0475-26,2026-07-01,Buoys Aids Southwest Rock light buoy QS2 LL 140.7,Southwest Coast,47.50467,-57.41782,,json
+182793,NW-N-0477-26,2026-07-01,Buoys Aids Grey River Rocks North Cardinal light and whistle buoy QGR LL 139.21,Southwest Coast,47.474,-57.09317,,json
+182843,NW-C-2805-26,2026-07-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06138,-73.08768,,desc
+182843,NW-C-2805-26,2026-07-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06138,-73.08773,,desc
+182843,NW-C-2805-26,2026-07-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06143,-73.08773,,desc
+182843,NW-C-2805-26,2026-07-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06143,-73.0877,11.2,desc
+182959,NW-C-2869-26,2026-07-07,Shallow Depth Confirmed,Montréal to Trois-Rivières Vicinity Sorel-Tracy,46.0509,-73.11348,6.4,desc
+182959,NW-C-2869-26,2026-07-07,Shallow Depth Confirmed,Montréal to Trois-Rivières Vicinity Sorel-Tracy,46.05067,-73.11333,5.3,desc
+182959,NW-C-2869-26,2026-07-07,Shallow Depth Confirmed,Montréal to Trois-Rivières Vicinity Sorel-Tracy,46.05078,-73.11198,4.5,desc
+183029,NW-P-0914-26,2026-07-09,Uncharted Rock,Prince Rupert Harbour,54.33102,-130.44228,0.9,desc
+183030,NW-C-2903-26,2026-07-09,Shallow Depth Confirmed,Pointe-des-Monts to Anticosti - south Vicinity Sainte-Anne-des-Monts,49.16952,-66.37187,2.3,desc
+183032,NW-A-0121-26,2026-07-09,Shallow Depth Confirmed,Ungava,58.82523,-68.26143,,desc
+183032,NW-A-0121-26,2026-07-09,Shallow Depth Confirmed,Ungava,58.8258,-68.26297,,desc
+183032,NW-A-0121-26,2026-07-09,Shallow Depth Confirmed,Ungava,58.76013,-68.22718,,desc
+183036,NW-C-2906-26,2026-07-09,Shallow Depth Reported,Lake Saint-Louis - west Vicinity Île Perrot,45.3909,-73.88432,1.2,desc
+183036,NW-C-2906-26,2026-07-09,Shallow Depth Reported,Lake Saint-Louis - west Vicinity Île Perrot,45.38955,-73.87788,0.4,desc
+183036,NW-C-2906-26,2026-07-09,Shallow Depth Reported,Lake Saint-Louis - west Vicinity Île Perrot,45.38573,-73.87048,0.4,desc
+183036,NW-C-2906-26,2026-07-09,Shallow Depth Reported,Lake Saint-Louis - west Vicinity Île Perrot,45.36888,-73.84327,0.6,desc
+183058,NW-P-0917-26,2026-07-10,Uncharted Rock,Hecate Strait,53.20413,-132.14088,3.9,desc
+183105,NW-P-0926-26,2026-07-12,Lights Aids Lord Rock (U.S.) LL 761,Southern Alaska,54.72578,-130.82034,,json
+183132,NW-C-2954-26,2026-07-13,Shallow Depth Confirmed,Lake Superior Vicinity Marathon,48.69273,-86.4301,8.9,desc
+183187,NW-M-0960-26,2026-07-15,Shallow Depth Confirmed,Chaleur - Miscou - south,47.71063,-64.6671,2.0,desc
+183187,NW-M-0960-26,2026-07-15,Shallow Depth Confirmed,Chaleur - Miscou - south,47.71005,-64.67017,1.93,desc
+183187,NW-M-0960-26,2026-07-15,Shallow Depth Confirmed,Chaleur - Miscou - south,47.70953,-64.67135,1.53,desc
+183187,NW-M-0960-26,2026-07-15,Shallow Depth Confirmed,Chaleur - Miscou - south,47.71105,-64.66207,1.95,desc
+183193,NW-N-0503-26,2026-07-14,Buoys Aids Net Rocks light buoy V23 LL 130.31,Southwest Coast,47.47643,-56.0395,,json
+183219,NW-N-0504-26,2026-07-15,Buoys Aids Man of War Rock light buoy H1 LL 290,South Labrador Coast,54.22215,-58.33422,,json
+183241,NW-C-2999-26,2026-07-15,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.07635,-70.72912,,desc
+183241,NW-C-2999-26,2026-07-15,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.07552,-70.72965,,desc
+183241,NW-C-2999-26,2026-07-15,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.0757,-70.73027,,desc
+183241,NW-C-2999-26,2026-07-15,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.07653,-70.72972,11.8,desc
+183320,NW-C-3033-26,2026-07-17,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.0782,-70.72838,,desc
+183320,NW-C-3033-26,2026-07-17,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.07703,-70.72913,,desc
+183320,NW-C-3033-26,2026-07-17,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.07708,-70.72927,,desc
+183320,NW-C-3033-26,2026-07-17,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.07825,-70.72852,12.3,desc
+183321,NW-C-3034-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.53583,-73.53147,,desc
+183321,NW-C-3034-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.5357,-73.53158,,desc
+183321,NW-C-3034-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.53577,-73.53172,,desc
+183321,NW-C-3034-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.5359,-73.5316,10.3,desc
+183322,NW-C-3035-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.53708,-73.53043,,desc
+183322,NW-C-3035-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.53705,-73.53045,,desc
+183322,NW-C-3035-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.53707,-73.53048,,desc
+183322,NW-C-3035-26,2026-07-17,Shallow Depth Confirmed,Port of Montreal,45.53708,-73.53047,10.9,desc
+183330,NW-N-0508-26,2026-07-17,Buoys Aids Bad Rock light buoy QQ2 LL 140.5,Southwest Coast,47.49882,-57.36336,,json
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.36583,-89.2523,6.2,desc
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.37033,-89.24943,4.9,desc
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.43953,-89.19615,3.6,desc
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.44908,-89.17357,4.8,desc
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.39183,-89.21642,6.0,desc
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.35575,-89.22362,3.3,desc
+183338,NW-C-3044-26,2026-07-17,Shallow Depth Confirmed,Lake Superior Vicinity Thunder Bay,48.43767,-89.19088,6.5,desc
+183391,NW-C-3070-26,2026-07-20,Buoys Aids Parrotts Rock red spar buoy MS16,Lake of the Woods Vicinity Brûlé Island,49.12119,-94.34517,,json
+183463,NW-C-3108-26,2026-07-22,Shallow Depth Confirmed,Lake Superior Vicinity Marathon,48.70112,-86.9454,31.6,desc
+183463,NW-C-3108-26,2026-07-22,Shallow Depth Confirmed,Lake Superior Vicinity Marathon,48.7106,-86.4548,26.4,desc
+183463,NW-C-3108-26,2026-07-22,Shallow Depth Confirmed,Lake Superior Vicinity Marathon,48.71237,-86.45015,40.1,desc
+183571,NW-C-3156-26,2026-07-24,Submerged Object,Lake Ontario Vicinity Etobicoke,43.59903,-79.49312,,desc
+183675,NW-C-3206-26,2026-07-28,Shallow Depth Confirmed,Lake Superior Vicinity Terrace Bay,48.79882,-86.9974,6.5,desc
+183675,NW-C-3206-26,2026-07-28,Shallow Depth Confirmed,Lake Superior Vicinity Terrace Bay,48.80748,-86.96463,18.3,desc
+183675,NW-C-3206-26,2026-07-28,Shallow Depth Confirmed,Lake Superior Vicinity Terrace Bay,48.80323,-86.97378,18.7,desc
+183675,NW-C-3206-26,2026-07-28,Shallow Depth Confirmed,Lake Superior Vicinity Terrace Bay,48.80582,-86.96693,19.5,desc
+183675,NW-C-3206-26,2026-07-28,Shallow Depth Confirmed,Lake Superior Vicinity Terrace Bay,48.78555,-86.99098,22.4,desc
+183675,NW-C-3206-26,2026-07-28,Shallow Depth Confirmed,Lake Superior Vicinity Terrace Bay,48.7836,-86.98785,24.6,desc
+183701,NW-C-3216-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.56528,-72.1069,,desc
+183701,NW-C-3216-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.56528,-72.1071,,desc
+183701,NW-C-3216-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.56533,-72.1071,,desc
+183701,NW-C-3216-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.56533,-72.1069,10.5,desc
+183713,NW-C-3220-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.50085,-72.2284,,desc
+183713,NW-C-3220-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.50043,-72.2286,,desc
+183713,NW-C-3220-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.50048,-72.22878,,desc
+183713,NW-C-3220-26,2026-07-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.5009,-72.2286,9.3,desc
+183747,NW-C-3232-26,2026-07-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.63127,-71.92983,,desc
+183747,NW-C-3232-26,2026-07-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.63122,-71.92995,,desc
+183747,NW-C-3232-26,2026-07-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.63123,-71.92995,,desc
+183747,NW-C-3232-26,2026-07-29,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.63128,-71.92985,10.5,desc
+183773,NW-N-0540-26,2026-07-30,Buoys Aids Hatten Shoal light buoy NCH2 LL 284.8,South Labrador Coast,53.6581,-57.07345,,json
+183802,NW-N-0541-26,2026-07-30,Buoys Aids Galloper Rock light and whistle buoy PR1 LL 66,South Coast,47.10833,-55.07,,desc
+183846,NW-P-1044-26,2026-07-31,Uncharted Rock,West Coast Haida Gwaii,53.02413,-132.36028,,desc
+183896,NW-C-3327-26,2026-08-01,Submerged Object,Montréal to Trois-Rivières Vicinity Rapides de Lachine,45.41833,-73.578,,desc
+183919,NW-A-0180-26,2026-08-02,Submerged Object,Beaufort Sea Shipping Safety Control Zone 12,69.4405,-132.9805,,desc
+183920,NW-M-1052-26,2026-08-02,Submerged Object,Southwestern Shore,44.48952,-63.85878,,desc
+183934,NW-P-1057-26,2026-08-03,Buoys Aids Lee Rock green spar buoy V25,Haro Strait,48.41842,-123.28825,,json
+183945,NW-N-0554-26,2026-08-03,Buoys Aids Cary Rock light buoy JK3 LL 442.75,East Coast,48.62833,-53.40083,,json
+184009,NW-C-3394-26,2026-08-05,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38578,-72.43117,,desc
+184009,NW-C-3394-26,2026-08-05,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38732,-72.42788,,desc
+184009,NW-C-3394-26,2026-08-05,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.3872,-72.42777,,desc
+184009,NW-C-3394-26,2026-08-05,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38567,-72.43105,9.9,desc
+184139,NW-N-0586-26,2026-08-07,Shallow Depth Confirmed,Northeast Coast,49.56647,-54.90193,,desc
+184166,NW-M-1084-26,2026-08-08,Buoys Aids Laurier Rock light buoy KK61 LL 371,Southwestern Shore Vicinity Lockeport,43.675,-65.09583,,desc
+184168,NW-N-0588-26,2026-08-08,Buoys Aids Watch Rock North Cardinal light and whistle buoy QLB LL 138.5,Southwest Coast,47.39022,-56.83555,,json
+184268,NW-C-3494-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06138,-73.08738,,desc
+184268,NW-C-3494-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06137,-73.08742,,desc
+184268,NW-C-3494-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.0614,-73.08742,,desc
+184268,NW-C-3494-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.0614,-73.0874,11.2,desc
+184269,NW-C-3495-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06217,-73.07857,,desc
+184269,NW-C-3495-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06192,-73.08143,,desc
+184269,NW-C-3495-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06205,-73.08145,,desc
+184269,NW-C-3495-26,2026-08-11,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.06232,-73.0786,10.9,desc
+184326,NW-M-1117-26,2026-08-12,Buoys Aids Dixon Rock light buoy C28 LL 699,Northumberland Strait,45.64202,-61.40323,,json
+184344,NW-A-0210-26,2026-08-12,Sandspit or Sandbar Change,Shipping Safety Control Zone 13,72.88847,-80.52572,,desc
+184399,NW-M-1145-26,2026-08-13,Buoys Aids Frenchman Rock light buoy VV8 LL 610.5,Eastern Shore,44.93236,-62.11764,,json
+184408,NW-C-3538-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01397,-70.78125,,desc
+184408,NW-C-3538-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01392,-70.7813,,desc
+184408,NW-C-3538-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01395,-70.78137,,desc
+184408,NW-C-3538-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01398,-70.78132,12.4,desc
+184409,NW-C-3539-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.0173,-70.77833,,desc
+184409,NW-C-3539-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01727,-70.77837,,desc
+184409,NW-C-3539-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01733,-70.77852,,desc
+184409,NW-C-3539-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.01737,-70.77848,12.3,desc
+184410,NW-C-3540-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.02807,-70.76907,,desc
+184410,NW-C-3540-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.02805,-70.76908,,desc
+184410,NW-C-3540-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.02807,-70.76912,,desc
+184410,NW-C-3540-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.02808,-70.76912,12.4,desc
+184411,NW-C-3541-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03092,-70.766,,desc
+184411,NW-C-3541-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.0309,-70.76602,,desc
+184411,NW-C-3541-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03093,-70.76608,,desc
+184411,NW-C-3541-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03095,-70.76607,12.4,desc
+184412,NW-C-3542-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03185,-70.76418,,desc
+184412,NW-C-3542-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03178,-70.76425,,desc
+184412,NW-C-3542-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03187,-70.76442,,desc
+184412,NW-C-3542-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03193,-70.76435,12.2,desc
+184413,NW-C-3543-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03277,-70.76778,,desc
+184413,NW-C-3543-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03272,-70.76783,,desc
+184413,NW-C-3543-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03278,-70.76795,,desc
+184413,NW-C-3543-26,2026-08-13,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.03282,-70.7679,12.2,desc
+184438,NW-C-3553-26,2026-08-14,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.00765,-70.78822,,desc
+184438,NW-C-3553-26,2026-08-14,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.00763,-70.78823,,desc
+184438,NW-C-3553-26,2026-08-14,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.00765,-70.78827,,desc
+184438,NW-C-3553-26,2026-08-14,Shallow Depth Confirmed,Beauport to L'Isle-aux-Coudres,47.00767,-70.78825,12.4,desc
+184460,NW-C-3560-26,2026-08-14,Submerged Object,Lake Erie Vicinity Long Point,42.57667,-80.42167,,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92345,-57.80557,0.8,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92358,-57.80537,0.6,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92333,-57.80645,0.1,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92368,-57.80468,0.8,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92308,-57.80558,1.5,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92295,-57.8033,0.9,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92277,-57.80302,1.1,desc
+184562,NW-N-0630-26,2026-08-18,Shallow Depth Reported,Northeast Gulf - south,49.92427,-57.80293,4.7,desc
+184566,NW-P-1152-26,2026-08-18,Uncharted Rock,West Coast Haida Gwaii,52.95803,-132.18053,,desc
+184589,NW-C-3624-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.1754,-72.92058,,desc
+184589,NW-C-3624-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.1752,-72.92087,,desc
+184589,NW-C-3624-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.17535,-72.9211,,desc
+184589,NW-C-3624-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.17555,-72.92082,10.7,desc
+184590,NW-C-3623-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.17648,-72.9191,,desc
+184590,NW-C-3623-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.17633,-72.9193,,desc
+184590,NW-C-3623-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.17643,-72.91943,,desc
+184590,NW-C-3623-26,2026-08-19,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.17657,-72.91923,10.4,desc
+184607,NW-C-3632-26,2026-08-19,Shallow Depth Reported,Port of Trois-Rivieres Vicinity Port of Trois-Rivières,46.33,-72.54672,10.6,json
+184619,NW-P-1160-26,2026-08-20,Submerged Object,Strait of Georgia,49.3985,-124.59925,,desc
+184647,NW-A-0233-26,2026-08-21,Shallow Depth Confirmed,Shipping Safety Control Zone 8,66.92825,-81.44968,31.0,desc
+184661,NW-M-1188-26,2026-08-22,Uncharted Rock,Fundy Vicinity Grand Lake,45.95397,-66.05742,,desc
+184772,NW-N-0641-26,2026-08-25,Shallow Depth Reported,Northeast Coast,49.96207,-55.60615,0.305,desc
+184772,NW-N-0641-26,2026-08-25,Shallow Depth Reported,Northeast Coast,49.9639,-55.60435,1.219,desc
+184772,NW-N-0641-26,2026-08-25,Shallow Depth Reported,Northeast Coast,49.96213,-55.6071,2.743,desc
+184772,NW-N-0641-26,2026-08-25,Shallow Depth Reported,Northeast Coast,49.96432,-55.60533,3.353,desc
+184772,NW-N-0641-26,2026-08-25,Shallow Depth Reported,Northeast Coast,49.96233,-55.60565,4.572,desc
+184773,NW-C-3714-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.13397,-72.95612,,desc
+184773,NW-C-3714-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.12803,-72.95808,,desc
+184773,NW-C-3714-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.12807,-72.95825,,desc
+184773,NW-C-3714-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.134,-72.95628,10.0,desc
+184774,NW-C-3713-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.13118,-72.95613,,desc
+184774,NW-C-3713-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.13115,-72.95615,,desc
+184774,NW-C-3713-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.13115,-72.95618,,desc
+184774,NW-C-3713-26,2026-08-25,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.13118,-72.95617,10.7,desc
+184786,NW-C-3724-26,2026-08-26,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.124,-72.96015,,desc
+184786,NW-C-3724-26,2026-08-26,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.1238,-72.96022,,desc
+184786,NW-C-3724-26,2026-08-26,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.12383,-72.96052,,desc
+184786,NW-C-3724-26,2026-08-26,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.12405,-72.96045,11.2,desc
+184805,NW-A-0249-26,2026-08-26,Shallow Depth Confirmed,Shipping Safety Control Zone 16,62.65603,-91.99383,,desc
+184805,NW-A-0249-26,2026-08-26,Shallow Depth Confirmed,Shipping Safety Control Zone 16,62.68013,-91.74422,,desc
+184805,NW-A-0249-26,2026-08-26,Shallow Depth Confirmed,Shipping Safety Control Zone 16,62.68015,-91.77547,,desc
+184805,NW-A-0249-26,2026-08-26,Shallow Depth Confirmed,Shipping Safety Control Zone 16,62.6896,-91.93528,,desc
+184807,NW-C-3733-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41112,-72.38613,,desc
+184807,NW-C-3733-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41107,-72.38623,,desc
+184807,NW-C-3733-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41113,-72.38632,,desc
+184807,NW-C-3733-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41118,-72.38622,11.0,desc
+184808,NW-C-3734-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.4118,-72.38103,,desc
+184808,NW-C-3734-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41172,-72.38117,,desc
+184808,NW-C-3734-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41187,-72.38135,,desc
+184808,NW-C-3734-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.41195,-72.38122,10.9,desc
+184809,NW-C-3735-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40923,-72.38858,,desc
+184809,NW-C-3735-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40918,-72.38868,,desc
+184809,NW-C-3735-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40932,-72.38885,,desc
+184809,NW-C-3735-26,2026-08-26,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.40938,-72.38875,11.1,desc
+184816,NW-C-3737-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65568,-71.776,,desc
+184816,NW-C-3737-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.6557,-71.77605,,desc
+184816,NW-C-3737-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65573,-71.77603,,desc
+184816,NW-C-3737-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65572,-71.77598,10.6,desc
+184817,NW-C-3738-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65442,-71.77162,,desc
+184817,NW-C-3738-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65443,-71.77165,,desc
+184817,NW-C-3738-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65445,-71.77163,,desc
+184817,NW-C-3738-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65445,-71.7716,10.6,desc
+184818,NW-C-3739-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65437,-71.77437,,desc
+184818,NW-C-3739-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65442,-71.77452,,desc
+184818,NW-C-3739-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.6545,-71.77445,,desc
+184818,NW-C-3739-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65445,-71.7743,10.4,desc
+184819,NW-C-3740-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65398,-71.77453,,desc
+184819,NW-C-3740-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65403,-71.77467,,desc
+184819,NW-C-3740-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65417,-71.77458,,desc
+184819,NW-C-3740-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65412,-71.77445,10.3,desc
+184820,NW-C-3742-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.6532,-71.77433,,desc
+184820,NW-C-3742-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65325,-71.77448,,desc
+184820,NW-C-3742-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65338,-71.7744,,desc
+184820,NW-C-3742-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65332,-71.77425,10.5,desc
+184824,NW-C-3745-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38342,-72.43698,,desc
+184824,NW-C-3745-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38342,-72.43702,,desc
+184824,NW-C-3745-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38343,-72.43703,,desc
+184824,NW-C-3745-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38345,-72.437,11.2,desc
+184825,NW-C-3746-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38008,-72.44193,,desc
+184825,NW-C-3746-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38032,-72.44063,,desc
+184825,NW-C-3746-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38025,-72.44062,,desc
+184825,NW-C-3746-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38002,-72.44192,11.2,desc
+184827,NW-C-3748-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37962,-72.44342,,desc
+184827,NW-C-3748-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38082,-72.43652,,desc
+184827,NW-C-3748-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38075,-72.43648,,desc
+184827,NW-C-3748-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37953,-72.44338,8.2,desc
+184832,NW-C-3750-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37983,-72.44297,,desc
+184832,NW-C-3750-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38098,-72.43642,,desc
+184832,NW-C-3750-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.38085,-72.43637,,desc
+184832,NW-C-3750-26,2026-08-27,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.3797,-72.44292,9.4,desc
+184836,NW-C-3755-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy,46.04908,-73.11682,7.9,desc
+184836,NW-C-3755-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy,46.04983,-73.117,7.9,desc
+184852,NW-C-3762-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy Vicinity Sorel-Tracy,46.04962,-73.11353,3.6,desc
+184852,NW-C-3762-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy Vicinity Sorel-Tracy,46.05015,-73.11282,3.9,desc
+184852,NW-C-3762-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy Vicinity Sorel-Tracy,46.05113,-73.11033,4.9,desc
+184852,NW-C-3762-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy Vicinity Sorel-Tracy,46.05105,-73.11188,5.9,desc
+184852,NW-C-3762-26,2026-08-27,Shallow Depth Confirmed,Montréal to Trois-Rivières Port of Sorel-Tracy Vicinity Sorel-Tracy,46.04908,-73.11237,6.9,desc
+184853,NW-M-1215-26,2026-08-27,Shallow Depth Reported,Grand Manan,45.26944,-66.0723,9.5,json
+184866,NW-C-3768-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65338,-71.77135,,desc
+184866,NW-C-3768-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65343,-71.77148,,desc
+184866,NW-C-3768-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65357,-71.77138,,desc
+184866,NW-C-3768-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65352,-71.77125,10.4,desc
+184867,NW-C-3769-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65103,-71.76403,,desc
+184867,NW-C-3769-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65105,-71.7641,,desc
+184867,NW-C-3769-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.6511,-71.76407,,desc
+184867,NW-C-3769-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65108,-71.764,10.6,desc
+184868,NW-C-3770-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65017,-71.7603,,desc
+184868,NW-C-3770-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65183,-71.76502,,desc
+184868,NW-C-3770-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65208,-71.76482,,desc
+184868,NW-C-3770-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.65043,-71.7601,10.1,desc
+184869,NW-C-3771-26,2026-08-28,Shallow Depth Confirmed,Donnacona to Beauport,46.63892,-71.73435,,desc
+184869,NW-C-3771-26,2026-08-28,Shallow Depth Confirmed,Donnacona to Beauport,46.64058,-71.7391,,desc
+184869,NW-C-3771-26,2026-08-28,Shallow Depth Confirmed,Donnacona to Beauport,46.64063,-71.73907,,desc
+184869,NW-C-3771-26,2026-08-28,Shallow Depth Confirmed,Donnacona to Beauport,46.63897,-71.73432,10.1,desc
+184870,NW-C-3772-26,2026-08-28,Shallow Depth Reported,Port of Trois-Rivieres Vicinity Port of Trois-Rivières,46.33961,-72.54013,10.6,json
+184876,NW-P-1181-26,2026-08-28,Submerged Object,Esquimalt Harbour,48.44045,-123.4492,,desc
+184885,NW-C-3784-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.66262,-71.80188,,desc
+184885,NW-C-3784-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.66275,-71.80225,,desc
+184885,NW-C-3784-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.663,-71.80205,,desc
+184885,NW-C-3784-26,2026-08-28,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.66288,-71.80168,10.3,desc
+184940,NW-C-3816-26,2026-08-31,Shallow Depth Reported,Georgian Bay Trent-Severn Waterway Vicinity Gouette Island,44.81947,-79.69368,,desc
+184950,NW-C-3819-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37078,-72.48002,,desc
+184950,NW-C-3819-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37065,-72.48037,,desc
+184950,NW-C-3819-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37072,-72.48043,,desc
+184950,NW-C-3819-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37087,-72.48008,11.0,desc
+184951,NW-C-3820-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37138,-72.47883,,desc
+184951,NW-C-3820-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37208,-72.47695,,desc
+184951,NW-C-3820-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37198,-72.47688,,desc
+184951,NW-C-3820-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37128,-72.47877,10.7,desc
+184952,NW-C-3821-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37123,-72.47893,,desc
+184952,NW-C-3821-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37198,-72.47688,,desc
+184952,NW-C-3821-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37193,-72.47683,,desc
+184952,NW-C-3821-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37117,-72.47888,10.0,desc
+184953,NW-C-3822-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.3735,-72.47287,,desc
+184953,NW-C-3822-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37447,-72.46955,,desc
+184953,NW-C-3822-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37433,-72.46948,,desc
+184953,NW-C-3822-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37337,-72.4728,10.7,desc
+184954,NW-C-3823-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37473,-72.46852,,desc
+184954,NW-C-3823-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37528,-72.46648,,desc
+184954,NW-C-3823-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37518,-72.46642,,desc
+184954,NW-C-3823-26,2026-08-31,Shallow Depth Confirmed,Trois-Rivières to Donnacona,46.37463,-72.46847,11.0,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35912,-89.22673,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35903,-89.2266,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35883,-89.22722,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35893,-89.22742,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35902,-89.22717,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35938,-89.22778,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35945,-89.22768,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35902,-89.22693,,desc
+184986,NW-C-3841-26,2026-09-01,Shallow Depth Reported,Lake Superior Vicinity Mission River,48.35912,-89.22673,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.26908,-66.01773,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.25985,-66.0182,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.25488,-66.01885,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.2289,-65.79395,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.21395,-65.7411,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.21028,-65.71478,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.21553,-65.69995,,desc
+185000,NW-A-0261-26,2026-09-01,Shallow Depth Confirmed,Shipping Safety Control Zone 9,68.21058,-65.73628,,desc
+185003,NW-C-3843-26,2026-09-01,Shallow Depth Reported,Port of Trois-Rivieres Vicinity Port of Trois-Rivières,46.33416,-72.5433,10.7,json
+185033,NW-C-3855-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25662,-72.71732,,desc
+185033,NW-C-3855-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.24852,-72.73472,,desc
+185033,NW-C-3855-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.24857,-72.73477,,desc
+185033,NW-C-3855-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25668,-72.71737,10.4,desc
+185034,NW-C-3856-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25668,-72.71735,,desc
+185034,NW-C-3856-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.24765,-72.73675,,desc
+185034,NW-C-3856-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.24772,-72.73682,,desc
+185034,NW-C-3856-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25675,-72.71743,10.9,desc
+185035,NW-C-3857-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25557,-72.72077,,desc
+185035,NW-C-3857-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25555,-72.7208,,desc
+185035,NW-C-3857-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25558,-72.72083,,desc
+185035,NW-C-3857-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.2556,-72.7208,11.2,desc
+185036,NW-C-3858-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25565,-72.72015,,desc
+185036,NW-C-3858-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25565,-72.72015,,desc
+185036,NW-C-3858-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25567,-72.72017,,desc
+185036,NW-C-3858-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25567,-72.72017,11.2,desc
+185037,NW-C-3859-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25698,-72.71728,,desc
+185037,NW-C-3859-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25695,-72.71733,,desc
+185037,NW-C-3859-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25703,-72.7174,,desc
+185037,NW-C-3859-26,2026-09-03,Shallow Depth Confirmed,Montréal to Trois-Rivières,46.25705,-72.71735,11.2,desc
+185064,NW-N-0662-26,2026-09-04,Shallow Depth Reported,Lake Melville,53.35073,-60.36065,10.0,desc
+185064,NW-N-0662-26,2026-09-04,Shallow Depth Reported,Lake Melville,53.35112,-60.36063,5.0,desc
+185064,NW-N-0662-26,2026-09-04,Shallow Depth Reported,Lake Melville,53.35075,-60.34593,10.0,desc
+185064,NW-N-0662-26,2026-09-04,Shallow Depth Reported,Lake Melville,53.35303,-60.34917,10.0,desc
+185064,NW-N-0662-26,2026-09-04,Shallow Depth Reported,Lake Melville,53.35103,-60.34668,10.0,desc
+185064,NW-N-0662-26,2026-09-04,Shallow Depth Reported,Lake Melville,53.34875,-60.36252,12.47,desc
+185111,NW-A-0273-26,2026-09-05,Shallow Depth Reported,Tulita mile 512 to Fort Good Hope mile 684,65.5059,-127.66175,,desc
+185111,NW-A-0273-26,2026-09-05,Shallow Depth Reported,Tulita mile 512 to Fort Good Hope mile 684,65.48237,-127.64153,1.98,desc

@@ -1,0 +1,12 @@
+{
+ "file": "shoal_list_v2_2026-09-06.csv",
+ "sha256": "958acbdba593823130560b94116f9dee19b300a3c08a55bf11b6c73e12d43531",
+ "date": "2026-09-06",
+ "n_candidates_total": 5388,
+ "n_pass_filters": 272,
+ "n_sealed": 40,
+ "model": "SeabedNet hazard-small v2 (34.8M; trained only where the 500 m disc is >=95% covered by NONNA-10 and the shallowest point is below the surface) over the full NONNA-100 archive (snapshot 2026-08-29)",
+ "criteria": "mean map 21-150 m deep; P(shallowest point within 500 m < 10.5 m) >= 0.7; predicted shallowest point between 3 and 18 m; relief < 100 m; within 6 km of a published sounding; no published sounding shallower than 21 m within ~500 m; >= 2 km from the GSHHG full-resolution coastline; cluster of 5-300 cells spanning >= 2 rows and >= 2 columns; > 5 cells from the block edge; gravity-sane blocks; <= 2 per 0.25-degree box; ranked by peak probability then hazard mass",
+ "supersedes": "shoal_list_2026-09-03.csv (v1, sha256 a0bc8c3d...) which stays sealed and will be scored as published; v1 was found to be dominated by near-shore and survey-line artefacts (see validation report)",
+ "rule": "Each entry is a falsifiable claim: a survey line over the position either finds water shallower than ~21 m within 500 m or it does not. Scored per entry; results published either way."
+}

@@ -12,6 +12,8 @@ DEV = "cuda"; P = 256
 SIZE = os.environ.get("HZ_SIZE", "tiny"); STEPS = int(os.environ.get("HZ_STEPS", "3000"))
 BATCH = int(os.environ.get("HZ_BATCH", "16")); CKPT = os.environ.get("HZ_CKPT", f"hazard_{SIZE}.pt")
 EXCL = [tuple(map(float, p.split(","))) for p in os.environ.get("HZ_EXCLUDE", "").split(";") if p]
+COVMIN = float(os.environ.get("HZ_COVMIN", "0"))        # v2: train only where the 500 m window is fully covered by NONNA-10 (no land, no gaps)
+SHOALMAX = float(os.environ.get("HZ_SHOALMAX", "1e9"))  # v2: drop surface/drying targets (>= this depth, m) so the head stops learning "the beach"
 MARGIN = 0.4   # deg lon/lat around an excluded point
 torch.manual_seed(0); rng = np.random.default_rng(0)
 torch.zeros(8, device=DEV)
@@ -24,11 +26,14 @@ for f in sorted(glob.glob("tiles_hz/*.npz")):
     H, W = d["z"].shape
     lons = np.linspace(lo0, lo1, W); lats = np.linspace(la1, la0, H)
     G = grav.sample(np.tile(lons, (H, 1)), np.tile(lats[:, None], (1, W))).astype(np.float32)
-    rec = dict(z=d["z"], s=d["zshoal"], g=G, name=os.path.basename(f))
+    sh = d["zshoal"].astype(np.float32).copy()
+    if COVMIN > 0 or SHOALMAX < 1e8:
+        bad = (d["cov"] < COVMIN) | (sh >= SHOALMAX); sh[bad] = np.nan
+    rec = dict(z=d["z"], s=sh, g=G, name=os.path.basename(f))
     ex = any(lo0-MARGIN <= x <= lo1+MARGIN and la0-MARGIN <= y <= la1+MARGIN for x, y in EXCL)
     ex |= any(not (lo1 < a or lo0 > c or la1 < b or la0 > dd) for a, b, c, dd in HOLDOUT_BBOXES)
     (held if ex else train).append(rec)
-print(f"hazard corpus: {len(train)} train groups, {len(held)} held-out (grounding sites + geo holdouts)", flush=True)
+print(f"hazard corpus: {len(train)} train groups, {len(held)} held-out (grounding sites + geo holdouts); COVMIN {COVMIN} SHOALMAX {SHOALMAX}; target cells kept {np.mean([np.isfinite(r['s']).mean() for r in train]):.3f}", flush=True)
 print("held:", [r["name"] for r in held], flush=True)
 
 def rand_mask():
