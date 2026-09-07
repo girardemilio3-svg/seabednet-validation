@@ -64,7 +64,7 @@ const style = {
   version: 8, glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   sources: {
     ocean: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 9, attribution: "Basemap: Esri, GEBCO, NOAA, National Geographic, DeLorme, HERE, Geonames.org" },
-    sat: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 14, attribution: "Imagery: Esri, Maxar, Earthstar Geographics" },
+    sat: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, minzoom: 8, maxzoom: 12, attribution: "Imagery: Esri, Maxar, Earthstar Geographics" },
     labels: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 9 },
     terrain: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 12, attribution: "Seabed relief: SeabedNet completed NONNA-100 (planning prior, not for navigation)" },
     hillsrc: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 12 },
@@ -81,7 +81,7 @@ const style = {
   layers: [
     { id: "bg", type: "background", paint: { "background-color": "#0a1526" } },
     { id: "ocean", type: "raster", source: "ocean", paint: { "raster-saturation": -0.55, "raster-brightness-max": 0.55, "raster-contrast": 0.15 } },
-    { id: "sat", type: "raster", source: "sat", minzoom: 6, paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 7.5, 1], "raster-saturation": -0.25, "raster-brightness-max": 0.85 } },
+    { id: "sat", type: "raster", source: "sat", minzoom: 6, paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 7.5, 0.8], "raster-saturation": -0.3, "raster-brightness-max": 0.85, "raster-fade-duration": 0 } },
     { id: "relief", type: "color-relief", source: "hillsrc", paint: { "color-relief-color": ["interpolate", ["linear"], ["elevation"], -700, "#06132a", -350, "#0c264a", -180, "#144677", -90, "#256c9c", -45, "#4396bd", -18, "#7fc1d8", -4, "#bfe2e8", -0.5, "#d9cfb4", 0, "rgba(0,0,0,0)"], "color-relief-opacity": ["interpolate", ["linear"], ["zoom"], 5, 0, 6.5, 0.9] } },
     { id: "hillshade", type: "hillshade", source: "hillsrc", paint: { "hillshade-exaggeration": 0.9, "hillshade-shadow-color": "#02030a", "hillshade-highlight-color": "#9fc4e8", "hillshade-accent-color": "#1b3a5c", "hillshade-illumination-direction": 315 } },
     { id: "age-img", type: "raster", source: "age", paint: { "raster-opacity": 0.0, "raster-resampling": "nearest" } },
@@ -100,7 +100,7 @@ const style = {
   ],
   sky: { "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 1, 7, 0] }
 };
-const map = new maplibregl.Map({ container: "map", style, center: [-80, 62], zoom: 1.6, pitch: 0, attributionControl: { compact: true }, maxTileCacheSize: /film=1/.test(location.search) ? 4000 : null });
+const map = new maplibregl.Map({ container: "map", style, center: [-80, 62], zoom: 1.6, pitch: 0, attributionControl: { compact: true }, maxTileCacheSize: /film=1/.test(location.search) ? 12000 : null });
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
 map.on("style.load", () => { try { map.setProjection({ type: "globe" }); } catch (e) {} try { map.setTerrain({ source: "terrain", exaggeration: 3.5 }); } catch (e) {} });
 map.addControl(new maplibregl.TerrainControl({ source: "terrain", exaggeration: 3.5 }), "top-right");
@@ -144,7 +144,7 @@ const WATER = {
     gl.useProgram(P.p);
     gl.uniformMatrix4fv(P.uM, false, d.mainMatrix); if (P.uF) gl.uniformMatrix4fv(P.uF, false, d.fallbackMatrix);
     if (P.uC) gl.uniform4f(P.uC, ...d.tileMercatorCoords); if (P.uP) gl.uniform4f(P.uP, ...d.clippingPlane); if (P.uTr) gl.uniform1f(P.uTr, d.projectionTransition);
-    gl.uniform1f(P.uT, (performance.now() - this.t0)/1000); const z = this.map.getZoom(); gl.uniform1f(P.uA, Math.max(0, Math.min(1, (z - 5.5)/1.5)));
+    gl.uniform1f(P.uT, (performance.now() - this.t0)/1000/(window.SLOW || 1)); const z = this.map.getZoom(); gl.uniform1f(P.uA, Math.max(0, Math.min(1, (z - 5.5)/1.5)));
     gl.bindVertexArray(this.vao);
     gl.disable(gl.CULL_FACE); gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL); gl.depthMask(false); gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     gl.drawElements(gl.TRIANGLES, this.n, gl.UNSIGNED_INT, 0); gl.bindVertexArray(null); gl.depthMask(true); window.__wr = (window.__wr||0)+1;
@@ -184,6 +184,7 @@ const STOPS = [
 ];
 const cap = document.getElementById("cap"); let touring = false;
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const SLOW = +(new URLSearchParams(location.search).get("slow") || 1);   // film mode: play the tour N× slower, sped back up in the encode so every frame settles
 function showCap(st) { cap.innerHTML = `<b>${st.t}</b>${st.s}`; cap.style.display = "block"; }
 async function tour() {
   if (touring) return; touring = true; document.getElementById("tour").textContent = "FLYING…";
@@ -191,8 +192,8 @@ async function tour() {
     map.setPaintProperty("age-img", "raster-opacity", st.age ? 0.9 : 0); map.setPaintProperty("hazard-img", "raster-opacity", st.age ? 0.0 : ["interpolate", ["linear"], ["zoom"], 7, 0.8, 9, 0.45, 11, 0.22]);
     document.querySelectorAll(".chip").forEach(ch => { if (ch.textContent === "Age of the chart") ch.classList.toggle("on", !!st.age); if (ch.textContent === "Hazard field") ch.classList.toggle("on", !st.age); });
     showCap(st);
-    await new Promise(res => { map.once("moveend", res); if (reduce) map.jumpTo({ center: st.c, zoom: st.z, pitch: st.p, bearing: st.b }); else map.flyTo({ center: st.c, zoom: st.z, pitch: st.p, bearing: st.b, duration: 5200, curve: 1.6, essential: true }); });
-    await new Promise(res => setTimeout(res, reduce ? 4000 : 9000));
+    await new Promise(res => { map.once("moveend", res); if (reduce) map.jumpTo({ center: st.c, zoom: st.z, pitch: st.p, bearing: st.b }); else map.flyTo({ center: st.c, zoom: st.z, pitch: st.p, bearing: st.b, duration: 5200*SLOW, curve: 1.6, essential: true }); });
+    await new Promise(res => setTimeout(res, (reduce ? 4000 : 9000)*SLOW));
   }
   touring = false; document.getElementById("tour").textContent = "▶ FLY AGAIN";
 }
@@ -209,6 +210,8 @@ if (/film=1/.test(location.search)) {
   map.on("load", () => map.setLayoutProperty("labels", "visibility", "none"));   // the captions name the places; the raster labels balloon when pitched mid-flight
   window.__tourDone = false; window.__warmDone = false; window.__go = false;
   // warm-up: visit every stop (and the zoomed-out midpoints of each flight) behind a black cover so all tiles are cached before the capture starts
+  window.__showCap = (st, show) => { if (show && st && st.t) showCap(st); else cap.style.display = "none"; };
+  if (!/norun=1/.test(location.search)) {
   const cover = document.createElement("div"); cover.style.cssText = "position:absolute;inset:0;background:#04060c;z-index:20"; document.body.appendChild(cover);
   const idle = () => new Promise(r => { const t = setTimeout(r, 12000); if (map.loaded() && !map.isMoving()) { clearTimeout(t); r(); } else map.once("idle", () => { clearTimeout(t); r(); }); });
   map.once("idle", async () => {
@@ -219,10 +222,13 @@ if (/film=1/.test(location.search)) {
       views.push({ c: st.c, z: Math.max(3, st.z - 2), p: st.p, b: st.b }); views.push(st); prev = st;
     }
     for (const v of views) { map.jumpTo({ center: v.c, zoom: v.z, pitch: v.p, bearing: v.b }); await new Promise(r => setTimeout(r, 300)); await idle(); await new Promise(r => setTimeout(r, 400)); }
+    map.jumpTo({ center: [-80, 62], zoom: 1.6, pitch: 0, bearing: 0 }); await idle();
+    await tour(); cap.style.display = "none";   // dry run of the exact flight path behind the cover: every tile and mesh along it is then cached
     map.jumpTo({ center: [-80, 62], zoom: 1.6, pitch: 0, bearing: 0 }); await idle(); window.__warmDone = true;
     while (!window.__go) await new Promise(r => setTimeout(r, 100));
-    cover.remove(); await new Promise(r => setTimeout(r, 1500)); await tour(); await new Promise(r => setTimeout(r, 2500)); window.__tourDone = true;
+    cover.remove(); await new Promise(r => setTimeout(r, 1500*SLOW)); await tour(); await new Promise(r => setTimeout(r, 2500*SLOW)); window.__tourDone = true;
   });
+  }
 }
 map.on("load", () => { setTimeout(() => { if (!touring && !/film=1/.test(location.search)) map.flyTo({ center: [-80, 62], zoom: 2.4, duration: 3500, essential: true }); }, 900); });
 </script>
