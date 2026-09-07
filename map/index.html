@@ -64,7 +64,7 @@ const style = {
   version: 8, glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   sources: {
     ocean: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 9, attribution: "Basemap: Esri, GEBCO, NOAA, National Geographic, DeLorme, HERE, Geonames.org" },
-    sat: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, minzoom: 8, maxzoom: 12, attribution: "Imagery: Esri, Maxar, Earthstar Geographics" },
+    sat: { type: "raster", tiles: [/localsat=1/.test(location.search) ? location.href.replace(/[^/]*$/, "") + "tiles_sat/{z}/{y}/{x}.jpg" : "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/{z}/{y}/{x}.jpg"], tileSize: 256, minzoom: 7, maxzoom: 13, attribution: "Land imagery: Sentinel-2 cloudless 2020 by EOX IT Services (CC-BY 4.0), contains modified Copernicus Sentinel data" },
     labels: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 9 },
     terrain: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 12, attribution: "Seabed relief: SeabedNet completed NONNA-100 (planning prior, not for navigation)" },
     hillsrc: { type: "raster-dem", tiles: [location.href.replace(/[^/]*$/, "") + "tiles/terrain/{z}/{x}/{y}.png"], tileSize: 256, encoding: "mapbox", minzoom: 5, maxzoom: 12 },
@@ -81,7 +81,7 @@ const style = {
   layers: [
     { id: "bg", type: "background", paint: { "background-color": "#0a1526" } },
     { id: "ocean", type: "raster", source: "ocean", paint: { "raster-saturation": -0.55, "raster-brightness-max": 0.55, "raster-contrast": 0.15 } },
-    { id: "sat", type: "raster", source: "sat", minzoom: 6, paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 7.5, 0.8], "raster-saturation": -0.3, "raster-brightness-max": 0.85, "raster-fade-duration": 0 } },
+    { id: "sat", type: "raster", source: "sat", minzoom: 6, paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 7.5, 0.9], "raster-saturation": -0.15, "raster-brightness-min": 0.12, "raster-contrast": 0.08, "raster-fade-duration": 0 } },
     { id: "relief", type: "color-relief", source: "hillsrc", paint: { "color-relief-color": ["interpolate", ["linear"], ["elevation"], -700, "#06132a", -350, "#0c264a", -180, "#144677", -90, "#256c9c", -45, "#4396bd", -18, "#7fc1d8", -4, "#bfe2e8", -0.5, "#d9cfb4", 0, "rgba(0,0,0,0)"], "color-relief-opacity": ["interpolate", ["linear"], ["zoom"], 5, 0, 6.5, 0.9] } },
     { id: "hillshade", type: "hillshade", source: "hillsrc", paint: { "hillshade-exaggeration": 0.9, "hillshade-shadow-color": "#02030a", "hillshade-highlight-color": "#9fc4e8", "hillshade-accent-color": "#1b3a5c", "hillshade-illumination-direction": 315 } },
     { id: "age-img", type: "raster", source: "age", paint: { "raster-opacity": 0.0, "raster-resampling": "nearest" } },
@@ -100,7 +100,7 @@ const style = {
   ],
   sky: { "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 1, 7, 0] }
 };
-const map = new maplibregl.Map({ container: "map", style, center: [-80, 62], zoom: 1.6, pitch: 0, attributionControl: { compact: true }, maxTileCacheSize: /film=1/.test(location.search) ? 12000 : null });
+const map = new maplibregl.Map({ container: "map", style, center: [-80, 62], zoom: 1.6, pitch: 0, attributionControl: { compact: true }, maxTileCacheSize: /film=1/.test(location.search) ? 12000 : null, maxTileCacheZoomLevels: /film=1/.test(location.search) ? 200 : 5 });
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
 map.on("style.load", () => { try { map.setProjection({ type: "globe" }); } catch (e) {} try { map.setTerrain({ source: "terrain", exaggeration: 3.5 }); } catch (e) {} });
 map.addControl(new maplibregl.TerrainControl({ source: "terrain", exaggeration: 3.5 }), "top-right");

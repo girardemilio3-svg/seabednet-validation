@@ -5,7 +5,7 @@ usage: python3 film_capture.py [--url http://localhost:8765/map/?film=1&static=1
 import argparse, os, subprocess, time, signal
 from playwright.sync_api import sync_playwright
 ap = argparse.ArgumentParser(); ap.add_argument("--url", default=None); ap.add_argument("--w", type=int, default=1920); ap.add_argument("--h", type=int, default=1080); ap.add_argument("--fps", type=int, default=30); ap.add_argument("--slow", type=int, default=1)
-A = ap.parse_args(); A.url = A.url or f"http://localhost:8765/map/?film=1&static=1&slow={A.slow}"; os.makedirs("film", exist_ok=True)
+A = ap.parse_args(); A.url = A.url or f"http://localhost:8765/map/?film=1&static=1&localsat=1&slow={A.slow}"; os.makedirs("film", exist_ok=True)
 env = dict(os.environ, DISPLAY=":99", VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json")
 xvfb = subprocess.Popen(["Xvfb", ":99", "-screen", "0", f"{A.w}x{A.h+200}x24", "-nolisten", "tcp"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); time.sleep(1.5)
 args = ["--use-angle=vulkan", "--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan", "--ignore-gpu-blocklist", "--disable-gpu-sandbox", "--enable-gpu-rasterization",
