@@ -75,6 +75,10 @@ Emilio Girard, Montréal
 
 ---
 
+**Addendum (6 Sept 2026) — the two things that changed since the note above was drafted.**
+(a) A version-2 Shoal List. Version 1 (sealed 3 Sept) was tested three days later against Sentinel-2 imagery, the GSHHG shoreline and the Coast Guard's reported-danger notices, and failed our own checks: every claim predicted a rock at the surface and most sat within a kilometre of a shore. It stays sealed and will be scored as published. The shallowest-point model was retrained with coast-contaminated targets removed, and version 2 (sealed 6 Sept, SHA-256 958acbdba5938231…, OpenTimestamps) holds 40 claims all ≥ 2 km from shore, predicted shallowest points 3–7 m in water the chart calls 21–52 m. **The one ask:** a single survey line over claim #1, Simpson Strait, 68.4251°N 98.6218°W (chart 22 m, model 4.5 m, P = 93%). If a launch is in that water this season, it settles the claim either way, and I publish the result either way.
+(b) A test nobody had run: all 1,558 positions in the Coast Guard's navigational warnings (Shallow Depth Reported/Confirmed, Shoal, Uncharted Rock, Submerged Object), scored against the hazard field the way the grounding hindcast is scored. Where the chart calls the water safe, the model puts 36 of 107 reported dangers in its top decile of risk (chance: 10%); with no published sounding within 300 m, 10 of 37 against 7 for the rule "danger is where the nearest sounding is shallow". Small samples, stated as such, table and per-notice file published. Atlas Exhibit L.
+
 ## 3. Arctic Gateway Group — one paragraph for the intro email
 
 Subject: A charting-risk map for the Churchill route, validated on CHS's own data — would AGG carry it into Churchill Plus?
@@ -123,6 +127,8 @@ Emilio Girard · Montréal · girardemilio3@gmail.com
 
 ---
 
+**Addendum (6 Sept 2026):** since drafting, two additions you may find more interesting than the atlas itself. (1) A second independent test set: the 1,558 reported-danger positions in the Canadian Coast Guard's navigational warnings, scored as a hindcast with the nearest-sounding rule as baseline (chart-safe subset: 36/107 in the top decile; blind subset, no sounding within 300 m: 10/37 vs 7/37 for the baseline). (2) A published correction: the first sealed Shoal List failed our own follow-up checks (near-shore artefacts) and was superseded by a retrained, offshore-only version 2, with the failure documented on the page. I would rather be reviewed on that than on a clean story.
+
 ## 7. Press pitch (Day 7: Nunatsiaq News, CBC North, Hakai, Globe, gCaptain) — send with the sentence "CHS and the TSB received this on [date]"
 
 Subject: A desktop model says it can see the Arctic shoals Canada hasn't charted — and it has put 40 of them in writing
@@ -134,3 +140,5 @@ The numbers behind it are public and checkable: trained only on soundings from b
 Ten years ago CHS said full Arctic charting was "more than a decade" away. The decade has passed; Ottawa, Manitoba and Saskatchewan are investing C$262.5M in the Churchill corridor with no charting line in the budget. The atlas prices one: C$23–40M for the corridor's worst water.
 
 Page, report, code, and the sealed list: [links]. Available for interview; the TSB and CHS were informed on [date].
+
+**Addendum (6 Sept 2026) — the press line that is now defensible:** "A Montréal engineer scored a machine-learning seabed model against every danger mariners have reported to the Coast Guard, 1,558 positions, and it had flagged a third of the ones the chart called safe before anyone reported them. Then he published the list of forty spots he thinks are hiding a rock, sealed on a public ledger, and asked the Hydrographic Service to send a boat to one of them." Add the date CHS received the request.
