@@ -65,7 +65,7 @@ class Corpus:
         s.vpos = {}; s.fast = os.environ.get("V5_FASTSAMPLE", "0") == "1"   # indexed sampling (no rejection loop)
         s.use_grav = os.environ.get("V5_GRAV", "0") == "1"   # raw marine gravity anomaly + vertical gradient as channels
         if s.use_grav: s.gravA = GravityPrior("planetary/grav_canada.npz"); s.curvA = GravityPrior("planetary/curv_canada.npz")
-        s.use_s1 = os.environ.get("V5_S1", "0") == "1"; s.s1 = {}   # winter Sentinel-1 VV/VH (dB) channels from aux_s1/
+        s.use_s1 = os.environ.get("V5_S1", "0") == "1"; s.s1 = {}; s.s1bb = {}; s.s1parent = {}   # winter Sentinel-1 VV/VH (dB) channels from aux_s1/
         if preload:                       # RAM-cache: float16 arrays + bbox
             import time; t0 = time.time(); tot = 0
             for f, res, kind in s.entries:
@@ -81,7 +81,7 @@ class Corpus:
                 if s.use_s1:
                     sp = f"aux_s1/{os.path.basename(f)}"
                     if os.path.exists(sp) and kind == "3857" and res == 100.0:
-                        b = np.load(sp); s.s1[f] = (b["vv"], b["vh"]); tot += b["vv"].nbytes*2
+                        b = np.load(sp); s.s1[f] = (b["vv"], b["vh"]); s.s1bb[f] = np.array(bb, dtype=np.float64); tot += b["vv"].nbytes*2
             print(f"corpus preloaded: {tot/1e9:.1f} GB in RAM ({time.time()-t0:.0f}s)")
         print(f"corpus: {len(s.entries)} files ({s.n10} at 10 m)" + (f"; aux channels for {s.n_aux} blocks" if s.use_aux else ""))
 
@@ -166,11 +166,27 @@ class Corpus:
         return a
 
     def s1_patch(s, f, i, j):
-        """3 channels: VV dB (+20)/20, VH dB (+30)/20, valid flag; zeros when unavailable."""
+        """3 channels: VV dB (+20)/20, VH dB (+30)/20, valid flag; zeros when unavailable.
+        100 m blocks: direct crop. 10 m tiles: sampled from the enclosing 100 m block (nearest cell) by mercator coordinates."""
         P = s.P; a = np.zeros((3, P, P), np.float32)
         if f in s.s1:
-            vv, vh = s.s1[f]; v = vv[i:i+P, j:j+P].astype(np.float32); h = vh[i:i+P, j:j+P].astype(np.float32); m = np.isfinite(v)
-            a[0] = np.where(m, (v + 20.0)/20.0, 0.0); a[1] = np.where(np.isfinite(h), (h + 30.0)/20.0, 0.0); a[2] = m
+            vv, vh = s.s1[f]; v = vv[i:i+P, j:j+P].astype(np.float32); h = vh[i:i+P, j:j+P].astype(np.float32)
+        else:
+            zc, bb = s.cache[f] if f in s.cache else (None, None)
+            if bb is None or len(bb) != 4: return a
+            if f not in s.s1parent:
+                x0, x1 = min(bb[0], bb[2]), max(bb[0], bb[2]); y0, y1 = min(bb[1], bb[3]), max(bb[1], bb[3]); cx, cy = (x0+x1)/2, (y0+y1)/2; par = None
+                for pf, pbb in s.s1bb.items():
+                    if min(pbb[0], pbb[2]) <= cx <= max(pbb[0], pbb[2]) and min(pbb[1], pbb[3]) <= cy <= max(pbb[1], pbb[3]): par = pf; break
+                s.s1parent[f] = par
+            par = s.s1parent[f]
+            if par is None: return a
+            H, W = zc.shape; x0, x1 = min(bb[0], bb[2]), max(bb[0], bb[2]); y0, y1 = min(bb[1], bb[3]), max(bb[1], bb[3])
+            pbb = s.s1bb[par]; px0, px1 = min(pbb[0], pbb[2]), max(pbb[0], pbb[2]); py0, py1 = min(pbb[1], pbb[3]), max(pbb[1], pbb[3]); pvv, pvh = s.s1[par]; PH, PW = pvv.shape
+            xs = x0 + (np.arange(j, j+P) + 0.5)/W*(x1-x0); ys = y1 - (np.arange(i, i+P) + 0.5)/H*(y1-y0)
+            jj = np.clip(((xs-px0)/(px1-px0)*PW).astype(int), 0, PW-1); ii = np.clip(((py1-ys)/(py1-py0)*PH).astype(int), 0, PH-1)
+            v = pvv[np.ix_(ii, jj)].astype(np.float32); h = pvh[np.ix_(ii, jj)].astype(np.float32)
+        m = np.isfinite(v); a[0] = np.where(m, (v + 20.0)/20.0, 0.0); a[1] = np.where(np.isfinite(h), (h + 30.0)/20.0, 0.0); a[2] = m
         return a
 
 if __name__ == "__main__":
