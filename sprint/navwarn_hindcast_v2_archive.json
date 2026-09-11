@@ -1,0 +1,2843 @@
+{
+ "summary": {
+  "all_scorable": {
+   "n": 8000,
+   "median": 98.7,
+   "ge90": 5951,
+   "ge75": 6716,
+   "p_ge90": 0.0
+  },
+  "map_safe": {
+   "n": 1373,
+   "median": 89.8,
+   "ge90": 682,
+   "ge75": 971,
+   "p_ge90": 1.168829229959671e-302
+  },
+  "map_safe_blind": {
+   "n": 124,
+   "median": 83.65,
+   "ge90": 39,
+   "ge75": 67,
+   "p_ge90": 4.411992067695051e-11
+  },
+  "shallow_reported": {
+   "n": 2826,
+   "median": 99.3,
+   "ge90": 2228,
+   "ge75": 2415,
+   "p_ge90": 0.0
+  },
+  "shallow_reported_map_safe": {
+   "n": 129,
+   "median": 88.5,
+   "ge90": 61,
+   "ge75": 88,
+   "p_ge90": 3.479089937505579e-27
+  },
+  "shallow_reported_map_safe_blind": {
+   "n": 6,
+   "median": 68.65,
+   "ge90": 3,
+   "ge75": 3,
+   "p_ge90": 0.015850000000000003
+  },
+  "arctic": {
+   "n": 354,
+   "median": 92.80000000000001,
+   "ge90": 222,
+   "ge75": 278,
+   "p_ge90": 1.486552861957217e-128
+  },
+  "arctic_map_safe": {
+   "n": 119,
+   "median": 80.7,
+   "ge90": 28,
+   "ge75": 62,
+   "p_ge90": 1.407334703083892e-05
+  },
+  "by_category": {
+   "Acoustic Recorder Submerged Object": {
+    "n": 3,
+    "median": 77.5,
+    "ge90": 0,
+    "ge75": 3,
+    "p_ge90": 1.0
+   },
+   "Aids to Navigation (Other) Aids Black Rocks port daybeacon DB-CN1": null,
+   "Aids to Navigation (Other) Aids Burke Rock starboard daybeacon DB-MJ12": null,
+   "Aids to Navigation (Other) Aids Casgrain Rock Daybeacon": null,
+   "Aids to Navigation (Other) Aids Chenal Ecart\u00e9 Shoal light buoy A36 LL 745": null,
+   "Aids to Navigation (Other) Aids Chenal Ecart\u00e9 Shoal light buoy A36 LL 745.0": null,
+   "Aids to Navigation (Other) Aids Connis Rocks LL 729.5": {
+    "n": 1,
+    "median": 87.5,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Aids to Navigation (Other) Aids Cormorant Rock port bifurcation daybeacon": null,
+   "Aids to Navigation (Other) Aids Curran Rock Daybeacon": null,
+   "Aids to Navigation (Other) Aids Curran Rock port daybeacon DB-UD3": null,
+   "Aids to Navigation (Other) Aids DB-U28 (TURTLE ROCK)": null,
+   "Aids to Navigation (Other) Aids Davis Island East Cardinal Light Buoy PFD LL 56 Davis Island Light Buoy PFD3 LL 56.21 Duck Rock Light Buoy PF2 LL 60.2 Red Harbour Breakwater Light LL 62.1": null,
+   "Aids to Navigation (Other) Aids Davis Island East Cardinal light buoy PFD LL 56 Davis Island Inner light buoy PFD3 LL 56.21 Davis Island LL 60 Duck Rock light buoy PF2 LL 60.2 Red Harbour Head LL 62 Red Harbour Breakwater LL 62.1": null,
+   "Aids to Navigation (Other) Aids Duntze Rock V -AIS 2 (U.S. LLNR 763 - 16149)": {
+    "n": 1,
+    "median": 70.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Aids to Navigation (Other) Aids Ettrick Rock buoy DA": null,
+   "Aids to Navigation (Other) Aids Gahan Rock Day Beacon DB-C142": null,
+   "Aids to Navigation (Other) Aids Gahan Rock starboard daybeacon DB-C142": null,
+   "Aids to Navigation (Other) Aids Gayward Rock LL 81": null,
+   "Aids to Navigation (Other) Aids Gayward Rock light LL 81": null,
+   "Aids to Navigation (Other) Aids Iron Rock starboard daybeacon DB-CP38": null,
+   "Aids to Navigation (Other) Aids Jaffrey Rock light and whistle buoy E64 LL 622": null,
+   "Aids to Navigation (Other) Aids McCurry Rocks Day Beacon DB-C174": null,
+   "Aids to Navigation (Other) Aids McNiffe Rock LL 73.4": null,
+   "Aids to Navigation (Other) Aids McNiffe Rock light LL 73.4": null,
+   "Aids to Navigation (Other) Aids Mist Rock LL 74.5": null,
+   "Aids to Navigation (Other) Aids Mist Rock port bifurcation light LL 74.5": null,
+   "Aids to Navigation (Other) Aids Nepean Rock south Cardinal light and bell buoy EM Racon (N) LL 741.5": {
+    "n": 1,
+    "median": 81.3,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Aids to Navigation (Other) Aids Race Rocks light LL 189": null,
+   "Aids to Navigation (Other) Aids Regatta Rocks light LL 611.7": {
+    "n": 1,
+    "median": 88.9,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Aids to Navigation (Other) Aids Spray Rock Day Beacon DB-C128": null,
+   "Aids to Navigation (Other) Aids Spray Rock starboard daybeacon DB-C128": null,
+   "Aids to Navigation (Other) Aids Temple Rocks front range DR-DH6F": null,
+   "Aids to Navigation (Other) Aids Tranch Rock starboard daybeacon DB-PK4": null,
+   "Aids to Navigation (Other) Buoys Aids Brig Rock light buoy YE5 LL 588.03": null,
+   "Aids to Navigation (Other) Buoys Aids Ettrick Rock red spar buoy DA": {
+    "n": 3,
+    "median": 70.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Aids to Navigation (Other) Buoys Aids Indian Rock West Cardinal light buoy TRP LL 464.6": null,
+   "Aids to Navigation (Other) Buoys Aids McLean Shoal green can buoy C7": null,
+   "Aids to Navigation (Other) Buoys Aids Nepean Rock south Cardinal light and bell buoy EM Racon (N) LL 741.5": {
+    "n": 1,
+    "median": 81.3,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids 2 Fathom Shoal light buoy PK3 LL 73.81": null,
+   "Buoys Aids 4 Foot Shoal light buoy QK4 LL 160.3": null,
+   "Buoys Aids Allan Rock light buoy PL7 LL 76.1": null,
+   "Buoys Aids Allan Rocks light and whistle buoy N33 LL 576.4": {
+    "n": 8,
+    "median": 51.7,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.18689527000000009
+   },
+   "Buoys Aids Allen Rock Light Buoy NS9 LL274.9": null,
+   "Buoys Aids Allen Shoal East Cardinal light buoy NP LL 270.03": null,
+   "Buoys Aids Ambush Rock Light Buoy ND LL 280.009": {
+    "n": 2,
+    "median": 95.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Anchor Shoal lighted spar buoy JVB LL 369.5": null,
+   "Buoys Aids Apple Rock light buoy C5 LL 319.3": null,
+   "Buoys Aids Aquaforte Breakwater Shoal Light Buoy MA2 LL 509.5": null,
+   "Buoys Aids Aquaforte Breakwater Shoal light buoy MA2 LL 509.5": null,
+   "Buoys Aids Ardent Rock light buoy XP4 LL 211.7": null,
+   "Buoys Aids Argos Shoal light buoy CS1 LL 687.1": {
+    "n": 4,
+    "median": 84.8,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Ariel Rock light buoy P12 LL 911": null,
+   "Buoys Aids Arnold Rock light and bell buoy YT3 LL 570.5": null,
+   "Buoys Aids Arthur Orr Rock light buoy P13 LL 912": null,
+   "Buoys Aids Bacon Bone Rock light buoy JR1 LL 439.31": {
+    "n": 2,
+    "median": 93.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Bacon Rock buoy D40 UL 6034.2": {
+    "n": 2,
+    "median": 92.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Bad Rock light LL 253": null,
+   "Buoys Aids Bad Rock light buoy QQ2 LL 140.5": {
+    "n": 4,
+    "median": 88.5,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Baker Shoal light buoy M2/2 LL 1397.1": null,
+   "Buoys Aids Bald Rock light and bell buoy PC2 LL 681": {
+    "n": 1,
+    "median": 99.1,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Bald Rock light buoy YA8 LL 590.06": null,
+   "Buoys Aids Bantam Rock light buoy KA51 LL 386.01": null,
+   "Buoys Aids Bar Shoal light buoy MF LL 511": null,
+   "Buoys Aids Barr Tickle Shoal West Cardinal light buoy NM LL 279.72": null,
+   "Buoys Aids Bass Rock light and bell buoy PJ2 LL 669.5": null,
+   "Buoys Aids Battery Shoal light buoy JT11 LL 760": null,
+   "Buoys Aids Bayfield Shoal light buoy H43 LL 397": null,
+   "Buoys Aids Beak Point Shoal (Petit Nez) light and whistle buoy NQ3 LL 727": null,
+   "Buoys Aids Bed Rock Shoal Light Buoy DD2.2 LL 346.3": {
+    "n": 11,
+    "median": 83.2,
+    "ge90": 1,
+    "ge75": 11,
+    "p_ge90": 0.68618940391
+   },
+   "Buoys Aids Bed Rock Shoal light buoy DD2.2 LL 346.3": {
+    "n": 4,
+    "median": 83.2,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Belcher Rock red spar buoy U6": null,
+   "Buoys Aids Bell Rock South Cardinal light buoy CW LL 497.1": {
+    "n": 1,
+    "median": 95.4,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Bell Rock light buoy HD5 LL 512": {
+    "n": 8,
+    "median": 97.3,
+    "ge90": 8,
+    "ge75": 8,
+    "p_ge90": 1.0000000000000005e-08
+   },
+   "Buoys Aids Bell Rocks light buoy CX2 LL 497.1": {
+    "n": 3,
+    "median": 95.4,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Ben Mohr Rock light buoy UK LL 270": {
+    "n": 2,
+    "median": 74.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Big Island Shoal green spar buoy HC1": null,
+   "Buoys Aids Big Rock light buoy JC6 LL 442": null,
+   "Buoys Aids Big Shoal South Light Buoy EW2 LL 38.65": {
+    "n": 3,
+    "median": 67.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Big Shoal West Cardinal Light Buoy EWC LL 38.67": {
+    "n": 4,
+    "median": 51.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Big Shoal light and bell buoy E9 LL 39.1": {
+    "n": 2,
+    "median": 55.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Billard Rock light and whistle buoy M3 LL 68.2": {
+    "n": 7,
+    "median": 81.3,
+    "ge90": 0,
+    "ge75": 7,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Bingham Shoal Light and Whistle Buoy PT LL 51": {
+    "n": 2,
+    "median": 86.4,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Bingham Shoal light and whistle buoy PT LL 51": {
+    "n": 10,
+    "median": 86.4,
+    "ge90": 0,
+    "ge75": 9,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Black Breaker Rock South Cardinal light buoy NHA LL 739": {
+    "n": 5,
+    "median": 99.4,
+    "ge90": 5,
+    "ge75": 5,
+    "p_ge90": 1.0000000000000003e-05
+   },
+   "Buoys Aids Black Cove Rock light buoy TB3 LL 467.25": null,
+   "Buoys Aids Black Island Shoal Light Buoy DHL2 LL 360.54": null,
+   "Buoys Aids Black Point Rock red conical buoy KD62": null,
+   "Buoys Aids Black Rock East Cardinal light and whistle buoy T LL 420.5": {
+    "n": 5,
+    "median": 80.9,
+    "ge90": 0,
+    "ge75": 5,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Black Rock Light Buoy MPS1 LL 1.91": null,
+   "Buoys Aids Black Rock Light Buoy TB1 LL 467.24": {
+    "n": 2,
+    "median": 91.1,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Black Rock Shoal Spar AT51": {
+    "n": 6,
+    "median": 96.9,
+    "ge90": 5,
+    "ge75": 6,
+    "p_ge90": 5.5000000000000016e-05
+   },
+   "Buoys Aids Black Rock Shoal green spar buoy AT51": {
+    "n": 1,
+    "median": 96.9,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Black Rock Shoal light buoy QM2.2 LL 159.1": null,
+   "Buoys Aids Black Rock Sunker light buoy DLB2 LL 331.9": {
+    "n": 2,
+    "median": 96.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Black Rock light buoy DA5 LL 355.129": null,
+   "Buoys Aids Black Rock light buoy MPS1 LL 1.91": null,
+   "Buoys Aids Black Rock light buoy PL4 LL 78.18": null,
+   "Buoys Aids Black Rock light buoy TB1 LL 467.24": {
+    "n": 10,
+    "median": 91.1,
+    "ge90": 10,
+    "ge75": 10,
+    "p_ge90": 1.0000000000000006e-10
+   },
+   "Buoys Aids Black Shoal green spar buoy AE57": null,
+   "Buoys Aids Blackfish Cove Shoal Light Buoy..VG2 LL 133.22": {
+    "n": 1,
+    "median": 96.4,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Blackfish Cove Shoal light buoy VG2 LL 133.22": {
+    "n": 3,
+    "median": 96.4,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Blake Shoal light buoy H6 LL 297.4": {
+    "n": 6,
+    "median": 99.6,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Blonde Rock East Cardinal light buoy NK LL 290.2": {
+    "n": 1,
+    "median": 99.8,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Boar Rock Light and Whistle Buoy QG2 - LL 143": {
+    "n": 1,
+    "median": 90.9,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Boar Rock Light and Whistle Buoy QG2 LL 143": {
+    "n": 1,
+    "median": 90.9,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Boar Rock light and bell buoy QG2 LL 143": {
+    "n": 8,
+    "median": 90.9,
+    "ge90": 7,
+    "ge75": 7,
+    "p_ge90": 7.300000000000004e-07
+   },
+   "Buoys Aids Boar Rock light and whistle buoy QG2 LL 143": {
+    "n": 5,
+    "median": 0.0,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.08146
+   },
+   "Buoys Aids Bonavista Outer Shoal light buoy JB5 LL 445.2": null,
+   "Buoys Aids Bonavista Shoal outer light buoy JB5 LL 445.2": null,
+   "Buoys Aids Bone Shoal light buoy A2 LL 813.5": null,
+   "Buoys Aids Boundary Pass Shoal Isolated Danger light and bell buoy DB (U.S.) LL 264.5": null,
+   "Buoys Aids Boundary Pass Shoal Isolated Danger light and bell buoy DB LL 264.5": null,
+   "Buoys Aids Boundary Pass Shoal isolated danger light and bell buoy DB (U.S.) LL 264.5": {
+    "n": 2,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Boxey Rock light and whistle buoy VB9 LL 120.1": {
+    "n": 5,
+    "median": 87.9,
+    "ge90": 0,
+    "ge75": 5,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Bradley Rock light buoy CR2 LL 476.1": {
+    "n": 4,
+    "median": 90.8,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Brandies Rock East Cardinal light buoy DWD LL 345.3": {
+    "n": 1,
+    "median": 82.4,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Brandies Rock West Cardinal Light Buoy QBR LL 173.1": {
+    "n": 3,
+    "median": 99.5,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Brandies Rock West Cardinal light buoy QBR LL 173.1": {
+    "n": 1,
+    "median": 99.5,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Brandies Rocks East Cardinal light buoy DWD LL 345.3": {
+    "n": 1,
+    "median": 82.4,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Brandies Shoal light buoy NA5 LL 270.92": null,
+   "Buoys Aids Brandy Rocks West Cardinal light and bell buoy JBR LL 449.5": {
+    "n": 4,
+    "median": 97.9,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Brazil Rock South Cardinal light buoy J LL 338": {
+    "n": 16,
+    "median": 95.6,
+    "ge90": 13,
+    "ge75": 14,
+    "p_ge90": 4.181050000000003e-11
+   },
+   "Buoys Aids Brazil Rocks light buoy UN54 LL 403.4": {
+    "n": 2,
+    "median": 98.4,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Brazil Shoal Light and Bell Buoy XKA LL 26": {
+    "n": 1,
+    "median": 99.3,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Bread Island Shoal Light and Bell Buoy E7 - LL 43": {
+    "n": 5,
+    "median": 70.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Bread Island Shoal Light and Bell Buoy E7 LL 43": {
+    "n": 1,
+    "median": 70.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Bread Island Shoal light and bell buoy E7 LL 43": {
+    "n": 7,
+    "median": 70.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Brehat Shoal South Cardinal light buoy KQG LL 235.3": {
+    "n": 2,
+    "median": 93.4,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Brig Rock light buoy YE5 LL 588.03": null,
+   "Buoys Aids Broad Shoal buoy AD53": {
+    "n": 1,
+    "median": 99.4,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Brockville red spar buoy PK8": null,
+   "Buoys Aids Buchholz Rock light buoy M14 LL 73.5": null,
+   "Buoys Aids Budget Rock light and bell buoy SN51 LL 350": null,
+   "Buoys Aids Bull Rock bifurcation light and bell buoy YM LL 586": {
+    "n": 2,
+    "median": 95.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Bull Rock light and whistle buoy XA1 LL 7": {
+    "n": 4,
+    "median": 95.6,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Bull Rock light buoy HX2 LL 563.2": null,
+   "Buoys Aids Bull Rock light buoy KK51 LL 369": {
+    "n": 2,
+    "median": 87.15,
+    "ge90": 1,
+    "ge75": 2,
+    "p_ge90": 0.19000000000000003
+   },
+   "Buoys Aids Bull Rock light buoy TY5 LL 633.02": null,
+   "Buoys Aids Burke Shoal green spar buoy A7": null,
+   "Buoys Aids Butter Rock light buoy KQB LL 237.4": null,
+   "Buoys Aids Butterfly Rock light buoy DY25 LL 355.083": null,
+   "Buoys Aids Butterpot Rock light buoy KQB LL 237.4": null,
+   "Buoys Aids Butterworth Rocks light LL 751": {
+    "n": 3,
+    "median": 98.0,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Calamity Shoal light buoy Q65 LL 395.3": null,
+   "Buoys Aids Calapoose Rocks light buoy QT8 LL 149.3": {
+    "n": 1,
+    "median": 98.6,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Calapose Rock Light Buoy QT8 LL 149.3": {
+    "n": 3,
+    "median": 98.6,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Calapose Rock light buoy QT8 LL 149.3": {
+    "n": 1,
+    "median": 98.6,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Caldwell Shoal red spar buoy M6": null,
+   "Buoys Aids Califf Rock light buoy SE2 LL 72.5": {
+    "n": 2,
+    "median": 92.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Campana Shoal port bifurcation spar buoy MA": {
+    "n": 1,
+    "median": 10.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Candlemas Shoal red spar buoy M14": null,
+   "Buoys Aids Cape Merry light buoy C3 LL 2615 Churchill Wharf light buoy C8 LL 2620 Merry Rock light buoy C2 LL 2607 Cape Merry light buoy C5 LL 2616 Churchill Wharf approaches light buoy C7 LL 2618 Cape Merry light buoy C6 LL 2617": null,
+   "Buoys Aids Cardigan Shoal Light Buoy NH4 LL 953.4": null,
+   "Buoys Aids Carters Rock light buoy DC7 LL 390": null,
+   "Buoys Aids Cary Rock light buoy JK3 LL 442.75": {
+    "n": 4,
+    "median": 92.8,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Cat Rock light buoy Y3 LL 259": {
+    "n": 3,
+    "median": 99.8,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Catamaran Shoal light buoy 135 LL 318.5, U.S. LL 1020": null,
+   "Buoys Aids Catamaran Shoal light buoy 135 U.S. LL 318.5": null,
+   "Buoys Aids Catamaran shoal light buoy 135 LL 318.5, U.S. LL 1020": null,
+   "Buoys Aids Catamaran shoal light buoy 135, U.S. LL 1020": null,
+   "Buoys Aids Cataract Rock green spar buoy PA1": null,
+   "Buoys Aids Cedar shoal spar buoy SS14": {
+    "n": 2,
+    "median": 74.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Cerberus Rock light and whistle buoy CH4 LL 709": {
+    "n": 2,
+    "median": 89.5,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Chain Point Shoal light buoy Q11 LL 805": null,
+   "Buoys Aids Chain Rock LL 500": null,
+   "Buoys Aids Chain Rock Light LL 500": null,
+   "Buoys Aids Chain Rock light LL 500": null,
+   "Buoys Aids Chance Cove Rock Light Buoy TB5 LL 467.209": null,
+   "Buoys Aids Chance Cove Rock light buoy TB5 LL 467.209": null,
+   "Buoys Aids Chance Cove Rock light buoy TB5 LL 467.28": null,
+   "Buoys Aids Chance Rock Fair Haven Light Buoy PFH3 - LL 37.51": null,
+   "Buoys Aids Chance Rock Fair Haven light buoy PFH3 LL 37.51": null,
+   "Buoys Aids Chance Rock light buoy PFH5 LL 37.51": null,
+   "Buoys Aids Channel Gut Five Foot Rock light buoy QG1 LL 160.2": null,
+   "Buoys Aids Chapman Shoal light 222 U.S. LL 1515": null,
+   "Buoys Aids Charge Rock North Cardinal light buoy JX LL 409": {
+    "n": 11,
+    "median": 91.3,
+    "ge90": 11,
+    "ge75": 11,
+    "p_ge90": 1.0000000000000006e-11
+   },
+   "Buoys Aids Charlie Rock green spar DA55": {
+    "n": 8,
+    "median": 74.9,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Charlton Rock light buoy TC4 LL 453.5": null,
+   "Buoys Aids Chenal Ecart\u00e9 Shoal light buoy A36 LL 745": null,
+   "Buoys Aids Chief Rock green spar buoy M29": null,
+   "Buoys Aids Clarke Rock light LL 447.2": null,
+   "Buoys Aids Cockawee Shoal west light buoy T56 LL 427": null,
+   "Buoys Aids Cockle Rock light buoy PBB2 LL 71.4": {
+    "n": 10,
+    "median": 97.3,
+    "ge90": 10,
+    "ge75": 10,
+    "p_ge90": 1.0000000000000006e-10
+   },
+   "Buoys Aids Cold Bath Shoal lighted spar buoy H39 LL 394": null,
+   "Buoys Aids Cold Harbour Shoal light buoy VG5 LL 133.5": null,
+   "Buoys Aids Cold Hr. Shoal Light Buoy....VG5 LL 133.5": null,
+   "Buoys Aids Cole Shoal light buoy 150A LL 338.3": null,
+   "Buoys Aids Colquhoun Shoal north Cardinal light and whistle buoy DCO LL 687.1": null,
+   "Buoys Aids Cook's Bay Shoal light buoy SS16 LL 1364": {
+    "n": 2,
+    "median": 92.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Coombes Rock light and whistle buoy E6 LL 43.5": {
+    "n": 2,
+    "median": 46.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Cormorant Rock port bifurcation daybeacon": null,
+   "Buoys Aids Cornwall Rock light buoy N2 LL 307.02": {
+    "n": 3,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Country Club Shoal green spar buoy K27/1": null,
+   "Buoys Aids Cow Rock light buoy KU2 LL 238.2": null,
+   "Buoys Aids Cowley Rock bifurcation light buoy HSA LL 504.02": null,
+   "Buoys Aids Cox Rock light buoy QE3 LL 145.82": null,
+   "Buoys Aids Crab Head Shoal Light Buoy NC3 LL 284.41": null,
+   "Buoys Aids Crab Island Shoals Light Buoy NC2/2 LL 284.42": {
+    "n": 3,
+    "median": 99.3,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Cran Rock light buoy S2 LL789": null,
+   "Buoys Aids Cran Shoal light buoy EB7 LL 631.1": {
+    "n": 4,
+    "median": 88.3,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Crockers Island red spar buoy S32": null,
+   "Buoys Aids Crocodile Shoal light buoy KE2 LL 265.1": null,
+   "Buoys Aids Cuckold Rock light buoy JJ51 LL 339": null,
+   "Buoys Aids Curb Rocks West Cardinal light buoy VC LL 111.095": {
+    "n": 7,
+    "median": 97.4,
+    "ge90": 7,
+    "ge75": 7,
+    "p_ge90": 1.0000000000000004e-07
+   },
+   "Buoys Aids Curran Rock Daybeacon": null,
+   "Buoys Aids D'Arcy Shoals light buoy U1 LL 226.3": null,
+   "Buoys Aids Dall Rocks South buoy E34": null,
+   "Buoys Aids Dall Rocks light and bell buoy E33 LL 612": {
+    "n": 2,
+    "median": 73.9,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Dall Rocks south Cardinal Buoy ED": null,
+   "Buoys Aids Davey Rock light buoy N32 LL 569.2": null,
+   "Buoys Aids Dead Head Shoal light buoy QW3 LL 158.721": null,
+   "Buoys Aids Dean Shoal light buoy VK12 LL 880.1": null,
+   "Buoys Aids Deer Cove Shoal Light Buoy....VG4 LL 133.44": {
+    "n": 1,
+    "median": 97.2,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Deer Cove Shoal light buoy VG4 LL 133.44": {
+    "n": 3,
+    "median": 97.2,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Devereaux Shoals Conical AP50": {
+    "n": 2,
+    "median": 95.5,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Devereaux Shoals red conical buoy AP50": {
+    "n": 3,
+    "median": 95.5,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Dixon Rock light buoy C28 LL 699": null,
+   "Buoys Aids Dorcas Rock buoy P27": null,
+   "Buoys Aids Dorcas Rock green spar buoy P27": null,
+   "Buoys Aids Doucet Rock green spar buoy UM5": null,
+   "Buoys Aids Drovers Rock Light Buoy DDR LL 383.3": {
+    "n": 2,
+    "median": 98.2,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Ducie Rock light and bell buoy VD1 LL 116.5": {
+    "n": 7,
+    "median": 41.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Duck Island Shoal lighted spar buoy U20 LL 360": null,
+   "Buoys Aids Duck Rock Light Buoy PF2 LL 60.2": null,
+   "Buoys Aids Duck Rock light LL 64.8": {
+    "n": 2,
+    "median": 99.9,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Duck Rock light buoy PF LL 60.2": null,
+   "Buoys Aids Duck Rock light buoy PF2 LL 60.2": null,
+   "Buoys Aids Duntze Rock light & bell buoy 2 (U.S.) LL 181.4": {
+    "n": 1,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Duntze Rock light and whistle buoy 2 (U.S.) LL 181.4": {
+    "n": 3,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids East Baldwin Rock Light and Bell Buoy QP2 - LL 161": null,
+   "Buoys Aids East Baldwin Rock Light and Bell Buoy QP2 LL 161": null,
+   "Buoys Aids East Baldwin Rock light and bell buoy QP2 LL 161": null,
+   "Buoys Aids East Black Rock light buoy PL4 LL 78.18": null,
+   "Buoys Aids East Mark Rock light buoy PL2 LL 78.1": null,
+   "Buoys Aids East Shoal light buoy XK1 LL 216.6": null,
+   "Buoys Aids Eight Mile Shoal green spar buoy SS6": null,
+   "Buoys Aids Eight Mile Shoal red spar buoy SS6": null,
+   "Buoys Aids Ellinor Rock Light Buoy S2 - LL 503.5": null,
+   "Buoys Aids Ellinor Rock Light Buoy S2 LL 503.5": null,
+   "Buoys Aids Ellinor Rock light buoy S2 LL 503.5": null,
+   "Buoys Aids Ellinor Rock south Cardinal buoy DH": null,
+   "Buoys Aids Elswa Rock green can buoy CE": null,
+   "Buoys Aids Empire Shoal light buoy 176 LL 356.2": null,
+   "Buoys Aids Enfield Rock light and bell buoy D76 LL 719.5": null,
+   "Buoys Aids Ettrick Rock buoy DA": {
+    "n": 2,
+    "median": 70.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Ettrick Rock red spar buoy DA": null,
+   "Buoys Aids Fairway Rock South Cardinal light buoy NN LL 324.6": {
+    "n": 2,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Fairweather Rock East Cardinal light buoy HSE LL 508.44": null,
+   "Buoys Aids Fawson Rock light buoy AA57 LL 501.1": null,
+   "Buoys Aids Felix Rock red spar buoy C116": null,
+   "Buoys Aids Ferryland Shoal Light Buoy MFL3 LL 509.1": null,
+   "Buoys Aids Fish Island Rock light and bell buoy QG3 LL 143.5": null,
+   "Buoys Aids Fish Island Rock light buoy QG3 LL 143.5": null,
+   "Buoys Aids Fish Rock light buoy PJF2 LL 55.16": null,
+   "Buoys Aids Fish Rocks South Cardinal light buoy ELH LL 37.4": {
+    "n": 6,
+    "median": 78.5,
+    "ge90": 1,
+    "ge75": 5,
+    "p_ge90": 0.46855900000000006
+   },
+   "Buoys Aids Fitzroy Rock light and bell buoy C4 LL 989": null,
+   "Buoys Aids Five Foot Shoal light buoy QW2 LL 158.72": null,
+   "Buoys Aids Flatroof Shoal buoy AH52": null,
+   "Buoys Aids Flying Point Shoals light and whistle buoy TA4 LL 655": {
+    "n": 2,
+    "median": 96.2,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Fosters Point Rock light buoy TV10 LL 466.01": null,
+   "Buoys Aids Four Fathom Shoal light buoy HS4/2 LL 508.42": {
+    "n": 6,
+    "median": 95.5,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Fraser Point Shoal green can buoy Q19": {
+    "n": 2,
+    "median": 97.30000000000001,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Gahan Rock Day Beacon DB-C142": {
+    "n": 2,
+    "median": 51.9,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Gahan Rock green spar buoy C141": null,
+   "Buoys Aids Gahan Rock green spar buoy C143": {
+    "n": 5,
+    "median": 83.9,
+    "ge90": 0,
+    "ge75": 5,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Galloper Rock light and whistle buoy PR1 LL 66": {
+    "n": 10,
+    "median": 96.5,
+    "ge90": 10,
+    "ge75": 10,
+    "p_ge90": 1.0000000000000006e-10
+   },
+   "Buoys Aids Gannet Rock north light LL 8.1": null,
+   "Buoys Aids Gannet Shoal green spar buoy PV1": null,
+   "Buoys Aids Gentille Shoal light buoy KC3 LL 268.1": null,
+   "Buoys Aids George Island Shoal Light Buoy HG LL 287.4": {
+    "n": 2,
+    "median": 95.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Georgia Rock light and bell buoy D43 LL 701": {
+    "n": 2,
+    "median": 49.8,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Gereaux Island green spar buoy AN1 Hangdog Point red spar buoy AN2 Gereaux Island red spar buoy AN6 Gereaux Island green spar buoy AN7 Gereaux Island red spar buoy AN14 Gereaux Island green spar buoy AN17 Norgate Rocks red spar buoy AN16 Norgate Rocks red spar buoy AN18": null,
+   "Buoys Aids Gereaux Island red spar buoy AN14 Gereaux Island green spar buoy AN17 Gereaux Island green spar buoy A127/1 Gereaux Island green spar buoy A127/3 Norgate Rocks red spar buoy AN18": null,
+   "Buoys Aids Gereaux Island red spar buoy AN6 Gereaux Island green spar buoy AN11 Norgate Rocks red spar buoy AN16": null,
+   "Buoys Aids Gibraltor Rock light buoy PX2 LL 15.5": {
+    "n": 3,
+    "median": 97.9,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Gibrattor Rock Light Buoy PX2 - LL 15.5": {
+    "n": 3,
+    "median": 97.9,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Gibrattor Rock light buoy PX2 LL 15.5": {
+    "n": 2,
+    "median": 97.9,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Glasgow Head Shoal green spar buoy PM7": null,
+   "Buoys Aids Glasgow Head Shoal green spar buoy PM9": null,
+   "Buoys Aids Goose Rock light buoy VU2 LL 130.8": null,
+   "Buoys Aids Gooseberry Cove Shoal light buoy TVG LL 466.1": null,
+   "Buoys Aids Gossip Shoals light and bell buoy U47 LL 276": null,
+   "Buoys Aids Grampus Rock light and bell buoy AM52 LL 496": null,
+   "Buoys Aids Grampus Rock light and bell buoy AM52 LL 496.0": {
+    "n": 1,
+    "median": 93.3,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Grand Passage Shoal isolated danger buoy HAA": null,
+   "Buoys Aids Grandfather Rock light buoy DD1 LL 381": null,
+   "Buoys Aids Grandfather Rock light buoy DD1 LL 381.0": null,
+   "Buoys Aids Grandfather Rock light buoy DX1 LL 381": null,
+   "Buoys Aids Green Island Shoal light buoy UH2 LL 43.5": {
+    "n": 2,
+    "median": 94.2,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Green Rock light and bell buoy JX3 LL 752": {
+    "n": 2,
+    "median": 97.7,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Green Rock light and bell buoy JX3 LL 752.0": {
+    "n": 2,
+    "median": 97.7,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Green Shoal green can buoy AQ55": null,
+   "Buoys Aids Gregory Rock light buoy PR3 LL 66.5": {
+    "n": 5,
+    "median": 98.4,
+    "ge90": 5,
+    "ge75": 5,
+    "p_ge90": 1.0000000000000003e-05
+   },
+   "Buoys Aids Grey River Rocks North Cardinal light and whistle buoy QGR LL 139.21": {
+    "n": 6,
+    "median": 95.7,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Grime Shoal light and whistle buoy CV1 LL 669": {
+    "n": 11,
+    "median": 86.1,
+    "ge90": 0,
+    "ge75": 6,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Grime Shoal light and whistle buoy CV1 LL 669.0": {
+    "n": 1,
+    "median": 86.1,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Grondine Rock red spar buoy D82": {
+    "n": 2,
+    "median": 13.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Gull Rock light and bell buoy SP2 LL 919": null,
+   "Buoys Aids Gull Rock light buoy HA1 LL 224": {
+    "n": 17,
+    "median": 89.5,
+    "ge90": 8,
+    "ge75": 15,
+    "p_ge90": 0.00010564635687310008
+   },
+   "Buoys Aids Gull Rock light buoy KU1 LL 238.1": null,
+   "Buoys Aids Gull Rock light buoy KU3 LL 238.21": null,
+   "Buoys Aids Gull Rocks LL 687.0": null,
+   "Buoys Aids Gulnare Rock East Cardinal light buoy DHG LL 377.48": null,
+   "Buoys Aids Gulnare Rocks East Cardinal light buoy DHG LL 385.1": null,
+   "Buoys Aids Gushue Rock East Cardinal light buoy NLG LL 280.15": null,
+   "Buoys Aids Half Tide Rock buoy XV1": {
+    "n": 4,
+    "median": 99.3,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Half Tide Rock green can buoy XV1": {
+    "n": 1,
+    "median": 99.3,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Halibut Rock": {
+    "n": 1,
+    "median": 96.3,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Halibut Rock North Cardinal buoy UA": null,
+   "Buoys Aids Halibut Rock North Cardinal spar buoy UA": null,
+   "Buoys Aids Halibut Rock South Cardinal spar buoy UB": {
+    "n": 3,
+    "median": 98.7,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Halibut Rock South buoy UB": {
+    "n": 3,
+    "median": 98.7,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Halibut Rock buoy XP1": null,
+   "Buoys Aids Halibut Rocks West Cardinal Light Buoy QHR LL 173.12": {
+    "n": 2,
+    "median": 96.3,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Hall Rock Shoal light buoy P16 LL 913": null,
+   "Buoys Aids Hanmer Rock light and whistle buoy D57 LL 753": {
+    "n": 2,
+    "median": 95.1,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Hanmer Rocks light and whistle buoy D62 LL 753.1": {
+    "n": 8,
+    "median": 85.8,
+    "ge90": 0,
+    "ge75": 8,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Harbour Rock Shoal light buoy CC LL 488.5": {
+    "n": 2,
+    "median": 90.0,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Harbour Rock Shoal light buoy CH2 LL 488.5": null,
+   "Buoys Aids Harbour Rock light buoy DPU1 LL 360.1": null,
+   "Buoys Aids Harbour Rock light buoy XW2 LL 202.3": null,
+   "Buoys Aids Harbour Shoal Light Buoy QG5/3 LL 143.74": null,
+   "Buoys Aids Harbour Shoal buoy JU2": null,
+   "Buoys Aids Harbour Shoal red spar JU2": null,
+   "Buoys Aids Harbour Shoal red spar buoy JU2": null,
+   "Buoys Aids Hare Rock light buoy NC1 LL 284.3": {
+    "n": 2,
+    "median": 98.3,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Harry's Rock Light Buoy QX8 LL 158.3": null,
+   "Buoys Aids Harry's Rock light buoy QX8 LL 158.3": null,
+   "Buoys Aids Harry's Rock light buoy QXX LL 158.3": null,
+   "Buoys Aids Haskell Shoal lighted spar buoy 173 LL 353": null,
+   "Buoys Aids Haskell shoal lighted spar buoy 173 LL 353": null,
+   "Buoys Aids Hatten Shoal light buoy NCH2 LL 284.8": null,
+   "Buoys Aids Hautfond Shoal light buoy CK2 LL 704.85": null,
+   "Buoys Aids Hay Cove Shoal North Cardinal light buoy XM LL 235.5": null,
+   "Buoys Aids Head Rock Shoal South Cardinal spar buoy HPC": null,
+   "Buoys Aids Horda Shoals light buoy UD LL 258.5": {
+    "n": 2,
+    "median": 67.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Horse Rock green spar buoy YE1": {
+    "n": 6,
+    "median": 98.2,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Horse Shoal light buoy VK11 LL 622": null,
+   "Buoys Aids Horseshoe Shoals red conical buoy JP12": null,
+   "Buoys Aids Hospital Rock light buoy U30 LL 281": null,
+   "Buoys Aids Hussey Shoal Light Buoy NUB1 LL 278.1": null,
+   "Buoys Aids Indian Rock West Cardinal light buoy TRP LL 464.6": null,
+   "Buoys Aids Indian Rocks light and whistle buoy N8 LL 977": null,
+   "Buoys Aids Inner Island Southwest Shoal West Cardinal light buoy NF LL 306.002": null,
+   "Buoys Aids Inner Shoal light buoy VW3 LL 122.5": null,
+   "Buoys Aids Iroquois Rock red spar buoy M8": null,
+   "Buoys Aids Isabel Rock red spar buoy D80/2": null,
+   "Buoys Aids Island Rock Cove Light Buoy DHS - LL 338.09": null,
+   "Buoys Aids Island Rock Cove light buoy DHS LL 338.09": null,
+   "Buoys Aids Jackson Rock light LL 243": {
+    "n": 4,
+    "median": 96.3,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Jackstraw Shoal lighted spar buoy J5 LL 365.8": null,
+   "Buoys Aids Jacques Fontaine Rock Light Buoy VJF1 LL 113.6": {
+    "n": 3,
+    "median": 90.8,
+    "ge90": 2,
+    "ge75": 3,
+    "p_ge90": 0.028000000000000008
+   },
+   "Buoys Aids Jacques Fontaine Rock light buoy VJF1 LL 113.6": {
+    "n": 2,
+    "median": 90.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Jaffrey Rock light and whistle buoy E64 LL 622": {
+    "n": 4,
+    "median": 86.6,
+    "ge90": 1,
+    "ge75": 4,
+    "p_ge90": 0.34390000000000004
+   },
+   "Buoys Aids Jenks Rock light buoy NNB5 LL 324.83": null,
+   "Buoys Aids Jig Rock light buoy S51 LL 354": null,
+   "Buoys Aids Joe Island Shoal Light Buoy DA1 LL 355.123": null,
+   "Buoys Aids Joe Island Shoal light buoy DA1 LL 355.123": null,
+   "Buoys Aids John Wheaton Rock Cautionary Light Buoy DHJ LL 372.4": null,
+   "Buoys Aids John Wheaton Rock Cautionary Light Buoy LL 372.4": null,
+   "Buoys Aids Kaministiquia River red spar buoy D2 Thunder Bay light buoy E1 LL 1153 Main Harbour center red spar buoy E4 Main Harbour center green spar buoy E5 Kaministiquia River entrance light buoy D3 LL 1143.3 Kaministiquia River Terminal entrance light buoy D5 LL 1144.1 Main Harbour north red spar buoy H2 Main Harbour north red spar buoy H4 Burke Shoal green spar buoy A7 Kaministiquia River entrance red spar buoy D4 Main Harbour center red spar buoy E2 Main Harbour center green spar buoy E3 Main Harbour center red spar buoy E6 Main Harbour center green spar buoy E7 Main Harbour center green spar buoy E9 Main Harbour south green spar buoy E11 Main Harbour south green spar buoy E13": null,
+   "Buoys Aids Kaministiquia River red spar buoy D2/2 Thunder Bay light buoy E3 LL 1153 Main Harbour center red spar buoy E8 Main Harbour center green spar buoy E9 Kaministiquia River entrance light buoy D1 LL 1143.3 Kaministiquia River Terminal entrance light buoy D7 LL 1144.1 Main Harbour north red spar buoy H4 Main Harbour north red spar buoy H6 Burke Shoal green spar buoy AA3 Kaministiquia River entrance red spar buoy D2 Main Harbour center red spar buoy E4 Main Harbour center green spar buoy E7 Main Harbour center red spar buoy E10 Main Harbour center green spar buoy E13 Main Harbour center green spar buoy E15 Main Harbour south green spar buoy E17 Main Harbour south green spar buoy E23": null,
+   "Buoys Aids Kenny's Rocks light LL 410": null,
+   "Buoys Aids Kenozja Shoal north Cardinal spar buoy KH": null,
+   "Buoys Aids Kooh Rock light buoy Y51 LL 169": {
+    "n": 2,
+    "median": 93.1,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids L'Anse aux Meadows Shoal light buoy XM4 LL 235.6": null,
+   "Buoys Aids Lamb Rock North Cardinal light buoy MLR LL 7.4": {
+    "n": 10,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Lareto Shoal light buoy H2 LL 295": {
+    "n": 2,
+    "median": 75.5,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Lareto Shoal light buoy H2 LL 295.0": {
+    "n": 2,
+    "median": 75.5,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Laurier Rock light buoy KK64 LL 371.02": null,
+   "Buoys Aids League Rock East light buoy DLR1 LL 340.1": {
+    "n": 2,
+    "median": 76.8,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids League Rock West light buoy DLR3 LL 340.3": {
+    "n": 2,
+    "median": 79.5,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids League Rock east light buoy DLR1 LL 340.1": {
+    "n": 2,
+    "median": 76.8,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids League Rock west light buoy DLR3 LL 340.3": {
+    "n": 4,
+    "median": 79.5,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Lee Rock green spar buoy V25": null,
+   "Buoys Aids Lichfield Shoal light and whistle buoy H7 LL 519": {
+    "n": 4,
+    "median": 93.8,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Liscomb Shoal light and bell buoy VP5 LL 614": null,
+   "Buoys Aids Little Bay (Tinker Rock) light LL 132": {
+    "n": 2,
+    "median": 89.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Little Burnt Bay Shoal light buoy DBE4 LL 352.6": null,
+   "Buoys Aids Little Grave Island Rock light buoy QW5 LL 158.74": null,
+   "Buoys Aids Little Heart's Ease Shoal light buoy TS1 LL 465.2": {
+    "n": 2,
+    "median": 60.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Little Hope Shoal light buoy UV52 LL 391.0": {
+    "n": 2,
+    "median": 97.5,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Little Shoal light buoy Q5 LL 801.5": null,
+   "Buoys Aids Little Zero Rock light buoy V30 LL 222.8": null,
+   "Buoys Aids Locks Rock Light Buoy NK2 LL 280.015": null,
+   "Buoys Aids Locks Rock West Cardinal Light Buoy NKK LL 280.015": null,
+   "Buoys Aids Lockwood Rock light and whistle buoy V24 LL 609": {
+    "n": 4,
+    "median": 87.5,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Logie Rock light buoy VC2 LL 785": null,
+   "Buoys Aids Long Island Outer Shoal light buoy DBE1 LL 347.2": {
+    "n": 2,
+    "median": 84.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Long Island Rocks light buoy DBE3 LL 347.3": {
+    "n": 2,
+    "median": 94.7,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Long Island Shoal outer light buoy DBE1 LL 347.2": {
+    "n": 2,
+    "median": 84.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Long Point Rock Light Buoy VL - LL 114.9": {
+    "n": 1,
+    "median": 70.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Long Point Rock South Cardinal light buoy VL LL 114.9": {
+    "n": 14,
+    "median": 70.5,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.7712320754503901
+   },
+   "Buoys Aids Long Point Rock light buoy VL LL 114.9": {
+    "n": 1,
+    "median": 70.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Long Shoal Spar buoy KK54": {
+    "n": 2,
+    "median": 98.0,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Long Shoal east light buoy SS9 LL 1368.7": {
+    "n": 3,
+    "median": 74.2,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Long Shoal light buoy E57 LL 437": null,
+   "Buoys Aids Long Shoal light buoy E57 LL 437.0": null,
+   "Buoys Aids Long Shoal red spar buoy KK54": {
+    "n": 2,
+    "median": 98.0,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Lord Rock light buoy DC2 LL 389.7": null,
+   "Buoys Aids Lowe Rock light buoy TC5 LL 457.5": null,
+   "Buoys Aids Lower Rock Light Buoy QLC LL 137.23": {
+    "n": 2,
+    "median": 94.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Lower Rock South Cardinal light buoy QLC LL 137.23": {
+    "n": 6,
+    "median": 94.6,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Lower Sandy Shoal Light Buoy DPH1 LL 351.4": {
+    "n": 2,
+    "median": 33.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Luard Shoal light and whistle buoy E63 LL 620.0": null,
+   "Buoys Aids Lurcher Northeast Shoal light buoy N9 LL 251.5": {
+    "n": 2,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Lurcher Shoal Bifurcation Light Buoy and Racon NM LL 251": {
+    "n": 1,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Lurcher Shoal bifurcation light buoy NM LL 251": {
+    "n": 1,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids MacDonald Shoals light buoy XU4 LL 593.6": null,
+   "Buoys Aids MacRae Point Shoal bifurcation light buoy QA LL 812": null,
+   "Buoys Aids Mackerel Rock green spar buoy SHB": null,
+   "Buoys Aids Mackerel Shoal starboard bifurcation buoy VP6": null,
+   "Buoys Aids Mad Moll Rock light buoy NM2 LL 279.29": {
+    "n": 2,
+    "median": 83.1,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Mad Moll Rocks North Cardinal light buoy NA LL 270.45": null,
+   "Buoys Aids Mad Rocks Light Buoy DUR2 LL 361.5": null,
+   "Buoys Aids Maloney Shoal Light Buoy YA3 LL 590.01": null,
+   "Buoys Aids Maloney Shoal green can buoy YA3": null,
+   "Buoys Aids Maloney Shoal green spar buoy YA3": null,
+   "Buoys Aids Mamajuda Shoal junction light buoy, U.S. LL 7740": null,
+   "Buoys Aids Man of War Rock light and bell buoy PK7 LL 670": null,
+   "Buoys Aids Man of War Rock light and bell buoy PK7 LL 670.0": null,
+   "Buoys Aids Man of War Rock light buoy H1 LL 290": {
+    "n": 4,
+    "median": 65.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Marchand Rock Light Buoy QV2.4 LL 144.52": null,
+   "Buoys Aids Marchand Rock light buoy QV2.4 LL 144.52": null,
+   "Buoys Aids Margery Rock light buoy VG1/1 LL 133.1": null,
+   "Buoys Aids Marine City Shoal light buoy 40 LL 748.2, U.S. LL 9790": null,
+   "Buoys Aids Marine City Shoal light buoy 40, U.S. LL 9790": null,
+   "Buoys Aids Marley Rocks Light Buoy NS1 - LL 276.8": {
+    "n": 2,
+    "median": 76.3,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Mars Rock North Light Buoy H11 LL 523.1": null,
+   "Buoys Aids Mars Rock North Light Buoy LL 523.1": null,
+   "Buoys Aids Mars Rock light and whistle buoy H9 LL 523": null,
+   "Buoys Aids Marten's Rock light buoy KR2 LL 251.5": {
+    "n": 2,
+    "median": 97.7,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Mary Rocks green spar buoy MP3": null,
+   "Buoys Aids Mathews Rock buoy DC": null,
+   "Buoys Aids Mathews Rock starboard bifurcation buoy DC": null,
+   "Buoys Aids Maynards Shoal light buoy STB LL 1371.2": null,
+   "Buoys Aids McCallum (Whale Rock) Light and Whistle Buoy Q23 - LL 133.8": {
+    "n": 3,
+    "median": 99.3,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids McCallum (Whale Rock) light and whistle buoy Q23 LL 133.8": {
+    "n": 9,
+    "median": 99.6,
+    "ge90": 7,
+    "ge75": 9,
+    "p_ge90": 2.9980000000000008e-06
+   },
+   "Buoys Aids McGarvey Shoal green spar buoy J1": null,
+   "Buoys Aids McKerrel Rock light buoy P37 LL 927": null,
+   "Buoys Aids McLean Shoal buoy C7": null,
+   "Buoys Aids Medee Bay Shoal light buoy XM4 LL 235.6": null,
+   "Buoys Aids Melville Shoal southwest lighted spar buoy K9 LL 417": null,
+   "Buoys Aids Mercer Rock green spar buoy A107 Red spar buoy A114 Norgate Rocks red spar buoy A116 Green buoy AN5 Gereaux Island green spar buoy AN15 Gereaux Island green spar buoy A127/3 Norgate Rocks red spar buoy AN16": null,
+   "Buoys Aids Merry Rock light buoy C1 LL 2606 Cape Merry light buoy C3 LL 2615 Cape Merry light buoy C6 LL 2617 Churchill Wharf approaches light buoy C7 LL 2618 Churchill Wharf light buoy C8 LL 2620": null,
+   "Buoys Aids Merry Rock light buoy C1 LL 2606 Merry Rock light buoy C2 LL 2607 Cape Merry light buoy C3 LL 2615 Cape Merry light buoy C6 LL 2617 Churchill Wharf Approach light buoy C7 LL 2618 Churchill Wharf light buoy C8 LL 2620": null,
+   "Buoys Aids Middle Arm Rock Light Buoy DMM6 LL 327.9": null,
+   "Buoys Aids Middle Arm Rock light buoy DMM6 LL 327.9": null,
+   "Buoys Aids Middle Rock Light LL 383": null,
+   "Buoys Aids Middle Rock light LL 383": null,
+   "Buoys Aids Middle Rock light buoy MU53 LL 454.63": null,
+   "Buoys Aids Midland Bay Shoal light buoy M20 LL 870": null,
+   "Buoys Aids Millbrooke Rock spar buoy E6": {
+    "n": 3,
+    "median": 98.4,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Montagnais Shoal Light Buoy HN LL 298.2": null,
+   "Buoys Aids Moorey Cove Shoal light buoy DR2 LL 341.495": null,
+   "Buoys Aids Mouse Rock Light Buoy CP2 LL 486.65": null,
+   "Buoys Aids Mouse Rock light buoy CP2 LL 486.65": null,
+   "Buoys Aids Murphy's Rock light buoy PK6 LL 73.82": null,
+   "Buoys Aids Musquodoboit (Flat Rock) Green Lighted Spar Buoy YV15 LL 566.08": null,
+   "Buoys Aids Musquodoboit (Flat Rock) lighted green spar bouy YV15 LL 566.09": null,
+   "Buoys Aids Mussel Bed Rocks light buoy DLW1 LL 352.8": {
+    "n": 8,
+    "median": 47.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Mussel Rock Shoal West Cardinal light buoy DBB LL 335.9": {
+    "n": 2,
+    "median": 97.2,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Mussel Shoal red spar buoy XU18 LL 596.04": null,
+   "Buoys Aids Mussell Bed Shoal Buoy DBT5": null,
+   "Buoys Aids Mussell Bed Shoal Buoy DBT5 LL 361.065": null,
+   "Buoys Aids Mustard Gull Island Rock light buoy JSB2 LL 442.16": null,
+   "Buoys Aids Mutton Shoal East Cardinal Buoy TB": null,
+   "Buoys Aids NW Flying Point Shoals Red Spar TA6": null,
+   "Buoys Aids Nag Rock bifurcation light buoy JTA LL 756.5": null,
+   "Buoys Aids Nag Rock red spar buoy JU4 LL 758.5": null,
+   "Buoys Aids Nanakwa Shoal ODAS light buoy LL 654.5": null,
+   "Buoys Aids Nanticoke Shoal lighted spar buoy EA8 LL 568.5": null,
+   "Buoys Aids Napojotalik Shoal light buoy NHN2 LL 321.73": null,
+   "Buoys Aids Nepean Rock south Cardinal light and bell buoy EM Racon (N) LL 741.5": {
+    "n": 2,
+    "median": 81.3,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Nepigon shoal light buoy S146 LL 2182": null,
+   "Buoys Aids Nerepis Shoals buoy J31": null,
+   "Buoys Aids Nerepis Shoals green spar buoy J31": null,
+   "Buoys Aids Net Rocks light buoy V23 LL 130.31": null,
+   "Buoys Aids Net Shoal Light Buoy QM1 LL 159.11": null,
+   "Buoys Aids Net Shoal light buoy QM1 LL 159.11": null,
+   "Buoys Aids Neverfail Shoal Light & Bell Buoy H8 (2.9m Bell) H8, LL#518": null,
+   "Buoys Aids Neverfail Shoal Light & Bell Buoy H8, LL518": null,
+   "Buoys Aids Neverfail Shoal North light buoy HN7 - LL 519.5": null,
+   "Buoys Aids Neverfail Shoal light and bell buoy H8 LL518": null,
+   "Buoys Aids Neverfail Shoal light buoy YA5 LL 590.03": null,
+   "Buoys Aids Nick Shoal light buoy HE16 LL 503.1": null,
+   "Buoys Aids Nimrod Shoal light buoy NS LL 276.9": {
+    "n": 4,
+    "median": 94.1,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Norgate Rocks green spar buoy AN19": null,
+   "Buoys Aids Norgate Rocks red spar buoy A116": null,
+   "Buoys Aids Norgate Rocks red spar buoy AN16": null,
+   "Buoys Aids Norgate Rocks red spar buoy AN18": null,
+   "Buoys Aids Norman Rock Light Buoy XC2 LL 233.14": null,
+   "Buoys Aids North Harbour Rock Light Buoy KA1 LL 242.31": null,
+   "Buoys Aids North Harbour Rock light buoy KA1 LL 242.31": null,
+   "Buoys Aids North McNair Shoal light buoy 136 LL 319": null,
+   "Buoys Aids North Rock isolated danger light buoy SA LL 52.55": null,
+   "Buoys Aids North Shoal Shag Rock light buoy QH2 LL 151.4": null,
+   "Buoys Aids North Shoal Shag Rocks light buoy QH2 LL 151.4": null,
+   "Buoys Aids North Shoal light and bell buoy X2 LL 5.6": {
+    "n": 2,
+    "median": 79.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Northeast Passage red spar buoy D62 Northeast Passage red spar buoy D80 Perley Rock green spar buoy D81 Grondine Rock red spar buoy D82 Bustard fairway spar buoy DJ Rooster Reef red spar buoy D86 Isabel Rock red spar buoy D80/2": null,
+   "Buoys Aids Northeast Shoal light and bell buoy DA51 LL 473": {
+    "n": 6,
+    "median": 89.8,
+    "ge90": 0,
+    "ge75": 6,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Northern Point Rock light buoy TW1 LL 469.21": null,
+   "Buoys Aids Northwest Flying Point Shoals Red Spar TA6": null,
+   "Buoys Aids Northwest Flying Point Shoals buoy TA6": null,
+   "Buoys Aids Northwest Flying Point Shoals red spar buoy TA6": null,
+   "Buoys Aids Offer Seal Island West Rock light buoy QE2.2 LL 145.81": null,
+   "Buoys Aids Old Dumping Ground Shoal light buoy P2 LL 1141": null,
+   "Buoys Aids Orpheus Rock light and bell buoy NQ1 LL 723": {
+    "n": 2,
+    "median": 98.7,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Otter Island Shoal Light Buoy DB2 LL 336.21": null,
+   "Buoys Aids Otter Island Shoal light buoy DB2 LL 336.21": null,
+   "Buoys Aids Outer Rock South Cardinal light buoy JJ LL 340.01": {
+    "n": 10,
+    "median": 99.0,
+    "ge90": 10,
+    "ge75": 10,
+    "p_ge90": 1.0000000000000006e-10
+   },
+   "Buoys Aids Ox Eye Rock light buoy NA2 LL 326": null,
+   "Buoys Aids Oxners Rock red conical buoy TD52": null,
+   "Buoys Aids Pan Shoal green spar buoy VT7": null,
+   "Buoys Aids Pancake Rock Light Buoy QP9 - LL 172": null,
+   "Buoys Aids Pancake Rock Light Buoy QP9 LL 172": null,
+   "Buoys Aids Pancake Rock light buoy QP9 LL 172": null,
+   "Buoys Aids Pancake Shoal Light Buoy S1 LL 502": null,
+   "Buoys Aids Pancake Shoal Light Buoy S1 LL 502.0": null,
+   "Buoys Aids Pancake Shoal light buoy S1 LL 502": null,
+   "Buoys Aids Pancake Shoal red spar buoy X2": null,
+   "Buoys Aids Parky Rock Light Buoy DUL2 LL 361.4": null,
+   "Buoys Aids Patey Rock shoal light LL 249": {
+    "n": 7,
+    "median": 60.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Penitentiary Shoal lighted spar buoy K3 LL 409": null,
+   "Buoys Aids Pennel Shoal light buoy HS2 LL 508.2": {
+    "n": 6,
+    "median": 97.3,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Perley Rock green spar buoy D81": null,
+   "Buoys Aids Peter Rock South Cardinal lighted spar buoy MN LL 497.5": null,
+   "Buoys Aids Peter Rock south Cardinal lighted spar buoy MN LL 497.5": null,
+   "Buoys Aids Petty Harbour Shoal Light Buoy MP1 LL 507.51": null,
+   "Buoys Aids Petty Harbour Shoal light buoy MP1 LL 507.51": null,
+   "Buoys Aids Picnic Rock starboard daybeacon DB-C18": null,
+   "Buoys Aids Pigeon Island Shoal light buoy Q22 LL 133.78": {
+    "n": 2,
+    "median": 73.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Pilly Rock Light Buoy DF3 LL 365.3": null,
+   "Buoys Aids Pink Rock light buoy PK2 LL 667.015": {
+    "n": 1,
+    "median": 59.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Pleasant Shoal light and bell buoy H19 LL 529.0": null,
+   "Buoys Aids Pleasant Shoal light buoy H19 LL 529": null,
+   "Buoys Aids Point Frederick Shoal lighted spar buoy KH2 LL 405.6": null,
+   "Buoys Aids Point of Bay Shoal light buoy DPB3 LL 350.12": null,
+   "Buoys Aids Pollock Shoal Light and Bell Buoy TC52 LL 433": {
+    "n": 4,
+    "median": 97.95,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Pollock Shoal light and bell buoy TC52 LL 433": {
+    "n": 3,
+    "median": 98.5,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Pomeroy Rock Light Buoy DJ2 LL 383.8": null,
+   "Buoys Aids Pomeroy Rock light buoy DJ2 LL 383.8": null,
+   "Buoys Aids Popes Shoal red conical buoy UH4": {
+    "n": 13,
+    "median": 98.1,
+    "ge90": 13,
+    "ge75": 13,
+    "p_ge90": 1.0000000000000007e-13
+   },
+   "Buoys Aids Premier Shoal light buoy CL4 LL 696.5": null,
+   "Buoys Aids Primer Rock Light Buoy DUL3 LL 361.6": null,
+   "Buoys Aids Primer Rock light buoy DUR1 LL 361.1": null,
+   "Buoys Aids Primmer Rock light buoy DUR1 LL 361.1": null,
+   "Buoys Aids Privateer Rock light buoy Y12 LL 262": null,
+   "Buoys Aids Privateer Rock light buoy Y12 LL262": null,
+   "Buoys Aids Prosser Rock Light Buoy S3 LL 503": null,
+   "Buoys Aids Prosser Rock light buoy S3 LL 503": null,
+   "Buoys Aids Psyche Rock East Cardinal light and bell buoy YS LL 580.3": {
+    "n": 2,
+    "median": 91.9,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Psyche Shoal lighted spar buoy M10 LL 426": null,
+   "Buoys Aids Pullman Shoal Light 194 (US) LL 1360": null,
+   "Buoys Aids Querr\u00e9 Island Shoal light buoy XP3 LL 211.6": null,
+   "Buoys Aids Race Rocks east cautionary light buoy VG LL 192": {
+    "n": 4,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Race Rocks south Cautionary light buoy VF LL 189.5": {
+    "n": 6,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Ragged Rock light buoy PK1 LL 73.6": {
+    "n": 11,
+    "median": 98.3,
+    "ge90": 11,
+    "ge75": 11,
+    "p_ge90": 1.0000000000000006e-11
+   },
+   "Buoys Aids Raggey Rock light buoy VFC2 LL 111.2": null,
+   "Buoys Aids Ram Rock light buoy YA7 LL 590.05": null,
+   "Buoys Aids Red Island Shoal ODAS Buoy LL 19.5": {
+    "n": 2,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Red Island Shoal ODAS buoy": {
+    "n": 3,
+    "median": 55.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Red Island Shoal West Cardinal light and whistle buoy EDD - LL 22": {
+    "n": 1,
+    "median": 73.6,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Red Island Shoal West Cardinal light and whistle buoy EDD LL - 22": {
+    "n": 1,
+    "median": 73.6,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Red Island Shoal West Cardinal light and whistle buoy EDD LL 22": {
+    "n": 11,
+    "median": 73.6,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Red Rock Shoal Light Buoy JB3 LL 446.1": {
+    "n": 2,
+    "median": 99.3,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Red Rock green spar buoy C115": null,
+   "Buoys Aids Red Rock light buoy AM3 LL 118": null,
+   "Buoys Aids Red Rock red spar buoy C114": null,
+   "Buoys Aids Red spar buoy A114/2 Norgate Rocks red spar buoy A116": null,
+   "Buoys Aids Refugee Island Shoal light buoy 139 LL 323": {
+    "n": 8,
+    "median": 21.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Regatta Rocks light LL 611.7": {
+    "n": 1,
+    "median": 88.9,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Renews Rocks East Cardinal light and whistle buoy MR LL 516": {
+    "n": 7,
+    "median": 91.4,
+    "ge90": 7,
+    "ge75": 7,
+    "p_ge90": 1.0000000000000004e-07
+   },
+   "Buoys Aids Reubans Rock light buoy QF2 LL 145.9": null,
+   "Buoys Aids Ringdove Shoal light and bell buoy DA58 LL 480.2": {
+    "n": 2,
+    "median": 87.3,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Ritters Arm Shoal light buoy DW5 LL 344.9": null,
+   "Buoys Aids River Center Shoal light buoy HN3 LL 298.3": null,
+   "Buoys Aids Rock Island red spar buoy EL2": null,
+   "Buoys Aids Rock Point LL519": null,
+   "Buoys Aids Rocky Island green spar buoy JU1": null,
+   "Buoys Aids Rocky Island south buoy J47": null,
+   "Buoys Aids Rocky Island south green spar buoy J47": null,
+   "Buoys Aids Rocky Point green spar buoy CH3": null,
+   "Buoys Aids Rogers Point Shoal Light Buoy DH1 LL 373.1": null,
+   "Buoys Aids Rogers Point Shoal light buoy DH1 LL 373.1": null,
+   "Buoys Aids Rogers Reef shoal light LF 433.3": null,
+   "Buoys Aids Rose Blanche Shoal light buoy QR1/1 LL 149.09": {
+    "n": 6,
+    "median": 99.4,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Rose Blanche Shoals Light Buoy QR1/1 LL 149.09": {
+    "n": 2,
+    "median": 99.4,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Rose Shoal South Cardinal light buoy TY LL 633.01": {
+    "n": 10,
+    "median": 99.5,
+    "ge90": 10,
+    "ge75": 10,
+    "p_ge90": 1.0000000000000006e-10
+   },
+   "Buoys Aids Rose Shoal red spar buoy TY4": null,
+   "Buoys Aids Rosedale Rock light buoy V15 (2.9m) V15 LL189.1": {
+    "n": 2,
+    "median": 99.1,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Rosedale Rock light buoy V15 LL 189.1": {
+    "n": 5,
+    "median": 99.1,
+    "ge90": 4,
+    "ge75": 5,
+    "p_ge90": 0.0004600000000000001
+   },
+   "Buoys Aids Rosenfeld Rock light buoy U59 LL 263": {
+    "n": 2,
+    "median": 44.3,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Ross Shoal green spar buoy M15": null,
+   "Buoys Aids Rothesay Rock red conical buoy AP2": null,
+   "Buoys Aids Round Rock Starboard Bifurcation Spar Buoy AY": null,
+   "Buoys Aids Round Rock starboard bifurcation spar buoy AY": null,
+   "Buoys Aids Rude Shoal light and bell buoy VH5 LL 623.5": null,
+   "Buoys Aids Russell Island Shoal light buoy LL 743.5, U.S. LL 9745": null,
+   "Buoys Aids SW Flying Point Shoals Red Spar TA2": null,
+   "Buoys Aids Saint-Augustin Shoal light buoy Q22 LL 1969": null,
+   "Buoys Aids Saint-Augustin Shoal light buoy Q22 LL1969": null,
+   "Buoys Aids Sally Rock light buoy PAG3 LL 75.53": null,
+   "Buoys Aids Salmon Island shoal lighted spar buoy K8 LL 416": null,
+   "Buoys Aids Salt Rock Light Buoy C10 LL 318.01": null,
+   "Buoys Aids Sandy Island Shoal Light Buoy NNA2 LL 324.66": {
+    "n": 1,
+    "median": 35.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Sandy Island Shoal light buoy NNA2 LF 324.66": {
+    "n": 1,
+    "median": 35.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Sandy Island Shoal light buoy NNA2 LL 324.66": {
+    "n": 2,
+    "median": 35.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Sauker Rock South Cardinal light and whistle buoy PBD LL 72.9": {
+    "n": 2,
+    "median": 93.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Scab Rock Light Buoy NR4 LL 230.1": null,
+   "Buoys Aids Scab Rock light buoy NR4 LL 230.1": null,
+   "Buoys Aids Sculpin Shoal light and bell buoy E52 LL 436": null,
+   "Buoys Aids Seal Rocks Light Buoy QE5 LL 145.84": null,
+   "Buoys Aids Seal Rocks light buoy QE5 LL 145.84": null,
+   "Buoys Aids Sentry Shoals ODAS light buoy 46131 LL 509.5": null,
+   "Buoys Aids Shag Rock Light Buoy HS2/2 LL 508.22": {
+    "n": 2,
+    "median": 99.15,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Shag Rock Sunker light and bell buoy VS2 LL 123": {
+    "n": 2,
+    "median": 75.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Shag Rock light buoy HS2/2 LL 508.22": {
+    "n": 6,
+    "median": 99.0,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Shag Rock light buoy QM2.4 LL 159.12": null,
+   "Buoys Aids Shag Rocks Light Buoy NMS2 LL 276.55": {
+    "n": 2,
+    "median": 89.8,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Shalloway Island light LL 69": null,
+   "Buoys Aids Shalloway Island light buoy PB2 LL 70": {
+    "n": 6,
+    "median": 97.7,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Shalloway Island, Burin light buoy PB2 LL 70": {
+    "n": 4,
+    "median": 97.7,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Shingles Shoal green spar buoy EJ55": null,
+   "Buoys Aids Shiphouse Rock light buoy DPU2 LL 360.2": null,
+   "Buoys Aids Shoal Northwest Light Buoy QR5 LL 140.53": null,
+   "Buoys Aids Shoal Northwest light buoy QR5 LL 140.53": null,
+   "Buoys Aids Shoal Point (Lewisporte) light buoy DLW3 LL 353.25": null,
+   "Buoys Aids Shoal Point light and bell buoy TP1 LL 642": null,
+   "Buoys Aids Shoal Short Reach Light Buoy QG5.1 LL 143.71": null,
+   "Buoys Aids Shoal Short Reach light buoy QG5.1 LL 143.71": null,
+   "Buoys Aids Shoal Tickle East Cardinal light buoy DSC LL 352.94": null,
+   "Buoys Aids Shoal Tickle east Cardinal light buoy DSC LL 352.94": null,
+   "Buoys Aids Shoal northwest light buoy QR5 LL 140.53": null,
+   "Buoys Aids Shoals South light buoy KQ3 LL 235.31": null,
+   "Buoys Aids Shoals south light buoy KQ3 LL 235.31": null,
+   "Buoys Aids Skinner Rock Light Buoy DWG5 LL 344.41": null,
+   "Buoys Aids Skinners Rock Light Buoy DWG5 LL 344.41": null,
+   "Buoys Aids Sloping Rock light buoy DY8 LL 355.084": null,
+   "Buoys Aids Smiths Harbour Rock light buoy DSM4 LL 327.6": null,
+   "Buoys Aids Smithson Rock Light & Bell Buoy HE2 LL 503": {
+    "n": 1,
+    "median": 90.1,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Buoys Aids Smithson Rock Light and Bell Buoy HE2 LL 503": {
+    "n": 3,
+    "median": 90.1,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Smithson Rock light & bell buoy HE2 LL 503": {
+    "n": 4,
+    "median": 92.7,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Smithson Rock light and bell buoy HE2 LL 503": {
+    "n": 5,
+    "median": 90.1,
+    "ge90": 5,
+    "ge75": 5,
+    "p_ge90": 1.0000000000000003e-05
+   },
+   "Buoys Aids Soldiers Rock light buoy NPW2 LL 229.1": {
+    "n": 4,
+    "median": 96.1,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Sollows Rock East Light Buoy Y17 LL 264": null,
+   "Buoys Aids Soup Rock Green Spar buoy YH1": null,
+   "Buoys Aids South Charity Shoal lighted spar buoy M6 LL 422": null,
+   "Buoys Aids South Charity Shoal lighted spar buoy M7 LL 422.5": null,
+   "Buoys Aids South East Shoal East Cardinal light buoy QES LL 145.88": null,
+   "Buoys Aids South McNair Shoal light buoy 137A LL 320.2": null,
+   "Buoys Aids South Rock South Cardinal light buoy JMS LL 402": null,
+   "Buoys Aids South Rock light buoy J4 LL 402": null,
+   "Buoys Aids Southeast Shoal light buoy X LL 598": null,
+   "Buoys Aids Southwest Flying Point Shoals Red Spar TA2": null,
+   "Buoys Aids Southwest Flying Point Shoals buoy TA2": null,
+   "Buoys Aids Southwest Flying Point Shoals red spar buoy TA2": null,
+   "Buoys Aids Southwest River Shoal light buoy JM9 LL 1,060.22": null,
+   "Buoys Aids Southwest Rock Light Buoy QS2 LL 140.7": {
+    "n": 3,
+    "median": 97.4,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Southwest Rock light buoy KK57 LL 369.04": null,
+   "Buoys Aids Southwest Rock light buoy PSW2 LL 74.4": {
+    "n": 1,
+    "median": 86.8,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Southwest Rock light buoy QS2 LL 140.7": {
+    "n": 3,
+    "median": 97.4,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "Buoys Aids Southwest Rocks light buoy PSW2 LL 74.4": {
+    "n": 2,
+    "median": 86.8,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Spain Rock West Cardinal light buoy MC LL 902.4": null,
+   "Buoys Aids Spectacle Shoal light buoy NSC LL 288": null,
+   "Buoys Aids Spectacle Shoals red spar buoy MQ52": null,
+   "Buoys Aids Split Rock light and whistle buoy TS2 LL 639.5": null,
+   "Buoys Aids Split Shoal light buoy M15/3 LL 1173.8": null,
+   "Buoys Aids Split Shoal light buoy M16 LL 1173.81": null,
+   "Buoys Aids Spray Rock Day Beacon DB-C128": null,
+   "Buoys Aids Squid Rocks light buoy JV5 LL 417.05": null,
+   "Buoys Aids St-Roch Shoals light buoy H89 LL 1873": null,
+   "Buoys Aids St-Roch Shoals light buoy H89 LL 1873.0": null,
+   "Buoys Aids Stag Rock light buoy DX8 LL 373": null,
+   "Buoys Aids Steeple Shoal lighted spar buoy H20 LL 364": null,
+   "Buoys Aids Steering Rock light buoy PJ6 LL 55.5": null,
+   "Buoys Aids Stenhouse Shoal light and whistle buoy D59 LL 751.1": {
+    "n": 6,
+    "median": 86.4,
+    "ge90": 0,
+    "ge75": 6,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Stern Rock Light Buoy QV2.2 LL 144.512": null,
+   "Buoys Aids Stern Rock light buoy QV2.2 LL 144.512": null,
+   "Buoys Aids Sunken Rock light buoy VSC LL 130.34": null,
+   "Buoys Aids Sunker Rock west Cardinal light buoy DSR LL 359.9": {
+    "n": 6,
+    "median": 93.0,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids Susan Rock light LL 618": null,
+   "Buoys Aids Sutton Rock light buoy Y44 LL 138": null,
+   "Buoys Aids Swan Island Rock light buoy DBE2 LL 347.4": null,
+   "Buoys Aids Tanners Rock light buoy DY11 LL 355.092": null,
+   "Buoys Aids Tanners Rock light buoy DY15 LL 355.083": null,
+   "Buoys Aids Temple Rock isolated danger spar buoy": null,
+   "Buoys Aids The Ninth Shoal green spar buoy SS12": {
+    "n": 1,
+    "median": 68.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids The Ninth Shoal red spar buoy SS12": {
+    "n": 1,
+    "median": 68.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Thistle Rock South Cardinal Light Buoy NR LL 230.2": {
+    "n": 2,
+    "median": 98.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Thistle Rock South Cardinal light buoy NR LL 230.2": {
+    "n": 2,
+    "median": 98.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Thomas Rocks Light and Bell Buoy PM2 LL 64.83": {
+    "n": 2,
+    "median": 95.9,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Thomas Rocks light and bell buoy PM2 LL 64.83": {
+    "n": 10,
+    "median": 95.9,
+    "ge90": 9,
+    "ge75": 9,
+    "p_ge90": 9.100000000000004e-09
+   },
+   "Buoys Aids Thorn Shoal light and bell buoy YT5 LL 572": null,
+   "Buoys Aids Three Star Shoal light buoy P10 LL 908": null,
+   "Buoys Aids Thrumcap Rock Light Buoy HE3 LL 503.5": {
+    "n": 8,
+    "median": 97.2,
+    "ge90": 8,
+    "ge75": 8,
+    "p_ge90": 1.0000000000000005e-08
+   },
+   "Buoys Aids Thrumcap Rock light buoy HE3 LL 503.5": {
+    "n": 4,
+    "median": 97.2,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Tickey Shoal Spar buoy KK56": {
+    "n": 2,
+    "median": 95.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Tickey Shoal red spar buoy KK56": {
+    "n": 2,
+    "median": 95.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Tilley's Rock light buoy JS3 LL 442.509": null,
+   "Buoys Aids Tim Barrett's Rock Light Buoy EL2 LL 37.45": {
+    "n": 2,
+    "median": 99.0,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Tinker Rock Light LL 379": null,
+   "Buoys Aids Tinker Rock light LL 379": null,
+   "Buoys Aids Tizard Rock light buoy AA2 LL 941": null,
+   "Buoys Aids Tom Cod Rock Light Buoy DB1 LL 336": {
+    "n": 1,
+    "median": 75.2,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Tom Cod Rock light buoy DB1 LL 336": {
+    "n": 5,
+    "median": 75.2,
+    "ge90": 0,
+    "ge75": 5,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Tooth Rock Light Buoy QE4.2 LL 145.85": null,
+   "Buoys Aids Tooth Rock light buoy QE4.2 LL 145.85": null,
+   "Buoys Aids Torbay French Rock light buoy TH2 LL 646.2": null,
+   "Buoys Aids Trout Shoal light buoy S323 LL 1371": null,
+   "Buoys Aids Tucker's Rock light buoy JW5 LL 410.51": null,
+   "Buoys Aids Turners Shoal green spar buoy VT11": null,
+   "Buoys Aids Turners Shoal spar VT11": null,
+   "Buoys Aids Turning Rock red spar buoy C84": null,
+   "Buoys Aids Turnip Island Rock light buoy QR2 LL 140.51": null,
+   "Buoys Aids Turtle Rock green spar buoy GB3": null,
+   "Buoys Aids Turtle Rock red spar buoy GB4": null,
+   "Buoys Aids Two Foot Shoal light buoy QW4 LL 158.71": null,
+   "Buoys Aids Upper Black Island Rocks light buoy DBE5 LL 348.2": {
+    "n": 3,
+    "median": 67.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Upper Cardigan (MacPhee Shoal) light buoy NJ3 LL 951.7": null,
+   "Buoys Aids Vail Point Shoal light buoy T7 LL 839": {
+    "n": 6,
+    "median": 19.8,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Vancouver Rock light and whistle buoy E54 LL 636": {
+    "n": 1,
+    "median": 68.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Vestal Rock Light Buoy and Bell Buoy PK4 LL 73.8": {
+    "n": 2,
+    "median": 95.2,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Vestal Rock light and bell buoy PK4 LL 73.8": {
+    "n": 14,
+    "median": 95.2,
+    "ge90": 14,
+    "ge75": 14,
+    "p_ge90": 1.0000000000000008e-14
+   },
+   "Buoys Aids Vestal Rock light buoy and bell buoy PK4 LL 73.8": {
+    "n": 2,
+    "median": 95.2,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Vesuvius Rock West Cardinal light buoy DHV LL 377.49": {
+    "n": 2,
+    "median": 82.9,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Victoria Rock starboard bifurcation spar buoy UE": null,
+   "Buoys Aids Victoria Shoal light buoy U43 LL 291.3": {
+    "n": 2,
+    "median": 89.7,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Vidal Shoals West Cardinal light buoy P LL 1076": null,
+   "Buoys Aids Vidal Shoals red spar buoy QM12": null,
+   "Buoys Aids Vidal Shoals spar buoy QM15": null,
+   "Buoys Aids Vidal Shoals west Cardinal light buoy P LL 1076": null,
+   "Buoys Aids Vidal Shoals west light buoy QM24 LL 1075": null,
+   "Buoys Aids Vincent Shoal North Cardinal light buoy KQ LL 237.2": null,
+   "Buoys Aids Virgin Arm Inner Shoal Light Buoy DVA5 LL 360.47": null,
+   "Buoys Aids Virgin Rock light buoy VH1 LL 127.35": null,
+   "Buoys Aids Voyageurs Shoal green spar buoy N594": null,
+   "Buoys Aids Voyageurs Shoal red spar buoy N593": null,
+   "Buoys Aids Wabby Rock light buoy DC3 LL 389.71": null,
+   "Buoys Aids Walbran Rock green can buoy EA": {
+    "n": 2,
+    "median": 72.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Warnes Shoal spar buoy MU51": null,
+   "Buoys Aids Washball Rock light buoy PD8 LL 53.93": {
+    "n": 2,
+    "median": 86.3,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Watch Rock North Cardinal light and whistle buoy QLB LL 138.5": {
+    "n": 9,
+    "median": 98.4,
+    "ge90": 9,
+    "ge75": 9,
+    "p_ge90": 1.0000000000000005e-09
+   },
+   "Buoys Aids Watson Rock LL 672": {
+    "n": 2,
+    "median": 93.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Waybridge Shoal light buoy TV6 LL 466.08": null,
+   "Buoys Aids Weaver Shoal anchorage area east lighted spar buoy XA LL 234": {
+    "n": 2,
+    "median": 4.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Webber Shoal light buoy TH7 LL 646.7": null,
+   "Buoys Aids Welcome Shoal red spar buoy A6": null,
+   "Buoys Aids Wellesley Rock light buoy H46 LL 562": null,
+   "Buoys Aids West Broad Shoal buoy AE56": null,
+   "Buoys Aids West Mark Rock Light Buoy PL1 LL 78.12": null,
+   "Buoys Aids West Mark Rock light buoy PL1 LL 78.12": null,
+   "Buoys Aids West Sister Shoal light buoy J2 LL 802.5": {
+    "n": 4,
+    "median": 57.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Western Rock #1 Light Buoy DDL1 LL 352.18": null,
+   "Buoys Aids Western Rock #1 light buoy DBT5 LL 361.08": null,
+   "Buoys Aids Western Rock #2 light buoy DBT6 LL 361.09": null,
+   "Buoys Aids Western Rock #2 light buoy DDL2 LL 352.19": null,
+   "Buoys Aids Weybridge Shoal light buoy TV6 LL 466.08": null,
+   "Buoys Aids Whale Back Rock Light Buoy DDN LL 361.095": {
+    "n": 4,
+    "median": 91.4,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Buoys Aids Whale Back Rock North Cardinal light buoy DDN LL 352.2": {
+    "n": 2,
+    "median": 91.4,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Buoys Aids Whale Rock green spar buoy KE57": null,
+   "Buoys Aids Whales Rock light buoy VFC1 LL 111.1": null,
+   "Buoys Aids Wharf Rock Light Buoy PS2 LL 51.65": null,
+   "Buoys Aids Wharf Rock light buoy PS2 LL 51.65": {
+    "n": 1,
+    "median": 82.9,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids White Ground Shoal Light Buoy DWG2 LL 345.41": null,
+   "Buoys Aids White Horse Rock light buoy MR2 LL 515.4": null,
+   "Buoys Aids White Point Rock light buoy UQ52 LL 404": {
+    "n": 6,
+    "median": 96.3,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Buoys Aids White Rock light buoy XU10 LL 595": {
+    "n": 1,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids White Rowsel Shoal light buoy N15 LL 281.9": null,
+   "Buoys Aids Whitefish Shoal green spar buoy SS2": {
+    "n": 2,
+    "median": 49.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Whitman Rock green spar buoy PH13": null,
+   "Buoys Aids Wilfred's Rock light buoy DR1 LL 332.61": {
+    "n": 2,
+    "median": 66.4,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids William Shoal lighted spar buoy K11 LL 426.5": null,
+   "Buoys Aids Williams Rock light and bell buoy EW1 LL 38.62": {
+    "n": 8,
+    "median": 46.9,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Wilson Rock buoy E77": {
+    "n": 2,
+    "median": 67.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Wilson Rock green can buoy E77": {
+    "n": 2,
+    "median": 67.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Buoys Aids Winterton Shoal light buoy TW2 LL 469.22": null,
+   "Buoys Aids Woody Island Rock Light Buoy NCH1 LL 284.73": null,
+   "Buoys Aids Yellow Rock red spar buoy S22": null,
+   "Buoys Lights Aids Jaffrey Rock light and whistle buoy E64 LL 622": null,
+   "Dangerous Wreck Submerged Object": {
+    "n": 3,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Alarm Rock light LL 294": null,
+   "Lights Aids Anchor Shoal lighted spar buoy JVB LL 369.5": null,
+   "Lights Aids Bacon Rock red spar buoy D40": {
+    "n": 2,
+    "median": 92.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Lights Aids Bad Rock light LL 253": null,
+   "Lights Aids Barrett Rock light LL 703": null,
+   "Lights Aids Billard Rock light and whistle buoy M3 LL 68.2": {
+    "n": 4,
+    "median": 81.3,
+    "ge90": 1,
+    "ge75": 4,
+    "p_ge90": 0.34390000000000004
+   },
+   "Lights Aids Black Forest Shoal LL 1405": null,
+   "Lights Aids Black Forest Shoal light LL 1405": null,
+   "Lights Aids Black Rock Point LL 799": null,
+   "Lights Aids Black Rock Point Sector light LL 800": null,
+   "Lights Aids Black Rock Point light LL 799": null,
+   "Lights Aids Black Rock light LL 193": null,
+   "Lights Aids Blackrock Point light LL 665.4": {
+    "n": 4,
+    "median": 78.8,
+    "ge90": 0,
+    "ge75": 4,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Blackrock Point sector light LL 665.41": {
+    "n": 2,
+    "median": 78.8,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Boundary Pass Shoal isolated danger light and bell buoy DB (U.S.) LL 264.5": null,
+   "Lights Aids Bread Island Shoal light and bell buoy E7 LL 43": {
+    "n": 1,
+    "median": 70.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Bustard Rocks light LL 966": null,
+   "Lights Aids Butterworth Rocks light LL 751": {
+    "n": 2,
+    "median": 98.0,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Lights Aids Cahil Rock Range Rear Light LL 694.5": null,
+   "Lights Aids Cahil Rock range front light LL 694.4": null,
+   "Lights Aids Cahil Rock range rear LL 694.5": null,
+   "Lights Aids Cahil Rock range rear light LL 694.5": null,
+   "Lights Aids Calumet Shoal light 226 LL 366.12, U.S. LL 1550": null,
+   "Lights Aids Candle Cove Rocks LL 419": null,
+   "Lights Aids Candle Cove Rocks Light LL 419": null,
+   "Lights Aids Candle Cove Rocks light LL 419": null,
+   "Lights Aids Canoe Rock LL 256.0": null,
+   "Lights Aids Canoe Rock light LL 256": null,
+   "Lights Aids Carne Rock LL 617.7": null,
+   "Lights Aids Cassidy Shoal light LL 394.7": null,
+   "Lights Aids Chain Rock LL 500": null,
+   "Lights Aids Chain Rock light LL 500": null,
+   "Lights Aids Channel Islands shoal light LL 258": null,
+   "Lights Aids Chenal Ecart\u00e9 Shoal light buoy A36 LL 745": null,
+   "Lights Aids Clive Island shoal light LL 246": null,
+   "Lights Aids Coffin Island shoal light LL 297": null,
+   "Lights Aids Colburne Passage south shoal light LL 248.1": null,
+   "Lights Aids Cole Shoal light buoy 150A LL 338.3": null,
+   "Lights Aids Comfort Island Shoal Light 199 U.S. LL 1380": null,
+   "Lights Aids Connis Rocks shoal light LL 729.5": {
+    "n": 2,
+    "median": 87.2,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Cork Rock Light LL 372.2": null,
+   "Lights Aids Crossover (Brockville) range front light LL 339.3": null,
+   "Lights Aids Crossover (Brockville) range front light LL 339.3 Crossover (Brockville) range rear light LL 339.4": null,
+   "Lights Aids Currie Islet (Gosling Rocks) LL 589.0": null,
+   "Lights Aids Danger Reefs shoal light LL 292": null,
+   "Lights Aids Davey Rock light buoy N32 LL 569.2": null,
+   "Lights Aids Dillon Rock light LL 572": {
+    "n": 2,
+    "median": 95.6,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Lights Aids Doran Shoal range front light LL 242.5": null,
+   "Lights Aids Doran Shoal range rear light LL 242.6": null,
+   "Lights Aids Duck Rock Light LL 64.8": {
+    "n": 1,
+    "median": 99.8,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Lights Aids Duck Rock light LL 64.8": {
+    "n": 1,
+    "median": 99.8,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Lights Aids Duck Rock light buoy PF LL 60.2": null,
+   "Lights Aids Dugout Rocks light LL 581": {
+    "n": 2,
+    "median": 91.1,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Lights Aids East Charity Shoal light (U.S.) LL 391.92": null,
+   "Lights Aids Ellinor Rock Light Buoy S2 - LL 503.5": null,
+   "Lights Aids Ellinor Rock light buoy S2 LL 503.5": null,
+   "Lights Aids Enfield Rock light and bell buoy D76 LL 719.5": null,
+   "Lights Aids Flat Rock Fog Signal LL 463": null,
+   "Lights Aids Flatrock Island light LL 769": null,
+   "Lights Aids Fog Rocks LL 591.0": {
+    "n": 2,
+    "median": 43.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Fosters Point Rock light buoy TV10 LL 466.01": null,
+   "Lights Aids Frontenac Shoal light 192 LL 361.53, U.S. LL 1345": null,
+   "Lights Aids Galiano shoal light LL 273": null,
+   "Lights Aids Gannet Rock South light LL 8.2": null,
+   "Lights Aids Gannet Rock north light LL 8.1": null,
+   "Lights Aids Gibsons Landing Rock light LL 430": null,
+   "Lights Aids Goose Neck Shoal range front light LL 247.5 Goose Neck Shoal range rear light LL 247.6": {
+    "n": 2,
+    "median": 2.2,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Granite State Shoal Light 214 (US) LL 364.32": null,
+   "Lights Aids Grappler Rock light LL 285": null,
+   "Lights Aids Green Island (Rocky Bay) light LL 389": null,
+   "Lights Aids Gull Rock LL 339": {
+    "n": 2,
+    "median": 89.7,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Gull Rock Shore Light - LL 1380": null,
+   "Lights Aids Gull Rock light LL 1380": null,
+   "Lights Aids Hanmer Rocks light and whistle buoy D62 LL 753.1": {
+    "n": 2,
+    "median": 85.8,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Harbour Shoal light buoy KN5 LL 239.25": null,
+   "Lights Aids Harris Rock light LL 733": null,
+   "Lights Aids Hay Rock light LL 1437": null,
+   "Lights Aids Hay Rock light LL 1437.0": null,
+   "Lights Aids Holland Rock light LL 690": null,
+   "Lights Aids Hudson Rocks LL 447.0": null,
+   "Lights Aids Hudson Rocks light LL 447": null,
+   "Lights Aids Hyde Rock light LL 766": null,
+   "Lights Aids Ironside Shoal light 180 light (U.S.) LL 357.51": null,
+   "Lights Aids Ironsides Shoal light 180 U.S. LL 1290": null,
+   "Lights Aids Jackson Rock light LL 243": {
+    "n": 4,
+    "median": 96.3,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Lights Aids Jackstraw Shoal light LL 366": null,
+   "Lights Aids Jeddore Rock LL 570.0": null,
+   "Lights Aids Keewaydin Rocks light LL 1394": null,
+   "Lights Aids Kenny's Rocks Light LL 410": null,
+   "Lights Aids Kenny's Rocks light LL 410": null,
+   "Lights Aids Leggett Shoal range front light LL 1209.7": null,
+   "Lights Aids Leggett Shoal range rear light LL LF 1209.8": null,
+   "Lights Aids Little Bay Light (Tinker Rock) light LL 132": {
+    "n": 2,
+    "median": 89.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Little Group Rock shoal light LL 230.5": null,
+   "Lights Aids Logie Rock light buoy VC2 LL 785": null,
+   "Lights Aids Lord Rock (U.S.) LL 761": {
+    "n": 1,
+    "median": 82.6,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Lord Rock light (U.S.) LL 761": {
+    "n": 1,
+    "median": 82.6,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Major Brown Rock light LL 583": {
+    "n": 2,
+    "median": 23.1,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids McIntosh Rock shoal light LL 711.5": null,
+   "Lights Aids Mercier Rock starboard daybeacon A106": null,
+   "Lights Aids Middle Rock Light LL 383": null,
+   "Lights Aids Nanticoke Shoal lighted spar buoy EA8 LL 568.5": null,
+   "Lights Aids Neill Rock light buoy N21 LL 551.3": null,
+   "Lights Aids North Rock LL 5.8": null,
+   "Lights Aids North Rock Light LL 5.8": null,
+   "Lights Aids North Rock light LL 5.8": null,
+   "Lights Aids Port Rexton Shoal light buoy TR1 LL 462.31": null,
+   "Lights Aids Pound Rocks LL 424.0": null,
+   "Lights Aids Pound Rocks Light LL 424": null,
+   "Lights Aids Pound Rocks Light LL 424.0": null,
+   "Lights Aids Pound Rocks light LL 424": null,
+   "Lights Aids Prosser Rock Light Buoy S3 LL 503.0": null,
+   "Lights Aids Pullman Shoal Light 194 U.S. LL 1360": null,
+   "Lights Aids Pullman Shoal Light 194 US LL 1360": null,
+   "Lights Aids Quarry Rock light buoy TV4 LL 465.8": {
+    "n": 2,
+    "median": 42.5,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Race Rocks light LL 189": null,
+   "Lights Aids Rebecca Rock LL 471": null,
+   "Lights Aids Rebecca Rock LL 471.0": null,
+   "Lights Aids Red Rock (Go Home Bay) light LL 901": null,
+   "Lights Aids Red Rock LL 906.0": null,
+   "Lights Aids Red Rock light LL 906": null,
+   "Lights Aids Regatta Rocks LL 611.7": {
+    "n": 6,
+    "median": 88.9,
+    "ge90": 0,
+    "ge75": 6,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Renews Rocks East Cardinal light and whistle buoy MR LL 516": {
+    "n": 1,
+    "median": 91.4,
+    "ge90": 1,
+    "ge75": 1,
+    "p_ge90": 0.1
+   },
+   "Lights Aids Rock Island light LL 663.2": null,
+   "Lights Aids Rock Point LL 519": null,
+   "Lights Aids Rock Point LL519": null,
+   "Lights Aids Rocky Harbour Wharf light LL 200.3": null,
+   "Lights Aids Rocky Harbour wharf light LL 200.3": null,
+   "Lights Aids Rosenfeld Rock light buoy U59 LL 263": {
+    "n": 1,
+    "median": 88.6,
+    "ge90": 0,
+    "ge75": 1,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Seagull Rock light LL 1418.5": null,
+   "Lights Aids Seal Rocks light LL 748": null,
+   "Lights Aids Seine Rock LL 426": null,
+   "Lights Aids Seine Rock Light LL 426": null,
+   "Lights Aids Shag Rocks light LL 37.5": null,
+   "Lights Aids Shalloway Island Light LL 69": null,
+   "Lights Aids Sheet Rock LL 594": null,
+   "Lights Aids Sheet Rock Light LL 594.0": null,
+   "Lights Aids Shoal Arm Wharf Light LL 336.28": null,
+   "Lights Aids Shoal Arm wharf light LL 336.28": null,
+   "Lights Aids Shoal Cove West Breakwater Light LL 217.12": null,
+   "Lights Aids Shoal Island light LL 1058": null,
+   "Lights Aids Shoal Point LL 367.0": null,
+   "Lights Aids Shoal Tickle LL 361.0": null,
+   "Lights Aids Shoal Tickle light LL 361": null,
+   "Lights Aids Shute Reef shoal light LL 248.3": null,
+   "Lights Aids Slippery Rock light LL 725": null,
+   "Lights Aids Spectacle Islands west shoal light LL 396.4": null,
+   "Lights Aids Spectacles Shoal light LL 368": null,
+   "Lights Aids Spray Rock Day Beacon DB-C128": null,
+   "Lights Aids Starling Rock light LL 677": null,
+   "Lights Aids Stenhouse Shoal light and whistle buoy D59 LL 751.1": {
+    "n": 2,
+    "median": 86.4,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Sugar Loaf Rock light LL 1435": null,
+   "Lights Aids Susan Rock light LL 618": null,
+   "Lights Aids Temple Rocks front range DR-DH6F": null,
+   "Lights Aids The Narrows Shoal East Light LL 1411": null,
+   "Lights Aids The Narrows Shoal East Light LL 1411.0": null,
+   "Lights Aids Thrasher Rock light LL 433": null,
+   "Lights Aids Tribune Rock light LL 569.3": null,
+   "Lights Aids Turning Rock (Honey Harbour) light LL 894": null,
+   "Lights Aids Turtle Rock day beacon DB-U28": null,
+   "Lights Aids Vancouver Rock light and whistle buoy E54 LL 636": {
+    "n": 1,
+    "median": 68.3,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Virago Rock sector light LL 289.3": null,
+   "Lights Aids Wain Rock LL 248.6": null,
+   "Lights Aids Wain Rock light LL 248.6": null,
+   "Lights Aids Walker Rock sector light LL 291": {
+    "n": 4,
+    "median": 72.7,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Lights Aids Walsh Rock light LL 624.8": null,
+   "Lights Aids Watch Rock North Cardinal light and whistle buoy QLB LL 138.5": {
+    "n": 2,
+    "median": 98.4,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Lights Aids Watson Rock LL 672": {
+    "n": 2,
+    "median": 93.8,
+    "ge90": 2,
+    "ge75": 2,
+    "p_ge90": 0.010000000000000002
+   },
+   "Lights Aids Watson Rock LL 672.0": {
+    "n": 4,
+    "median": 93.8,
+    "ge90": 4,
+    "ge75": 4,
+    "p_ge90": 0.00010000000000000002
+   },
+   "Lights Aids Watson Rock light LL 672": {
+    "n": 6,
+    "median": 93.8,
+    "ge90": 6,
+    "ge75": 6,
+    "p_ge90": 1.0000000000000004e-06
+   },
+   "Lights Aids Waybridge Shoal light buoy TV6 LL 466.08": null,
+   "Lights Aids Weaver Shoal range front light LL 244.5": null,
+   "Lights Aids Weaver Shoal range rear LL 244.6": null,
+   "Lights Aids Whiskey Shoal light 182 U.S. LL 1305": null,
+   "Lights Aids Whiskey Shoal light 182 light LL 359.5, U.S. LL 1305": null,
+   "Lights Aids Whiterock Passage range front light 1 LL 484.1": null,
+   "Lights Aids Whiterock Passage range rear light 1 LL 484.2": null,
+   "Lights Aids Zero Rock light LL 223": null,
+   "Obstruction (Other) Submerged Object": null,
+   "RACON Aids Butterworth Rocks light LL 751": {
+    "n": 3,
+    "median": 98.0,
+    "ge90": 3,
+    "ge75": 3,
+    "p_ge90": 0.0010000000000000002
+   },
+   "RACON Aids Chapman Shoal light 222 U.S. LL 1515": null,
+   "RACON Aids Chapman Shoal light buoy 222 U.S. LL 1515": null,
+   "RACON Aids Comfort Island Shoal Light 199 U.S. LL 1380": null,
+   "RACON Aids Comfort Island Shoal light 199 LL 361.58, U.S. LL 1380": null,
+   "RACON Aids Davey Rock light buoy N32 LL 569.2": null,
+   "RACON Aids Gannet Rock LL 8": null,
+   "RACON Aids Gannet Rock RACON LL 8": null,
+   "RACON Aids Gladman Rock RACON": null,
+   "RACON Aids Hanmer Rocks light LL 752.3": null,
+   "RACON Aids Race Rocks south Cautionary light buoy VF LL 189.5": {
+    "n": 3,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "RACON Aids Rosenfeld Rock light buoy U59 LL 263": {
+    "n": 2,
+    "median": 88.6,
+    "ge90": 0,
+    "ge75": 2,
+    "p_ge90": 1.0
+   },
+   "RACON Aids Southeast Shoal LL 597": null,
+   "RACON Aids Stenhouse Shoal light and whistle buoy D59 LL 751.1": {
+    "n": 8,
+    "median": 86.4,
+    "ge90": 0,
+    "ge75": 8,
+    "p_ge90": 1.0
+   },
+   "Sandspit or Sandbar Change": null,
+   "Sandspit or Sandbar Change Shallow Depth Reported Shoal": null,
+   "Shallow Depth Confirmed": {
+    "n": 1,
+    "median": 0.0,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   },
+   "Shallow Depth Reported": {
+    "n": 185,
+    "median": 86.1,
+    "ge90": 77,
+    "ge75": 112,
+    "p_ge90": 2.8945466606387644e-29
+   },
+   "Shallow Depth Reported Shoal": null,
+   "Shoal": {
+    "n": 94,
+    "median": 86.4,
+    "ge90": 35,
+    "ge75": 65,
+    "p_ge90": 1.848509157106614e-12
+   },
+   "Submerged Object": {
+    "n": 78,
+    "median": 50.099999999999994,
+    "ge90": 20,
+    "ge75": 30,
+    "p_ge90": 6.269465306560003e-05
+   },
+   "Uncharted Rock": {
+    "n": 6,
+    "median": 93.6,
+    "ge90": 4,
+    "ge75": 6,
+    "p_ge90": 0.0012700000000000003
+   },
+   "Uncharted Submarine Cables": {
+    "n": 2,
+    "median": 42.2,
+    "ge90": 0,
+    "ge75": 0,
+    "p_ge90": 1.0
+   }
+  }
+ },
+ "n_points": 8948,
+ "n_in_blocks": 8851,
+ "source": "CCG NAVWARN search (nis.ccg-gcc.gc.ca), active notices 2026-09-06",
+ "hazard": "hazard_nat_v2 (NONNA 2026-08-29 snapshot)"
+}

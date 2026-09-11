@@ -10,10 +10,10 @@ import glob, json, math, os, numpy as np, torch
 from scipy.stats import norm
 from v5_data import GravityPrior, lat_of_y, lon_of_x
 from v5_model import V5, normalize
-DEV = "cuda"; P = 256; S = 128; BW = 16
-HZ = os.environ.get("HZ_CKPT", "hazard_tiny.pt"); HZS = os.environ.get("HZ_SIZE", "tiny")
+DEV = "cuda"; P = 256; S = 128; BW = int(os.environ.get("HZ_BW", "16"))
+HZ = os.environ.get("HZ_CKPT", "hazard_tiny.pt"); HZS = os.environ.get("HZ_SIZE", "tiny"); HZ_AUX = os.environ.get("HZ_AUX", "0") == "1"; NAUX = 5 if HZ_AUX else 0
 DRAFTS = {"p105": 10.5, "p125": 12.5}
-net = V5(HZS).to(DEV); ck = torch.load(HZ, map_location=DEV, weights_only=False); net.load_state_dict(ck["net"]); net.eval()
+net = V5(HZS, in_ch=3+NAUX).to(DEV); ck = torch.load(HZ, map_location=DEV, weights_only=False); net.load_state_dict(ck["net"]); net.eval()
 grav = GravityPrior(); OUT = os.environ.get("HZ_OUT", "hazard_out"); os.makedirs(OUT, exist_ok=True)
 win = np.outer(np.hanning(P), np.hanning(P)) + 1e-3
 files = [l.strip() for l in open(os.environ.get("HZ_BLOCKS", "corridor_blocks.txt")) if l.strip()]
@@ -30,6 +30,12 @@ for n, f in enumerate(files):
     zp = np.full((Hp, Wp), np.nan, np.float32); zp[:H, :W] = z
     kp = np.zeros((Hp, Wp), np.float32); kp[:H, :W] = known
     gp = np.zeros((Hp, Wp), np.float32); gp[:H, :W] = G; gp[H:, :] = G[-1:, :].mean(); gp[:, W:] = gp[:, W-1:W]
+    ap = np.zeros((NAUX, Hp, Wp), np.float32)
+    if HZ_AUX:
+        af = f"aux_out/{os.path.basename(f)}"
+        if os.path.exists(af):
+            a = np.load(af); L = a["land"].astype(np.float32); m = np.isfinite(L) & (L > 0.5)
+            ap[0, :H, :W] = np.where(m, np.clip(L, 0, 500)/100.0, 0.0); ap[1, :H, :W] = m; ap[2:5, :H, :W] = a["s2"].astype(np.float32)/255.0 * a["s2ok"][None]
     accm = np.zeros((Hp, Wp)); accs = np.zeros((Hp, Wp)); wacc = np.zeros((Hp, Wp))
     coords = [(i, j) for i in range(0, Hp-P+1, S) for j in range(0, Wp-P+1, S) if kp[i:i+P, j:j+P].sum() >= 400]
     with torch.no_grad():
@@ -38,8 +44,9 @@ for n, f in enumerate(files):
             t = lambda a: torch.tensor(np.stack(a))[:, None].float().to(DEV)
             dt = t([np.nan_to_num(zp[i:i+P, j:j+P]) for i, j in cb]); kt = t([kp[i:i+P, j:j+P] for i, j in cb]); gt = t([gp[i:i+P, j:j+P] for i, j in cb])
             dn, gn, mu0, sd0 = normalize(dt, kt, gt)
+            at = torch.tensor(np.stack([ap[:, i:i+P, j:j+P] for i, j in cb])).float().to(DEV)
             with torch.autocast("cuda", dtype=torch.bfloat16):
-                mu, lv = net(torch.cat([dn*kt, kt, gn], 1), torch.zeros(len(cb), device=DEV, dtype=torch.long))
+                mu, lv = net(torch.cat([dn*kt, kt, gn] + ([at] if HZ_AUX else []), 1), torch.zeros(len(cb), device=DEV, dtype=torch.long))
             est = (mu.float()*sd0 + mu0)[:, 0].cpu().numpy(); sig = (torch.exp(0.5*lv.float())*sd0)[:, 0].cpu().numpy()
             for q, (i, j) in enumerate(cb):
                 accm[i:i+P, j:j+P] += est[q]*win; accs[i:i+P, j:j+P] += sig[q]*win; wacc[i:i+P, j:j+P] += win

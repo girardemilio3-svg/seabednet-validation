@@ -42,12 +42,12 @@ CONFIGS = {
 }
 
 class V5(nn.Module):
-    def __init__(s, size="small", cond=128):
+    def __init__(s, size="small", cond=128, in_ch=3):
         super().__init__()
-        cfg = CONFIGS[size]; W, D = cfg["widths"], cfg["depths"]
+        cfg = CONFIGS[size]; W, D = cfg["widths"], cfg["depths"]; s.in_ch = in_ch
         s.res_emb = nn.Embedding(2, cond)              # 0: 100 m, 1: 10 m
         s.cond_mlp = nn.Sequential(nn.Linear(cond, cond), nn.SiLU(), nn.Linear(cond, cond))
-        s.stem = nn.Conv2d(3, W[0], 3, 1, 1)
+        s.stem = nn.Conv2d(in_ch, W[0], 3, 1, 1)
         s.downs, s.stages, s.attns = nn.ModuleList(), nn.ModuleList(), nn.ModuleList()
         for li, (w, d) in enumerate(zip(W, D)):
             s.stages.append(nn.ModuleList([Block(w, cond) for _ in range(d)]))
@@ -88,3 +88,10 @@ if __name__ == "__main__":
         x = torch.randn(2, 3, 256, 256)
         mu, lv = m(x, torch.tensor([0, 1]))
         print(f"{size:6s} {n:7.1f}M params  out {tuple(mu.shape)} {tuple(lv.shape)}")
+
+def load_with_extra_channels(net, state):
+    """Load a 3-channel checkpoint into a net whose stem takes more channels: copy the 3 known input weights, zero the rest."""
+    sd = dict(state); w = sd.get("stem.weight")
+    if w is not None and w.shape[1] != net.stem.weight.shape[1]:
+        nw = net.stem.weight.detach().clone().zero_(); nw[:, :w.shape[1]] = w; sd["stem.weight"] = nw
+    net.load_state_dict(sd); return net

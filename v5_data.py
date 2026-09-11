@@ -26,7 +26,8 @@ HOLDOUT_BBOXES = [  # lon0,lat0,lon1,lat1 (matches original holdout tiles)
 ]
 
 class GravityPrior:
-    def __init__(s, path="planetary/gravity_prior_canada.npz"):
+    def __init__(s, path=None):
+        path = path or os.environ.get("V5_PRIOR", "planetary/gravity_prior_canada.npz")   # V5_PRIOR=planetary/gravity_prior_canada_nosid.npz -> leakage-free anchor
         d = np.load(path)
         s.z = d["z"].astype("float32")
         s.lon0, s.lon1 = d["lon"]; s.lat0, s.lat1 = d["lat"]
@@ -60,7 +61,11 @@ class Corpus:
             dr, idx = item.split("="); s.temporal[dr] = idx
         if s.temporal: s.n_blanked = 0
         s.n10 = sum(1 for e in s.entries if e[1] == 10.0)
-        s.cache = {}
+        s.cache = {}; s.aux = {}; s.use_aux = os.environ.get("V5_AUX", "0") == "1"; s.n_aux = 0
+        s.vpos = {}; s.fast = os.environ.get("V5_FASTSAMPLE", "0") == "1"   # indexed sampling (no rejection loop)
+        s.use_grav = os.environ.get("V5_GRAV", "0") == "1"   # raw marine gravity anomaly + vertical gradient as channels
+        if s.use_grav: s.gravA = GravityPrior("planetary/grav_canada.npz"); s.curvA = GravityPrior("planetary/curv_canada.npz")
+        s.use_s1 = os.environ.get("V5_S1", "0") == "1"; s.s1 = {}   # winter Sentinel-1 VV/VH (dB) channels from aux_s1/
         if preload:                       # RAM-cache: float16 arrays + bbox
             import time; t0 = time.time(); tot = 0
             for f, res, kind in s.entries:
@@ -69,8 +74,16 @@ class Corpus:
                 bb = d["bbox3857"] if kind == "3857" else d["bbox"]
                 s.cache[f] = (z, np.array(bb, dtype=np.float64))
                 tot += z.nbytes
+                if s.use_aux:
+                    ap = f"aux_out/{os.path.basename(f)}"
+                    if os.path.exists(ap) and kind == "3857" and res == 100.0:
+                        a = np.load(ap); s.aux[f] = (a["land"].astype(np.float16), a["s2"], a["s2ok"]); s.n_aux += 1; tot += a["s2"].nbytes + a["land"].nbytes//2
+                if s.use_s1:
+                    sp = f"aux_s1/{os.path.basename(f)}"
+                    if os.path.exists(sp) and kind == "3857" and res == 100.0:
+                        b = np.load(sp); s.s1[f] = (b["vv"], b["vh"]); tot += b["vv"].nbytes*2
             print(f"corpus preloaded: {tot/1e9:.1f} GB in RAM ({time.time()-t0:.0f}s)")
-        print(f"corpus: {len(s.entries)} files ({s.n10} at 10 m)")
+        print(f"corpus: {len(s.entries)} files ({s.n10} at 10 m)" + (f"; aux channels for {s.n_aux} blocks" if s.use_aux else ""))
 
     def _load_z(s, f, z):
         idx = s.temporal.get(os.path.dirname(f))
@@ -90,6 +103,17 @@ class Corpus:
     def _in_holdout(s, lon, lat):
         return any(a <= lon <= c and b <= lat <= d for a, b, c, d in HOLDOUT_BBOXES)
 
+    def _valid_positions(s, f, z, min_valid):
+        """top-left (i, j) at stride 8 whose P x P window has >= min_valid known fraction; cached per file and threshold"""
+        key = (f, round(min_valid, 2))
+        if key in s.vpos: return s.vpos[key]
+        P = s.P; H, W = z.shape; k = np.isfinite(z).astype(np.float32)
+        c = np.zeros((H+1, W+1), np.float64); c[1:, 1:] = np.cumsum(np.cumsum(k, 0), 1)
+        ii = np.arange(0, H-P+1, 8); jj = np.arange(0, W-P+1, 8)
+        frac = (c[ii[:, None]+P, jj[None, :]+P] - c[ii[:, None], jj[None, :]+P] - c[ii[:, None]+P, jj[None, :]] + c[ii[:, None], jj[None, :]])/(P*P)
+        ok = np.argwhere(frac >= min_valid); pos = np.stack([ii[ok[:, 0]], jj[ok[:, 1]]], 1) if len(ok) else np.zeros((0, 2), int)
+        s.vpos[key] = pos; return pos
+
     def sample(s, min_valid=0.35, want_res=None, holdout=False, tries=400):
         P = s.P
         for _ in range(tries):
@@ -103,7 +127,12 @@ class Corpus:
             z = zc
             H, W = z.shape
             if H < P or W < P: continue
-            i, j = s.rng.integers(H-P), s.rng.integers(W-P)
+            if s.fast:
+                pos = s._valid_positions(f, z, min_valid)
+                if len(pos) == 0: continue
+                i, j = pos[s.rng.integers(len(pos))]; i = int(min(i + s.rng.integers(8), H-P)); j = int(min(j + s.rng.integers(8), W-P))
+            else:
+                i, j = s.rng.integers(H-P), s.rng.integers(W-P)
             p = z[i:i+P, j:j+P].astype(np.float32)
             known = np.isfinite(p)
             if known.mean() < min_valid: continue
@@ -116,10 +145,33 @@ class Corpus:
             lats = np.linspace(la1-(i)/H*(la1-la0), la1-(i+P)/H*(la1-la0), P)
             LO, LA = np.meshgrid(lons, lats)
             grav = s.grav.sample(LO, LA)
-            return dict(depth=np.nan_to_num(p), known=known.astype(np.float32),
+            out = dict(depth=np.nan_to_num(p), known=known.astype(np.float32),
                         gravity=grav.astype(np.float32), res_m=res,
                         center=(clon, clat))
+            if s.use_aux or s.use_grav or s.use_s1:
+                ch = [s.aux_patch(f, i, j)] if s.use_aux else []
+                if s.use_grav: ch.append(np.stack([s.gravA.sample(LO, LA)/50.0, s.curvA.sample(LO, LA)/100.0]).astype(np.float32))
+                if s.use_s1: ch.append(s.s1_patch(f, i, j))
+                out["aux"] = np.concatenate(ch, 0)
+            return out
         return None
+
+    def aux_patch(s, f, i, j):
+        """5 channels: land elevation (clipped, /100 m), land flag, imagery R,G,B (/255); zeros + flags off when unavailable."""
+        P = s.P; a = np.zeros((5, P, P), np.float32)
+        if f in s.aux:
+            land, s2, ok = s.aux[f]; L = land[i:i+P, j:j+P].astype(np.float32); m = np.isfinite(L) & (L > 0.5)
+            a[0] = np.where(m, np.clip(L, 0, 500)/100.0, 0.0); a[1] = m
+            a[2:5] = s2[:, i:i+P, j:j+P].astype(np.float32)/255.0 * ok[i:i+P, j:j+P]
+        return a
+
+    def s1_patch(s, f, i, j):
+        """3 channels: VV dB (+20)/20, VH dB (+30)/20, valid flag; zeros when unavailable."""
+        P = s.P; a = np.zeros((3, P, P), np.float32)
+        if f in s.s1:
+            vv, vh = s.s1[f]; v = vv[i:i+P, j:j+P].astype(np.float32); h = vh[i:i+P, j:j+P].astype(np.float32); m = np.isfinite(v)
+            a[0] = np.where(m, (v + 20.0)/20.0, 0.0); a[1] = np.where(np.isfinite(h), (h + 30.0)/20.0, 0.0); a[2] = m
+        return a
 
 if __name__ == "__main__":
     c = Corpus()

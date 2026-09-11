@@ -1,0 +1,44 @@
+{
+ "chart says safe": {
+  "n": 1373,
+  "model_ge90": 682,
+  "base_ge90": 662,
+  "p": 1.168829229959671e-302
+ },
+ "+ no sounding within 300 m (blind)": {
+  "n": 124,
+  "model_ge90": 39,
+  "base_ge90": 37,
+  "p": 4.411992067695051e-11
+ },
+ "+ no sounding within 1 km": {
+  "n": 66,
+  "model_ge90": 11,
+  "base_ge90": 9,
+  "p": 0.06213750717334729
+ },
+ "+ nearest sounding deeper than 21 m": {
+  "n": 1298,
+  "model_ge90": 644,
+  "base_ge90": 603,
+  "p": 1.555704598367837e-285
+ },
+ "Arctic, chart safe": {
+  "n": 119,
+  "model_ge90": 28,
+  "base_ge90": 56,
+  "p": 1.407334703083892e-05
+ },
+ "stated depth <=21 m, chart safe": {
+  "n": 129,
+  "model_ge90": 61,
+  "base_ge90": 91,
+  "p": 3.479089937505579e-27
+ },
+ "Reported/Shoal/Uncharted Rock only, chart safe": {
+  "n": 285,
+  "model_ge90": 116,
+  "base_ge90": 157,
+  "p": 4.6270165645841784e-42
+ }
+}

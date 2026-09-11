@@ -12,12 +12,14 @@ from scipy import ndimage as ndi
 from v5_data import GravityPrior, lat_of_y, lon_of_x
 from v5_model import V5, normalize
 
-DEV = "cuda"; P = 256; S = 128; BW = 16
+DEV = "cuda"; P = 256; S = 128; BW = int(os.environ.get("TE_BW", "16"))
 SIZE = os.environ.get("V5_SIZE", "tiny"); CKPT = os.environ.get("V5_CKPT", f"v5_{SIZE}_temporal.pt")
 TAG = os.environ.get("TAG", os.path.basename(CKPT)[:-3])
 MAXPX = 60                      # same fill discipline as the atlas (≤ 60 px from a sounding)
 BINS = [0, 0.5, 1, 2, 4, 8, 1e9]
-net = V5(SIZE).to(DEV)
+AUXC = os.environ.get("V5_AUX", "0") == "1"; GRAV = os.environ.get("V5_GRAV", "0") == "1"; S1 = os.environ.get("V5_S1", "0") == "1"; NAUX = (5 if AUXC else 0) + (2 if GRAV else 0) + (3 if S1 else 0); AUX = AUXC or GRAV or S1
+net = V5(SIZE, in_ch=3 + NAUX).to(DEV)
+if GRAV: gravA = GravityPrior("planetary/grav_canada.npz"); curvA = GravityPrior("planetary/curv_canada.npz")
 ck = torch.load(CKPT, map_location=DEV, weights_only=False)
 net.load_state_dict(ck["net"]); net.eval()
 RESIDUAL = os.environ.get("V5_RESIDUAL", "0") == "1"
@@ -46,6 +48,21 @@ for n, f in enumerate(files):
     kp = np.zeros((Hp,Wp), np.float32); kp[:H,:W] = known
     gp = np.zeros((Hp,Wp), np.float32); gp[:H,:W] = G
     gp[H:,:] = G[-1:,:].mean(); gp[:,W:] = gp[:,W-1:W]
+    ap = np.zeros((NAUX, Hp, Wp), np.float32)
+    off = (5 if AUXC else 0)
+    if GRAV:
+        LO, LA = np.meshgrid(lons, lats); ap[off, :H, :W] = gravA.sample(LO, LA)/50.0; ap[off+1, :H, :W] = curvA.sample(LO, LA)/100.0; off += 2
+    if S1:
+        sp = f"aux_s1/{os.path.basename(f)}"
+        if os.path.exists(sp):
+            b = np.load(sp); v = b["vv"].astype(np.float32); h = b["vh"].astype(np.float32); m = np.isfinite(v)
+            ap[off, :H, :W] = np.where(m, (v + 20.0)/20.0, 0.0); ap[off+1, :H, :W] = np.where(np.isfinite(h), (h + 30.0)/20.0, 0.0); ap[off+2, :H, :W] = m
+    if AUXC:
+        af = f"aux_out/{os.path.basename(f)}"
+        if os.path.exists(af):
+            a = np.load(af); L = a["land"].astype(np.float32); m = np.isfinite(L) & (L > 0.5)
+            ap[0, :H, :W] = np.where(m, np.clip(L, 0, 500)/100.0, 0.0); ap[1, :H, :W] = m
+            ap[2:5, :H, :W] = a["s2"].astype(np.float32)/255.0 * a["s2ok"][None]
     accm = np.zeros((Hp,Wp)); accs = np.zeros((Hp,Wp)); wacc = np.zeros((Hp,Wp))
     coords = [(i,j) for i in range(0,Hp-P+1,S) for j in range(0,Wp-P+1,S) if kp[i:i+P,j:j+P].sum() >= 400]
     with torch.no_grad():
@@ -56,10 +73,11 @@ for n, f in enumerate(files):
             gb = np.stack([gp[i:i+P,j:j+P] for i,j in cb])
             t = lambda a: torch.tensor(a)[:,None].float().to(DEV)
             dt, kt, gt = t(zb), t(kb), t(gb)
+            at = torch.tensor(np.stack([ap[:, i:i+P, j:j+P] for i, j in cb])).float().to(DEV)
             dn, gn, mu0, sd0 = normalize(dt, kt, gt)
             ridx = torch.zeros(len(cb), device=DEV, dtype=torch.long)
             with torch.autocast("cuda", dtype=torch.bfloat16):
-                mu, lv = net(torch.cat([dn*kt, kt, gn], 1), ridx)
+                mu, lv = net(torch.cat([dn*kt, kt, gn] + ([at] if AUX else []), 1), ridx)
             mu = mu.float()
             if RESIDUAL: mu = mu + gn.float()
             est = (mu*sd0 + mu0)[:,0].cpu().numpy()

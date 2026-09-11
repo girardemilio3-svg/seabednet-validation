@@ -15,6 +15,7 @@ EXCL = [tuple(map(float, p.split(","))) for p in os.environ.get("HZ_EXCLUDE", ""
 COVMIN = float(os.environ.get("HZ_COVMIN", "0"))        # v2: train only where the 500 m window is fully covered by NONNA-10 (no land, no gaps)
 SHOALMAX = float(os.environ.get("HZ_SHOALMAX", "1e9"))  # v2: drop surface/drying targets (>= this depth, m) so the head stops learning "the beach"
 MARGIN = 0.4   # deg lon/lat around an excluded point
+HZ_AUX = os.environ.get("HZ_AUX", "0") == "1"; NAUX = 5 if HZ_AUX else 0; HZ_INIT = os.environ.get("HZ_INIT", "")
 torch.manual_seed(0); rng = np.random.default_rng(0)
 torch.zeros(8, device=DEV)
 grav = GravityPrior()
@@ -30,6 +31,13 @@ for f in sorted(glob.glob("tiles_hz/*.npz")):
     if COVMIN > 0 or SHOALMAX < 1e8:
         bad = (d["cov"] < COVMIN) | (sh >= SHOALMAX); sh[bad] = np.nan
     rec = dict(z=d["z"], s=sh, g=G, name=os.path.basename(f))
+    if HZ_AUX:
+        ap = f"aux_out/{os.path.basename(f)}"
+        if os.path.exists(ap):
+            a = np.load(ap); L = a["land"].astype(np.float32); m = np.isfinite(L) & (L > 0.5)
+            aux = np.zeros((5,) + L.shape, np.float32); aux[0] = np.where(m, np.clip(L, 0, 500)/100.0, 0.0); aux[1] = m; aux[2:5] = a["s2"].astype(np.float32)/255.0 * a["s2ok"][None]
+            rec["aux"] = aux.astype(np.float16)
+        else: rec["aux"] = None
     ex = any(lo0-MARGIN <= x <= lo1+MARGIN and la0-MARGIN <= y <= la1+MARGIN for x, y in EXCL)
     ex |= any(not (lo1 < a or lo0 > c or la1 < b or la0 > dd) for a, b, c, dd in HOLDOUT_BBOXES)
     (held if ex else train).append(rec)
@@ -56,36 +64,41 @@ def sample(pool):
         s = r["s"][i:i+P, j:j+P]
         if np.isfinite(s).mean() < 0.35: continue
         z = r["z"][i:i+P, j:j+P]
-        return np.nan_to_num(z), np.isfinite(z).astype(np.float32), r["g"][i:i+P, j:j+P], np.nan_to_num(s), np.isfinite(s).astype(np.float32)
+        ax = r["aux"][:, i:i+P, j:j+P].astype(np.float32) if HZ_AUX and r.get("aux") is not None else np.zeros((NAUX, P, P), np.float32)
+        return np.nan_to_num(z), np.isfinite(z).astype(np.float32), r["g"][i:i+P, j:j+P], np.nan_to_num(s), np.isfinite(s).astype(np.float32), ax
     return None
 
 def batch(pool, B):
-    out = [[] for _ in range(6)]
+    out = [[] for _ in range(7)]; tries = 0
     while len(out[0]) < B:
-        x = sample(pool)
-        if x is None: continue
-        for k, v in enumerate(x): out[k].append(v)
-        out[5].append(rand_mask())
+        x = sample(pool); tries += 1
+        if x is None:
+            if tries > 50: raise RuntimeError("no usable patches")
+            continue
+        for k, v in enumerate(x[:5]): out[k].append(v)
+        out[5].append(rand_mask()); out[6].append(x[5])
     t = lambda a: torch.tensor(np.stack(a))[:, None].float().to(DEV)
-    return [t(a) for a in out]
+    return [t(a) for a in out[:6]] + [torch.tensor(np.stack(out[6])).float().to(DEV)]
 
 Q = queue.Queue(maxsize=6)
 def producer():
     while True: Q.put(batch(train, BATCH))
 for _ in range(3): threading.Thread(target=producer, daemon=True).start()
 
-net = V5(SIZE).to(DEV).to(memory_format=torch.channels_last)
-opt = torch.optim.AdamW(net.parameters(), 2e-4, weight_decay=1e-5)
+net = V5(SIZE, in_ch=3+NAUX).to(DEV).to(memory_format=torch.channels_last)
+if HZ_INIT and not os.path.exists(CKPT):
+    from v5_model import load_with_extra_channels; load_with_extra_channels(net, torch.load(HZ_INIT, map_location=DEV, weights_only=False)["net"]); print("warm-started from", HZ_INIT, flush=True)
+opt = torch.optim.AdamW(net.parameters(), float(os.environ.get("HZ_LR", "2e-4")), weight_decay=1e-5)
 sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, STEPS)
 step0 = 0
 if os.path.exists(CKPT):
     ck = torch.load(CKPT, map_location=DEV); net.load_state_dict(ck["net"]); opt.load_state_dict(ck["opt"]); sched.load_state_dict(ck["sched"]); step0 = ck["step"]; print("resumed", step0)
 t0 = time.time()
 for step in range(step0+1, STEPS+1):
-    z, k, g, s, sk, m = Q.get()
+    z, k, g, s, sk, m, ax = Q.get()
     mvis = k*m
     dn, gn, mu0, sd0 = normalize(z, mvis, g)
-    x = torch.cat([dn*mvis, mvis, gn], 1).to(memory_format=torch.channels_last)
+    x = torch.cat([dn*mvis, mvis, gn] + ([ax] if HZ_AUX else []), 1).to(memory_format=torch.channels_last)
     with torch.autocast("cuda", dtype=torch.bfloat16):
         mu, lv = net(x, torch.zeros(len(z), device=DEV, dtype=torch.long))
     mu = mu.float(); lv = lv.float()
@@ -102,9 +115,11 @@ for step in range(step0+1, STEPS+1):
 net.eval(); res = dict(model=[], naive=[], grav=[], hid_model=[], hid_naive=[], cov=[], cov2=[])
 with torch.no_grad():
     for _ in range(60):
-        z, k, g, s, sk, m = batch(held, 4); mvis = k*m
+        try: z, k, g, s, sk, m, ax = batch(held, 4)
+        except RuntimeError: break
+        mvis = k*m
         dn, gn, mu0, sd0 = normalize(z, mvis, g)
-        mu, lv = net(torch.cat([dn*mvis, mvis, gn], 1), torch.zeros(len(z), device=DEV, dtype=torch.long))
+        mu, lv = net(torch.cat([dn*mvis, mvis, gn] + ([ax] if HZ_AUX else []), 1), torch.zeros(len(z), device=DEV, dtype=torch.long))
         est = mu.float()*sd0 + mu0; sig = torch.exp(0.5*lv.float())*sd0
         vis = (sk*mvis) > 0; hid = (sk*(1-m)*k) > 0
         res["model"].append((est-s).abs()[vis].mean().item()); res["naive"].append((z-s).abs()[vis].mean().item()); res["grav"].append((g-s).abs()[vis].mean().item())

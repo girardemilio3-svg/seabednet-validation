@@ -1,0 +1,193 @@
+{
+ "method": "danger-report model (gradient boosting on hazard field + soundings + coast + elevation + imagery + radar + gravity; year-split validated AUC 0.93) applied on a 500 m grid to chart-safe water within 6 km of a sounding; boxes ranked by expected reported-danger area per ship-day",
+ "relevance": "within 30 km of the Churchill route or an NRCan shipping route / Arctic sea route, or 15 km of a sealift community; inland lakes excluded",
+ "top20": [
+  {
+   "lon": -83.5,
+   "lat": 64.0,
+   "area_km2": 118,
+   "cells": 1053,
+   "expected_reports_km2": 26.74,
+   "ship_days": 2.9,
+   "reports_per_ship_day": 9.083
+  },
+  {
+   "lon": -78.5,
+   "lat": 64.5,
+   "area_km2": 55,
+   "cells": 512,
+   "expected_reports_km2": 7.96,
+   "ship_days": 1.4,
+   "reports_per_ship_day": 5.767
+  },
+  {
+   "lon": -94.0,
+   "lat": 69.0,
+   "area_km2": 31,
+   "cells": 430,
+   "expected_reports_km2": 4.26,
+   "ship_days": 0.8,
+   "reports_per_ship_day": 5.506
+  },
+  {
+   "lon": -92.0,
+   "lat": 63.5,
+   "area_km2": 58,
+   "cells": 509,
+   "expected_reports_km2": 6.85,
+   "ship_days": 1.5,
+   "reports_per_ship_day": 4.698
+  },
+  {
+   "lon": -65.5,
+   "lat": 62.5,
+   "area_km2": 138,
+   "cells": 1112,
+   "expected_reports_km2": 14.63,
+   "ship_days": 3.4,
+   "reports_per_ship_day": 4.254
+  },
+  {
+   "lon": -69.0,
+   "lat": 63.5,
+   "area_km2": 175,
+   "cells": 1516,
+   "expected_reports_km2": 16.47,
+   "ship_days": 4.4,
+   "reports_per_ship_day": 3.775
+  },
+  {
+   "lon": -91.0,
+   "lat": 63.0,
+   "area_km2": 289,
+   "cells": 2459,
+   "expected_reports_km2": 24.12,
+   "ship_days": 7.2,
+   "reports_per_ship_day": 3.335
+  },
+  {
+   "lon": -59.0,
+   "lat": 65.5,
+   "area_km2": 90,
+   "cells": 904,
+   "expected_reports_km2": 6.13,
+   "ship_days": 2.2,
+   "reports_per_ship_day": 2.726
+  },
+  {
+   "lon": -91.5,
+   "lat": 63.5,
+   "area_km2": 143,
+   "cells": 1241,
+   "expected_reports_km2": 9.36,
+   "ship_days": 3.6,
+   "reports_per_ship_day": 2.611
+  },
+  {
+   "lon": -91.5,
+   "lat": 62.5,
+   "area_km2": 580,
+   "cells": 4699,
+   "expected_reports_km2": 37.49,
+   "ship_days": 14.5,
+   "reports_per_ship_day": 2.585
+  },
+  {
+   "lon": -58.5,
+   "lat": 65.5,
+   "area_km2": 268,
+   "cells": 2700,
+   "expected_reports_km2": 16.83,
+   "ship_days": 6.7,
+   "reports_per_ship_day": 2.509
+  },
+  {
+   "lon": -92.5,
+   "lat": 62.5,
+   "area_km2": 75,
+   "cells": 614,
+   "expected_reports_km2": 4.64,
+   "ship_days": 1.9,
+   "reports_per_ship_day": 2.469
+  },
+  {
+   "lon": -68.5,
+   "lat": 63.5,
+   "area_km2": 301,
+   "cells": 2603,
+   "expected_reports_km2": 17.75,
+   "ship_days": 7.5,
+   "reports_per_ship_day": 2.359
+  },
+  {
+   "lon": -94.0,
+   "lat": 61.0,
+   "area_km2": 481,
+   "cells": 3530,
+   "expected_reports_km2": 27.02,
+   "ship_days": 12.0,
+   "reports_per_ship_day": 2.248
+  },
+  {
+   "lon": -63.5,
+   "lat": 70.5,
+   "area_km2": 60,
+   "cells": 950,
+   "expected_reports_km2": 3.29,
+   "ship_days": 1.5,
+   "reports_per_ship_day": 2.178
+  },
+  {
+   "lon": -68.5,
+   "lat": 63.0,
+   "area_km2": 388,
+   "cells": 3312,
+   "expected_reports_km2": 18.85,
+   "ship_days": 9.7,
+   "reports_per_ship_day": 1.943
+  },
+  {
+   "lon": -92.0,
+   "lat": 62.5,
+   "area_km2": 296,
+   "cells": 2407,
+   "expected_reports_km2": 14.28,
+   "ship_days": 7.4,
+   "reports_per_ship_day": 1.932
+  },
+  {
+   "lon": -59.5,
+   "lat": 65.0,
+   "area_km2": 783,
+   "cells": 7671,
+   "expected_reports_km2": 37.4,
+   "ship_days": 19.6,
+   "reports_per_ship_day": 1.911
+  },
+  {
+   "lon": -60.0,
+   "lat": 65.5,
+   "area_km2": 579,
+   "cells": 5868,
+   "expected_reports_km2": 27.42,
+   "ship_days": 14.5,
+   "reports_per_ship_day": 1.893
+  },
+  {
+   "lon": -64.5,
+   "lat": 70.5,
+   "area_km2": 65,
+   "cells": 1011,
+   "expected_reports_km2": 3.0,
+   "ship_days": 1.6,
+   "reports_per_ship_day": 1.857
+  }
+ ],
+ "total": {
+  "area_km2": 4973,
+  "ship_days": 124,
+  "cost_low_MCAD": 13,
+  "cost_high_MCAD": 23
+ },
+ "n_boxes": 1205
+}

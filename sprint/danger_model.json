@@ -1,0 +1,129 @@
+{
+ "n_rows": 91068,
+ "n_train": 52018,
+ "n_test": 39050,
+ "pos_test": 692,
+ "base_rate": 0.01772087067861716,
+ "all_features": {
+  "auc": 0.9318789186269785,
+  "ap": 0.6208751611588246,
+  "top_decile_precision": 0.14571062740076823,
+  "top_decile_recall": 0.8222543352601156,
+  "features": [
+   "hazard_p",
+   "shoal_m",
+   "complete_m",
+   "sigma",
+   "nearest_z",
+   "nearest_km",
+   "land_m",
+   "land_max500",
+   "land_flag",
+   "s2_r",
+   "s2_g",
+   "s2_b",
+   "s1_vv",
+   "s1_vh",
+   "s1_ok",
+   "gravity",
+   "lat",
+   "coast_dist_px"
+  ]
+ },
+ "no_hazard": {
+  "auc": 0.9306168129459997,
+  "ap": 0.6167056453022411,
+  "top_decile_precision": 0.14366197183098592,
+  "top_decile_recall": 0.8106936416184971,
+  "features": [
+   "complete_m",
+   "sigma",
+   "nearest_z",
+   "nearest_km",
+   "land_m",
+   "land_max500",
+   "land_flag",
+   "s2_r",
+   "s2_g",
+   "s2_b",
+   "s1_vv",
+   "s1_vh",
+   "s1_ok",
+   "gravity",
+   "lat",
+   "coast_dist_px"
+  ]
+ },
+ "hazard_plus_nearest": {
+  "auc": 0.8863992242840268,
+  "ap": 0.44235164015873646,
+  "top_decile_precision": 0.12573623559539052,
+  "top_decile_recall": 0.7095375722543352,
+  "features": [
+   "hazard_p",
+   "shoal_m",
+   "nearest_z",
+   "nearest_km"
+  ]
+ },
+ "nearest_only_gbm": {
+  "auc": 0.845697512211544,
+  "ap": 0.12336952338708927,
+  "top_decile_precision": 0.09910371318822023,
+  "top_decile_recall": 0.5592485549132948,
+  "features": [
+   "nearest_z",
+   "nearest_km"
+  ]
+ },
+ "hazard_only_gbm": {
+  "auc": 0.8573424065097695,
+  "ap": 0.21789906117269137,
+  "top_decile_precision": 0.10729833546734956,
+  "top_decile_recall": 0.6054913294797688,
+  "features": [
+   "hazard_p",
+   "shoal_m"
+  ]
+ },
+ "hazard_p_rank": {
+  "auc": 0.7413814694359528,
+  "top_decile_precision": 0.030217669654289372,
+  "top_decile_recall": 0.17052023121387283
+ },
+ "nearest_z_rank": {
+  "auc": 0.7240169959496282,
+  "top_decile_precision": 0.02765685019206146,
+  "top_decile_recall": 0.15606936416184972
+ },
+ "completed_depth_rank": {
+  "auc": 0.7580665924344636,
+  "top_decile_precision": 0.05352112676056338,
+  "top_decile_recall": 0.3020231213872832
+ },
+ "sigma_rank": {
+  "auc": 0.3466519935249507,
+  "top_decile_precision": 0.012548015364916773,
+  "top_decile_recall": 0.0708092485549133
+ },
+ "drop_one_auc_loss": {
+  "nearest_km": 0.0153,
+  "coast_dist_px": 0.0081,
+  "shoal_m": 0.0038,
+  "land_max500": 0.0037,
+  "s2_r": 0.003,
+  "s1_vv": 0.0028,
+  "lat": 0.0027,
+  "s2_g": 0.0022,
+  "s1_vh": 0.0022,
+  "s2_b": 0.0004,
+  "sigma": 0.0003,
+  "gravity": 0.0003,
+  "land_flag": 0.0,
+  "s1_ok": 0.0,
+  "complete_m": -0.0003,
+  "land_m": -0.0007,
+  "hazard_p": -0.0011,
+  "nearest_z": -0.0028
+ }
+}

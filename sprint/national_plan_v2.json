@@ -1,0 +1,195 @@
+{
+ "method": "expected keel-depth hazard area (sum of P(shoal<10.5 m) over unseen navigable cells) per ship-day, within shipping-relevant water",
+ "relevance": "within 30 km of the Churchill route or an NRCan Canadian shipping route / Arctic sea route, or 15 km of a sealift community; blocks where the gravity prior fails (inland lakes) excluded",
+ "hazard_field": "hazard_nat_v2 (coast-aware head, 2026-09-06)",
+ "top20": [
+  {
+   "lon": -79.5,
+   "lat": 56.0,
+   "area_km2": 30,
+   "unseen_cells": 4204,
+   "expected_hazard_km2": 11.48,
+   "ship_days": 0.7,
+   "hazards_per_ship_day": 15.338
+  },
+  {
+   "lon": -66.5,
+   "lat": 62.0,
+   "area_km2": 73,
+   "unseen_cells": 14581,
+   "expected_hazard_km2": 24.25,
+   "ship_days": 1.8,
+   "hazards_per_ship_day": 13.251
+  },
+  {
+   "lon": -67.0,
+   "lat": 62.5,
+   "area_km2": 60,
+   "unseen_cells": 12202,
+   "expected_hazard_km2": 18.99,
+   "ship_days": 1.5,
+   "hazards_per_ship_day": 12.664
+  },
+  {
+   "lon": -101.0,
+   "lat": 68.5,
+   "area_km2": 64,
+   "unseen_cells": 20755,
+   "expected_hazard_km2": 19.49,
+   "ship_days": 1.6,
+   "hazards_per_ship_day": 12.218
+  },
+  {
+   "lon": -93.0,
+   "lat": 62.0,
+   "area_km2": 54,
+   "unseen_cells": 10550,
+   "expected_hazard_km2": 15.34,
+   "ship_days": 1.4,
+   "hazards_per_ship_day": 11.347
+  },
+  {
+   "lon": -96.0,
+   "lat": 68.5,
+   "area_km2": 28,
+   "unseen_cells": 8986,
+   "expected_hazard_km2": 7.67,
+   "ship_days": 0.7,
+   "hazards_per_ship_day": 11.044
+  },
+  {
+   "lon": -68.0,
+   "lat": 63.5,
+   "area_km2": 69,
+   "unseen_cells": 14898,
+   "expected_hazard_km2": 18.88,
+   "ship_days": 1.7,
+   "hazards_per_ship_day": 10.939
+  },
+  {
+   "lon": -82.5,
+   "lat": 69.0,
+   "area_km2": 36,
+   "unseen_cells": 12420,
+   "expected_hazard_km2": 9.58,
+   "ship_days": 0.9,
+   "hazards_per_ship_day": 10.612
+  },
+  {
+   "lon": -82.0,
+   "lat": 69.0,
+   "area_km2": 43,
+   "unseen_cells": 14902,
+   "expected_hazard_km2": 11.3,
+   "ship_days": 1.1,
+   "hazards_per_ship_day": 10.423
+  },
+  {
+   "lon": -67.5,
+   "lat": 63.0,
+   "area_km2": 96,
+   "unseen_cells": 20420,
+   "expected_hazard_km2": 24.48,
+   "ship_days": 2.4,
+   "hazards_per_ship_day": 10.172
+  },
+  {
+   "lon": -68.0,
+   "lat": 63.0,
+   "area_km2": 283,
+   "unseen_cells": 60149,
+   "expected_hazard_km2": 69.71,
+   "ship_days": 7.1,
+   "hazards_per_ship_day": 9.863
+  },
+  {
+   "lon": -114.0,
+   "lat": 67.5,
+   "area_km2": 107,
+   "unseen_cells": 32599,
+   "expected_hazard_km2": 26.16,
+   "ship_days": 2.7,
+   "hazards_per_ship_day": 9.769
+  },
+  {
+   "lon": -80.0,
+   "lat": 56.5,
+   "area_km2": 291,
+   "unseen_cells": 41688,
+   "expected_hazard_km2": 68.25,
+   "ship_days": 7.3,
+   "hazards_per_ship_day": 9.376
+  },
+  {
+   "lon": -70.0,
+   "lat": 62.5,
+   "area_km2": 113,
+   "unseen_cells": 23017,
+   "expected_hazard_km2": 26.48,
+   "ship_days": 2.8,
+   "hazards_per_ship_day": 9.348
+  },
+  {
+   "lon": -114.5,
+   "lat": 67.5,
+   "area_km2": 192,
+   "unseen_cells": 58177,
+   "expected_hazard_km2": 44.09,
+   "ship_days": 4.8,
+   "hazards_per_ship_day": 9.184
+  },
+  {
+   "lon": -108.0,
+   "lat": 67.0,
+   "area_km2": 215,
+   "unseen_cells": 61866,
+   "expected_hazard_km2": 48.84,
+   "ship_days": 5.4,
+   "hazards_per_ship_day": 9.097
+  },
+  {
+   "lon": -116.0,
+   "lat": 68.5,
+   "area_km2": 38,
+   "unseen_cells": 12567,
+   "expected_hazard_km2": 8.15,
+   "ship_days": 0.9,
+   "hazards_per_ship_day": 8.631
+  },
+  {
+   "lon": -101.0,
+   "lat": 68.0,
+   "area_km2": 42,
+   "unseen_cells": 13267,
+   "expected_hazard_km2": 8.71,
+   "ship_days": 1.1,
+   "hazards_per_ship_day": 8.272
+  },
+  {
+   "lon": -92.5,
+   "lat": 62.0,
+   "area_km2": 109,
+   "unseen_cells": 21343,
+   "expected_hazard_km2": 22.09,
+   "ship_days": 2.7,
+   "hazards_per_ship_day": 8.133
+  },
+  {
+   "lon": -79.0,
+   "lat": 56.0,
+   "area_km2": 29,
+   "unseen_cells": 4032,
+   "expected_hazard_km2": 5.59,
+   "ship_days": 0.7,
+   "hazards_per_ship_day": 7.789
+  }
+ ],
+ "total": {
+  "area_km2": 1972,
+  "ship_days": 49,
+  "cost_low_MCAD": 5,
+  "cost_high_MCAD": 9,
+  "expected_hazard_km2": 489.5
+ },
+ "n_boxes_considered": 1115
+}

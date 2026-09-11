@@ -16,6 +16,7 @@ STEPS = int(os.environ.get("V5_STEPS", "4000"))
 BATCH = int(os.environ.get("V5_BATCH", "16"))
 P = 256
 CKPT = os.environ.get("V5_CKPT", f"v5_{SIZE}.pt")
+AUX = os.environ.get("V5_AUX", "0") == "1"; GRAV = os.environ.get("V5_GRAV", "0") == "1"; S1 = os.environ.get("V5_S1", "0") == "1"; NAUX = (5 if AUX else 0) + (2 if GRAV else 0) + (3 if S1 else 0); AUX = AUX or GRAV or S1; INIT = os.environ.get("V5_INIT", "")   # V5_INIT: warm-start from a 3-channel checkpoint
 torch.manual_seed(0)
 rng = np.random.default_rng(0)
 torch.zeros(8, device=DEV)   # claim CUDA context BEFORE corpus preload (unified pool)
@@ -58,34 +59,40 @@ def make_mask():
 
 # ------------------------------------------------------------------ batches
 def get_batch(B=BATCH, holdout=False, center_mask=False):
-    ds, ks, gs, ms, ridx = [], [], [], [], []
+    ds, ks, gs, ms, ridx, axs = [], [], [], [], [], []; misses = 0
     while len(ds) < B:
         want10 = rng.random() < 0.3 and corpus.n10 > 20
         s = corpus.sample(min_valid=0.9, want_res=10.0 if want10 else 100.0,
                           holdout=holdout)
         if s is None:
-            s = corpus.sample(min_valid=0.9, holdout=holdout)
-        if s is None: continue
+            s = corpus.sample(min_valid=0.5 if holdout else 0.9, holdout=holdout)
+        if s is None:
+            misses += 1
+            if misses > 30: raise RuntimeError("no usable patches (holdout=%s)" % holdout)
+            continue
         if center_mask:
             m = np.ones((P, P), np.float32); h = int(P*0.6); i0 = (P-h)//2
             m[i0:i0+h, i0:i0+h] = 0
         else:
             m = make_mask()
-        ds.append(s["depth"]); ks.append(s["known"]); gs.append(s["gravity"])
+        ds.append(s["depth"]); ks.append(s["known"]); gs.append(s["gravity"]); axs.append(s.get("aux", np.zeros((NAUX, P, P), np.float32)))
         ms.append(m); ridx.append(1 if s["res_m"] == 10.0 else 0)
     t = lambda a: torch.tensor(np.stack(a))[:, None].float().to(DEV)
     return (t(ds), t(ks), t(gs), t(ms),
-            torch.tensor(ridx, device=DEV, dtype=torch.long))
+            torch.tensor(ridx, device=DEV, dtype=torch.long), torch.tensor(np.stack(axs)).float().to(DEV))
 
 # ------------------------------------------------------------------ setup
 _build_gap_bank()
-net = V5(SIZE).to(DEV).to(memory_format=torch.channels_last)
+net = V5(SIZE, in_ch=3+NAUX).to(DEV).to(memory_format=torch.channels_last)
+if INIT and not os.path.exists(CKPT):
+    from v5_model import load_with_extra_channels
+    load_with_extra_channels(net, torch.load(INIT, map_location=DEV, weights_only=False)["net"]); print("warm-started from", INIT, flush=True)
 COMPILE = os.environ.get("V5_COMPILE", "0") == "1"
 run_net = torch.compile(net, mode="max-autotune") if COMPILE else net
 print(f"v5-{SIZE}: {sum(p.numel() for p in net.parameters())/1e6:.1f}M params, "
       f"corpus {len(corpus.entries)} files ({corpus.n10} @10m), "
       f"channels_last on, compile={'ON' if COMPILE else 'off'}")
-opt = torch.optim.AdamW(net.parameters(), 2e-4, weight_decay=1e-5)
+opt = torch.optim.AdamW(net.parameters(), float(os.environ.get("V5_LR", "2e-4")), weight_decay=1e-5)
 sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, STEPS)
 step0 = 0
 if os.path.exists(CKPT):
@@ -126,7 +133,7 @@ import threading as _thg
 _thg.Thread(target=_memguard, daemon=True).start()
 
 # ------------------------------------------------------------------ train
-import multiprocessing as _mp
+import torch.multiprocessing as _mp     # shared-memory tensor queue: no 10 MB pickle per batch
 _ctx = _mp.get_context("fork")
 NWORK = int(os.environ.get("V5_WORKERS", "4"))
 BQ = _ctx.Queue(maxsize=8)
@@ -134,10 +141,11 @@ def _produce_proc(seed):
     # numpy-only in children — corpus + gap bank shared copy-on-write via fork
     import numpy as _np
     global rng
+    torch.set_num_threads(1)
     rng = _np.random.default_rng(seed)
     corpus.rng = _np.random.default_rng(seed + 1)
     while True:
-        ds, ks, gs, ms, ridx = [], [], [], [], []
+        ds, ks, gs, ms, ridx, axs = [], [], [], [], [], []
         while len(ds) < BATCH:
             want10 = rng.random() < 0.3 and corpus.n10 > 20
             smp = corpus.sample(min_valid=0.9, want_res=10.0 if want10 else 100.0)
@@ -145,18 +153,17 @@ def _produce_proc(seed):
                 smp = corpus.sample(min_valid=0.9)
             if smp is None: continue
             m = make_mask()
-            ds.append(smp["depth"]); ks.append(smp["known"]); gs.append(smp["gravity"])
+            ds.append(smp["depth"]); ks.append(smp["known"]); gs.append(smp["gravity"]); axs.append(smp.get("aux", _np.zeros((NAUX, P, P), _np.float32)))
             ms.append(m); ridx.append(1 if smp["res_m"] == 10.0 else 0)
-        BQ.put((_np.stack(ds), _np.stack(ks), _np.stack(gs), _np.stack(ms),
-                _np.array(ridx, dtype=_np.int64)))
+        BQ.put(tuple(torch.from_numpy(_np.ascontiguousarray(a)) for a in (_np.stack(ds), _np.stack(ks), _np.stack(gs), _np.stack(ms), _np.array(ridx, dtype=_np.int64), _np.stack(axs))))
 _workers = [_ctx.Process(target=_produce_proc, args=(1000+i,), daemon=True)
             for i in range(NWORK)]
 for w in _workers: w.start()
 print(f"{NWORK} producer processes forked (corpus shared CoW)", flush=True)
 def _next_batch():
-    a, b, c, dm, r = BQ.get()
-    t = lambda arr: torch.tensor(arr)[:, None].float().to(DEV)
-    return t(a), t(b), t(c), t(dm), torch.tensor(r, device=DEV, dtype=torch.long)
+    a, b, c, dm, r, ax = BQ.get()
+    t = lambda arr: arr[:, None].float().to(DEV, non_blocking=True)
+    return t(a), t(b), t(c), t(dm), r.to(DEV, dtype=torch.long), ax.float().to(DEV, non_blocking=True)
 t0 = time.time(); data_wait = 0.0
 ACCUM = int(os.environ.get("V5_ACCUM", "1"))
 RESIDUAL = os.environ.get("V5_RESIDUAL", "0") == "1"   # micro-batches per optimizer step
@@ -164,11 +171,11 @@ for step in range(step0+1, STEPS+1):
     opt.zero_grad()
     for _acc in range(ACCUM):
         tw = time.time()
-        d, k, g, m, ridx = _next_batch()
+        d, k, g, m, ridx, ax = _next_batch()
         data_wait += time.time() - tw
         mvis = k*m
         dn, gn, mu0, sd0 = normalize(d, mvis, g)
-        x = torch.cat([dn*mvis, mvis, gn], 1).to(memory_format=torch.channels_last)
+        x = torch.cat([dn*mvis, mvis, gn] + ([ax] if AUX else []), 1).to(memory_format=torch.channels_last)
         with torch.autocast("cuda", dtype=torch.bfloat16):
             mu, lv = run_net(x, ridx)
         mu = mu.float(); lv = lv.float()
@@ -200,10 +207,11 @@ net.eval()
 maes, gmaes, sigs, errs = [], [], [], []
 with torch.no_grad():
     for _ in range(24):
-        d, k, g, m, ridx = get_batch(B=1, holdout=True, center_mask=True)
+        try: d, k, g, m, ridx, ax = get_batch(B=1, holdout=True, center_mask=True)
+        except RuntimeError as e: print("held-out eval skipped:", e, flush=True); break
         mvis = k*m
         dn, gn, mu0, sd0 = normalize(d, mvis, g)
-        mu, lv = net(torch.cat([dn*mvis, mvis, gn], 1), ridx)
+        mu, lv = net(torch.cat([dn*mvis, mvis, gn] + ([ax] if AUX else []), 1), ridx)
         if RESIDUAL: mu = mu.float() + gn.float()
         est = mu.float()*sd0 + mu0
         sig = torch.exp(0.5*lv.float())*sd0
