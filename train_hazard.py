@@ -15,7 +15,7 @@ EXCL = [tuple(map(float, p.split(","))) for p in os.environ.get("HZ_EXCLUDE", ""
 COVMIN = float(os.environ.get("HZ_COVMIN", "0"))        # v2: train only where the 500 m window is fully covered by NONNA-10 (no land, no gaps)
 SHOALMAX = float(os.environ.get("HZ_SHOALMAX", "1e9"))  # v2: drop surface/drying targets (>= this depth, m) so the head stops learning "the beach"
 MARGIN = 0.4   # deg lon/lat around an excluded point
-HZ_AUX = os.environ.get("HZ_AUX", "0") == "1"; NAUX = 5 if HZ_AUX else 0; HZ_INIT = os.environ.get("HZ_INIT", "")
+HZ_AUX = os.environ.get("HZ_AUX", "0") == "1"; HZ_S1 = os.environ.get("HZ_S1", "0") == "1"; NAUX = (5 if HZ_AUX else 0) + (3 if HZ_S1 else 0); HZ_INIT = os.environ.get("HZ_INIT", ""); HZ_AUXANY = HZ_AUX or HZ_S1
 torch.manual_seed(0); rng = np.random.default_rng(0)
 torch.zeros(8, device=DEV)
 grav = GravityPrior()
@@ -31,13 +31,21 @@ for f in sorted(glob.glob("tiles_hz/*.npz")):
     if COVMIN > 0 or SHOALMAX < 1e8:
         bad = (d["cov"] < COVMIN) | (sh >= SHOALMAX); sh[bad] = np.nan
     rec = dict(z=d["z"], s=sh, g=G, name=os.path.basename(f))
-    if HZ_AUX:
-        ap = f"aux_out/{os.path.basename(f)}"
-        if os.path.exists(ap):
-            a = np.load(ap); L = a["land"].astype(np.float32); m = np.isfinite(L) & (L > 0.5)
-            aux = np.zeros((5,) + L.shape, np.float32); aux[0] = np.where(m, np.clip(L, 0, 500)/100.0, 0.0); aux[1] = m; aux[2:5] = a["s2"].astype(np.float32)/255.0 * a["s2ok"][None]
-            rec["aux"] = aux.astype(np.float16)
-        else: rec["aux"] = None
+    if HZ_AUXANY:
+        chans = []
+        if HZ_AUX:
+            ap = f"aux_out/{os.path.basename(f)}"
+            if os.path.exists(ap):
+                a = np.load(ap); L = a["land"].astype(np.float32); m = np.isfinite(L) & (L > 0.5)
+                aux = np.zeros((5,) + L.shape, np.float32); aux[0] = np.where(m, np.clip(L, 0, 500)/100.0, 0.0); aux[1] = m; aux[2:5] = a["s2"].astype(np.float32)/255.0 * a["s2ok"][None]; chans.append(aux)
+            else: chans.append(np.zeros((5,) + d["z"].shape, np.float32))
+        if HZ_S1:
+            sp = f"aux_s1/{os.path.basename(f)}"
+            if os.path.exists(sp):
+                b = np.load(sp); v = b["vv"].astype(np.float32); h = b["vh"].astype(np.float32); m = np.isfinite(v)
+                chans.append(np.stack([np.where(m, (v + 20.0)/20.0, 0.0), np.where(np.isfinite(h), (h + 30.0)/20.0, 0.0), m.astype(np.float32)]))
+            else: chans.append(np.zeros((3,) + d["z"].shape, np.float32))
+        rec["aux"] = np.concatenate(chans, 0).astype(np.float16)
     ex = any(lo0-MARGIN <= x <= lo1+MARGIN and la0-MARGIN <= y <= la1+MARGIN for x, y in EXCL)
     ex |= any(not (lo1 < a or lo0 > c or la1 < b or la0 > dd) for a, b, c, dd in HOLDOUT_BBOXES)
     (held if ex else train).append(rec)
@@ -64,7 +72,7 @@ def sample(pool):
         s = r["s"][i:i+P, j:j+P]
         if np.isfinite(s).mean() < 0.35: continue
         z = r["z"][i:i+P, j:j+P]
-        ax = r["aux"][:, i:i+P, j:j+P].astype(np.float32) if HZ_AUX and r.get("aux") is not None else np.zeros((NAUX, P, P), np.float32)
+        ax = r["aux"][:, i:i+P, j:j+P].astype(np.float32) if HZ_AUXANY and r.get("aux") is not None else np.zeros((NAUX, P, P), np.float32)
         return np.nan_to_num(z), np.isfinite(z).astype(np.float32), r["g"][i:i+P, j:j+P], np.nan_to_num(s), np.isfinite(s).astype(np.float32), ax
     return None
 
@@ -98,7 +106,7 @@ for step in range(step0+1, STEPS+1):
     z, k, g, s, sk, m, ax = Q.get()
     mvis = k*m
     dn, gn, mu0, sd0 = normalize(z, mvis, g)
-    x = torch.cat([dn*mvis, mvis, gn] + ([ax] if HZ_AUX else []), 1).to(memory_format=torch.channels_last)
+    x = torch.cat([dn*mvis, mvis, gn] + ([ax] if HZ_AUXANY else []), 1).to(memory_format=torch.channels_last)
     with torch.autocast("cuda", dtype=torch.bfloat16):
         mu, lv = net(x, torch.zeros(len(z), device=DEV, dtype=torch.long))
     mu = mu.float(); lv = lv.float()
@@ -119,7 +127,7 @@ with torch.no_grad():
         except RuntimeError: break
         mvis = k*m
         dn, gn, mu0, sd0 = normalize(z, mvis, g)
-        mu, lv = net(torch.cat([dn*mvis, mvis, gn] + ([ax] if HZ_AUX else []), 1), torch.zeros(len(z), device=DEV, dtype=torch.long))
+        mu, lv = net(torch.cat([dn*mvis, mvis, gn] + ([ax] if HZ_AUXANY else []), 1), torch.zeros(len(z), device=DEV, dtype=torch.long))
         est = mu.float()*sd0 + mu0; sig = torch.exp(0.5*lv.float())*sd0
         vis = (sk*mvis) > 0; hid = (sk*(1-m)*k) > 0
         res["model"].append((est-s).abs()[vis].mean().item()); res["naive"].append((z-s).abs()[vis].mean().item()); res["grav"].append((g-s).abs()[vis].mean().item())

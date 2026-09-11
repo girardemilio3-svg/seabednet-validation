@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 from rasterio.windows import from_bounds
 from rasterio.warp import transform_bounds
 from v5_data import lat_of_y, lon_of_x
-SRC = sys.argv[1] if len(sys.argv) > 1 else "tiles_nat"; OUT = "aux_s1"; os.makedirs(OUT, exist_ok=True)
+SRC = sys.argv[1] if len(sys.argv) > 1 else "tiles_nat"; OUT = os.environ.get("S1_OUT", "aux_s1"); os.makedirs(OUT, exist_ok=True)
 MAXS = int(os.environ.get("S1_MAX_SCENES", 16))
 cat = pystac_client.Client.open("https://planetarycomputer.microsoft.com/api/stac/v1", modifier=pc.sign_inplace)
 def one(f):
@@ -26,9 +26,10 @@ def one(f):
     items = items[:MAXS]; acc = {"vv": [], "vh": []}
     for it in items:
         for pol in ("vv", "vh"):
-            if pol not in it.assets: continue
+            key = pol if pol in it.assets else {"vv": "hh", "vh": "hv"}[pol]      # Arctic EW scenes are HH/HV: use them as the co-/cross-pol channel
+            if key not in it.assets: continue
             try:
-                with rasterio.open(it.assets[pol].href) as src:
+                with rasterio.open(it.assets[key].href) as src:
                     b = transform_bounds("EPSG:4326", src.crs, *bbox); a = src.read(1, window=from_bounds(*b, src.transform), out_shape=(H, W), boundless=True, fill_value=np.nan).astype(np.float32)
                 a = np.where(a > 0, 10*np.log10(np.maximum(a, 1e-6)), np.nan); acc[pol].append(a)
             except Exception: pass
