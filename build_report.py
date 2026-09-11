@@ -223,5 +223,41 @@ try:
 except Exception as _e:
     print("section 10.1/11 skipped:", _e)
 
+# ---- §12 (11 September 2026): the accuracy sprint
+try:
+    _L = lambda fn: json.load(open(fn)) if os.path.exists(fn) else None
+    _T = {k: _L(f"temporal_validation_{k}.json") for k in ("temporal_base", "temporal_ctl", "temporal_aux", "temporal_ctl0", "temporal_aux0", "temporal_s10", "temporal_grav0")}
+    _N = {"temporal_base": "Original (34.8M; soundings + gravity)", "temporal_ctl": "Control fine-tune, same inputs", "temporal_aux": "Fine-tune + coastal elevation + Sentinel-2", "temporal_ctl0": "From scratch (6.8M): soundings + gravity", "temporal_aux0": "From scratch: + coastal elevation + Sentinel-2", "temporal_s10": "From scratch: + winter Sentinel-1", "temporal_grav0": "From scratch: + raw gravity, leakage-free anchor"}
+    _rows = ""
+    for _k, _v in _T.items():
+        if not _v: continue
+        _o = _v["overall"]; _bd = _v.get("by_depth", []); _sh = _bd[0] if isinstance(_bd, list) and _bd else None
+        _rows += tr([_N[_k], f"{_o['mae_model']:.2f}", f"{_o['mae_nn']:.2f}", f"{_o['mae_grav']:.2f}", f"{_o['frac_within_1sigma']*100:.0f}%", (f"{_sh['mae_model']:.2f}" if _sh else "—")])
+    _AR = _L("navwarn_archive_stats_v2.json"); _DM = _L("danger_model.json"); _P3 = _L("national_plan_v3.json"); _P2 = _L("national_plan_v2.json")
+    _ar_rows = "".join(tr([k, str(v["n"]), f"{v['model_ge90']} ({v['model_ge90']/max(1,v['n'])*100:.0f}%)", f"{v['base_ge90']} ({v['base_ge90']/max(1,v['n'])*100:.0f}%)"]) for k, v in _AR.items()) if _AR else ""
+    _dm_rows = "".join(tr([lab, f"{_DM[key]['auc']:.3f}", f"{_DM[key]['top_decile_precision']*100:.1f}%", f"{_DM[key]['top_decile_recall']*100:.0f}%"]) for lab, key in [("All cues", "all_features"), ("All cues except the hazard field", "no_hazard"), ("Hazard field only (learned)", "hazard_only_gbm"), ("Nearest sounding only (learned)", "nearest_only_gbm"), ("Hazard probability, raw rank", "hazard_p_rank"), ("Nearest sounding depth, raw rank", "nearest_z_rank")]) if _DM and "all_features" in _DM else ""
+    _p3_rows = "".join(tr([f"{r['lat']:.1f}°N {abs(r['lon']):.1f}°W", f"{r['area_km2']:,}", f"{r['expected_reports_km2']:.1f}", f"{r['ship_days']:.0f}", f"{r['reports_per_ship_day']:.2f}"]) for r in _P3["top20"][:10]) if _P3 else ""
+    EXTRA12 = f"""
+<h2>12. The accuracy sprint (10–11 September 2026)</h2>
+<p><b>Question.</b> A larger network did not improve the temporal benchmark (§4: 13.5 m tiny vs 13.3 m small), so the limit is information, not capacity. Three new input channels were built for every 100 m block: coastal land elevation from the Copernicus 30 m DEM averaged to the block grid; a Sentinel-2 cloudless summer mosaic (RGB, ~70 m); and a winter (February–April, two seasons) Sentinel-1 backscatter median (VV, VH). A leakage-free gravity anchor was built by masking the ship-constrained cells of SRTM15+ (Scripps SID grid) and refilling from gravity-predicted cells only, with the raw Sandwell V34 gravity anomaly and vertical gradient as channels.</p>
+<p><b>Protocol.</b> Every variant is scored on the corridor temporal benchmark (§4, Test 2: pre-2016 soundings in, post-2016 soundings out, {_T['temporal_base']['n_cells']:,} cells). Fine-tuned variants start from the published checkpoint with the new channels zero-initialised, and are compared with a control fine-tune of identical length and inputs so that extra training is separated from extra inputs. From-scratch variants use the small (6.8M) architecture on the 100 m corpus.</p>
+<div class='tw'><table><thead>{tr(["Model", "MAE model (m)", "nearest sounding", "gravity prior", "inside 1σ", "shallowest stratum"], True)}</thead><tbody>{_rows}</tbody></table></div>
+<div class='tcap'><b>Table 9.</b> Temporal benchmark by variant. Rows appear as runs complete.</div>
+<p><b>Result so far.</b> The control fine-tune improves the published model by 0.6 m; the same fine-tune with coastal elevation and Sentinel-2 added is worse (13.18 m) and worse still in the shallowest stratum. Fine-tuning a converged network with zero-initialised inputs is a weak test of the inputs; the from-scratch rows are the decisive ones.</p>
+<p><b>The archived reported dangers.</b> The Coast Guard&rsquo;s cancelled navigational warnings add {8948:,} danger positions (2017–2026; {3302:,} with a stated depth; 385 Arctic) to the {1558:,} in force (§11). Scored with the §11 protocol (Table 10), the hazard head and the nearest-sounding rule tie where the chart calls the water safe, and the rule wins in the Arctic and on notices with a measured depth. At this sample size the hazard head, as published, does not beat the obvious heuristic.</p>
+<div class='tw'><table><thead>{tr(["Subset (archive, chart says safe)", "n", "hazard head in top decile", "nearest-sounding rule"], True)}</thead><tbody>{_ar_rows}</tbody></table></div>
+<div class='tcap'><b>Table 10.</b> Archived reported dangers in the top decile of apparently-safe water within 25 km, version-2 hazard head vs the nearest-sounding baseline.</div>
+<p><b>A model of where dangers are reported.</b> Every dated notice in chart-safe water (live and archived) against ten random chart-safe cells per notice from the same blocks; features: hazard probability and predicted shallowest point, completed depth and σ, nearest published sounding depth and distance, coastal elevation at the cell and its 500 m maximum, Sentinel-2 RGB, winter Sentinel-1 VV/VH, gravity prior, latitude, distance to the coast. Gradient-boosted trees trained on notices to 2022 and tested on 2023–2026 ({_DM['n_test']:,} cells, {_DM['pos_test']:,} reported dangers, base rate {_DM['base_rate']*100:.1f}%).</p>
+<div class='tw'><table><thead>{tr(["Ranking", "AUC", "Top-decile precision", "Top-decile recall"], True)}</thead><tbody>{_dm_rows}</tbody></table></div>
+<div class='tcap'><b>Table 11.</b> Danger-report model on years it never saw. Drop-one AUC loss, largest first: {", ".join(f"{k} ({v:+.3f})" for k, v in list(_DM['drop_one_auc_loss'].items())[:6])}.</div>
+<p>One tenth of the chart-safe water captures {_DM['all_features']['top_decile_recall']*100:.0f}% of the later reported dangers, {_DM['all_features']['top_decile_precision']/_DM['base_rate']:.0f}× the base rate. The hazard field contributes almost nothing once the other cues are present, and the two strongest cues, distance to the nearest sounding and to the coast, are in part measures of where ships go. This is therefore a model of reporting as much as of the seabed: the correct target for deciding where a survey launch goes, and not a statement about bathymetry.</p>
+<p><b>Survey plans, re-ranked.</b> §7 ranked boxes by uncertainty. Two operational rankings are added: by expected keel-depth hazard area per ship-day from the hazard field ({_P2['total']['area_km2']:,} km², {_P2['total']['ship_days']} ship-days, C${_P2['total']['cost_low_MCAD']}–{_P2['total']['cost_high_MCAD']}M for the top twenty), and by expected reported-danger area per ship-day from the model above ({_P3['total']['area_km2']:,} km², {_P3['total']['ship_days']} ship-days, C${_P3['total']['cost_low_MCAD']}–{_P3['total']['cost_high_MCAD']}M), both restricted to water within 30 km of NRCan&rsquo;s Arctic shipping routes or the Churchill route or 15 km of a sealift community, inland lakes excluded.</p>
+<div class='tw'><table><thead>{tr(["Box", "Area (km²)", "Expected reported-danger area (km²)", "Ship-days", "per ship-day"], True)}</thead><tbody>{_p3_rows}</tbody></table></div>
+<div class='tcap'><b>Table 12.</b> Top ten boxes by the danger-report model (file national_plan_v3.json; hazard-field ranking in national_plan_v2.json).</div>
+"""
+    html = html.replace("<h2>References</h2>", EXTRA12 + "<h2>References</h2>").replace("Version 1.1, 6 September 2026 (§10.1 and §11 added)", "Version 1.2, 11 September 2026 (§12 added)")
+except Exception as _e:
+    print("section 12 skipped:", _e)
+
 open("report/index.html", "w", encoding="utf-8").write(html)
 print("report built", len(html)//1024, "KB; landed", len(landed), "of", len(hc))

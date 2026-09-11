@@ -9,8 +9,8 @@ def sub1(s, old, new):
     assert s.count(old) == 1, f"count {s.count(old)}: {old[:60]}"; return s.replace(old, new)
 tr = lambda cells, th=False: "<tr>" + "".join(f"<{'th' if th else 'td'}>{c}</{'th' if th else 'td'}>" for c in cells) + "</tr>"
 def load(fn): return json.load(open(fn)) if os.path.exists(fn) else None
-T = {k: load(f"temporal_validation_{k}.json") for k in ("temporal_base", "temporal_ctl", "temporal_aux", "temporal_grav", "temporal_s1")}
-names = {"temporal_base": "Original (soundings + gravity)", "temporal_ctl": "Control fine-tune (same inputs)", "temporal_aux": "+ coastal elevation + Sentinel-2", "temporal_grav": "+ raw gravity, leakage-free anchor", "temporal_s1": "+ winter Sentinel-1 radar"}
+T = {k: load(f"temporal_validation_{k}.json") for k in ("temporal_base", "temporal_ctl", "temporal_aux", "temporal_ctl0", "temporal_aux0", "temporal_s10", "temporal_grav0")}
+names = {"temporal_base": "Original (soundings + gravity), 34.8M", "temporal_ctl": "Control fine-tune (same inputs)", "temporal_aux": "Fine-tune + coastal elevation + Sentinel-2", "temporal_ctl0": "From scratch, 6.8M: soundings + gravity", "temporal_aux0": "From scratch: + coastal elevation + Sentinel-2", "temporal_s10": "From scratch: + winter Sentinel-1 radar", "temporal_grav0": "From scratch: + raw gravity, leakage-free anchor"}
 parts = []
 if T["temporal_base"] and (T["temporal_ctl"] or T["temporal_aux"]):
     rows = []
