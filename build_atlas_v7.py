@@ -62,6 +62,12 @@ if DT and DT.get("chart_safe") and DT.get("arctic"):
     parts.append(f'''
   <h3 style="font-size:19px;margin:26px 0 6px">Measured depths at reported shoals</h3>
   <p class="lede" style="font-size:14.5px">{DT['all']['n']:,} notices state a least depth. Where the chart called the water safe ({cs['n']} positions, reported depth median {cs['reported_median']:.0f} m against a chart of 21 m or more), the hazard head&rsquo;s predicted shallowest point is unbiased ({cs['bias_shoal']:+.1f} m) where the nearest sounding is biased {cs['bias_nearest']:+.0f} m deep, but no more precise: mean error {cs['mae_shoal_model']:.0f} m against {cs['mae_nearest']:.0f} m, within 5 m in {cs['frac_shoal_within5']*100:.0f}% of cases against {cs['frac_nearest_within5']*100:.0f}%. In the Arctic ({arc['n']} positions): model {arc['mae_shoal_model']:.1f} m, nearest sounding {arc['mae_nearest']:.1f} m, chart bias {arc['bias_nearest']:+.1f} m. The head knows the chart is too deep; it does not yet know by how much.</p>''')
+IS2 = load("is2_claims_strict.json")
+if IS2 and "control" in IS2:
+    c = IS2["control"]
+    parts.append(f'''
+  <h3 style="font-size:19px;margin:26px 0 6px">The laser, again: a null result on the claims</h3>
+  <p class="lede" style="font-size:14.5px">Raw ICESat-2 photons (all confidence levels, 2019&ndash;2026) were pulled in a 1.2 km box around each of the forty version-2 claims and searched, pass by pass, for a bottom return below the sea-surface peak. A detector that finds &ldquo;bottoms&rdquo; on {c['claims_with_detection']} of {c['claims_scored']} claims also finds them over 800 m of water in Lancaster Sound ({c['control_sites']['Lancaster Sound']['detections']} of {c['control_sites']['Lancaster Sound']['passes']} passes) and on the Beaufort slope ({c['control_sites']['Beaufort slope']['detections']} of {c['control_sites']['Beaufort slope']['passes']}), at the same depths: the 4 m peak is the instrument&rsquo;s afterpulse and the deeper ones are subsurface scattering and sea ice. The claim check is therefore inconclusive and is not used as evidence for or against any claim. The photon subsets and both detectors are in the repository for anyone who can do better.</p>''')
 NP = load("national_plan_v2.json")
 if NP:
     rows = "".join(tr([f"{r['lat']:.1f}&deg;N {abs(r['lon']):.1f}&deg;W", f"{r['area_km2']:,}", f"{r['expected_hazard_km2']:.1f}", f"{r['ship_days']:.0f}", f"{r['hazards_per_ship_day']:.1f}"]) for r in NP["top20"][:12])
