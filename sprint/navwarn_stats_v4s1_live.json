@@ -1,0 +1,37 @@
+{
+ "chart says safe": {
+  "n": 107,
+  "v2": 36,
+  "v4s1": 37,
+  "base": 40,
+  "p_v4s1": 5.846144514477754e-12
+ },
+ "+ blind (no sounding within 300 m)": {
+  "n": 37,
+  "v2": 10,
+  "v4s1": 9,
+  "base": 7,
+  "p_v4s1": 0.009256485670165867
+ },
+ "Arctic, chart safe": {
+  "n": 40,
+  "v2": 11,
+  "v4s1": 11,
+  "base": 9,
+  "p_v4s1": 0.0014697224972242636
+ },
+ "stated depth <=21 m, chart safe": {
+  "n": 13,
+  "v2": 8,
+  "v4s1": 8,
+  "base": 5,
+  "p_v4s1": 8.090210800000003e-06
+ },
+ "Reported/Shoal/Uncharted only, chart safe": {
+  "n": 60,
+  "v2": 23,
+  "v4s1": 24,
+  "base": 23,
+  "p_v4s1": 9.647173757245804e-10
+ }
+}

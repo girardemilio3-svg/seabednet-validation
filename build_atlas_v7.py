@@ -9,8 +9,8 @@ def sub1(s, old, new):
     assert s.count(old) == 1, f"count {s.count(old)}: {old[:60]}"; return s.replace(old, new)
 tr = lambda cells, th=False: "<tr>" + "".join(f"<{'th' if th else 'td'}>{c}</{'th' if th else 'td'}>" for c in cells) + "</tr>"
 def load(fn): return json.load(open(fn)) if os.path.exists(fn) else None
-T = {k: load(f"temporal_validation_{k}.json") for k in ("temporal_base", "temporal_ctl", "temporal_aux", "temporal_ctl0", "temporal_aux0", "temporal_s10", "temporal_grav0")}
-names = {"temporal_base": "Original (soundings + gravity), 34.8M", "temporal_ctl": "Control fine-tune (same inputs)", "temporal_aux": "Fine-tune + coastal elevation + Sentinel-2", "temporal_ctl0": "From scratch, 6.8M: soundings + gravity", "temporal_aux0": "From scratch: + coastal elevation + Sentinel-2", "temporal_s10": "From scratch: + winter Sentinel-1 radar", "temporal_grav0": "From scratch: + raw gravity, leakage-free anchor"}
+T = {k: load(f"temporal_validation_{k}.json") for k in ("temporal_base", "temporal_ctl", "temporal_aux", "temporal_ctl0", "temporal_aux0", "temporal_s10", "temporal_s11", "temporal_grav0", "temporal_ctlfull", "temporal_s1full")}
+names = {"temporal_base": "Original (soundings + gravity), 34.8M", "temporal_ctl": "Control fine-tune (same inputs)", "temporal_aux": "Fine-tune + coastal elevation + Sentinel-2", "temporal_ctl0": "From scratch, 6.8M: soundings + gravity", "temporal_aux0": "From scratch: + coastal elevation + Sentinel-2", "temporal_s10": "From scratch: + winter Sentinel-1 radar", "temporal_grav0": "From scratch: + raw gravity, leakage-free anchor", "temporal_s11": "From scratch: + winter radar, full coverage", "temporal_ctlfull": "Full size, full corpus, from scratch: control", "temporal_s1full": "Full size, full corpus, from scratch: + winter radar"}
 parts = []
 if T["temporal_base"] and (T["temporal_ctl"] or T["temporal_aux"]):
     rows = []
@@ -18,21 +18,22 @@ if T["temporal_base"] and (T["temporal_ctl"] or T["temporal_aux"]):
         if not v: continue
         o = v["overall"]; bd = v.get("by_depth", [])
         sh = (bd[0] if isinstance(bd, list) and bd else (next((bd[b] for b in bd if b.startswith("0") or b.startswith("<")), None) if isinstance(bd, dict) else None))
-        rows.append(tr([names[k], f"{o['mae_model']:.2f}", f"{o['mae_nn']:.2f}", f"{o['mae_grav']:.2f}", f"{o['frac_within_1sigma']*100:.0f}%", (f"{sh['mae_model']:.2f}" if sh else "&mdash;"), f"{v['n_cells']:,}"]))
+        sh2 = (bd[1] if isinstance(bd, list) and len(bd) > 1 else None)
+        rows.append(tr([names[k], f"{o['mae_model']:.2f}", f"{o['mae_nn']:.2f}", f"{o['mae_grav']:.2f}", f"{o['frac_within_1sigma']*100:.0f}%", (f"{sh['mae_model']:.2f}" if sh else "&mdash;"), (f"{sh2['mae_model']:.2f}" if sh2 else "&mdash;"), f"{o['bias']:+.1f}"]))
     bd0 = T["temporal_base"].get("by_depth", []); strata = [(f"{x['m'][0]}&ndash;{x['m'][1]} m" if "m" in x else "shallowest") for x in bd0] if isinstance(bd0, list) else list(bd0.keys())
     parts.append(f'''
   <h3 style="font-size:19px;margin:22px 0 6px">The temporal benchmark, before and after new inputs</h3>
-  <p class="lede" style="font-size:14.5px">Same test as Exhibit H: a model that has seen only pre-2016 soundings predicts the post-2016 soundings in the corridor. The control row is the original model fine-tuned for the same number of steps with the same inputs, so that any change in the next rows is the inputs and not the extra training. Shallow column: depth stratum {strata[0] if strata else ''}.</p>
-  <div class="tblwrap"><table><thead>{tr(["Model", "MAE model (m)", "nearest sounding", "gravity prior", "inside 1&sigma;", "shallow MAE", "cells"], True)}</thead><tbody>{''.join(rows)}</tbody></table></div>''')
-NW = {k: load(f"navwarn_hindcast_{k}.json") for k in ("v2", "v3ctl", "v3aux")}
-if NW["v2"] and NW["v3aux"]:
-    def cell(j, key):
-        s = j["summary"].get(key); return f"{s['ge90']} / {s['n']} ({s['ge90']/s['n']*100:.0f}%)" if s else "&mdash;"
-    rows = "".join(tr([lab, cell(NW["v2"], key), (cell(NW["v3ctl"], key) if NW["v3ctl"] else "&mdash;"), cell(NW["v3aux"], key)]) for lab, key in [("Chart says safe", "map_safe"), ("&hellip; blind (no sounding within 300 m)", "map_safe_blind"), ("Arctic, chart safe", "arctic_map_safe"), ("Stated depth &le; 21 m, chart safe", "shallow_reported_map_safe")])
+  <p class="lede" style="font-size:14.5px">Same test as Exhibit H: a model that has seen only pre-2016 soundings predicts the post-2016 soundings in the corridor. The control row is the original model fine-tuned for the same number of steps with the same inputs, so that any change in the next rows is the inputs and not the extra training. From-scratch rows share one recipe within each size. Two things came out of it. Winter Sentinel-1 radar is the only input that helps, and it helps most in the 0&ndash;50 m band where ships ground; at full size it also adds a deep-water bias that costs it the overall number, so the current best overall model is the full-size from-scratch control at {T["temporal_ctlfull"]["overall"]["mae_model"]:.2f} m with a 20&ndash;50 m error of {T["temporal_ctlfull"]["by_depth"][1]["mae_model"]:.1f} m against the published {T["temporal_base"]["by_depth"][1]["mae_model"]:.1f} m. And swapping the gravity anchor for one that has never seen a ship sounding costs about a metre: that row is the leakage-free number to defend in review.</p>
+  <div class="tblwrap"><table><thead>{tr(["Model", "MAE (m)", "nearest sounding", "gravity prior", "inside 1&sigma;", "0&ndash;20 m", "20&ndash;50 m", "bias"], True)}</thead><tbody>{''.join(rows)}</tbody></table></div>''')
+NWL = load("navwarn_stats_v4s1_live.json"); NWA = load("navwarn_stats_v4s1_archive.json")
+if NWL and NWA:
+    def rows_of(S): return "".join(tr([k, str(v["n"]), f"{v['v2']} ({v['v2']/max(1,v['n'])*100:.0f}%)", f"{v['v4s1']} ({v['v4s1']/max(1,v['n'])*100:.0f}%)", f"{v['base']} ({v['base']/max(1,v['n'])*100:.0f}%)"]) for k, v in S.items())
     parts.append(f'''
-  <h3 style="font-size:19px;margin:26px 0 6px">The hazard head on the Coast Guard test, before and after</h3>
-  <p class="lede" style="font-size:14.5px">Reported dangers in the top decile of apparently-safe water (Exhibit L protocol), for the version-2 head, a control fine-tune, and the fine-tune with the new channels.</p>
-  <div class="tblwrap"><table><thead>{tr(["Subset", "v2 head", "control", "+ new channels"], True)}</thead><tbody>{rows}</tbody></table></div>''')
+  <h3 style="font-size:19px;margin:26px 0 6px">The hazard head with winter radar, on the Coast Guard tests</h3>
+  <p class="lede" style="font-size:14.5px">The version-2 hazard head was fine-tuned twice from the same checkpoint for the same number of steps, once with the winter Sentinel-1 channel and once without, and the radar version was run over all 437 blocks. Reported dangers in the top decile of apparently-safe water within 25 km (Exhibit L protocol), on the notices in force and on the archive:</p>
+  <div class="tblwrap"><table><thead>{tr(["Notices in force", "n", "v2 head", "v2 + radar", "nearest-sounding rule"], True)}</thead><tbody>{rows_of(NWL)}</tbody></table></div>
+  <div class="tblwrap" style="margin-top:10px"><table><thead>{tr(["Archive 2017&ndash;2026", "n", "v2 head", "v2 + radar", "nearest-sounding rule"], True)}</thead><tbody>{rows_of(NWA)}</tbody></table></div>
+  <p class="lede" style="font-size:14.5px">Radar improves the depth model (above) but, fine-tuned into the hazard head, changes the reported-danger scores by a point or two either way. The head still trails the nearest-sounding rule in the Arctic and on notices with a measured depth. A hazard head trained from scratch with radar is the next run; if it does not move these numbers, the honest reading is that reported dangers are governed by cues the hazard field does not carry, which is what the danger-report model below already exploits.</p>''')
 AR = {k: load(f"navwarn_archive_stats_{k}.json") for k in ("v2", "v3ctl", "v3aux")}
 if AR["v2"]:
     keys = list(AR["v2"].keys()); hdr = ["Subset (archive, chart says safe)", "n"] + [f"{k} head" for k in ("v2", "v3ctl", "v3aux") if AR[k]] + ["nearest-sounding rule"]
