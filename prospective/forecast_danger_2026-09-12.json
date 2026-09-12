@@ -1,0 +1,12 @@
+{
+ "sealed": "2026-09-12",
+ "cutoff_id": 185304,
+ "n_cells": 8851961,
+ "n_blocks": 191,
+ "top_decile_threshold": 0.0082550048828125,
+ "top_percentile_threshold": 0.08447265625,
+ "model": "danger_model2 recipe refit on all dated notices (danger_apply.py), inputs national_v5_out + hazard_nat_v2 + aux_s1 + exposure cues",
+ "sha256": "d57eb0fb858ec6cbce9ec12fd3482b1a14e354a637506ed5df7e4f677b4aef61",
+ "file": "forecast_danger_2026-09-12.csv",
+ "rule": "notice eligible iff id > cutoff_id and date > sealed; inside iff a scored cell within 1 km; hit iff nearest cell percentile >= 90 (chance 10%) / >= 99 (chance 1%)"
+}
