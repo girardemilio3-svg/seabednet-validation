@@ -20,6 +20,7 @@ pip install torch numpy scipy rasterio
 python3 seabednet_complete.py --in block.npz --out block_completed            # NONNA-style npz: z [H,W] float32, bbox3857 [x0,y0,x1,y1]
 python3 seabednet_complete.py --tif soundings.tif --out completed              # EPSG:3857 GeoTIFF, nodata = no sounding; writes completed.tif (depth, sigma)
 python3 seabednet_complete.py --in block.npz --out out --models v5_small.pt --cpu --bw 4   # CPU only
+python3 seabednet_complete.py --in block.npz --out out --tta 8                             # 8-fold test-time augmentation (default 4; measured gain in the atlas, Exhibit M)
 ```
 Output `out.npz`: `complete`, `sigma` (float32 metres), `known` (bool), `bbox3857`, `members` (number of models averaged).
 

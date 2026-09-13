@@ -16,12 +16,23 @@ Requires: torch, numpy, scipy (and rasterio for --tif); the gravity prior planet
 Members that need the winter-radar channel are skipped unless aux_s1/<name>.npz exists for the block."""
 import argparse, math, os, sys, numpy as np
 ap = argparse.ArgumentParser(); ap.add_argument("--in", dest="inp"); ap.add_argument("--tif"); ap.add_argument("--out", required=True)
-ap.add_argument("--models", default="v5_small.pt,v5_small_ctlall.pt,v5_small_s1all.pt"); ap.add_argument("--cpu", action="store_true"); ap.add_argument("--bw", type=int, default=8)
+ap.add_argument("--models", default="v5_small.pt,v5_small_ctlall.pt,v5_small_s1all.pt"); ap.add_argument("--cpu", action="store_true"); ap.add_argument("--bw", type=int, default=8); ap.add_argument("--tta", type=int, default=4, help="test-time augmentation folds: 1, 4 or 8")
 A = ap.parse_args()
 import torch
 from scipy import ndimage as ndi
 from v5_data import GravityPrior, lat_of_y, lon_of_x
 from v5_model import V5, normalize
+
+def tta_folds(n):   # 1: identity; 4: the four flips; 8: all rotations x flips
+    return [(0, False)] if n <= 1 else ([(0, False), (0, True), (2, False), (2, True)] if n == 4 else [(k, fl) for k in range(4) for fl in (False, True)])
+def tta_forward(net, xin, ridx, n):
+    mus, lvs = [], []
+    for k, fl in tta_folds(n):
+        xa = torch.rot90(xin, k, (2, 3)); xa = torch.flip(xa, (3,)) if fl else xa
+        m_, l_ = net(xa, ridx); m_ = torch.flip(m_, (3,)) if fl else m_; l_ = torch.flip(l_, (3,)) if fl else l_
+        mus.append(torch.rot90(m_, -k, (2, 3))); lvs.append(torch.rot90(l_, -k, (2, 3)))
+    if n <= 1: return mus[0], lvs[0]
+    return torch.stack(mus).float().mean(0), torch.log(torch.stack(lvs).float().exp().mean(0))
 DEV = "cpu" if A.cpu or not torch.cuda.is_available() else "cuda"; P = 256; S = 128
 if A.tif:
     import rasterio
@@ -58,7 +69,7 @@ for ck_path in A.models.split(","):
             dt = t([np.nan_to_num(zp[i:i+P, j:j+P]) for i, j in cb]); kt = t([kp[i:i+P, j:j+P] for i, j in cb]); gt = t([gp[i:i+P, j:j+P] for i, j in cb])
             dn, gn, mu0, sd0 = normalize(dt, kt, gt); xin = torch.cat([dn*kt, kt, gn], 1)
             if needs_s1: xin = torch.cat([xin, torch.tensor(np.stack([s1[:, i:i+P, j:j+P] for i, j in cb])).float().to(DEV)], 1)
-            mu, lv = net(xin, torch.zeros(len(cb), device=DEV, dtype=torch.long))
+            mu, lv = tta_forward(net, xin, torch.zeros(len(cb), device=DEV, dtype=torch.long), A.tta)
             est = (mu.float()*sd0 + mu0)[:, 0].cpu().numpy(); sig = (torch.exp(0.5*lv.float())*sd0)[:, 0].cpu().numpy()
             for q, (i, j) in enumerate(cb): accm[i:i+P, j:j+P] += est[q]*win; accs[i:i+P, j:j+P] += sig[q]*win; wacc[i:i+P, j:j+P] += win
     est = np.where(wacc > 0, accm/np.maximum(wacc, 1e-6), np.nan)[:H, :W]; sig = np.where(wacc > 0, accs/np.maximum(wacc, 1e-6), np.nan)[:H, :W]
