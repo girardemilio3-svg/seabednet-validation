@@ -1,0 +1,13 @@
+{
+ "sealed": "2026-09-13",
+ "cutoff_id": 185317,
+ "n_cells": 4634780,
+ "n_blocks": 68,
+ "top_decile_threshold": 0.00484466552734375,
+ "top_percentile_threshold": 0.076416015625,
+ "model": "danger_model2 recipe refit on all dated notices (danger_apply.py), inputs national_v5_out + hazard_nat_v2 + aux_s1 + exposure cues",
+ "sha256": "afe70e97fbdf75d4547a2bc73013671ddeff648926bcf232ad373bf0036ee369",
+ "file": "forecast_danger_south_2026-09-13.csv",
+ "coverage": "blocks south of 56N, every chart-safe cell within 6 km of a sounding (no route filter); inland lakes excluded",
+ "rule": "notice eligible iff id > cutoff_id and date > sealed; inside iff a scored cell within 1 km; hit iff nearest cell percentile >= 90 (chance 10%) / >= 99 (chance 1%)"
+}

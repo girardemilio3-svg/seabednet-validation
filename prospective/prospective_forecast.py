@@ -11,12 +11,12 @@ import csv, glob, hashlib, json, os, re, subprocess, datetime, zipfile, numpy as
 def shape_of(path, key):
     with zipfile.ZipFile(path) as z, z.open(key + ".npy") as f:
         v = np.lib.format.read_magic(f); return (np.lib.format.read_array_header_1_0 if v == (1, 0) else np.lib.format.read_array_header_2_0)(f)[0]
-R = 6378137.0; today = datetime.date.today().isoformat()
+R = 6378137.0; today = datetime.date.today().isoformat(); SDIR = os.environ.get("FC_DIR", "danger_score"); NAME = os.environ.get("FC_NAME", "forecast_danger")
 # cutoff = highest NAVWARN id visible on the live search right now
 t = requests.get("https://nis.ccg-gcc.gc.ca/public/rest/messages/en/search?page=0&maxHits=50", headers={"User-Agent": "Mozilla/5.0 (research; seabednet)"}, timeout=60).text
 ids = [int(x) for x in re.findall(r"message/(\d+)", t)]; cutoff = max(ids)
 rows = []
-for f in sorted(glob.glob("danger_score/*.npz")):
+for f in sorted(glob.glob(SDIR + "/*.npz")):
     name = os.path.basename(f); a = np.load(f, allow_pickle=True); H, W = shape_of(f"hazard_nat_v2/{name}", "p105")
     x0, y0, x1, y1 = a["bbox3857"]; x0, x1 = min(x0, x1), max(x0, x1); y0, y1 = min(y0, y1), max(y0, y1)
     ii = a["i"].astype(float); jj = a["j"].astype(float); sc = a["score"].astype(float)
@@ -24,13 +24,13 @@ for f in sorted(glob.glob("danger_score/*.npz")):
     rows += list(zip([name[:-4]]*len(sc), a["i"].tolist(), a["j"].tolist(), np.round(lon, 5).tolist(), np.round(lat, 5).tolist(), sc.tolist()))
 sc = np.array([r[5] for r in rows]); order = np.argsort(-sc); rank = np.empty(len(sc), int); rank[order] = np.arange(len(sc))
 pct = 100.0*(1 - rank/len(sc))                       # 100 = highest score
-out = f"forecast_danger_{today}.csv"
+out = f"{NAME}_{today}.csv"
 with open(out, "w", newline="") as fh:
     w = csv.writer(fh); w.writerow(["block", "i", "j", "lon", "lat", "score", "percentile"])
     for k in order: w.writerow([*rows[k][:5], f"{rows[k][5]:.5f}", f"{pct[k]:.3f}"])
 sha = hashlib.sha256(open(out, "rb").read()).hexdigest()
 meta = dict(sealed=today, cutoff_id=cutoff, n_cells=len(sc), n_blocks=len(set(r[0] for r in rows)), top_decile_threshold=float(np.quantile(sc, 0.9)), top_percentile_threshold=float(np.quantile(sc, 0.99)),
             model="danger_model2 recipe refit on all dated notices (danger_apply.py), inputs national_v5_out + hazard_nat_v2 + aux_s1 + exposure cues", sha256=sha, file=out,
-            rule="notice eligible iff id > cutoff_id and date > sealed; inside iff a scored cell within 1 km; hit iff nearest cell percentile >= 90 (chance 10%) / >= 99 (chance 1%)")
+            coverage=("blocks south of 56N, every chart-safe cell within 6 km of a sounding (no route filter); inland lakes excluded" if SDIR.endswith("south") else "Arctic and Hudson Bay blocks, chart-safe cells within 30 km of an NRCan route/node or 15 km of a community"), rule="notice eligible iff id > cutoff_id and date > sealed; inside iff a scored cell within 1 km; hit iff nearest cell percentile >= 90 (chance 10%) / >= 99 (chance 1%)")
 json.dump(meta, open(out.replace(".csv", ".json"), "w"), indent=1)
 subprocess.run(["ots", "stamp", out], check=False); print(json.dumps(meta, indent=1))
