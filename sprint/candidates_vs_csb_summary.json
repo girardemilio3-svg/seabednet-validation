@@ -1,0 +1,24 @@
+{
+ "n_candidates": 15936,
+ "n_with_pings": 217,
+ "refuted": 196,
+ "ambiguous": 16,
+ "supported_raw": 5,
+ "supported_after_garbage_check": 1,
+ "garbage_note": "four 'supported' Arctic sites were one vessel logging a constant 0.7 m over 100 m water",
+ "bc_note": "the one remaining supported site (48.969N 123.070W) is 530 m from shore in 60-110 m water with small-boat pings of 5-8 m: coastal shallows, not an offshore shoal",
+ "sealed_claim_refuted": {
+  "region": "St. Lawrence estuary",
+  "lat": 47.633,
+  "lon": -70.046,
+  "predicted_m": 3.2,
+  "chart_m": 30,
+  "pings_within_300m": 613,
+  "ping_depth_q10_q50_q90": [
+   27.2,
+   32.0,
+   36.7
+  ]
+ },
+ "caveat": "ships choose safe water, so pings within 300 m can miss a pinnacle narrower than 100 m; refutation is strong for broad shoals, weaker for pinnacles"
+}

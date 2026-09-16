@@ -1,0 +1,211 @@
+{
+ "source": "IHO DCDB crowdsourced bathymetry, pings uploaded 2026-01-01..2026-09-13 (108M), 44 of 82 platforms kept after calibration against charted soundings (>=300 pings on sounded cells, spread <= 3 m, offset <= 10 m, offset removed); noise floor at sounded cells 1.63 m median",
+ "map": "national_v6_out (three-member ensemble)",
+ "cells_unsounded_total": 430464,
+ "dropout_cells_excluded": 23130,
+ "shelf_cells": 278898,
+ "all": {
+  "model": {
+   "median": 4.88,
+   "within5": 0.509,
+   "within10": 0.702
+  },
+  "nearest": {
+   "median": 3.19,
+   "within5": 0.673,
+   "within10": 0.833
+  },
+  "blend": {
+   "median": 3.31,
+   "within5": 0.651,
+   "within10": 0.813
+  },
+  "n": 278898
+ },
+ "by_distance_km": {
+  "0-0.25": {
+   "model": {
+    "median": 4.3,
+    "within5": 0.55,
+    "within10": 0.751
+   },
+   "nearest": {
+    "median": 2.46,
+    "within5": 0.804,
+    "within10": 0.939
+   },
+   "blend": {
+    "median": 2.46,
+    "within5": 0.804,
+    "within10": 0.939
+   },
+   "n": 133196
+  },
+  "0.25-0.5": {
+   "model": {
+    "median": 4.67,
+    "within5": 0.523,
+    "within10": 0.711
+   },
+   "nearest": {
+    "median": 3.02,
+    "within5": 0.726,
+    "within10": 0.912
+   },
+   "blend": {
+    "median": 3.67,
+    "within5": 0.622,
+    "within10": 0.818
+   },
+   "n": 68247
+  },
+  "0.5-1": {
+   "model": {
+    "median": 5.5,
+    "within5": 0.476,
+    "within10": 0.644
+   },
+   "nearest": {
+    "median": 3.75,
+    "within5": 0.623,
+    "within10": 0.854
+   },
+   "blend": {
+    "median": 4.98,
+    "within5": 0.501,
+    "within10": 0.67
+   },
+   "n": 38776
+  },
+  "1-3": {
+   "model": {
+    "median": 6.35,
+    "within5": 0.428,
+    "within10": 0.642
+   },
+   "nearest": {
+    "median": 8.3,
+    "within5": 0.339,
+    "within10": 0.564
+   },
+   "blend": {
+    "median": 6.44,
+    "within5": 0.419,
+    "within10": 0.639
+   },
+   "n": 13774
+  },
+  "3-6": {
+   "model": {
+    "median": 8.11,
+    "within5": 0.365,
+    "within10": 0.564
+   },
+   "nearest": {
+    "median": 25.27,
+    "within5": 0.202,
+    "within10": 0.338
+   },
+   "blend": {
+    "median": 8.51,
+    "within5": 0.38,
+    "within10": 0.536
+   },
+   "n": 6715
+  }
+ },
+ "by_depth_m": {
+  "0-20": {
+   "model": {
+    "median": 7.03,
+    "within5": 0.413,
+    "within10": 0.593
+   },
+   "nearest": {
+    "median": 3.55,
+    "within5": 0.616,
+    "within10": 0.774
+   },
+   "blend": {
+    "median": 4.11,
+    "within5": 0.555,
+    "within10": 0.689
+   },
+   "n": 13252
+  },
+  "20-50": {
+   "model": {
+    "median": 4.3,
+    "within5": 0.551,
+    "within10": 0.722
+   },
+   "nearest": {
+    "median": 2.74,
+    "within5": 0.734,
+    "within10": 0.847
+   },
+   "blend": {
+    "median": 2.9,
+    "within5": 0.705,
+    "within10": 0.832
+   },
+   "n": 48831
+  },
+  "50-200": {
+   "model": {
+    "median": 4.93,
+    "within5": 0.505,
+    "within10": 0.704
+   },
+   "nearest": {
+    "median": 3.28,
+    "within5": 0.663,
+    "within10": 0.833
+   },
+   "blend": {
+    "median": 3.38,
+    "within5": 0.645,
+    "within10": 0.816
+   },
+   "n": 216814
+  }
+ },
+ "by_region": {
+  "BC": {
+   "model": {
+    "median": 4.58,
+    "within5": 0.531,
+    "within10": 0.75
+   },
+   "nearest": {
+    "median": 3.44,
+    "within5": 0.638,
+    "within10": 0.773
+   },
+   "blend": {
+    "median": 3.25,
+    "within5": 0.667,
+    "within10": 0.828
+   },
+   "n": 147117
+  },
+  "Atlantic": {
+   "model": {
+    "median": 3.14,
+    "within5": 0.682,
+    "within10": 0.888
+   },
+   "nearest": {
+    "median": 3.12,
+    "within5": 0.717,
+    "within10": 0.909
+   },
+   "blend": {
+    "median": 2.97,
+    "within5": 0.731,
+    "within10": 0.919
+   },
+   "n": 79082
+  }
+ }
+}
