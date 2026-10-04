@@ -16,7 +16,15 @@ for status in ("", "&status=CANCELLED"):
         if not found: break
         ids |= {i for i in found if i > cutoff}
         if min(found) <= cutoff: break
-ids = sorted(ids); print("candidate ids after cutoff", len(ids), flush=True)
+# the live search drops notices once they are cancelled and archived, so the id list is not monotone:
+# union it with every id already cached from an earlier scoring run, or the test silently forgets its own outcomes
+_cached = set()
+if os.path.exists("recon_navwarn/prospective_msgs.jsonl"):
+    for _l in open("recon_navwarn/prospective_msgs.jsonl"):
+        try: _cached.add(int(json.loads(_l)["id"]))
+        except Exception: pass
+ids = sorted((ids | {i for i in _cached if i > cutoff}))
+print("candidate ids after cutoff", len(ids), f"({len(_cached)} from cache)", flush=True)
 cache = "recon_navwarn/prospective_msgs.jsonl"; have = {}
 if os.path.exists(cache):
     for line in open(cache): m = json.loads(line); have[m["id"]] = m
